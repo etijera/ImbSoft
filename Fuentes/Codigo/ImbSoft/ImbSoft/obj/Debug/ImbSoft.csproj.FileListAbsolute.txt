@@ -49,3 +49,6 @@ G:\Trabajo\Proyecto imbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.csp
 G:\Trabajo\Proyecto imbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe.licenses
 G:\Trabajo\Proyecto imbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe
 G:\Trabajo\Proyecto imbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.pdb
+D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\ImbSoft.exe.config
+D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe
+D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.pdb
