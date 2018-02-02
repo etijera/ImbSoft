@@ -92,7 +92,7 @@ namespace Contabilidad
                                                 new SqlParameter("@Consecutivo",documento),
                                                 new SqlParameter("@Fecha",Funciones.getInstancia().Datetime2String(TxtFecha.DateTime))};
 
-                DataSet ds = DataBase.ExecuteQuery("PA_ContEntrarDocOt", "datos", CommandType.StoredProcedure, parametros,
+                DataSet ds = DataBase.ExecuteQuery("[Contabilidad].[PA_IngresarDocumentosCtt]", "datos", CommandType.StoredProcedure, parametros,
                                                             ConexionDB.getInstancia().Conexion(Database, null));
                 dtCuenta = ds.Tables[0].Copy();
             }

@@ -96,7 +96,7 @@ namespace ImbSoft.Vistas
         private void BtnIngresarDocumentos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmEntradaDoc2 frmEntrarDoc = new FrmEntradaDoc2();
-            frmEntrarDoc.Database = "CARAZO";
+            frmEntrarDoc.Database = "ImbSoft";
             frmEntrarDoc.AñoPeriodo = 2018;
             frmEntrarDoc.MesPeriodo = 1;
             frmEntrarDoc.Usuario = "ETIJERA";
