@@ -4,7 +4,7 @@
 CREATE TABLE [Contabilidad].[CabeceraAsientos](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[CodigoFuente] [varchar](6) NOT NULL,
-	[Documento] [varchar](24) NOT NULL,
+	[Comprobante] [varchar](24) NOT NULL,
 	[Valor] [money] NOT NULL,
 	[Fecha] [smalldatetime] NOT NULL,
 	[Descripcion] [varchar](1000) NULL CONSTRAINT [DF_CabeceraAsientos_Descripcion]  DEFAULT (''),
@@ -42,7 +42,7 @@ GO
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Id del asiento, autoincremental.' , @level0type=N'SCHEMA',@level0name=N'Contabilidad', @level1type=N'TABLE',@level1name=N'CabeceraAsientos', @level2type=N'COLUMN',@level2name=N'Id'
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Código de la fuente.' , @level0type=N'SCHEMA',@level0name=N'Contabilidad', @level1type=N'TABLE',@level1name=N'CabeceraAsientos', @level2type=N'COLUMN',@level2name=N'CodigoFuente'
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Consecutivo del documento contable.' , @level0type=N'SCHEMA',@level0name=N'Contabilidad', @level1type=N'TABLE',@level1name=N'CabeceraAsientos', @level2type=N'COLUMN',@level2name=N'Documento'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Consecutivo del Comprobante contable.' , @level0type=N'SCHEMA',@level0name=N'Contabilidad', @level1type=N'TABLE',@level1name=N'CabeceraAsientos', @level2type=N'COLUMN',@level2name=N'Comprobante'
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Valor del asiento.' , @level0type=N'SCHEMA',@level0name=N'Contabilidad', @level1type=N'TABLE',@level1name=N'CabeceraAsientos', @level2type=N'COLUMN',@level2name=N'Valor'
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Fecha del asiento.' , @level0type=N'SCHEMA',@level0name=N'Contabilidad', @level1type=N'TABLE',@level1name=N'CabeceraAsientos', @level2type=N'COLUMN',@level2name=N'Fecha'
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Descripción del asiento.' , @level0type=N'SCHEMA',@level0name=N'Contabilidad', @level1type=N'TABLE',@level1name=N'CabeceraAsientos', @level2type=N'COLUMN',@level2name=N'Descripcion'
