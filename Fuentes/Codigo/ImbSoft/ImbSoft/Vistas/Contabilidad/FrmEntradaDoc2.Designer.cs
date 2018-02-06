@@ -63,10 +63,11 @@ namespace Contabilidad
             this.BtnEliminarTodo = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.BtnNotaAclaratoria = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtDocumento.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFecha.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtFecha.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFecha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
@@ -271,7 +272,7 @@ namespace Contabilidad
             this.TxtlblFuente.OcultarBtnImprimir = false;
             this.TxtlblFuente.OpcionGet = null;
             this.TxtlblFuente.OpGet = false;
-            this.TxtlblFuente.Ordenar = OrdenarPor.CampoNombre;
+            this.TxtlblFuente.Ordenar = Referencias.OrdenarPor.CampoNombre;
             this.TxtlblFuente.PasarUsuario = false;
             this.TxtlblFuente.PerfilShow = null;
             this.TxtlblFuente.PonerCeros = false;
@@ -281,7 +282,7 @@ namespace Contabilidad
             this.TxtlblFuente.SoloLectura = false;
             this.TxtlblFuente.TabIndex = 1;
             this.TxtlblFuente.TxtCodLocation = new System.Drawing.Point(0, 3);
-            this.TxtlblFuente.TxtCodSize = new System.Drawing.Size(50, 18);
+            this.TxtlblFuente.TxtCodSize = new System.Drawing.Size(50, 20);
             this.TxtlblFuente.Usuario = null;
             this.TxtlblFuente.Validated += new System.EventHandler(this.TxtlblFuente_Validated);
             // 
@@ -319,9 +320,9 @@ namespace Contabilidad
             this.TxtFecha.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.TxtFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TxtFecha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.TxtFecha.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.TxtFecha.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.TxtFecha.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.TxtFecha.Size = new System.Drawing.Size(100, 18);
             this.TxtFecha.TabIndex = 5;
             this.TxtFecha.EditValueChanged += new System.EventHandler(this.TxtFecha_EditValueChanged);
@@ -341,9 +342,9 @@ namespace Contabilidad
             // 
             // GctrlCuenta
             // 
-            this.GctrlCuenta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.GctrlCuenta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GctrlCuenta.Location = new System.Drawing.Point(5, 5);
             this.GctrlCuenta.MainView = this.DgvCuenta;
             this.GctrlCuenta.Name = "GctrlCuenta";
@@ -589,6 +590,11 @@ namespace Contabilidad
             // 
             // FrmEntradaDoc2
             // 
+            this.Appearance.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 506);
@@ -605,11 +611,12 @@ namespace Contabilidad
             this.Text = "Entrada de Documentos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEntradaDoc_FormClosing);
             this.Load += new System.EventHandler(this.FrmEntradaDoc_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtDocumento.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFecha.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtFecha.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtFecha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);

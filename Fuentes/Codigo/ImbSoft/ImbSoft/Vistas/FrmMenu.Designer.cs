@@ -49,16 +49,19 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.BtnIUsuarios = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnIngresarDocumentos = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.RbPContabilidad = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.RbPGPuc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.RbPGPerfilesCont = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.RibPConfiguraciones = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbPGPerfilesConfig = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbPGPerfilesImb = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BtnIngresarDocumentos = new DevExpress.XtraBars.BarButtonItem();
+            this.RibPHerramientas = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rbPGPerfil = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.BtnPerfiles = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -104,15 +107,17 @@
             this.barButtonItem5,
             this.barMdiChildrenListItem1,
             this.BtnIUsuarios,
-            this.BtnIngresarDocumentos});
+            this.BtnIngresarDocumentos,
+            this.BtnPerfiles});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 32);
-            this.ribbonControl1.MaxItemId = 37;
+            this.ribbonControl1.MaxItemId = 38;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.RbPContabilidad,
-            this.RibPConfiguraciones});
+            this.RibPConfiguraciones,
+            this.RibPHerramientas});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
             this.ribbonControl1.Size = new System.Drawing.Size(861, 104);
@@ -211,6 +216,18 @@
             this.BtnIUsuarios.Name = "BtnIUsuarios";
             this.BtnIUsuarios.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnIUsuarios_ItemClick);
             // 
+            // BtnIngresarDocumentos
+            // 
+            this.BtnIngresarDocumentos.Caption = "Ingresar Documento";
+            this.BtnIngresarDocumentos.Id = 36;
+            this.BtnIngresarDocumentos.Name = "BtnIngresarDocumentos";
+            this.BtnIngresarDocumentos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnIngresarDocumentos_ItemClick);
+            // 
+            // ribbonPageCategory1
+            // 
+            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
+            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
+            // 
             // RbPContabilidad
             // 
             this.RbPContabilidad.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -240,6 +257,11 @@
             this.RbPGPerfilesCont.Name = "RbPGPerfilesCont";
             this.RbPGPerfilesCont.Text = "Perfiles";
             // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.BtnIngresarDocumentos);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            // 
             // RibPConfiguraciones
             // 
             this.RibPConfiguraciones.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -266,22 +288,25 @@
             this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // ribbonPageCategory1
+            // RibPHerramientas
             // 
-            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
-            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
+            this.RibPHerramientas.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rbPGPerfil});
+            this.RibPHerramientas.Name = "RibPHerramientas";
+            this.RibPHerramientas.Text = "Herramientas";
             // 
-            // ribbonPageGroup1
+            // rbPGPerfil
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.BtnIngresarDocumentos);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.rbPGPerfil.ItemLinks.Add(this.BtnPerfiles);
+            this.rbPGPerfil.Name = "rbPGPerfil";
+            this.rbPGPerfil.Text = "Perfiles";
             // 
-            // BtnIngresarDocumentos
+            // BtnPerfiles
             // 
-            this.BtnIngresarDocumentos.Caption = "Ingresar Documento";
-            this.BtnIngresarDocumentos.Id = 36;
-            this.BtnIngresarDocumentos.Name = "BtnIngresarDocumentos";
-            this.BtnIngresarDocumentos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnIngresarDocumentos_ItemClick);
+            this.BtnPerfiles.Caption = "Maestro de Perfiles";
+            this.BtnPerfiles.Id = 37;
+            this.BtnPerfiles.Name = "BtnPerfiles";
+            this.BtnPerfiles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPerfiles_ItemClick);
             // 
             // FrmMenu
             // 
@@ -339,5 +364,8 @@
         private DevExpress.XtraBars.BarButtonItem BtnIngresarDocumentos;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem BtnPerfiles;
+        private DevExpress.XtraBars.Ribbon.RibbonPage RibPHerramientas;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbPGPerfil;
     }
 }

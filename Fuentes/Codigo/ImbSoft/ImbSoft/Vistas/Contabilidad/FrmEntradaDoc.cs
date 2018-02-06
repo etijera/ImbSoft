@@ -530,7 +530,7 @@ namespace Contabilidad
 
         private void ConsultarConsecutivo(String glCod)
         {
-            String sql = "select LTRIM(RTRIM(DBO.PadL(ftecon+1,6,'0'))) as ftecon from profuentes where ftecod ='" + glCod + "' AND delmrk='1'";
+            String sql = "select LTRIM(RTRIM(DBO.PadL(ftecon+1,6,'0'))) as ftecon from profuentes where ftecod ='" + glCod + "' AND MarcaBorrado='1'";
 
             DataSet ds = DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
             string consecutivo = "";
@@ -556,7 +556,7 @@ namespace Contabilidad
 
         private void BuscarCcosto(int indice,String codigo)
         {
-            String sql = "SELECT ccocod,cconom FROM procencos WHERE ccocod ='" + codigo + "' AND delmrk='1'";
+            String sql = "SELECT ccocod,cconom FROM procencos WHERE ccocod ='" + codigo + "' AND MarcaBorrado='1'";
 
             DataSet ds = DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
             string nombre = "";
@@ -577,7 +577,7 @@ namespace Contabilidad
 
         private void BuscarTercero(int indice, String codigo)
         {
-            String sql = "SELECT ternit,ternom FROM accglter WHERE ternit = '" + codigo + "' AND delmrk='1'";
+            String sql = "SELECT ternit,ternom FROM accglter WHERE ternit = '" + codigo + "' AND MarcaBorrado='1'";
 
             DataSet ds = DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
             string nombre = "";
@@ -845,7 +845,7 @@ namespace Contabilidad
             //if (TxtFecha.DateTime.Date < DateTime.Now.Date)
             //{
             //    retorno = false;
-            //    XtraMessageBox.Show("La  fecha seleccionada no puede ser menor que la fecha actual.", GLReferences.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    XtraMessageBox.Show("La  fecha seleccionada no puede ser menor que la fecha actual.", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             //    TxtFecha.Focus();
             //}                
 
@@ -1318,7 +1318,7 @@ namespace Contabilidad
 
         public void CcostoOt() 
         {
-            String sql = "select ordenes.OrdCCO,procencos.cconom from ordenes INNER JOIN procencos ON ordenes.OrdCCO = procencos.ccocod where ordnro ='" + Documento + "' AND procencos.delmrk='1'";
+            String sql = "select ordenes.OrdCCO,procencos.cconom from ordenes INNER JOIN procencos ON ordenes.OrdCCO = procencos.ccocod where ordnro ='" + Documento + "' AND procencos.MarcaBorrado='1'";
 
             DataSet ds = DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
             string nombre = "";

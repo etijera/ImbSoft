@@ -103,5 +103,11 @@ namespace ImbSoft.Vistas
             frmEntrarDoc.ShowDialog();
         }
 
+        private void BtnPerfiles_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmShowPerfiles perfiles = new FrmShowPerfiles();            
+            perfiles.ShowDialog();
+        }
+
     }
 }

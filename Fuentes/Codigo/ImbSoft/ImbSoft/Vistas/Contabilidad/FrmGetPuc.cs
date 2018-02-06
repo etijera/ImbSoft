@@ -261,7 +261,7 @@ namespace Contabilidad
                                                     ConexionDB.getInstancia().Conexion(Database, null));
             if (ds.Tables[0].Rows.Count>0)
             {
-                int activo = Convert.ToInt32(ds.Tables[0].Rows[0]["Delmrk"]);
+                int activo = Convert.ToInt32(ds.Tables[0].Rows[0]["MarcaBorrado"]);
                 if (activo==0)
                 {
                     if (DialogResult.Yes == XtraMessageBox.Show("El código que intenta ingresar fue eliminado. ¿Desea recuperar el registro? ", Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
@@ -404,7 +404,7 @@ namespace Contabilidad
 
             bool IsDone = DataBase.ExecuteNonQuery("PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
-            //XtraMessageBox.Show("Proceso realizado con exito", GLReferences.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //XtraMessageBox.Show("Proceso realizado con exito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
            // 
         }
 
