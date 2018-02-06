@@ -234,7 +234,7 @@ namespace UsuarioControles
         //    camp = "DISTINCT " + PerfilShow.Llave + "," + camp.Vector2Cadena(",", PerfilShow.Campos);
 
         //    String[] par = new String[] { camp, PerfilShow.Tabla,Relacion, condicion,Complemento };
-        //    String cad = String.Format("SELECT {0} FROM {1} {2} WHERE delmrk = 1 {3} {4}", par);
+        //    String cad = String.Format("SELECT {0} FROM {1} {2} WHERE MarcaBorrado = 1 {3} {4}", par);
 
         //    dsGeneral = DataBase.ExecuteQuery(cad, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(database, null));
         //    if (dsGeneral.Tables[0].Rows.Count == 1)
@@ -276,7 +276,7 @@ namespace UsuarioControles
             camp = "DISTINCT " + PerfilShow.Llave + "," + camp.Vector2Cadena(",", PerfilShow.Campos);
 
             String[] par = new String[] { camp, PerfilShow.Tabla, Relacion, condicion, Complemento };
-            String cad = String.Format("SELECT {0} FROM {1} {2} WHERE delmrk = 1 {3} {4}", par);
+            String cad = String.Format("SELECT {0} FROM {1} {2} WHERE MarcaBorrado = 1 {3} {4}", par);
 
             dsGeneral = DataBase.ExecuteQuery(cad, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(database, null));
             if (dsGeneral.Tables[0].Rows.Count == 1)

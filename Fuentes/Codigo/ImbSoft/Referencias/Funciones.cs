@@ -122,25 +122,25 @@ namespace Referencias
 
         //public DataSet GetTipoUsurios(SqlConnection Conn)
         //{
-        //    string sql = "SELECT * FROM TipoUsuarios WHERE delmrk = '1' order by Codigo";
+        //    string sql = "SELECT * FROM TipoUsuarios WHERE MarcaBorrado = '1' order by Codigo";
         //    return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
         //}        
 
         public DataSet GetUsuarios(SqlConnection Conn)
         {
-            string sql = "SELECT * FROM Usuarios WHERE delmrk = '1'";
+            string sql = "SELECT * FROM Usuarios WHERE MarcaBorrado = '1'";
             return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
         }
 
         public DataSet GetPersonas(SqlConnection Conn)
         {
-            string sql = "SELECT * FROM Personas WHERE delmrk = '1'";
+            string sql = "SELECT * FROM Personas WHERE MarcaBorrado = '1'";
             return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
         }
 
         public DataSet ValidarUsuario(string user, string pass, SqlConnection Conn)
         {
-            string sql = "SELECT * FROM Usuarios WHERE delmrk = '1' AND Nombre = @usuario AND Contrasenia = @clave";
+            string sql = "SELECT * FROM Usuarios WHERE MarcaBorrado = '1' AND Nombre = @usuario AND Contrasenia = @clave";
             SqlParameter[] parameters = { new SqlParameter("@usuario", user), new SqlParameter("@clave", pass) };
             return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, parameters, Conn);
         }
@@ -153,7 +153,7 @@ namespace Referencias
 
         public DataSet GetTables(SqlConnection Conn)
         {
-            string sql = "SELECT	sysobjects.NAME AS TABLA , sysobjects.Id as Id FROM	sysobjects  WHERE	sysobjects.xtype = 'U' OR  sysobjects.xtype = 'V' ORDER BY sysobjects.NAME ";
+            string sql = "SELECT SC.name + '.' + T.NAME AS TABLA , T.Id as Id FROM sysobjects AS T INNER JOIN sys.schemas AS SC ON SC.schema_id = T.uid WHERE T.xtype = 'U' OR  T.xtype = 'V' ORDER BY TABLA";
             return DataBase.ExecuteQuery(sql, "tablas", CommandType.Text, null, Conn);
         }
 

@@ -8,8 +8,32 @@ CREATE PROCEDURE [Contabilidad].[PA_IngresarDocumentosCtt]
 		,@Consecutivo		VARCHAR(24)		= NULL
 		,@Fuente			VARCHAR(6)		= NULL
 		,@Fecha				DATETIME		= NULL
-		,@NotaAclaratoria	VARCHAR(MAX)	= NULL		
+		--,@NotaAclaratoria	VARCHAR(MAX)	= NULL		
 AS
+
+-- =====================================================================================================
+-- Nombre:			[Contabilidad].[PA_IngresarDocumentosCtt]
+-- =====================================================================================================
+-- Tipo:			Procedimiento Almacenado.
+-- Creación:		05-02-2018
+-- Desarrollador:  	Erick Tijera(etijera)
+-- Proposito:		Procedimiento almacenado para gestionar el ingreso de los documentos
+-- =====================================================================================================
+-- Parámetros:						
+--		@Operacion			= Operación.
+--		,@Consecutivo		= Consecutivo del documento
+--		,@Fuente			= Fuente del documento
+--		,@Fecha				= Fecha del documento.		
+-- =====================================================================================================		
+-- Salidas:			N/A
+-- =====================================================================================================
+-- Modificaciones: 
+
+-- =====================================================================================================
+-- Pruebas y Ejemplos
+-- EXEC [Contabilidad].[PA_IngresarDocumentosCtt]  @Operacion = 'SD', @Fuente = '001', @Fecha = '20180205'
+-- =====================================================================================================
+
 BEGIN
 	IF @Operacion = 'SD'
 	BEGIN
@@ -27,7 +51,7 @@ BEGIN
 				,''									DetCTT
 		FROM	Contabilidad.CabeceraAsientos AS CA
 				INNER JOIN Contabilidad.MovimientosAsiento AS MA ON MA.Asiento = CA.Id
-				LEFT JOIN Terceros AS TE ON TE.Codigo = MA.CodTercero 
+				LEFT JOIN dbo.Terceros AS TE ON TE.Codigo = MA.CodTercero 
 				LEFT JOIN Contabilidad.CentroCostos AS CC ON CC.Codigo = MA.CodCentroCosto
 				LEFT JOIN Contabilidad.Puc AS PUC ON PUC.Codigo = MA.Cuenta
 				--LEFT JOIN ordenes       ON ordenes.ordnro    = accGLMAS.MasOT Debe ser la tabla de contrato
@@ -49,7 +73,7 @@ BEGIN
 				,''									DetCTT
 		FROM	Contabilidad.CabeceraAsientos AS CA
 				INNER JOIN Contabilidad.MovimientosAsiento AS MA ON MA.Asiento = CA.Id
-				LEFT JOIN Terceros AS TE ON TE.Codigo = MA.CodTercero 
+				LEFT JOIN dbo.Terceros AS TE ON TE.Codigo = MA.CodTercero 
 				LEFT JOIN Contabilidad.CentroCostos AS CC ON CC.Codigo = MA.CodCentroCosto
 				LEFT JOIN Contabilidad.Puc AS PUC ON PUC.Codigo = MA.Cuenta
 				--LEFT JOIN ordenes       ON ordenes.ordnro    = accGLMAS.MasOT Debe ser la tabla de contrato

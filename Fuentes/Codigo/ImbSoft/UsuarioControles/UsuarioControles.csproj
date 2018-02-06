@@ -153,6 +153,12 @@
     <Compile Include="FormularioBase2.Designer.cs">
       <DependentUpon>FormularioBase2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAñadirEditarPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAñadirEditarPerfiles.Designer.cs">
+      <DependentUpon>FrmAñadirEditarPerfiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGetCodeName.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,12 @@
     </Compile>
     <Compile Include="FrmShowIt.Designer.cs">
       <DependentUpon>FrmShowIt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShowPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShowPerfiles.Designer.cs">
+      <DependentUpon>FrmShowPerfiles.cs</DependentUpon>
     </Compile>
     <Compile Include="LblBase.cs">
       <SubType>UserControl</SubType>
@@ -249,6 +261,9 @@
     <EmbeddedResource Include="FormularioBase2.resx">
       <DependentUpon>FormularioBase2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAñadirEditarPerfiles.resx">
+      <DependentUpon>FrmAñadirEditarPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGetCodeName.resx">
       <DependentUpon>FrmGetCodeName.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmShowIt.resx">
       <DependentUpon>FrmShowIt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShowPerfiles.resx">
+      <DependentUpon>FrmShowPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LblBase.resx">
       <DependentUpon>LblBase.cs</DependentUpon>

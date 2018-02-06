@@ -222,7 +222,7 @@ namespace UsuarioControles
         {
             SqlParameter[] parametro = new [] { new SqlParameter("@Usuario", Usuario ?? "") };
 
-            DataTable dtPermisos = DataBase.ExecuteQueryDataTable("PA_Permisos", "datos", CommandType.StoredProcedure, parametro, ConexionDB.getInstancia().Conexion(database, null));
+            DataTable dtPermisos = DataBase.ExecuteQueryDataTable("PA_UsuarioPermisos", "datos", CommandType.StoredProcedure, parametro, ConexionDB.getInstancia().Conexion(database, null));
 
             if (dtPermisos.Rows.Count > 0)
             {
@@ -295,7 +295,7 @@ namespace UsuarioControles
 
                 string camp = "";
                 camp = PerfilShow.Llave + "," + camp.Vector2Cadena(",", PerfilShow.Campos).Replace(PerfilShow.Llave + ",", "");
-                String cad = String.Format("SELECT DISTINCT TOP(1) {0} FROM {1} {2} WHERE delmrk = 1 {3} ORDER BY {4} DESC", camp, PerfilShow.Tabla, Relacion, Complemento, PerfilShow.Llave);
+                String cad = String.Format("SELECT DISTINCT TOP(1) {0} FROM {1} {2} WHERE MarcaBorrado = 1 {3} ORDER BY {4} DESC", camp, PerfilShow.Tabla, Relacion, Complemento, PerfilShow.Llave);
                 DataTable dt = DataBase.ExecuteQueryDataTable(cad, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(database, null));
                 DataSet dsUlt = new DataSet();
                 dsUlt.Tables.Add(dt);
@@ -313,7 +313,7 @@ namespace UsuarioControles
                     else
                         resto = Convert.ToInt32(Seleccion) - 0;
 
-                    cad = String.Format("SELECT TOP({0}) {1} FROM {2} {3} WHERE delmrk = 1 {4} ORDER BY {5} DESC", resto, camp, PerfilShow.Tabla, Relacion, Complemento, PerfilShow.Llave);
+                    cad = String.Format("SELECT TOP({0}) {1} FROM {2} {3} WHERE MarcaBorrado = 1 {4} ORDER BY {5} DESC", resto, camp, PerfilShow.Tabla, Relacion, Complemento, PerfilShow.Llave);
                     DataTable dt1 = DataBase.ExecuteQueryDataTable(cad, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(database, null));
                     dsGeneral.Tables.Clear();
                     dsGeneral.Tables.Add(dt1);
@@ -434,7 +434,7 @@ namespace UsuarioControles
                         {
                             Seleccion = dsGeneral.Tables[0].Rows[GvGeneral.GetFocusedDataSourceRowIndex()][PerfilShow.Llave].ToString();
 
-                            String sql = String.Format("UPDATE {0} SET delmrk = 0 WHERE {1} = '{2}'", PerfilShow.Tabla, PerfilShow.Llave, Seleccion);
+                            String sql = String.Format("UPDATE {0} SET MarcaBorrado = 0 WHERE {1} = '{2}'", PerfilShow.Tabla, PerfilShow.Llave, Seleccion);
 
                             bool IsDone = DataBase.ExecuteNonQuery(sql, CommandType.Text, null, ConexionDB.getInstancia().Conexion(database, null));
 
@@ -484,7 +484,7 @@ namespace UsuarioControles
                             camp = "DISTINCT " + PerfilShow.Llave + "," + camp.Vector2Cadena(",", PerfilShow.Campos);
                         }
 
-                        String cad = String.Format("SELECT {0} FROM {1} {2} WHERE delmrk = 1 {3} ", camp, PerfilShow.Tabla, Relacion, Complemento);
+                        String cad = String.Format("SELECT {0} FROM {1} {2} WHERE MarcaBorrado = 1 {3} ", camp, PerfilShow.Tabla, Relacion, Complemento);
                         DataTable dt = DataBase.ExecuteQueryDataTable(cad, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(database, null));
                         DataSet dsRpt = new DataSet();
                         dsRpt.Tables.Add(dt);
@@ -577,7 +577,7 @@ namespace UsuarioControles
 
             string camp = "";
             camp = "DISTINCT " + PerfilShow.Llave + "," + camp.Vector2Cadena(",", PerfilShow.Campos);
-            String cad = String.Format("SELECT {0} FROM {1} {2} WHERE {3} delmrk = 1 {4} ORDER BY {5} ", camp, PerfilShow.Tabla, Relacion, condicion, Complemento, campoOrden);
+            String cad = String.Format("SELECT {0} FROM {1} {2} WHERE {3} MarcaBorrado = 1 {4} ORDER BY {5} ", camp, PerfilShow.Tabla, Relacion, condicion, Complemento, campoOrden);
             DataTable dt  = DataBase.ExecuteQueryDataTable(cad, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(database, null));
             dsGeneral.Tables.Clear();
             dsGeneral.Tables.Add(dt);

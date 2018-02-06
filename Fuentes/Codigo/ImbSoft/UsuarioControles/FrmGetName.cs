@@ -72,7 +72,7 @@ namespace UsuarioControles
 
                         if (IsDone)
                         {
-                            string cons = String.Format("SELECT {0} FROM {1} WHERE delmrk = 1 AND {2} = '{3}'", PerfilAct.Llave,
+                            string cons = String.Format("SELECT {0} FROM {1} WHERE MarcaBorrado = 1 AND {2} = '{3}'", PerfilAct.Llave,
                             PerfilAct.Tabla, PerfilAct.CampoCodigo, code);
 
                             DataSet ds = DataBase.ExecuteQuery(cons, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
@@ -142,7 +142,7 @@ namespace UsuarioControles
 
         //            if (IsDone)
         //            {
-        //                string cons = String.Format("SELECT {0} FROM {1} WHERE delmrk = 1 AND {2} = '{3}'", PerfilAct.Llave,
+        //                string cons = String.Format("SELECT {0} FROM {1} WHERE MarcaBorrado = 1 AND {2} = '{3}'", PerfilAct.Llave,
         //                                PerfilAct.Tabla, PerfilAct.CampoCodigo, code);
 
         //                DataSet ds = DataBase.ExecuteQuery(cons, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
@@ -197,7 +197,7 @@ namespace UsuarioControles
                 string camp = "";
                 camp = camp.Vector2Cadena(",", PerfilAct.Campos);
                 string condicion = String.Format(" AND {0} = '{1}'", PerfilAct.Llave, ID);
-                String cad = String.Format("SELECT {0} FROM {1} WHERE delmrk = 1 {2}", camp, PerfilAct.Tabla, condicion);
+                String cad = String.Format("SELECT {0} FROM {1} WHERE MarcaBorrado = 1 {2}", camp, PerfilAct.Tabla, condicion);
                 DataSet ds = DataBase.ExecuteQuery(cad, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
 
                 this.TxtNombre.Text = ds.Tables[0].Rows[0][PerfilAct.CampoNombre].ToString();

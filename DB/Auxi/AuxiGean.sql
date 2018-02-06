@@ -69,3 +69,11 @@ SELECT  accglmas.Mascod				Codigo
 				LEFT JOIN accglpuc		ON accglPUC.glcod	 = accGLMAS.Mascod
 				LEFT JOIN ordenes       ON ordenes.ordnro    = accGLMAS.MasOT
 		WHERE	accGLMAS.Masdeb>0 
+
+
+
+SELECT * FROM accglUsuarios
+SELECT * FROM ProTipoUsuarios
+
+
+en el perfilador agregarle el esquema 
