@@ -1,4 +1,4 @@
-﻿namespace Adicionales.Views.Helpers
+﻿namespace ImbSoft.Vistas
 {
     partial class FrmLogin
     {

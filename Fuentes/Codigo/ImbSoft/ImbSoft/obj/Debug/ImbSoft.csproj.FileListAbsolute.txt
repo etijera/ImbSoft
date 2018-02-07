@@ -50,8 +50,6 @@ G:\Trabajo\Proyecto imbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe
 G:\Trabajo\Proyecto imbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe
 G:\Trabajo\Proyecto imbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.pdb
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\ImbSoft.exe.config
-D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe
-D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.pdb
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\ImbSoft.exe
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\ImbSoft.pdb
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\Referencias.dll
@@ -69,9 +67,12 @@ D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\Conta
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.Form1.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmGetUsuarios.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmListaUsuarios.resources
+D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmLogin1.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmLogin.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Views.FrmMain.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmMenu.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\BarBerSoft.Vistas.FrmSalir.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.csproj.GenerateResource.Cache
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe.licenses
+D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe
+D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.pdb

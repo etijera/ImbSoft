@@ -39,15 +39,16 @@ namespace ImbSoft
 
 
 
-            //FrmLogin login = new FrmLogin();
-            //if (login.ShowDialog() == DialogResult.OK)
-            //{
+            FrmLogin1 login = new FrmLogin1();
+            if (login.ShowDialog() == DialogResult.OK)
+            {
             FrmMenu principal = new FrmMenu();
 
-                //principal.NomUsuario = login.NomUsuario;
+                principal.Usuario = login.Usuario;
+                principal.Periodo = login.Periodo;
 
                 Application.Run(principal);
-            //}
+            }
 
         }
     }

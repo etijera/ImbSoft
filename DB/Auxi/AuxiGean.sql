@@ -43,37 +43,5 @@ select * from ImbZonas
 
 select * from Bancos
 
-
-
-SELECT glcod Codigo,glnum Nombre,glbal Balance,glter Tercero, glRetTipo  AS TipoRetencion
-FROM accglPUC 
-
-select Det_codigo AS CodigoClasificacion, Det_Puc AS CodigoPuc from Puc_Clasificacion_Det
-
-
-SELECT  accglmas.Mascod				Codigo	
-				,ISNULL(accglpuc.glnum,'')	Cuenta 					
-				,ISNULL(accGLMAS.masdet,'')	Detalle
-				,ISNULL(procencos.ccocod,'')Ccosto	
-				,ISNULL(procencos.cconom,'')DesCcosto
-				,ISNULL(accglTer.ternit,'')	Tercero 
-				,ISNULL(accglTer.ternom,'')	NomTercero 
-				,accglmas.masdeb			Debe 
-				,0							Haber 
-				,accglpuc.glcct				RCcosto
-				,accglmas.MasOT				OT
-				,ordenes.ordnom             DetOT
-		FROM	accGLMAS
-				LEFT JOIN accglter		ON accglTer.tercod   = accGLMAS.Master
-				LEFT JOIN procencos		ON procencos.ccocod	 = accglmas.Mascco
-				LEFT JOIN accglpuc		ON accglPUC.glcod	 = accGLMAS.Mascod
-				LEFT JOIN ordenes       ON ordenes.ordnro    = accGLMAS.MasOT
-		WHERE	accGLMAS.Masdeb>0 
-
-
-
-SELECT * FROM accglUsuarios
-SELECT * FROM ProTipoUsuarios
-
-
-en el perfilador agregarle el esquema 
+select * from ProTipoUsuarios
+select * from accglUsuarios

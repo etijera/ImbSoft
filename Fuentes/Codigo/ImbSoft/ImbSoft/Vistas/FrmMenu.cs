@@ -19,6 +19,7 @@ namespace ImbSoft.Vistas
         #region Propiedades
         public String Database { get; set; }
         public String Usuario { get; set; }
+        public String Periodo { get; set; }
 
         #endregion
 

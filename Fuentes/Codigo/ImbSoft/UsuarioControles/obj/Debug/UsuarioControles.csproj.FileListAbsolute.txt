@@ -89,9 +89,11 @@ D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\De
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.Fecha.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.FormularioBase.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.FormularioBase2.resources
+D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.FrmAñadirEditarPerfiles.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.FrmGetCodeName.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.FrmGetName.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.FrmShowIt.resources
+D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.FrmShowPerfiles.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.LblBase.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.Properties.Resources.resources
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.RangoFecha.resources
@@ -103,5 +105,3 @@ D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\De
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.dll.licenses
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.dll
 D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.pdb
-D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.FrmAñadirEditarPerfiles.resources
-D:\Erick\Proyecto ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.FrmShowPerfiles.resources

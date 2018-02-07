@@ -115,16 +115,17 @@ namespace Referencias
             return "$ " + val.ToString("N");
         }
 
+        //Modificar
         public DataSet ObtenerConfiguracionGeneral(SqlConnection conn)
         {
             return DataBase.ExecuteQuery("PA_ObtenerConfiguracionGeneral", "Data", CommandType.StoredProcedure, null, conn);
         }
 
-        //public DataSet GetTipoUsurios(SqlConnection Conn)
-        //{
-        //    string sql = "SELECT * FROM TipoUsuarios WHERE MarcaBorrado = '1' order by Codigo";
-        //    return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
-        //}        
+        public DataSet GetTipoUsurios(SqlConnection Conn)
+        {
+            string sql = "SELECT * FROM TipoUsuarios WHERE MarcaBorrado = '1' order by Codigo";
+            return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
+        }        
 
         public DataSet GetUsuarios(SqlConnection Conn)
         {
@@ -132,24 +133,24 @@ namespace Referencias
             return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
         }
 
-        public DataSet GetPersonas(SqlConnection Conn)
-        {
-            string sql = "SELECT * FROM Personas WHERE MarcaBorrado = '1'";
-            return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
-        }
+        //public DataSet GetPersonas(SqlConnection Conn)
+        //{
+        //    string sql = "SELECT * FROM Personas WHERE MarcaBorrado = '1'";
+        //    return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
+        //}
 
         public DataSet ValidarUsuario(string user, string pass, SqlConnection Conn)
         {
-            string sql = "SELECT * FROM Usuarios WHERE MarcaBorrado = '1' AND Nombre = @usuario AND Contrasenia = @clave";
+            string sql = "SELECT * FROM Usuarios WHERE MarcaBorrado = '1' AND usuario = @usuario AND Clave = @clave";
             SqlParameter[] parameters = { new SqlParameter("@usuario", user), new SqlParameter("@clave", pass) };
             return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, parameters, Conn);
         }
 
-        public DataSet GetMenu(SqlConnection Conn)
-        {
-            string sql = "SELECT * FROM accglmenu ORDER BY Codigo";
-            return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
-        }
+        //public DataSet GetMenu(SqlConnection Conn)
+        //{
+        //    string sql = "SELECT * FROM accglmenu ORDER BY Codigo";
+        //    return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);
+        //}
 
         public DataSet GetTables(SqlConnection Conn)
         {

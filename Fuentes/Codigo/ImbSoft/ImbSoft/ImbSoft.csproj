@@ -99,11 +99,17 @@
     <Compile Include="Vistas\FrmListaUsuarios.Designer.cs">
       <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmLogin.cs">
+    <Compile Include="Vistas\FrmLogin1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <Compile Include="Vistas\FrmLogin1.Designer.cs">
+      <DependentUpon>FrmLogin1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmLogin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmLogin2.Designer.cs">
+      <DependentUpon>FrmLogin2.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\FrmMain.cs">
       <SubType>Form</SubType>
@@ -154,8 +160,11 @@
     <EmbeddedResource Include="Vistas\FrmListaUsuarios.resx">
       <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\FrmLogin1.resx">
+      <DependentUpon>FrmLogin1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmLogin2.resx">
+      <DependentUpon>FrmLogin2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -177,7 +186,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reportes\" />

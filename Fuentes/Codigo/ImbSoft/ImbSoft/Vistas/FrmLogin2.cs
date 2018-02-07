@@ -10,7 +10,7 @@ using Referencias.Properties;
 using DevExpress.XtraEditors;
 using UsuarioControles;
 
-namespace Adicionales.Views.Helpers
+namespace ImbSoft.Vistas
 {
     public partial class FrmLogin : FormularioBase
     {
