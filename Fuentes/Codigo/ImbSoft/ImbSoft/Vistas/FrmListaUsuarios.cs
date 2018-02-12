@@ -48,9 +48,9 @@ namespace ImbSoft.Vistas
             try
             {
 
-                DataSet ds = CtrlUsuarios.GetUsuarioAll();
+                DataTable dt = CtrlUsuarios.GetUsuarioAll();
 
-                dtConsulta = ds.Tables[0].Copy();
+                dtConsulta = dt.Copy();
                 dsConsulta.Tables.Clear();
                 if (dsConsulta.Tables.Count == 0)
                 {

@@ -11,18 +11,25 @@ namespace ImbSoft.Clases
         public int Id { get; set; }
         public string Codigo { get; set; }
         public string Nombre { get; set; }
-        public string Contrasenia { get; set; }
+        public string Usuario { get; set; }
+        public string Clave { get; set; }
+
+        public TipoUsuario TipoUsuario { get; set; }
 
         public Usuario() 
         {
+            TipoUsuario = new TipoUsuario();
         }
 
-        public Usuario(int id, string codigo, string nombre, string contrasenia) 
+        public Usuario(int id, string codigo, string nombre, string usuario, string clave, TipoUsuario tipoUsuario) 
         {
             Id = id;
             Codigo = codigo;
             Nombre = nombre;
-            Contrasenia = contrasenia;
+            Usuario = usuario;
+            Clave = clave;
+            TipoUsuario = tipoUsuario;
+
         }
     }
 }

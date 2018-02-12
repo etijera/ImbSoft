@@ -124,7 +124,40 @@ namespace ImbSoft.Vistas
             CbxMes.Enabled = true;            
         }
 
+        private void CbxAño_Enter(object sender, EventArgs e)
+        {
+            CbxAño.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+        }
+
+        private void CbxAño_Leave(object sender, EventArgs e)
+        {
+            CbxAño.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+        }
+
+        private void CbxMes_Enter(object sender, EventArgs e)
+        {
+            CbxMes.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+        }
+
+        private void CbxMes_Leave(object sender, EventArgs e)
+        {
+            CbxMes.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+        }
+
+        private void LueUsuario_Enter(object sender, EventArgs e)
+        {
+            LueUsuario.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+        }
+
+        private void LueUsuario_Leave(object sender, EventArgs e)
+        {
+            LueUsuario.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+        }
+
         #endregion
+
+
+
 
 
     }

@@ -10,33 +10,33 @@ using Referencias;
 
 namespace ImbSoft.Controladores
 {
-    class CtrlUsuarios
+    class CtrlTipoUsuarios
     {
-        public static Int32 InsertarBasico(Usuario usuario)
+        public static Int32 InsertarBasico(TipoUsuario tipoUsuario)
         {
             SqlParameter[] dbParametros = new SqlParameter[]
             {
                 DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"INSERTBASICO"),
-                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,usuario.Nombre),
-                DBHelper.MakeParam("@Contrasenia",SqlDbType.VarChar,0,usuario.Clave)
+                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,tipoUsuario.Nombre),
+                DBHelper.MakeParam("@Contrasenia",SqlDbType.VarChar,0,tipoUsuario.Clave)//por aqui
             };
 
             return Convert.ToInt32(DBHelper.ExecuteScalar("PA_Usuarios", dbParametros));
         }
    
-        public static Int32 Actualizar(Usuario usuario)
+        public static Int32 Actualizar(TipoUsuario tipoUsuario)
         {
             SqlParameter[] dbParametros = new SqlParameter[]
             {
                 DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"UPDATE"),
-                DBHelper.MakeParam("@Id",SqlDbType.Int,0,usuario.Id), 
-                DBHelper.MakeParam("@Contrasenia",SqlDbType.VarChar,0,usuario.Clave)
+                DBHelper.MakeParam("@Id",SqlDbType.Int,0,tipoUsuario.Id), 
+                DBHelper.MakeParam("@Contrasenia",SqlDbType.VarChar,0,tipoUsuario.Clave)
             };
 
             return Convert.ToInt32(DBHelper.ExecuteScalar("PA_Usuarios", dbParametros));
         }
 
-        public static DataSet GetUsuarioOne(Usuario usuario)
+        public static DataSet GetUsuarioOne(TipoUsuario tipoUsuario)
         {
             SqlParameter[] dbParametros = new SqlParameter[]
             {
@@ -47,7 +47,7 @@ namespace ImbSoft.Controladores
             return DBHelper.ExecuteDataSet("PA_Usuarios", dbParametros);
         }
 
-        public static DataSet GetUsuarioName(Usuario usuario)
+        public static DataSet GetUsuarioName(TipoUsuario tipoUsuario)
         {
             SqlParameter[] dbParametros = new SqlParameter[]
             {
@@ -71,7 +71,7 @@ namespace ImbSoft.Controladores
             return dtPermisos;
         }
 
-        public static Int32 Eliminar(Usuario usuario)
+        public static Int32 Eliminar(TipoUsuario tipoUsuario)
         {
             SqlParameter[] dbParametros = new SqlParameter[]
             {

@@ -156,10 +156,10 @@ namespace UsuarioControles
 
         private void FrmGetName_Load(object sender, EventArgs e)
         {
-            this.Text = "Añadir " + PerfilAct.Titulo;
+            cabeceraForm1.NombreCabecera = "Añadir " + PerfilAct.Titulo;
             if (Modo == "E")
             {
-                this.Text = "Editar " + PerfilAct.Titulo;
+                cabeceraForm1.NombreCabecera = "Editar " + PerfilAct.Titulo;
 
                 string camp = "";
                 camp = camp.Vector2Cadena(",", PerfilAct.Campos);
@@ -174,10 +174,14 @@ namespace UsuarioControles
             }
             else
             {
-                String cad = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoCodigo);
-                DataSet ds = DataBase.ExecuteQuery(cad, "tamaño", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
-                this.TxtCod.Properties.MaxLength = Convert.ToInt32(ds.Tables[0].Rows[0][0].ToString());
+                String sSql = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoCodigo);
+                DataSet ds = DataBase.ExecuteQuery(sSql, "tamaño", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
+                this.TxtCod.MaxLenght = Convert.ToInt32(ds.Tables[0].Rows[0][0].ToString());
             }
+
+            String sSql2 = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoNombre);
+            DataSet ds1 = DataBase.ExecuteQuery(sSql2, "tamaño", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
+            this.TxtNombre.MaxLenght = Convert.ToInt32(ds1.Tables[0].Rows[0][0].ToString());
         }
 
         private void TxtCod_Validating(object sender, CancelEventArgs e)
@@ -202,7 +206,7 @@ namespace UsuarioControles
                         String cod = TxtCod.Text;
                         if (!String.IsNullOrEmpty(cod))
                         {
-                            string codigo = Funciones.getInstancia().RellenarCadenaPorLaIzquierda(cod, '0', TxtCod.Properties.MaxLength);
+                            string codigo = Funciones.getInstancia().RellenarCadenaPorLaIzquierda(cod, '0', TxtCod.MaxLenght);
                             TxtCod.Text = codigo;
                         }
                     }

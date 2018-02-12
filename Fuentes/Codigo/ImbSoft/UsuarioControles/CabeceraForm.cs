@@ -30,6 +30,54 @@ namespace UsuarioControles
             }
         }
 
+        public bool VerBMinimiar
+        {
+            get
+            {
+                return LnkLblMinimizar.Visible;
+            }
+            set
+            {
+                LnkLblMinimizar.Visible = value;
+            }
+        }
+
+        public bool VerBCerrar
+        {
+            get
+            {
+                return LnkLblCerrar.Visible;
+            }
+            set
+            {
+                LnkLblCerrar.Visible = value;
+            }
+        }
+
+        public bool HabilitarBCerrar
+        {
+            get
+            {
+                return LnkLblCerrar.Enabled;
+            }
+            set
+            {
+                LnkLblCerrar.Enabled = value;
+            }
+        }
+
+        public bool HabilitarBMinimiar
+        {
+            get
+            {
+                return LnkLblMinimizar.Enabled;
+            }
+            set
+            {
+                LnkLblMinimizar.Enabled = value;
+            }
+        }
+
         #endregion
 
         #region Variables
@@ -38,7 +86,6 @@ namespace UsuarioControles
         Boolean mouseAction;
 
         #endregion
-
 
         #region Metodos
 

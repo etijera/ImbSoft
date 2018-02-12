@@ -45,12 +45,16 @@
             this.TxtTex.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.TxtTex.Properties.Appearance.Options.UseBackColor = true;
             this.TxtTex.Properties.Appearance.Options.UseForeColor = true;
+            this.TxtTex.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Teal;
+            this.TxtTex.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this.TxtTex.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtTex.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
             this.TxtTex.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.TxtTex.Properties.MaxLength = 50;
             this.TxtTex.Size = new System.Drawing.Size(166, 20);
             this.TxtTex.TabIndex = 2;
+            this.TxtTex.Enter += new System.EventHandler(this.TxtTex_Enter);
+            this.TxtTex.Leave += new System.EventHandler(this.TxtTex_Leave);
             // 
             // TxtBase
             // 

@@ -40,6 +40,30 @@ namespace UsuarioControles
             }
         }
 
+        public char CaraterPassword
+        {
+            get
+            {
+                return TxtTex.Properties.PasswordChar;
+            }
+            set
+            {
+                TxtTex.Properties.PasswordChar = value;
+            }
+        }
+
+        public string Texto
+        {
+            get
+            {
+                return TxtTex.Text;
+            }
+            set
+            {
+                TxtTex.Text = value;
+            }
+        }
+
         public bool SoloLectura
         {
             get
@@ -157,6 +181,23 @@ namespace UsuarioControles
              
             }
         }
+
+        #endregion
+
+        #region Eventos
+        private void TxtTex_Enter(object sender, EventArgs e)
+        {
+            TxtTex.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+        }
+
+
+        private void TxtTex_Leave(object sender, EventArgs e)
+        {
+            TxtTex.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+        }
+
+
+
 
         #endregion
     }

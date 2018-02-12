@@ -14,7 +14,7 @@ using ImbSoft.Controladores;
 
 namespace ImbSoft.Vistas
 {
-    public partial class FrmGetUsuarios : FormularioBase
+    public partial class FrmGetTipoUsuarios : FormularioBase
     {
         #region Propiedades
 
@@ -34,7 +34,7 @@ namespace ImbSoft.Vistas
         #endregion
 
         #region Metodos
-        public FrmGetUsuarios()
+        public FrmGetTipoUsuarios()
         {
             InitializeComponent();
         }
@@ -43,50 +43,34 @@ namespace ImbSoft.Vistas
         {
             bool retorno = true;
           
-
-            if (string.IsNullOrEmpty((TxtUsuario.Text)))
+            if (string.IsNullOrEmpty((TxtNombre.Texto)))
             {
-                errorP1.SetError(TxtUsuario, "Debe ingresar el usuario.");
-                TxtUsuario.Focus();
+                errorP1.SetError(TxtNombre, "Debe ingresar el nombre.");
+                TxtNombre.Focus();
                 retorno = false;
             }
             else
             {
-                errorP1.SetError(TxtUsuario, "");
-            }
+                errorP1.SetError(TxtNombre, "");
+            } 
 
-            if (string.IsNullOrEmpty((TxtPass1.Text)))
+            if (!string.IsNullOrEmpty((TxtNombre.Texto)))
             {
-                errorP1.SetError(TxtPass1, "Debe ingresar la contraseña.");
-                TxtPass1.Focus();
-                retorno = false;
-            }
-            else
-            {
-                errorP1.SetError(TxtPass1, "");
-            }
-
-            if (string.IsNullOrEmpty((TxtPass2.Text)))
-            {
-                errorP1.SetError(TxtPass2, "Debe confirmar la contraseña.");
-                TxtPass2.Focus();
-                retorno = false;
-            }
-            else
-            {
-                errorP1.SetError(TxtPass2, "");
-
-                if (TxtPass1.Text != TxtPass2.Text)
+                if (TxtNombre.Texto.Trim().IndexOf(" ") > 0)
                 {
-                    errorP1.SetError(TxtPass2, "Las contraseñas no coinciden.");
-                    TxtPass2.Focus();
+                    errorP1.SetError(TxtNombre, "El nombre no debe tener espacio.");
+                    TxtNombre.Focus();
                     retorno = false;
                 }
                 else
                 {
-                    errorP1.SetError(TxtPass2, "");
-                }
+                    errorP1.SetError(TxtNombre, "");
+                }                
             }
+            else
+            {
+                errorP1.SetError(TxtNombre, "");
+            }           
 
             return retorno;
         }
@@ -94,9 +78,7 @@ namespace ImbSoft.Vistas
         public void Accept() 
         {
             if (Modo != "E") 
-            {
-              
- 
+            {               
                 if (Validar())
                 {
                     if (ConsultarUsuario())
@@ -106,9 +88,7 @@ namespace ImbSoft.Vistas
 
                         DialogResult = DialogResult.OK;
                     }
-                }
-                
-                
+                }                                
             }
             else
             {
@@ -137,19 +117,19 @@ namespace ImbSoft.Vistas
             if (Modo != "E")
             {
                 Usuario us = new Usuario();
-                us.Nombre = TxtUsuario.Text.Trim();
+                us.Nombre = TxtNombre.Texto.Trim();
                 DataSet ds = CtrlUsuarios.GetUsuarioName(us);                   
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     user = ds.Tables[0].Rows[0]["Nombre"].ToString();
                 }
 
-                if (TxtUsuario.Text == user)
+                if (TxtNombre.Texto == user)
                 {
 
                     retorno = false;
                     XtraMessageBox.Show("El nombre de usuario ya existe.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                    TxtUsuario.Focus();
+                    TxtNombre.Focus();
 
                 }
             }
@@ -159,9 +139,13 @@ namespace ImbSoft.Vistas
 
         private void LimpiarVentana()
         {
-            TxtUsuario.Text = "";
-            TxtPass1.Text = "";
-            TxtPass2.Text = "";
+            TxtNombre.Texto = "";
+            ChkAñadir.Checked = false;
+            ChkEliminar.Checked = false;
+            ChkEditar.Checked = false;
+            ChkGuardar.Checked = false;
+            ChkImprimir.Checked = false;
+            ChkExportar.Checked = false;
         }
 
         private void CargarDatos(int id)
@@ -171,7 +155,7 @@ namespace ImbSoft.Vistas
             DataSet ds = CtrlUsuarios.GetUsuarioOne(us);
             DataRow dr = ds.Tables[0].Rows[0];
             
-            TxtUsuario.Text = dr["Nombre"].ToString();
+            TxtNombre.Texto = dr["Nombre"].ToString();
             TxtPass1.Text = dr["Contrasenia"].ToString();
             TxtPass2.Text = dr["Contrasenia"].ToString();
 
@@ -198,7 +182,7 @@ namespace ImbSoft.Vistas
                 Usuario usuario = new Usuario();
                
                 
-                usuario.Nombre = TxtUsuario.Text.Trim();
+                usuario.Nombre = TxtNombre.Texto.Trim();
                 usuario.Clave = TxtPass2.Text.Trim();
 
                 if (CtrlUsuarios.InsertarBasico(usuario) > 0)
@@ -211,7 +195,7 @@ namespace ImbSoft.Vistas
                 Usuario usuario = new Usuario();
                
                 usuario.Id = Id;
-                usuario.Nombre = TxtUsuario.Text.Trim();
+                usuario.Nombre = TxtNombre.Texto.Trim();
                 usuario.Clave = TxtPass2.Text.Trim();
 
                 if (CtrlUsuarios.Actualizar(usuario) > 0)
@@ -241,39 +225,39 @@ namespace ImbSoft.Vistas
             //    return;
             //}
            
-            TxtUsuario.Focus();
+            TxtNombre.Focus();
             if (Modo == "E" && Id > 0) 
             {
                 CargarDatos(Id);
-                TxtUsuario.Enabled = false;              
+                TxtNombre.Enabled = false;              
             }
            
         }
 
-        private void TxtUsuario_Validating(object sender, CancelEventArgs e)
+        private void TxtNombre_Validating(object sender, CancelEventArgs e)
         {
-            if (TxtUsuario.Text.Trim().Length > 0) 
+            if (TxtNombre.Texto.Trim().Length > 0) 
             { 
-                if (TxtUsuario.Text.Trim().Contains(" "))
+                if (TxtNombre.Texto.Trim().Contains(" "))
                 {                   
-                    errorP1.SetError(TxtUsuario, "El usuario no debe contener espcios en blanco.");
-                    TxtUsuario.Focus();
+                    errorP1.SetError(TxtNombre, "El usuario no debe contener espcios en blanco.");
+                    TxtNombre.Focus();
                 }
                 else
                 {
-                    errorP1.SetError(TxtUsuario, "");
+                    errorP1.SetError(TxtNombre, "");
                 }
             }
             else
             {
-                if (string.IsNullOrEmpty((TxtUsuario.Text))) 
+                if (string.IsNullOrEmpty((TxtNombre.Texto))) 
                 {
-                    errorP1.SetError(TxtUsuario, "Debe ingresar el usuario.");
-                    TxtUsuario.Focus();
+                    errorP1.SetError(TxtNombre, "Debe ingresar el usuario.");
+                    TxtNombre.Focus();
                 }
                 else
                 {
-                    errorP1.SetError(TxtUsuario, "");
+                    errorP1.SetError(TxtNombre, "");
                 }
             }
         }

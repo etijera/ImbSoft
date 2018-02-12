@@ -9,7 +9,7 @@ using DevExpress.XtraEditors;
 using UsuarioControles;
 using Referencias.Properties;
 
-namespace BarBerSoft.Vistas
+namespace ImbSoft.Vistas
 {
     public partial class FrmSalir : FormularioBase
     {

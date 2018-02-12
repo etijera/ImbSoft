@@ -1,4 +1,4 @@
-﻿namespace BarBerSoft.Vistas
+﻿namespace ImbSoft.Vistas
 {
     partial class FrmSalir
     {

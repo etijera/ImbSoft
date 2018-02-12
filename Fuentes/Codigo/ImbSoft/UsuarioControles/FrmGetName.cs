@@ -63,7 +63,7 @@ namespace UsuarioControles
                         ConexionDB.getInstancia().Conexion(Database, null),PerfilAct.CampoCodigo);
 
                         string camp = "";
-                        //camp = camp.Vector2Cadena(",", PerfilAct.Campos);
+                        
                         camp = PerfilAct.CampoCodigo + "," + PerfilAct.CampoNombre;
                         var sql = string.Format("INSERT INTO {0} ({1}) VALUES ({2})", PerfilAct.Tabla,
                         camp, String.Format("'{0}', '{1}'", code, TxtNombre.Text));
@@ -123,77 +123,16 @@ namespace UsuarioControles
             }
         }
 
-        //public void Accept()
-        //{
-        //    try
-        //    {
-        //        if (Modo.Equals("N"))
-        //        {
-        //            string code = Funciones.getInstancia().GetNextCode(PerfilAct.Tabla, PerfilAct.Llave, 
-        //                           ConexionDB.getInstancia().Conexion(Database, null));
-
-        //            string camp = "";
-        //            camp = camp.Vector2Cadena(",", PerfilAct.Campos);
-
-        //            String sql = String.Format("INSERT INTO {0} ({1}) VALUES ({2})", PerfilAct.Tabla, 
-        //                camp, "'" + code + "', " + "'" + TxtNombre.Text + "'");
-
-        //            bool IsDone = DataBase.ExecuteNonQuery(sql, CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
-
-        //            if (IsDone)
-        //            {
-        //                string cons = String.Format("SELECT {0} FROM {1} WHERE MarcaBorrado = 1 AND {2} = '{3}'", PerfilAct.Llave,
-        //                                PerfilAct.Tabla, PerfilAct.CampoCodigo, code);
-
-        //                DataSet ds = DataBase.ExecuteQuery(cons, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
-
-        //                ID = ds.Tables[0].Rows[0][PerfilAct.Llave].ToString();
-        //                AlertInfo info = new AlertInfo(Resources.SystemMessage, String.Format(Resources.SaveSuccess, TxtNombre.Text), Resources.Check);
-        //                alertControl1.Show(this, info);
-        //                this.TxtNombre.Text = String.Empty;
-        //                this.TxtNombre.Focus();
-        //                if (!DesdeMenu)
-        //                    DialogResult = DialogResult.OK;
-        //                else 
-        //                {
-        //                    agrego = true;
-        //                    this.TxtNombre.Text = String.Empty;
-        //                }
-        //            }
-        //        }
-        //        else
-        //        {                    
-        //            String sql = String.Format("UPDATE {0} SET {1} = '{2}' WHERE {3} = '{4}'", PerfilAct.Tabla,
-        //                PerfilAct.CampoNombre, TxtNombre.Text,PerfilAct.Llave, ID);
-
-        //            bool IsDone = DataBase.ExecuteNonQuery(sql, CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
-
-        //            if (IsDone)
-        //            {
-        //                AlertInfo info = new AlertInfo(Resources.SystemMessage, String.Format(Resources.SaveSuccess, TxtNombre.Text), Resources.Check);
-        //                alertControl1.Show(this, info);
-        //                this.TxtNombre.Text = String.Empty;
-        //                this.TxtNombre.Focus();
-        //                DialogResult = DialogResult.OK;
-        //            }
-        //        }
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        XtraMessageBox.Show(ex.Message, Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);
-        //        return;
-        //    }
-        //}
-
         #endregion
 
         #region Eventos
         private void FrmGetName_Load(object sender, EventArgs e)
         {
+            cabeceraForm1.NombreCabecera = "Añadir " + PerfilAct.Titulo;
+
             if (Modo == "E")
             {
-                this.Text = "Editando";
+                cabeceraForm1.NombreCabecera = "Editando - " + this.Text;               
                 string camp = "";
                 camp = camp.Vector2Cadena(",", PerfilAct.Campos);
                 string condicion = String.Format(" AND {0} = '{1}'", PerfilAct.Llave, ID);
@@ -202,6 +141,10 @@ namespace UsuarioControles
 
                 this.TxtNombre.Text = ds.Tables[0].Rows[0][PerfilAct.CampoNombre].ToString();
             }
+
+            String sSql2 = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoNombre);
+            DataSet ds1 = DataBase.ExecuteQuery(sSql2, "tamaño", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
+            this.TxtNombre.MaxLenght = Convert.ToInt32(ds1.Tables[0].Rows[0][0].ToString());
         }
 
         private void FrmGetName_FormClosing(object sender, FormClosingEventArgs e)

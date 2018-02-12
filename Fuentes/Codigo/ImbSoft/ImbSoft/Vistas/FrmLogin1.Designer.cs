@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin1));
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.TxtPassword = new DevExpress.XtraEditors.TextEdit();
             this.LnkLblMinimizar = new System.Windows.Forms.LinkLabel();
             this.LnkLblCerrar = new System.Windows.Forms.LinkLabel();
             this.BtnAjustes = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.TxtPassword = new UsuarioControles.TxtBase();
             this.lblBase3 = new UsuarioControles.LblBase();
             this.lblBase2 = new UsuarioControles.LblBase();
             this.lblBase1 = new UsuarioControles.LblBase();
@@ -42,7 +42,6 @@
             this.CbxAño = new DevExpress.XtraEditors.ComboBoxEdit();
             this.LueUsuario = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CbxMes.Properties)).BeginInit();
@@ -56,7 +55,7 @@
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(262, 58);
+            this.simpleButton1.Location = new System.Drawing.Point(262, 50);
             this.simpleButton1.LookAndFeel.SkinName = "Office 2010 Blue";
             this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.simpleButton1.Name = "simpleButton1";
@@ -64,26 +63,6 @@
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.ToolTip = "Entrar";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // TxtPassword
-            // 
-            this.TxtPassword.EnterMoveNextControl = true;
-            this.TxtPassword.Location = new System.Drawing.Point(93, 62);
-            this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(250)))));
-            this.TxtPassword.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.TxtPassword.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
-            this.TxtPassword.Properties.Appearance.Options.UseBackColor = true;
-            this.TxtPassword.Properties.Appearance.Options.UseFont = true;
-            this.TxtPassword.Properties.Appearance.Options.UseForeColor = true;
-            this.TxtPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.TxtPassword.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtPassword.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
-            this.TxtPassword.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TxtPassword.Properties.MaxLength = 20;
-            this.TxtPassword.Properties.UseSystemPasswordChar = true;
-            this.TxtPassword.Size = new System.Drawing.Size(160, 20);
-            this.TxtPassword.TabIndex = 3;
             // 
             // LnkLblMinimizar
             // 
@@ -97,7 +76,7 @@
             this.LnkLblMinimizar.Location = new System.Drawing.Point(312, 12);
             this.LnkLblMinimizar.Name = "LnkLblMinimizar";
             this.LnkLblMinimizar.Size = new System.Drawing.Size(18, 18);
-            this.LnkLblMinimizar.TabIndex = 10;
+            this.LnkLblMinimizar.TabIndex = 2;
             this.LnkLblMinimizar.TabStop = true;
             this.LnkLblMinimizar.Text = "_";
             this.LnkLblMinimizar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -116,7 +95,7 @@
             this.LnkLblCerrar.Location = new System.Drawing.Point(332, 12);
             this.LnkLblCerrar.Name = "LnkLblCerrar";
             this.LnkLblCerrar.Size = new System.Drawing.Size(18, 18);
-            this.LnkLblCerrar.TabIndex = 11;
+            this.LnkLblCerrar.TabIndex = 3;
             this.LnkLblCerrar.TabStop = true;
             this.LnkLblCerrar.Text = "X";
             this.LnkLblCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,12 +115,13 @@
             this.BtnAjustes.LookAndFeel.UseWindowsXPTheme = true;
             this.BtnAjustes.Name = "BtnAjustes";
             this.BtnAjustes.Size = new System.Drawing.Size(18, 18);
-            this.BtnAjustes.TabIndex = 18;
+            this.BtnAjustes.TabIndex = 1;
             this.BtnAjustes.ToolTip = "Ajustes de conexión";
             this.BtnAjustes.Click += new System.EventHandler(this.BtnAjustes_Click);
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.TxtPassword);
             this.groupControl1.Controls.Add(this.lblBase3);
             this.groupControl1.Controls.Add(this.lblBase2);
             this.groupControl1.Controls.Add(this.lblBase1);
@@ -149,13 +129,28 @@
             this.groupControl1.Controls.Add(this.CbxAño);
             this.groupControl1.Controls.Add(this.LueUsuario);
             this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.TxtPassword);
-            this.groupControl1.Location = new System.Drawing.Point(22, 134);
+            this.groupControl1.Location = new System.Drawing.Point(16, 113);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(325, 143);
-            this.groupControl1.TabIndex = 19;
+            this.groupControl1.Size = new System.Drawing.Size(332, 167);
+            this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // TxtPassword
+            // 
+            this.TxtPassword.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Default;
+            this.TxtPassword.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.TxtPassword.Appearance.Options.UseBackColor = true;
+            this.TxtPassword.CaraterPassword = '\0';
+            this.TxtPassword.Location = new System.Drawing.Point(90, 60);
+            this.TxtPassword.MaxLenght = 50;
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Size = new System.Drawing.Size(167, 26);
+            this.TxtPassword.SoloLectura = false;
+            this.TxtPassword.TabIndex = 1;
+            this.TxtPassword.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPassword.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
+            this.TxtPassword.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
             // 
             // lblBase3
             // 
@@ -165,7 +160,7 @@
             this.lblBase3.Location = new System.Drawing.Point(16, 100);
             this.lblBase3.Name = "lblBase3";
             this.lblBase3.Size = new System.Drawing.Size(74, 13);
-            this.lblBase3.TabIndex = 10;
+            this.lblBase3.TabIndex = 7;
             this.lblBase3.Texto = "Periodo";
             // 
             // lblBase2
@@ -173,10 +168,10 @@
             this.lblBase2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.lblBase2.Appearance.Options.UseBackColor = true;
             this.lblBase2.AutoSize = true;
-            this.lblBase2.Location = new System.Drawing.Point(16, 64);
+            this.lblBase2.Location = new System.Drawing.Point(16, 68);
             this.lblBase2.Name = "lblBase2";
             this.lblBase2.Size = new System.Drawing.Size(74, 13);
-            this.lblBase2.TabIndex = 9;
+            this.lblBase2.TabIndex = 6;
             this.lblBase2.Texto = "Contraseña";
             // 
             // lblBase1
@@ -187,7 +182,7 @@
             this.lblBase1.Location = new System.Drawing.Point(16, 33);
             this.lblBase1.Name = "lblBase1";
             this.lblBase1.Size = new System.Drawing.Size(53, 13);
-            this.lblBase1.TabIndex = 8;
+            this.lblBase1.TabIndex = 5;
             this.lblBase1.Texto = "Usuario";
             // 
             // CbxMes
@@ -196,21 +191,25 @@
             this.CbxMes.EnterMoveNextControl = true;
             this.CbxMes.Location = new System.Drawing.Point(185, 97);
             this.CbxMes.Name = "CbxMes";
+            this.CbxMes.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.CbxMes.Properties.Appearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
-            this.CbxMes.Properties.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
+            this.CbxMes.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.CbxMes.Properties.Appearance.Options.UseBackColor = true;
             this.CbxMes.Properties.Appearance.Options.UseBorderColor = true;
             this.CbxMes.Properties.Appearance.Options.UseForeColor = true;
-            this.CbxMes.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.DarkSeaGreen;
-            this.CbxMes.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.DarkGreen;
-            this.CbxMes.Properties.AppearanceDisabled.Options.UseBorderColor = true;
-            this.CbxMes.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.CbxMes.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Teal;
+            this.CbxMes.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this.CbxMes.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.CbxMes.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CbxMes.Properties.CaseSensitiveSearch = true;
             this.CbxMes.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CbxMes.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.CbxMes.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.CbxMes.Size = new System.Drawing.Size(68, 20);
-            this.CbxMes.TabIndex = 7;
+            this.CbxMes.TabIndex = 3;
+            this.CbxMes.Enter += new System.EventHandler(this.CbxMes_Enter);
+            this.CbxMes.Leave += new System.EventHandler(this.CbxMes_Leave);
             // 
             // CbxAño
             // 
@@ -219,44 +218,53 @@
             this.CbxAño.EnterMoveNextControl = true;
             this.CbxAño.Location = new System.Drawing.Point(93, 97);
             this.CbxAño.Name = "CbxAño";
+            this.CbxAño.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.CbxAño.Properties.Appearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
-            this.CbxAño.Properties.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
+            this.CbxAño.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.CbxAño.Properties.Appearance.Options.UseBackColor = true;
             this.CbxAño.Properties.Appearance.Options.UseBorderColor = true;
             this.CbxAño.Properties.Appearance.Options.UseForeColor = true;
-            this.CbxAño.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.DarkSeaGreen;
-            this.CbxAño.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.DarkGreen;
-            this.CbxAño.Properties.AppearanceDisabled.Options.UseBorderColor = true;
-            this.CbxAño.Properties.AppearanceDisabled.Options.UseForeColor = true;
-            this.CbxAño.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.CbxAño.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Teal;
+            this.CbxAño.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this.CbxAño.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CbxAño.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.CbxAño.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.CbxAño.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CbxAño.Size = new System.Drawing.Size(86, 20);
-            this.CbxAño.TabIndex = 6;
+            this.CbxAño.TabIndex = 2;
+            this.CbxAño.Enter += new System.EventHandler(this.CbxAño_Enter);
+            this.CbxAño.Leave += new System.EventHandler(this.CbxAño_Leave);
             // 
             // LueUsuario
             // 
             this.LueUsuario.EnterMoveNextControl = true;
             this.LueUsuario.Location = new System.Drawing.Point(93, 30);
             this.LueUsuario.Name = "LueUsuario";
-            this.LueUsuario.Properties.Appearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
-            this.LueUsuario.Properties.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
-            this.LueUsuario.Properties.Appearance.Options.UseBorderColor = true;
+            this.LueUsuario.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.LueUsuario.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.LueUsuario.Properties.Appearance.Options.UseBackColor = true;
             this.LueUsuario.Properties.Appearance.Options.UseForeColor = true;
             this.LueUsuario.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.DarkSeaGreen;
             this.LueUsuario.Properties.AppearanceDisabled.ForeColor = System.Drawing.Color.DarkGreen;
             this.LueUsuario.Properties.AppearanceDisabled.Options.UseBorderColor = true;
             this.LueUsuario.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.LueUsuario.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Teal;
+            this.LueUsuario.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this.LueUsuario.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LueUsuario.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.LueUsuario.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.LueUsuario.Properties.ShowHeader = false;
             this.LueUsuario.Size = new System.Drawing.Size(160, 20);
-            this.LueUsuario.TabIndex = 5;
+            this.LueUsuario.TabIndex = 0;
             this.LueUsuario.EditValueChanged += new System.EventHandler(this.LueUsuario_EditValueChanged);
+            this.LueUsuario.Enter += new System.EventHandler(this.LueUsuario_Enter);
+            this.LueUsuario.Leave += new System.EventHandler(this.LueUsuario_Leave);
             // 
             // FrmLogin1
             // 
-            this.Appearance.BackColor = System.Drawing.Color.SeaGreen;
+            this.Appearance.BackColor = System.Drawing.Color.Teal;
             this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
             this.Appearance.BorderColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;
@@ -273,7 +281,6 @@
             this.TransparencyKey = System.Drawing.Color.Maroon;
             this.Load += new System.EventHandler(this.FrmLogin1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -289,7 +296,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.LinkLabel LnkLblMinimizar;
         private System.Windows.Forms.LinkLabel LnkLblCerrar;
-        private DevExpress.XtraEditors.TextEdit TxtPassword;
         private DevExpress.XtraEditors.SimpleButton BtnAjustes;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LookUpEdit LueUsuario;
@@ -298,5 +304,6 @@
         private DevExpress.XtraScheduler.UI.MonthEdit CbxMes;
         private DevExpress.XtraEditors.ComboBoxEdit CbxAño;
         private UsuarioControles.LblBase lblBase3;
+        private UsuarioControles.TxtBase TxtPassword;
     }
 }

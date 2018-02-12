@@ -29,50 +29,29 @@
         private void InitializeComponent()
         {
             this.GbxDatos = new DevExpress.XtraEditors.GroupControl();
-            this.TxtCod = new DevExpress.XtraEditors.TextEdit();
-            this.LblCodigo = new DevExpress.XtraEditors.LabelControl();
             this.acceptCancel1 = new UsuarioControles.AcceptCancel();
-            this.TxtNombre = new DevExpress.XtraEditors.TextEdit();
-            this.LblNombre = new DevExpress.XtraEditors.LabelControl();
+            this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtNombre = new UsuarioControles.TxtBase();
+            this.LblNombre = new UsuarioControles.LblBase();
+            this.TxtCod = new UsuarioControles.TxtBase();
+            this.LblCodigo = new UsuarioControles.LblBase();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GbxDatos)).BeginInit();
             this.GbxDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtCod.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtNombre.Properties)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GbxDatos
             // 
-            this.GbxDatos.Controls.Add(this.TxtCod);
-            this.GbxDatos.Controls.Add(this.LblCodigo);
+            this.GbxDatos.Controls.Add(this.panel1);
             this.GbxDatos.Controls.Add(this.acceptCancel1);
-            this.GbxDatos.Controls.Add(this.TxtNombre);
-            this.GbxDatos.Controls.Add(this.LblNombre);
-            this.GbxDatos.Location = new System.Drawing.Point(12, 9);
+            this.GbxDatos.Location = new System.Drawing.Point(2, 29);
             this.GbxDatos.Name = "GbxDatos";
             this.GbxDatos.ShowCaption = false;
-            this.GbxDatos.Size = new System.Drawing.Size(448, 99);
+            this.GbxDatos.Size = new System.Drawing.Size(469, 183);
             this.GbxDatos.TabIndex = 1;
             this.GbxDatos.Text = "groupControl1";
-            // 
-            // TxtCod
-            // 
-            this.TxtCod.EnterMoveNextControl = true;
-            this.TxtCod.Location = new System.Drawing.Point(52, 6);
-            this.TxtCod.Name = "TxtCod";
-            this.TxtCod.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.TxtCod.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtCod.Properties.Mask.EditMask = "\\d+";
-            this.TxtCod.Size = new System.Drawing.Size(89, 18);
-            this.TxtCod.TabIndex = 0;
-            this.TxtCod.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCod_Validating);
-            // 
-            // LblCodigo
-            // 
-            this.LblCodigo.Location = new System.Drawing.Point(9, 10);
-            this.LblCodigo.Name = "LblCodigo";
-            this.LblCodigo.Size = new System.Drawing.Size(37, 13);
-            this.LblCodigo.TabIndex = 2;
-            this.LblCodigo.Text = "Código:";
             // 
             // acceptCancel1
             // 
@@ -80,51 +59,117 @@
             this.acceptCancel1.CancelButtonText = "Cancelar";
             this.acceptCancel1.HabilitarAceptar = true;
             this.acceptCancel1.HabilitarCancelar = true;
-            this.acceptCancel1.Location = new System.Drawing.Point(138, 56);
+            this.acceptCancel1.Location = new System.Drawing.Point(179, 129);
             this.acceptCancel1.LookAndFeel.SkinName = "Office 2007 Silver";
             this.acceptCancel1.Maceptar = null;
             this.acceptCancel1.Mcancelar = null;
             this.acceptCancel1.Name = "acceptCancel1";
-            this.acceptCancel1.Size = new System.Drawing.Size(172, 38);
+            this.acceptCancel1.Size = new System.Drawing.Size(111, 51);
             this.acceptCancel1.TabIndex = 2;
+            // 
+            // cabeceraForm1
+            // 
+            this.cabeceraForm1.AutoSize = true;
+            this.cabeceraForm1.HabilitarBCerrar = true;
+            this.cabeceraForm1.HabilitarBMinimiar = true;
+            this.cabeceraForm1.Location = new System.Drawing.Point(1, 1);
+            this.cabeceraForm1.Name = "cabeceraForm1";
+            this.cabeceraForm1.NombreCabecera = "Titulo";
+            this.cabeceraForm1.Size = new System.Drawing.Size(469, 32);
+            this.cabeceraForm1.TabIndex = 2;
+            this.cabeceraForm1.VerBCerrar = true;
+            this.cabeceraForm1.VerBMinimiar = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.TxtCod);
+            this.panel1.Controls.Add(this.LblCodigo);
+            this.panel1.Controls.Add(this.TxtNombre);
+            this.panel1.Controls.Add(this.LblNombre);
+            this.panel1.ForeColor = System.Drawing.Color.Maroon;
+            this.panel1.Location = new System.Drawing.Point(26, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(416, 96);
+            this.panel1.TabIndex = 4;
             // 
             // TxtNombre
             // 
-            this.TxtNombre.EnterMoveNextControl = true;
-            this.TxtNombre.Location = new System.Drawing.Point(52, 32);
+            this.TxtNombre.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Default;
+            this.TxtNombre.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.TxtNombre.Appearance.Options.UseBackColor = true;
+            this.TxtNombre.CaraterPassword = '\0';
+            this.TxtNombre.Location = new System.Drawing.Point(80, 49);
+            this.TxtNombre.MaxLenght = 50;
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.TxtNombre.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtNombre.Size = new System.Drawing.Size(384, 18);
-            this.TxtNombre.TabIndex = 1;
+            this.TxtNombre.Size = new System.Drawing.Size(321, 26);
+            this.TxtNombre.SoloLectura = false;
+            this.TxtNombre.TabIndex = 9;
+            this.TxtNombre.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtNombre.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
+            this.TxtNombre.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
             // 
             // LblNombre
             // 
-            this.LblNombre.Location = new System.Drawing.Point(9, 36);
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.Location = new System.Drawing.Point(14, 55);
             this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(41, 13);
-            this.LblNombre.TabIndex = 0;
-            this.LblNombre.Text = "Nombre:";
+            this.LblNombre.Size = new System.Drawing.Size(60, 13);
+            this.LblNombre.TabIndex = 8;
+            this.LblNombre.Texto = "Nombre:";
+            // 
+            // TxtCod
+            // 
+            this.TxtCod.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Default;
+            this.TxtCod.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.TxtCod.Appearance.Options.UseBackColor = true;
+            this.TxtCod.CaraterPassword = '\0';
+            this.TxtCod.Location = new System.Drawing.Point(80, 19);
+            this.TxtCod.MaxLenght = 50;
+            this.TxtCod.Name = "TxtCod";
+            this.TxtCod.Size = new System.Drawing.Size(321, 26);
+            this.TxtCod.SoloLectura = false;
+            this.TxtCod.TabIndex = 11;
+            this.TxtCod.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtCod.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
+            this.TxtCod.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
+            // 
+            // LblCodigo
+            // 
+            this.LblCodigo.AutoSize = true;
+            this.LblCodigo.Location = new System.Drawing.Point(14, 25);
+            this.LblCodigo.Name = "LblCodigo";
+            this.LblCodigo.Size = new System.Drawing.Size(60, 13);
+            this.LblCodigo.TabIndex = 10;
+            this.LblCodigo.Texto = "Código:";
             // 
             // FrmGetCodeName
             // 
+            this.Appearance.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 117);
+            this.ClientSize = new System.Drawing.Size(472, 214);
+            this.Controls.Add(this.cabeceraForm1);
             this.Controls.Add(this.GbxDatos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmGetCodeName";
             this.Text = "FrmGetCodeName";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGetCodeName_FormClosing);
             this.Load += new System.EventHandler(this.FrmGetName_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GbxDatos)).EndInit();
             this.GbxDatos.ResumeLayout(false);
-            this.GbxDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtCod.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtNombre.Properties)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,9 +177,11 @@
 
         private DevExpress.XtraEditors.GroupControl GbxDatos;
         private AcceptCancel acceptCancel1;
-        private DevExpress.XtraEditors.TextEdit TxtNombre;
-        private DevExpress.XtraEditors.LabelControl LblNombre;
-        private DevExpress.XtraEditors.TextEdit TxtCod;
-        private DevExpress.XtraEditors.LabelControl LblCodigo;
+        private CabeceraForm cabeceraForm1;
+        private System.Windows.Forms.Panel panel1;
+        private TxtBase TxtNombre;
+        private LblBase LblNombre;
+        private TxtBase TxtCod;
+        private LblBase LblCodigo;
     }
 }
