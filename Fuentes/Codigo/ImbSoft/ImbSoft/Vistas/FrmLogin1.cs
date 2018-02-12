@@ -51,7 +51,7 @@ namespace ImbSoft.Vistas
 
         public void Entrar()
         {
-            DataTable dt = f.ValidarUsuario(LueUsuario.Text, TxtPassword.Text.Trim(), ConexionDB.getInstancia().Conexion(Database, null)).Tables[0];
+            DataTable dt = f.ValidarUsuario(LueUsuario.Text, TxtPassword.Texto.Trim(), ConexionDB.getInstancia().Conexion(Database, null)).Tables[0];
             if (dt.Rows.Count != 0)
             {
                 Usuario = LueUsuario.EditValue.ToString().Trim();

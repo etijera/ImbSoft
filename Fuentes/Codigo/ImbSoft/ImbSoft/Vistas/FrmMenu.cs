@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using UsuarioControles;
 using Contabilidad;
+using Referencias;
 
 namespace ImbSoft.Vistas
 {
@@ -108,6 +109,17 @@ namespace ImbSoft.Vistas
         {
             FrmShowPerfiles perfiles = new FrmShowPerfiles();            
             perfiles.ShowDialog();
+        }
+
+        private void BtnItipoUsuarios_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmShowIt frmTipoUsuarios = new FrmShowIt();
+            frmTipoUsuarios.PerfilShow = Perfilador.getInstancia().CargarPerfil("TipoUsuarios");
+            frmTipoUsuarios.database = Database;
+            frmTipoUsuarios.Usuario = Usuario;
+            frmTipoUsuarios.DesdeMenu = true;
+            frmTipoUsuarios.PasarUsuario = true;
+            frmTipoUsuarios.ShowDialog(); 
         }
 
     }

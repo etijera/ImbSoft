@@ -5992,4 +5992,32 @@
     <CampoCodigo>CodigoEquipo</CampoCodigo>
     <CampoNombre>dprnom</CampoNombre>
   </Perfil>
+  <Perfil ID="TipoUsuarios">
+    <Id>TipoUsuarios</Id>
+    <Descripcion>Tipos de usuario</Descripcion>
+    <Tabla>dbo.TipoUsuarios</Tabla>
+    <Campos>Codigo,Nombre</Campos>
+    <Visibles>Nombre</Visibles>
+    <Formulario>FrmGetTipoUsuarios</Formulario>
+    <Titulo>Tipos de Usuario</Titulo>
+    <Cabeceras>Nombre</Cabeceras>
+    <Tamaños>403</Tamaños>
+    <Llave>Id</Llave>
+    <CampoFecha>
+    </CampoFecha>
+    <UtilizarReportes>False</UtilizarReportes>
+    <DatosDetalle>
+    </DatosDetalle>
+    <Subtitulo>Tipos de usuario</Subtitulo>
+    <ColumnaEstatica>
+    </ColumnaEstatica>
+    <Reporte>
+    </Reporte>
+    <CamposId>Nombre</CamposId>
+    <Indices>0</Indices>
+    <Proyecto>
+    </Proyecto>
+    <CampoCodigo>Codigo</CampoCodigo>
+    <CampoNombre>Nombre</CampoNombre>
+  </Perfil>
 </Perfiles>

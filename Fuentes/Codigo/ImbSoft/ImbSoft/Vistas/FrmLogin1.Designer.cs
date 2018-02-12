@@ -141,7 +141,7 @@
             this.TxtPassword.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Default;
             this.TxtPassword.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.TxtPassword.Appearance.Options.UseBackColor = true;
-            this.TxtPassword.CaraterPassword = '\0';
+            this.TxtPassword.CaraterPassword = '*';
             this.TxtPassword.Location = new System.Drawing.Point(90, 60);
             this.TxtPassword.MaxLenght = 50;
             this.TxtPassword.Name = "TxtPassword";
@@ -149,6 +149,7 @@
             this.TxtPassword.SoloLectura = false;
             this.TxtPassword.TabIndex = 1;
             this.TxtPassword.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPassword.Texto = "";
             this.TxtPassword.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
             this.TxtPassword.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
             // 

@@ -16,12 +16,18 @@ namespace ImbSoft.Controladores
         {
             SqlParameter[] dbParametros = new SqlParameter[]
             {
+                //,,,,
                 DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"INSERTBASICO"),
-                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,tipoUsuario.Nombre),
-                DBHelper.MakeParam("@Contrasenia",SqlDbType.VarChar,0,tipoUsuario.Clave)//por aqui
+                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,tipoUsuario.Nombre), 
+                DBHelper.MakeParam("@PoderEditar",SqlDbType.VarChar,0,tipoUsuario.PoderAdicionar), 
+                DBHelper.MakeParam("@PoderEditar",SqlDbType.VarChar,0,tipoUsuario.PoderEditar), 
+                DBHelper.MakeParam("@PoderEliminar",SqlDbType.VarChar,0,tipoUsuario.PoderEliminar), 
+                DBHelper.MakeParam("@PoderExportar",SqlDbType.VarChar,0,tipoUsuario.PoderExportar), 
+                DBHelper.MakeParam("@PoderGuardar",SqlDbType.VarChar,0,tipoUsuario.PoderGuardar), 
+                DBHelper.MakeParam("@PoderImprimir",SqlDbType.VarChar,0,tipoUsuario.PoderImprimir)
             };
 
-            return Convert.ToInt32(DBHelper.ExecuteScalar("PA_Usuarios", dbParametros));
+            return Convert.ToInt32(DBHelper.ExecuteScalar("PA_TipoUsuarios", dbParametros));
         }
    
         public static Int32 Actualizar(TipoUsuario tipoUsuario)
@@ -29,33 +35,39 @@ namespace ImbSoft.Controladores
             SqlParameter[] dbParametros = new SqlParameter[]
             {
                 DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"UPDATE"),
-                DBHelper.MakeParam("@Id",SqlDbType.Int,0,tipoUsuario.Id), 
-                DBHelper.MakeParam("@Contrasenia",SqlDbType.VarChar,0,tipoUsuario.Clave)
+                DBHelper.MakeParam("@Id",SqlDbType.Int,0,tipoUsuario.Id),
+                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,tipoUsuario.Nombre), 
+                DBHelper.MakeParam("@PoderEditar",SqlDbType.VarChar,0,tipoUsuario.PoderAdicionar), 
+                DBHelper.MakeParam("@PoderEditar",SqlDbType.VarChar,0,tipoUsuario.PoderEditar), 
+                DBHelper.MakeParam("@PoderEliminar",SqlDbType.VarChar,0,tipoUsuario.PoderEliminar), 
+                DBHelper.MakeParam("@PoderExportar",SqlDbType.VarChar,0,tipoUsuario.PoderExportar), 
+                DBHelper.MakeParam("@PoderGuardar",SqlDbType.VarChar,0,tipoUsuario.PoderGuardar), 
+                DBHelper.MakeParam("@PoderImprimir",SqlDbType.VarChar,0,tipoUsuario.PoderImprimir)
             };
 
-            return Convert.ToInt32(DBHelper.ExecuteScalar("PA_Usuarios", dbParametros));
+            return Convert.ToInt32(DBHelper.ExecuteScalar("PA_TipoUsuarios", dbParametros));
         }
 
-        public static DataSet GetUsuarioOne(TipoUsuario tipoUsuario)
+        public static DataSet GetTipoUsuarioOne(TipoUsuario tipoUsuario)
         {
             SqlParameter[] dbParametros = new SqlParameter[]
             {
                 DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"SELECTID"), 
-                DBHelper.MakeParam("@Id",SqlDbType.Int,0,usuario.Id),               
+                DBHelper.MakeParam("@Id",SqlDbType.Int,0,tipoUsuario.Id),               
             };
 
-            return DBHelper.ExecuteDataSet("PA_Usuarios", dbParametros);
+            return DBHelper.ExecuteDataSet("PA_TipoUsuarios", dbParametros);
         }
 
-        public static DataSet GetUsuarioName(TipoUsuario tipoUsuario)
+        public static DataSet GetTipoUsuarioName(TipoUsuario tipoUsuario)
         {
             SqlParameter[] dbParametros = new SqlParameter[]
             {
                 DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"SELECTNAME"), 
-                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,usuario.Nombre),               
+                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,tipoUsuario.Nombre),               
             };
 
-            return DBHelper.ExecuteDataSet("PA_Usuarios", dbParametros);
+            return DBHelper.ExecuteDataSet("PA_TipoUsuarios", dbParametros);
             
         }
 
@@ -66,7 +78,7 @@ namespace ImbSoft.Controladores
                 DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"SELECTALL")            
             };
 
-            DataTable dtPermisos = DataBase.ExecuteQueryDataTable("PA_Usuarios", "datos", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));
+            DataTable dtPermisos = DataBase.ExecuteQueryDataTable("PA_TipoUsuarios", "datos", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));
 
             return dtPermisos;
         }
@@ -76,10 +88,10 @@ namespace ImbSoft.Controladores
             SqlParameter[] dbParametros = new SqlParameter[]
             {
                 DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"DEL"),
-                DBHelper.MakeParam("@Id",SqlDbType.Int,0,usuario.Id)
+                DBHelper.MakeParam("@Id",SqlDbType.Int,0,tipoUsuario.Id)
             };
 
-            return Convert.ToInt32(DBHelper.ExecuteScalar("PA_Usuarios", dbParametros));
+            return Convert.ToInt32(DBHelper.ExecuteScalar("PA_TipoUsuarios", dbParametros));
         }
 
     }

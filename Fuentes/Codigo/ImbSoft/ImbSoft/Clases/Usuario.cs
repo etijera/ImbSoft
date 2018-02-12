@@ -11,7 +11,7 @@ namespace ImbSoft.Clases
         public int Id { get; set; }
         public string Codigo { get; set; }
         public string Nombre { get; set; }
-        public string Usuario { get; set; }
+        public string User { get; set; }
         public string Clave { get; set; }
 
         public TipoUsuario TipoUsuario { get; set; }
@@ -26,7 +26,7 @@ namespace ImbSoft.Clases
             Id = id;
             Codigo = codigo;
             Nombre = nombre;
-            Usuario = usuario;
+            User = usuario;
             Clave = clave;
             TipoUsuario = tipoUsuario;
 

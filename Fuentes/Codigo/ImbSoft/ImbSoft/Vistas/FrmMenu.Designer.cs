@@ -50,6 +50,7 @@
             this.barMdiChildrenListItem1 = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.BtnIUsuarios = new DevExpress.XtraBars.BarButtonItem();
             this.BtnIngresarDocumentos = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnPerfiles = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.RbPContabilidad = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.RbPGPuc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -58,10 +59,10 @@
             this.RibPConfiguraciones = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbPGPerfilesConfig = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbPGPerfilesImb = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.RibPHerramientas = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbPGPerfil = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BtnPerfiles = new DevExpress.XtraBars.BarButtonItem();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.BtnItipoUsuarios = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -73,11 +74,15 @@
             this.cabeceraForm1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cabeceraForm1.AutoSize = true;
+            this.cabeceraForm1.HabilitarBCerrar = true;
+            this.cabeceraForm1.HabilitarBMinimiar = true;
             this.cabeceraForm1.Location = new System.Drawing.Point(2, 1);
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "ImbSoft";
             this.cabeceraForm1.Size = new System.Drawing.Size(857, 32);
             this.cabeceraForm1.TabIndex = 3;
+            this.cabeceraForm1.VerBCerrar = true;
+            this.cabeceraForm1.VerBMinimiar = true;
             // 
             // applicationMenu1
             // 
@@ -108,9 +113,10 @@
             this.barMdiChildrenListItem1,
             this.BtnIUsuarios,
             this.BtnIngresarDocumentos,
-            this.BtnPerfiles});
+            this.BtnPerfiles,
+            this.BtnItipoUsuarios});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 32);
-            this.ribbonControl1.MaxItemId = 38;
+            this.ribbonControl1.MaxItemId = 39;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -223,6 +229,13 @@
             this.BtnIngresarDocumentos.Name = "BtnIngresarDocumentos";
             this.BtnIngresarDocumentos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnIngresarDocumentos_ItemClick);
             // 
+            // BtnPerfiles
+            // 
+            this.BtnPerfiles.Caption = "Maestro de Perfiles";
+            this.BtnPerfiles.Id = 37;
+            this.BtnPerfiles.Name = "BtnPerfiles";
+            this.BtnPerfiles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPerfiles_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -273,6 +286,7 @@
             // rbPGPerfilesConfig
             // 
             this.rbPGPerfilesConfig.ItemLinks.Add(this.BtnIGeneral);
+            this.rbPGPerfilesConfig.ItemLinks.Add(this.BtnItipoUsuarios);
             this.rbPGPerfilesConfig.ItemLinks.Add(this.BtnIUsuarios);
             this.rbPGPerfilesConfig.Name = "rbPGPerfilesConfig";
             this.rbPGPerfilesConfig.Text = "Perfil del Sistema";
@@ -281,12 +295,6 @@
             // 
             this.rbPGPerfilesImb.Name = "rbPGPerfilesImb";
             this.rbPGPerfilesImb.Text = "Perfil Inmobiliario";
-            // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Bottom;
-            this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
-            this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // RibPHerramientas
             // 
@@ -301,12 +309,18 @@
             this.rbPGPerfil.Name = "rbPGPerfil";
             this.rbPGPerfil.Text = "Perfiles";
             // 
-            // BtnPerfiles
+            // xtraTabbedMdiManager1
             // 
-            this.BtnPerfiles.Caption = "Maestro de Perfiles";
-            this.BtnPerfiles.Id = 37;
-            this.BtnPerfiles.Name = "BtnPerfiles";
-            this.BtnPerfiles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPerfiles_ItemClick);
+            this.xtraTabbedMdiManager1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Bottom;
+            this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // BtnItipoUsuarios
+            // 
+            this.BtnItipoUsuarios.Caption = "Tipo Usuarios";
+            this.BtnItipoUsuarios.Id = 38;
+            this.BtnItipoUsuarios.Name = "BtnItipoUsuarios";
+            this.BtnItipoUsuarios.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnItipoUsuarios_ItemClick);
             // 
             // FrmMenu
             // 
@@ -367,5 +381,6 @@
         private DevExpress.XtraBars.BarButtonItem BtnPerfiles;
         private DevExpress.XtraBars.Ribbon.RibbonPage RibPHerramientas;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbPGPerfil;
+        private DevExpress.XtraBars.BarButtonItem BtnItipoUsuarios;
     }
 }

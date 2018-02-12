@@ -203,7 +203,7 @@ namespace ImbSoft.Vistas
 
                 if (CtrlUsuarios.InsertarBasico(usuario) > 0)
                 {
-                    XtraMessageBox.Show("Usuario insertado con exito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+                    XtraMessageBox.Show("Usuario insertado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
                 }
             }
             else
@@ -216,7 +216,7 @@ namespace ImbSoft.Vistas
 
                 if (CtrlUsuarios.Actualizar(usuario) > 0)
                 {
-                    XtraMessageBox.Show("Usuario actualizado con exito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+                    XtraMessageBox.Show("Usuario actualizado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
                 }
             }
         }

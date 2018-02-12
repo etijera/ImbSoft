@@ -340,7 +340,16 @@ namespace UsuarioControles
         {
             if (permisoEditar)
             {
-                System.Reflection.Assembly myDllAssembly = System.Reflection.Assembly.LoadFile(@"" + PerfilShow.Proyecto);
+                System.Reflection.Assembly myDllAssembly;
+
+                if (Application.StartupPath == PerfilShow.Proyecto.Trim())
+                {
+                    myDllAssembly = System.Reflection.Assembly.GetExecutingAssembly();
+                }else
+                {
+                    myDllAssembly = System.Reflection.Assembly.LoadFile(@"" + PerfilShow.Proyecto);                     
+	            }
+                 
                 Type t = myDllAssembly.GetType(PerfilShow.Formulario);
 
                 object o = Activator.CreateInstance(t);

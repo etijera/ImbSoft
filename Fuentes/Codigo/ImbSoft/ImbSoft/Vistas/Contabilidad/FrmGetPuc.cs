@@ -404,7 +404,7 @@ namespace Contabilidad
 
             bool IsDone = DataBase.ExecuteNonQuery("PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
-            //XtraMessageBox.Show("Proceso realizado con exito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //XtraMessageBox.Show("Proceso realizado con éxito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
            // 
         }
 

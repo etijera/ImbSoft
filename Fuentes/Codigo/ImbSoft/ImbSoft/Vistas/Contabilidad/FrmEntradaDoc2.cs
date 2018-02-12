@@ -926,7 +926,7 @@ namespace Contabilidad
             {
                 Consecutivo = consecutivo;
                 Fuente = TxtlblFuente.Codigo ?? "";
-                XtraMessageBox.Show("Proceso realizado con exito", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Proceso realizado con éxito", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (DgvCuenta.RowCount>0)
                 {

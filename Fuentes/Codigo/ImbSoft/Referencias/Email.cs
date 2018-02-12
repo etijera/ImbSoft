@@ -81,7 +81,7 @@ namespace Referencias
                 client.Timeout.ToString();
                 client.Send(mail);
                 }
-                XtraMessageBox.Show("Mensaje enviado con Exito..", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Mensaje enviado con éxito..", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
