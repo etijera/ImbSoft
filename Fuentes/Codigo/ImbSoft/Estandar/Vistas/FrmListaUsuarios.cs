@@ -12,11 +12,11 @@ using UsuarioControles;
 using System.Data.SqlClient;
 using Referencias;
 using DevExpress.XtraGrid.Columns;
-using ImbSoft.Clases;
-using ImbSoft.Controladores;
+using Estandar.Clases;
+using Estandar.Controladores;
 using Referencias.Properties;
 
-namespace ImbSoft.Vistas
+namespace Estandar.Vistas
 {
     public partial class FrmListaUsuarios : FormularioBase
     {

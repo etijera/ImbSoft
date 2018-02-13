@@ -36,6 +36,8 @@
             this.Titulo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolBarShowit1 = new UsuarioControles.CommonToolBar2();
             this.BtnReubicar = new DevExpress.XtraEditors.SimpleButton();
+            this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GctrlGeneral)).BeginInit();
@@ -44,14 +46,14 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.Controls.Add(this.GctrlGeneral);
-            this.groupControl1.Location = new System.Drawing.Point(11, 44);
+            this.groupControl1.Location = new System.Drawing.Point(1, 60);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(643, 321);
+            this.groupControl1.Size = new System.Drawing.Size(662, 334);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "groupControl1";
             // 
@@ -61,7 +63,7 @@
             this.GctrlGeneral.Location = new System.Drawing.Point(2, 2);
             this.GctrlGeneral.MainView = this.GvGeneral;
             this.GctrlGeneral.Name = "GctrlGeneral";
-            this.GctrlGeneral.Size = new System.Drawing.Size(639, 317);
+            this.GctrlGeneral.Size = new System.Drawing.Size(658, 330);
             this.GctrlGeneral.TabIndex = 0;
             this.GctrlGeneral.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GvGeneral});
@@ -108,7 +110,7 @@
             this.toolBarShowit1.HabilitarGuardar = true;
             this.toolBarShowit1.HabilitarImprimir = true;
             this.toolBarShowit1.ImprimirValidacion = true;
-            this.toolBarShowit1.Location = new System.Drawing.Point(12, 12);
+            this.toolBarShowit1.Location = new System.Drawing.Point(1, 32);
             this.toolBarShowit1.Mañadir = null;
             this.toolBarShowit1.Meditar = null;
             this.toolBarShowit1.Melimnar = null;
@@ -116,7 +118,7 @@
             this.toolBarShowit1.Mguardar = null;
             this.toolBarShowit1.Mimprimir = null;
             this.toolBarShowit1.Name = "toolBarShowit1";
-            this.toolBarShowit1.Size = new System.Drawing.Size(209, 26);
+            this.toolBarShowit1.Size = new System.Drawing.Size(662, 28);
             this.toolBarShowit1.TabIndex = 30;
             this.toolBarShowit1.VerAñadir = DevExpress.XtraBars.BarItemVisibility.Always;
             this.toolBarShowit1.VerEditar = DevExpress.XtraBars.BarItemVisibility.Always;
@@ -129,23 +131,43 @@
             // 
             this.BtnReubicar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnReubicar.Image = ((System.Drawing.Image)(resources.GetObject("BtnReubicar.Image")));
-            this.BtnReubicar.Location = new System.Drawing.Point(624, 12);
+            this.BtnReubicar.Location = new System.Drawing.Point(632, 31);
             this.BtnReubicar.Name = "BtnReubicar";
-            this.BtnReubicar.Size = new System.Drawing.Size(30, 31);
+            this.BtnReubicar.Size = new System.Drawing.Size(30, 29);
             this.BtnReubicar.TabIndex = 31;
             this.BtnReubicar.Click += new System.EventHandler(this.BtnReubicar_Click);
             // 
+            // cabeceraForm1
+            // 
+            this.cabeceraForm1.AutoSize = true;
+            this.cabeceraForm1.HabilitarBCerrar = true;
+            this.cabeceraForm1.HabilitarBMinimiar = true;
+            this.cabeceraForm1.Location = new System.Drawing.Point(1, 1);
+            this.cabeceraForm1.Name = "cabeceraForm1";
+            this.cabeceraForm1.NombreCabecera = "Maestro de Perfiles";
+            this.cabeceraForm1.Size = new System.Drawing.Size(661, 32);
+            this.cabeceraForm1.TabIndex = 32;
+            this.cabeceraForm1.VerBCerrar = true;
+            this.cabeceraForm1.VerBMinimiar = true;
+            // 
             // FrmShowPerfiles
             // 
+            this.Appearance.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 372);
+            this.ClientSize = new System.Drawing.Size(664, 396);
             this.Controls.Add(this.BtnReubicar);
             this.Controls.Add(this.toolBarShowit1);
+            this.Controls.Add(this.cabeceraForm1);
             this.Controls.Add(this.groupControl1);
             this.Name = "FrmShowPerfiles";
             this.Text = "Maestro de Perfiles .Net";
             this.Load += new System.EventHandler(this.FrmShowPerfiles_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GctrlGeneral)).EndInit();
@@ -164,5 +186,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn Id;
         private DevExpress.XtraGrid.Columns.GridColumn Titulo;
         private DevExpress.XtraEditors.SimpleButton BtnReubicar;
+        private CabeceraForm cabeceraForm1;
     }
 }

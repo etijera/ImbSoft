@@ -1,4 +1,4 @@
-﻿namespace ImbSoft.Vistas
+﻿namespace Estandar.Vistas
 {
     partial class FrmListaUsuarios
     {

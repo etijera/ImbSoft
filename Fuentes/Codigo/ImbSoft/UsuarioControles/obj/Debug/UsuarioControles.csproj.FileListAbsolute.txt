@@ -142,6 +142,7 @@ G:\Trabajo\Proyecto imbSoft\GitHub\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft
 G:\Trabajo\Proyecto imbSoft\GitHub\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.dll.licenses
 G:\Trabajo\Proyecto imbSoft\GitHub\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.dll
 G:\Trabajo\Proyecto imbSoft\GitHub\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.pdb
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.csprojResolveAssemblyReference.cache
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\bin\Debug\UsuarioControles.dll.config
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\bin\Debug\UsuarioControles.dll
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\bin\Debug\UsuarioControles.pdb
@@ -151,7 +152,6 @@ D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioC
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\bin\Debug\Referencias.pdb
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\bin\Debug\es\Microsoft.Windows.Design.Interaction.resources.dll
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\bin\Debug\es\Microsoft.Windows.Design.Extensibility.resources.dll
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.csprojResolveAssemblyReference.cache
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.AcceptCancel.resources
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.ButtonBar.resources
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\UsuarioControles\obj\Debug\UsuarioControles.CabeceraForm.resources

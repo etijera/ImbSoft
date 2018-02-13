@@ -9,19 +9,21 @@ using DevExpress.XtraEditors;
 using UsuarioControles;
 using Referencias;
 using Referencias.Properties;
-using ImbSoft.Clases;
-using ImbSoft.Controladores;
+using Estandar.Clases;
+using Estandar.Controladores;
 
-namespace ImbSoft.Vistas
+namespace Estandar.Vistas
 {
     public partial class FrmGetTipoUsuarios : FormularioBase
     {
         #region Propiedades
 
         public string Database { get; set; }
-        public string Usuario { get; set; }
         public string Modo { get; set; }
-        public int Id { get; set; }
+        public string ID { get; set; }
+        public Perfil PerfilAct { get; set; }
+        public bool DesdeMenu { get; set; }
+        public string Usuario { get; set; }
 
         #endregion
 
@@ -197,7 +199,7 @@ namespace ImbSoft.Vistas
             {
                 TipoUsuario tipoUsuario = new TipoUsuario();
                
-                tipoUsuario.Id = Id;
+                tipoUsuario.Id = Convert.ToInt32(ID);
                 tipoUsuario.PoderAdicionar = ChkAñadir.Checked;
                 tipoUsuario.PoderEditar = ChkEditar.Checked;
                 tipoUsuario.PoderEliminar = ChkEliminar.Checked;
@@ -219,9 +221,9 @@ namespace ImbSoft.Vistas
         private void GetUsuarios_Load(object sender, EventArgs e)
         {                     
             TxtNombre.Focus();
-            if (Modo == "E" && Id > 0) 
+            if (Modo == "E" && Convert.ToInt32(ID) > 0) 
             {
-                CargarDatos(Id);
+                CargarDatos(Convert.ToInt32(ID));
                 TxtNombre.Enabled = false;              
             }           
         }

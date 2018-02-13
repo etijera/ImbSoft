@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImbSoft.Clases
+namespace Estandar.Clases
 {
     class TipoUsuario
     {

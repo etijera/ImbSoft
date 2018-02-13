@@ -9,10 +9,10 @@ using DevExpress.XtraEditors;
 using UsuarioControles;
 using Referencias;
 using Referencias.Properties;
-using ImbSoft.Clases;
-using ImbSoft.Controladores;
+using Estandar.Clases;
+using Estandar.Controladores;
 
-namespace ImbSoft.Vistas
+namespace Estandar.Vistas
 {
     public partial class FrmGetUsuarios : FormularioBase
     {

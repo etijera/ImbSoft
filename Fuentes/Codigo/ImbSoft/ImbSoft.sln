@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Settings", "Settings\Settin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsuarioControles", "UsuarioControles\UsuarioControles.csproj", "{0B378E37-09B3-46BD-B7E5-C7B128FDE9B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estandar", "Estandar\Estandar.csproj", "{21418AEF-A7E7-45A5-8008-760C0FD84D39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0B378E37-09B3-46BD-B7E5-C7B128FDE9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B378E37-09B3-46BD-B7E5-C7B128FDE9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B378E37-09B3-46BD-B7E5-C7B128FDE9B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21418AEF-A7E7-45A5-8008-760C0FD84D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21418AEF-A7E7-45A5-8008-760C0FD84D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21418AEF-A7E7-45A5-8008-760C0FD84D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21418AEF-A7E7-45A5-8008-760C0FD84D39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5998,7 +5998,7 @@
     <Tabla>dbo.TipoUsuarios</Tabla>
     <Campos>Codigo,Nombre</Campos>
     <Visibles>Nombre</Visibles>
-    <Formulario>FrmGetTipoUsuarios</Formulario>
+    <Formulario>Estandar.Vistas.FrmGetTipoUsuarios</Formulario>
     <Titulo>Tipos de Usuario</Titulo>
     <Cabeceras>Nombre</Cabeceras>
     <Tamaños>403</Tamaños>
@@ -6015,8 +6015,7 @@
     </Reporte>
     <CamposId>Nombre</CamposId>
     <Indices>0</Indices>
-    <Proyecto>
-    </Proyecto>
+    <Proyecto>\Estandar.dll</Proyecto>
     <CampoCodigo>Codigo</CampoCodigo>
     <CampoNombre>Nombre</CampoNombre>
   </Perfil>

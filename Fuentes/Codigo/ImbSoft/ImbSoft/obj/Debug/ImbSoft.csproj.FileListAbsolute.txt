@@ -105,23 +105,6 @@ G:\Trabajo\Proyecto imbSoft\GitHub\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft
 G:\Trabajo\Proyecto imbSoft\GitHub\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.pdb
 G:\Trabajo\Proyecto imbSoft\GitHub\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmGetTipoUsuarios.resources
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\ImbSoft.exe.config
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.csprojResolveAssemblyReference.cache
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Properties.Resources.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\Contabilidad.FrmAddCuentaEntradaDoc.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\Contabilidad.FrmEntradaDoc.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\Contabilidad.FrmEntradaDoc2.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\Contabilidad.FrmGetPuc.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.Form1.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmGetTipoUsuarios.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmGetUsuarios.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmListaUsuarios.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmLogin1.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmLogin.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Views.FrmMain.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmMenu.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmSalir.resources
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.csproj.GenerateResource.Cache
-D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe.licenses
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\ImbSoft.exe
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\ImbSoft.pdb
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\Referencias.dll
@@ -130,5 +113,17 @@ D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\Referencias.pdb
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\Settings.pdb
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\UsuarioControles.pdb
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.csprojResolveAssemblyReference.cache
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Properties.Resources.resources
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.Form1.resources
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmLogin1.resources
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmLogin.resources
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Views.FrmMain.resources
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmMenu.resources
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.Vistas.FrmSalir.resources
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.csproj.GenerateResource.Cache
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe.licenses
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.exe
 D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\obj\Debug\ImbSoft.pdb
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\Estandar.dll
+D:\Erick\Proyecto ImbSoft\Github\Código Fuentes\Fuentes\Codigo\ImbSoft\ImbSoft\bin\Debug\Estandar.pdb
