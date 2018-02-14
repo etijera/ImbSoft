@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommonToolBar2G));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -41,7 +42,7 @@
             DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.BtnAñadir = new DevExpress.XtraBars.BarButtonItem();
             this.BtnEdit = new DevExpress.XtraBars.BarButtonItem();
@@ -79,6 +80,8 @@
             // 
             // bar2
             // 
+            this.bar2.BarAppearance.Normal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bar2.BarAppearance.Normal.Options.UseBackColor = true;
             this.bar2.BarName = "Main menu";
             this.bar2.DockCol = 0;
             this.bar2.DockRow = 0;
@@ -169,6 +172,8 @@
             // 
             // barDockControlTop
             // 
+            this.barDockControlTop.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.barDockControlTop.Appearance.Options.UseBackColor = true;
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
@@ -176,6 +181,8 @@
             // 
             // barDockControlBottom
             // 
+            this.barDockControlBottom.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.barDockControlBottom.Appearance.Options.UseBackColor = true;
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 42);
@@ -183,6 +190,8 @@
             // 
             // barDockControlLeft
             // 
+            this.barDockControlLeft.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.barDockControlLeft.Appearance.Options.UseBackColor = true;
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
@@ -190,6 +199,8 @@
             // 
             // barDockControlRight
             // 
+            this.barDockControlRight.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.barDockControlRight.Appearance.Options.UseBackColor = true;
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(323, 40);
@@ -197,6 +208,8 @@
             // 
             // CommonToolBar2G
             // 
+            this.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.barDockControlLeft);

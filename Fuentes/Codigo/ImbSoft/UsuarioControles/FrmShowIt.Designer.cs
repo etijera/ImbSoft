@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.GctrlGeneral = new DevExpress.XtraGrid.GridControl();
             this.GvGeneral = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.PrgBuscar = new DevExpress.XtraEditors.MarqueeProgressBarControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.toolBarShowit1 = new UsuarioControles.CommonToolBar2();
-            this.toolTipController1 = new DevExpress.Utils.ToolTipController();
+            this.toolTipController1 = new DevExpress.Utils.ToolTipController(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
-            this.barManager2 = new DevExpress.XtraBars.BarManager();
+            this.barManager2 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl5 = new DevExpress.XtraBars.BarDockControl();
@@ -52,6 +53,8 @@
             this.BtnBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.GrpBuscar = new DevExpress.XtraEditors.GroupControl();
             this.BkgwBuscar = new System.ComponentModel.BackgroundWorker();
+            this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GctrlGeneral)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GvGeneral)).BeginInit();
@@ -63,6 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtBuscar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrpBuscar)).BeginInit();
             this.GrpBuscar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GctrlGeneral
@@ -73,7 +78,7 @@
             this.GctrlGeneral.Location = new System.Drawing.Point(5, 5);
             this.GctrlGeneral.MainView = this.GvGeneral;
             this.GctrlGeneral.Name = "GctrlGeneral";
-            this.GctrlGeneral.Size = new System.Drawing.Size(421, 179);
+            this.GctrlGeneral.Size = new System.Drawing.Size(421, 192);
             this.GctrlGeneral.TabIndex = 0;
             this.GctrlGeneral.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GvGeneral});
@@ -88,15 +93,12 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.Controls.Add(this.PrgBuscar);
             this.groupControl1.Controls.Add(this.GctrlGeneral);
-            this.groupControl1.Location = new System.Drawing.Point(7, 60);
+            this.groupControl1.Location = new System.Drawing.Point(5, 70);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(431, 189);
+            this.groupControl1.Size = new System.Drawing.Size(431, 202);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "groupControl1";
             // 
@@ -106,7 +108,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PrgBuscar.EditValue = "Cargando...";
-            this.PrgBuscar.Location = new System.Drawing.Point(106, 67);
+            this.PrgBuscar.Location = new System.Drawing.Point(106, 82);
             this.PrgBuscar.MenuManager = this.barManager1;
             this.PrgBuscar.Name = "PrgBuscar";
             this.PrgBuscar.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -129,28 +131,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(444, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(445, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 254);
-            this.barDockControlBottom.Size = new System.Drawing.Size(444, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 312);
+            this.barDockControlBottom.Size = new System.Drawing.Size(445, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 254);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 312);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(444, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 254);
+            this.barDockControlRight.Location = new System.Drawing.Point(445, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 312);
             // 
             // toolBarShowit1
             // 
@@ -167,7 +169,7 @@
             this.toolBarShowit1.HabilitarGuardar = true;
             this.toolBarShowit1.HabilitarImprimir = true;
             this.toolBarShowit1.ImprimirValidacion = true;
-            this.toolBarShowit1.Location = new System.Drawing.Point(7, 2);
+            this.toolBarShowit1.Location = new System.Drawing.Point(5, 5);
             this.toolBarShowit1.Mañadir = null;
             this.toolBarShowit1.Meditar = null;
             this.toolBarShowit1.Melimnar = null;
@@ -175,7 +177,7 @@
             this.toolBarShowit1.Mguardar = null;
             this.toolBarShowit1.Mimprimir = null;
             this.toolBarShowit1.Name = "toolBarShowit1";
-            this.toolBarShowit1.Size = new System.Drawing.Size(236, 31);
+            this.toolBarShowit1.Size = new System.Drawing.Size(218, 31);
             this.toolBarShowit1.TabIndex = 29;
             this.toolBarShowit1.VerAñadir = DevExpress.XtraBars.BarItemVisibility.Always;
             this.toolBarShowit1.VerEditar = DevExpress.XtraBars.BarItemVisibility.Always;
@@ -224,28 +226,28 @@
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl3.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl3.Size = new System.Drawing.Size(444, 0);
+            this.barDockControl3.Size = new System.Drawing.Size(445, 0);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl4.Location = new System.Drawing.Point(0, 254);
-            this.barDockControl4.Size = new System.Drawing.Size(444, 0);
+            this.barDockControl4.Location = new System.Drawing.Point(0, 312);
+            this.barDockControl4.Size = new System.Drawing.Size(445, 0);
             // 
             // barDockControl5
             // 
             this.barDockControl5.CausesValidation = false;
             this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl5.Location = new System.Drawing.Point(0, 0);
-            this.barDockControl5.Size = new System.Drawing.Size(0, 254);
+            this.barDockControl5.Size = new System.Drawing.Size(0, 312);
             // 
             // barDockControl6
             // 
             this.barDockControl6.CausesValidation = false;
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl6.Location = new System.Drawing.Point(444, 0);
-            this.barDockControl6.Size = new System.Drawing.Size(0, 254);
+            this.barDockControl6.Location = new System.Drawing.Point(445, 0);
+            this.barDockControl6.Size = new System.Drawing.Size(0, 312);
             // 
             // barButtonItem1
             // 
@@ -278,11 +280,9 @@
             // 
             // GrpBuscar
             // 
-            this.GrpBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.GrpBuscar.Controls.Add(this.TxtBuscar);
             this.GrpBuscar.Controls.Add(this.BtnBuscar);
-            this.GrpBuscar.Location = new System.Drawing.Point(7, 29);
+            this.GrpBuscar.Location = new System.Drawing.Point(5, 39);
             this.GrpBuscar.Name = "GrpBuscar";
             this.GrpBuscar.ShowCaption = false;
             this.GrpBuscar.Size = new System.Drawing.Size(431, 32);
@@ -295,19 +295,41 @@
             this.BkgwBuscar.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BkgwBuscar_DoWork);
             this.BkgwBuscar.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BkgwBuscar_RunWorkerCompleted);
             // 
+            // cabeceraForm1
+            // 
+            this.cabeceraForm1.AutoSize = true;
+            this.cabeceraForm1.HabilitarBCerrar = true;
+            this.cabeceraForm1.HabilitarBMinimiar = true;
+            this.cabeceraForm1.Location = new System.Drawing.Point(0, 0);
+            this.cabeceraForm1.Name = "cabeceraForm1";
+            this.cabeceraForm1.NombreCabecera = "Titulo";
+            this.cabeceraForm1.Size = new System.Drawing.Size(444, 32);
+            this.cabeceraForm1.TabIndex = 38;
+            this.cabeceraForm1.VerBCerrar = true;
+            this.cabeceraForm1.VerBMinimiar = true;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.GrpBuscar);
+            this.panelControl1.Controls.Add(this.groupControl1);
+            this.panelControl1.Controls.Add(this.toolBarShowit1);
+            this.panelControl1.Location = new System.Drawing.Point(2, 30);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(441, 280);
+            this.panelControl1.TabIndex = 39;
+            // 
             // FrmShowIt
             // 
-            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.BackColor = System.Drawing.Color.LightSeaGreen;
             this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
             this.Appearance.BorderColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 254);
-            this.Controls.Add(this.GrpBuscar);
-            this.Controls.Add(this.toolBarShowit1);
-            this.Controls.Add(this.groupControl1);
+            this.ClientSize = new System.Drawing.Size(445, 312);
+            this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.cabeceraForm1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -316,7 +338,6 @@
             this.Controls.Add(this.barDockControl6);
             this.Controls.Add(this.barDockControl4);
             this.Controls.Add(this.barDockControl3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmShowIt";
@@ -335,6 +356,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtBuscar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrpBuscar)).EndInit();
             this.GrpBuscar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,5 +390,7 @@
         private DevExpress.XtraEditors.SimpleButton BtnBuscar;
         private System.ComponentModel.BackgroundWorker BkgwBuscar;
         private DevExpress.XtraEditors.MarqueeProgressBarControl PrgBuscar;
+        private CabeceraForm cabeceraForm1;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

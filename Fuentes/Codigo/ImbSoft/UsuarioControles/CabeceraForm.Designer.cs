@@ -67,6 +67,7 @@
             this.LblNameFrm.Size = new System.Drawing.Size(36, 18);
             this.LblNameFrm.TabIndex = 17;
             this.LblNameFrm.Text = "Titulo";
+            this.LblNameFrm.TextChanged += new System.EventHandler(this.LblNameFrm_TextChanged);
             this.LblNameFrm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblNameFrm_MouseDown);
             this.LblNameFrm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LblNameFrm_MouseMove);
             this.LblNameFrm.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LblNameFrm_MouseUp);

@@ -80,6 +80,8 @@
             // 
             // bar2
             // 
+            this.bar2.BarAppearance.Normal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.bar2.BarAppearance.Normal.Options.UseBackColor = true;
             this.bar2.BarName = "Main menu";
             this.bar2.DockCol = 0;
             this.bar2.DockRow = 0;
@@ -170,6 +172,8 @@
             // 
             // barDockControlTop
             // 
+            this.barDockControlTop.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.barDockControlTop.Appearance.Options.UseBackColor = true;
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
@@ -177,6 +181,8 @@
             // 
             // barDockControlBottom
             // 
+            this.barDockControlBottom.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.barDockControlBottom.Appearance.Options.UseBackColor = true;
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 26);

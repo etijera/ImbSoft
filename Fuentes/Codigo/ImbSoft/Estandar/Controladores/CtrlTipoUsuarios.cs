@@ -12,86 +12,70 @@ namespace Estandar.Controladores
 {
     class CtrlTipoUsuarios
     {
-        public static Int32 InsertarBasico(TipoUsuario tipoUsuario)
+        public static bool InsertarBasico(TipoUsuario tipoUsuario)
         {
-            SqlParameter[] dbParametros = new SqlParameter[]
-            {
-                //,,,,
-                DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"INSERTBASICO"),
-                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,tipoUsuario.Nombre), 
-                DBHelper.MakeParam("@PoderEditar",SqlDbType.VarChar,0,tipoUsuario.PoderAdicionar), 
-                DBHelper.MakeParam("@PoderEditar",SqlDbType.VarChar,0,tipoUsuario.PoderEditar), 
-                DBHelper.MakeParam("@PoderEliminar",SqlDbType.VarChar,0,tipoUsuario.PoderEliminar), 
-                DBHelper.MakeParam("@PoderExportar",SqlDbType.VarChar,0,tipoUsuario.PoderExportar), 
-                DBHelper.MakeParam("@PoderGuardar",SqlDbType.VarChar,0,tipoUsuario.PoderGuardar), 
-                DBHelper.MakeParam("@PoderImprimir",SqlDbType.VarChar,0,tipoUsuario.PoderImprimir)
-            };
+            SqlParameter[] dbParametros = new[] {   new SqlParameter("@Operacion", "INSERTBASICO")
+                                                    ,new SqlParameter("@Nombre", tipoUsuario.Nombre)
+                                                    ,new SqlParameter("@PoderAdicionar", tipoUsuario.PoderAdicionar)
+                                                    ,new SqlParameter("@PoderEditar", tipoUsuario.PoderEditar)
+                                                    ,new SqlParameter("@PoderEliminar", tipoUsuario.PoderEliminar)
+                                                    ,new SqlParameter("@PoderExportar", tipoUsuario.PoderExportar)
+                                                    ,new SqlParameter("@PoderGuardar", tipoUsuario.PoderGuardar)
+                                                    ,new SqlParameter("@PoderImprimir", tipoUsuario.PoderImprimir)
+                                                };
 
-            return Convert.ToInt32(DBHelper.ExecuteScalar("PA_TipoUsuarios", dbParametros));
+            return DataBase.ExecuteNonQuery("PA_TipoUsuarios", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));
         }
    
-        public static Int32 Actualizar(TipoUsuario tipoUsuario)
+        public static bool Actualizar(TipoUsuario tipoUsuario)
         {
-            SqlParameter[] dbParametros = new SqlParameter[]
-            {
-                DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"UPDATE"),
-                DBHelper.MakeParam("@Id",SqlDbType.Int,0,tipoUsuario.Id),
-                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,tipoUsuario.Nombre), 
-                DBHelper.MakeParam("@PoderEditar",SqlDbType.VarChar,0,tipoUsuario.PoderAdicionar), 
-                DBHelper.MakeParam("@PoderEditar",SqlDbType.VarChar,0,tipoUsuario.PoderEditar), 
-                DBHelper.MakeParam("@PoderEliminar",SqlDbType.VarChar,0,tipoUsuario.PoderEliminar), 
-                DBHelper.MakeParam("@PoderExportar",SqlDbType.VarChar,0,tipoUsuario.PoderExportar), 
-                DBHelper.MakeParam("@PoderGuardar",SqlDbType.VarChar,0,tipoUsuario.PoderGuardar), 
-                DBHelper.MakeParam("@PoderImprimir",SqlDbType.VarChar,0,tipoUsuario.PoderImprimir)
-            };
 
-            return Convert.ToInt32(DBHelper.ExecuteScalar("PA_TipoUsuarios", dbParametros));
+            SqlParameter[] dbParametros = new[] {   new SqlParameter("@Operacion", "UPDATE")
+                                                    ,new SqlParameter("@Id", tipoUsuario.Id)
+                                                    ,new SqlParameter("@Nombre", tipoUsuario.Nombre)
+                                                    ,new SqlParameter("@PoderAdicionar", tipoUsuario.PoderAdicionar)
+                                                    ,new SqlParameter("@PoderEditar", tipoUsuario.PoderEditar)
+                                                    ,new SqlParameter("@PoderEliminar", tipoUsuario.PoderEliminar)
+                                                    ,new SqlParameter("@PoderExportar", tipoUsuario.PoderExportar)
+                                                    ,new SqlParameter("@PoderGuardar", tipoUsuario.PoderGuardar)
+                                                    ,new SqlParameter("@PoderImprimir", tipoUsuario.PoderImprimir)
+                                                };
+
+            return DataBase.ExecuteNonQuery("PA_TipoUsuarios", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));            
         }
 
-        public static DataSet GetTipoUsuarioOne(TipoUsuario tipoUsuario)
+        public static DataTable GetTipoUsuarioOne(TipoUsuario tipoUsuario)
         {
-            SqlParameter[] dbParametros = new SqlParameter[]
-            {
-                DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"SELECTID"), 
-                DBHelper.MakeParam("@Id",SqlDbType.Int,0,tipoUsuario.Id),               
-            };
+            SqlParameter[] dbParametros = new[] {   new SqlParameter("@Operacion", "SELECTID")
+                                                    ,new SqlParameter("@Id", tipoUsuario.Id)
+                                                };
 
-            return DBHelper.ExecuteDataSet("PA_TipoUsuarios", dbParametros);
+            return DataBase.ExecuteQueryDataTable("PA_TipoUsuarios", "datos", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));
         }
 
-        public static DataSet GetTipoUsuarioName(TipoUsuario tipoUsuario)
+        public static DataTable GetTipoUsuarioName(TipoUsuario tipoUsuario)
         {
-            SqlParameter[] dbParametros = new SqlParameter[]
-            {
-                DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"SELECTNAME"), 
-                DBHelper.MakeParam("@Nombre",SqlDbType.VarChar,0,tipoUsuario.Nombre),               
-            };
-
-            return DBHelper.ExecuteDataSet("PA_TipoUsuarios", dbParametros);
-            
+            SqlParameter[] dbParametros = new[] {   new SqlParameter("@Operacion", "SELECTNAME")
+                                                    ,new SqlParameter("@Nombre", tipoUsuario.Nombre)
+                                                };
+            return DataBase.ExecuteQueryDataTable("PA_TipoUsuarios", "datos", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));
         }
 
         public static DataTable GetUsuarioAll()
         {
-            SqlParameter[] dbParametros = new SqlParameter[]
-            {
-                DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"SELECTALL")            
-            };
+            SqlParameter[] dbParametros = new[] { new SqlParameter("@Operacion", "SELECTALL") };
 
-            DataTable dtPermisos = DataBase.ExecuteQueryDataTable("PA_TipoUsuarios", "datos", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));
-
-            return dtPermisos;
+            return DataBase.ExecuteQueryDataTable("PA_TipoUsuarios", "datos", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));
         }
 
-        public static Int32 Eliminar(TipoUsuario tipoUsuario)
+        public static bool Eliminar(TipoUsuario tipoUsuario)
         {
-            SqlParameter[] dbParametros = new SqlParameter[]
-            {
-                DBHelper.MakeParam("@Operacion",SqlDbType.VarChar,0,"DEL"),
-                DBHelper.MakeParam("@Id",SqlDbType.Int,0,tipoUsuario.Id)
-            };
 
-            return Convert.ToInt32(DBHelper.ExecuteScalar("PA_TipoUsuarios", dbParametros));
+            SqlParameter[] dbParametros = new[] {   new SqlParameter("@Operacion", "DEL")
+                                                    ,new SqlParameter("@Id", tipoUsuario.Id)
+                                                };
+
+            return DataBase.ExecuteNonQuery("PA_TipoUsuarios", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));            
         }
 
     }

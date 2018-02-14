@@ -117,10 +117,10 @@ namespace Estandar.Vistas
             {
                 TipoUsuario tipoUs = new TipoUsuario();
                 tipoUs.Nombre = TxtNombre.Texto.Trim();
-                DataSet ds = CtrlTipoUsuarios.GetTipoUsuarioName(tipoUs);                   
-                if (ds.Tables[0].Rows.Count > 0)
+                DataTable dt = CtrlTipoUsuarios.GetTipoUsuarioName(tipoUs);                   
+                if (dt.Rows.Count > 0)
                 {
-                    tipoUser = ds.Tables[0].Rows[0]["Nombre"].ToString();
+                    tipoUser = dt.Rows[0]["Nombre"].ToString();
                 }
 
                 if (TxtNombre.Texto == tipoUser)
@@ -149,8 +149,8 @@ namespace Estandar.Vistas
         {
             TipoUsuario tipoUs = new TipoUsuario();
             tipoUs.Id = id;
-            DataSet ds = CtrlTipoUsuarios.GetTipoUsuarioOne(tipoUs);
-            DataRow dr = ds.Tables[0].Rows[0];
+            DataTable dt = CtrlTipoUsuarios.GetTipoUsuarioOne(tipoUs);
+            DataRow dr = dt.Rows[0];
 
             TxtNombre.Texto = dr["Nombre"].ToString();
             ChkAñadir.Checked = Convert.ToBoolean(dr["PoderAdicionar"]);
@@ -190,7 +190,7 @@ namespace Estandar.Vistas
                 tipoUsuario.PoderImprimir = ChkImprimir.Checked;
                 tipoUsuario.PoderExportar = ChkExportar.Checked;
 
-                if (CtrlTipoUsuarios.InsertarBasico(tipoUsuario) > 0)
+                if (CtrlTipoUsuarios.InsertarBasico(tipoUsuario))
                 {
                     XtraMessageBox.Show("Tipo de usuario insertado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
                 }
@@ -207,7 +207,7 @@ namespace Estandar.Vistas
                 tipoUsuario.PoderImprimir = ChkImprimir.Checked;
                 tipoUsuario.PoderExportar = ChkExportar.Checked;
 
-                if (CtrlTipoUsuarios.Actualizar(tipoUsuario) > 0)
+                if (CtrlTipoUsuarios.Actualizar(tipoUsuario))
                 {
                     XtraMessageBox.Show("Tipo de usuario actualizado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
                 }

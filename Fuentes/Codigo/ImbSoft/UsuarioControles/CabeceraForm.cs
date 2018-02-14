@@ -157,5 +157,10 @@ namespace UsuarioControles
 
         #endregion
 
+        private void LblNameFrm_TextChanged(object sender, EventArgs e)
+        {
+            LblNameFrm.Location = new Point((panel2.Width - LblNameFrm.Width) / 2, LblNameFrm.Location.Y);
+        }
+
     }
 }
