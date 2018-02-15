@@ -11,6 +11,7 @@ using Referencias;
 using Referencias.Properties;
 using Estandar.Clases;
 using Estandar.Controladores;
+using DevExpress.XtraBars.Alerter;
 
 namespace Estandar.Vistas
 {
@@ -32,6 +33,7 @@ namespace Estandar.Vistas
         Point formPosition;
         Boolean mouseAction;
         private Funciones f = new Funciones();
+        private bool agrego;
 
         #endregion
 
@@ -100,8 +102,6 @@ namespace Estandar.Vistas
                     if (ConsultarTipoUsuario())
                     {
                         InsertarActualizar("UPDATE");
-
-                        DialogResult = DialogResult.OK;
                     }
                 }
             }
@@ -166,51 +166,65 @@ namespace Estandar.Vistas
         {
             try
             {
-                
-                InsertarTipoUsuarioBasico(modo);
+                if (modo == "INSERT")
+                {
+                    TipoUsuario tipoUsuario = new TipoUsuario();
+
+                    tipoUsuario.Nombre = TxtNombre.Texto.Trim();
+                    tipoUsuario.PoderAdicionar = ChkAñadir.Checked;
+                    tipoUsuario.PoderEditar = ChkEditar.Checked;
+                    tipoUsuario.PoderEliminar = ChkEliminar.Checked;
+                    tipoUsuario.PoderGuardar = ChkGuardar.Checked;
+                    tipoUsuario.PoderImprimir = ChkImprimir.Checked;
+                    tipoUsuario.PoderExportar = ChkExportar.Checked;
+
+                    //if (CtrlTipoUsuarios.InsertarBasico(tipoUsuario))
+                    //{
+                    //    XtraMessageBox.Show("Tipo de usuario insertado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+                    //}
+
+                    DataTable dt = CtrlTipoUsuarios.InsertarBasico(tipoUsuario);
+
+                    ID = dt.Rows[0][PerfilAct.Llave].ToString();
+                    AlertInfo info = new AlertInfo(Resources.SystemMessage, String.Format(Resources.SaveSuccess, TxtNombre.Text), Resources.Check);
+                    alertControl1.Show(this, info);                    
+                    this.TxtNombre.Text = String.Empty;                 
+                    this.TxtNombre.Focus();
+
+                    if (!DesdeMenu)
+                        DialogResult = DialogResult.OK;
+                    else
+                    {
+                        agrego = true;
+                    }
+
+                }
+                else
+                {
+                    TipoUsuario tipoUsuario = new TipoUsuario();
+
+                    tipoUsuario.Id = Convert.ToInt32(ID);
+                    tipoUsuario.PoderAdicionar = ChkAñadir.Checked;
+                    tipoUsuario.PoderEditar = ChkEditar.Checked;
+                    tipoUsuario.PoderEliminar = ChkEliminar.Checked;
+                    tipoUsuario.PoderGuardar = ChkGuardar.Checked;
+                    tipoUsuario.PoderImprimir = ChkImprimir.Checked;
+                    tipoUsuario.PoderExportar = ChkExportar.Checked;
+
+                    if (CtrlTipoUsuarios.Actualizar(tipoUsuario))
+                    {
+                        XtraMessageBox.Show("Tipo de usuario actualizado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+
+                        this.TxtNombre.Text = String.Empty;                       
+                        this.TxtNombre.Focus();
+                        DialogResult = DialogResult.OK;
+                    }
+                }
                                          
             }
             catch (Exception ex)
             {
                  XtraMessageBox.Show(ex.Message, Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2);                
-            }
-        }
-
-        public void InsertarTipoUsuarioBasico(string modo) 
-        {
-            if (modo == "INSERT")
-            {
-                TipoUsuario tipoUsuario = new TipoUsuario();
-                               
-                tipoUsuario.Nombre = TxtNombre.Texto.Trim();
-                tipoUsuario.PoderAdicionar = ChkAñadir.Checked;
-                tipoUsuario.PoderEditar = ChkEditar.Checked;
-                tipoUsuario.PoderEliminar = ChkEliminar.Checked;
-                tipoUsuario.PoderGuardar = ChkGuardar.Checked;
-                tipoUsuario.PoderImprimir = ChkImprimir.Checked;
-                tipoUsuario.PoderExportar = ChkExportar.Checked;
-
-                if (CtrlTipoUsuarios.InsertarBasico(tipoUsuario))
-                {
-                    XtraMessageBox.Show("Tipo de usuario insertado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                }
-            }
-            else
-            {
-                TipoUsuario tipoUsuario = new TipoUsuario();
-               
-                tipoUsuario.Id = Convert.ToInt32(ID);
-                tipoUsuario.PoderAdicionar = ChkAñadir.Checked;
-                tipoUsuario.PoderEditar = ChkEditar.Checked;
-                tipoUsuario.PoderEliminar = ChkEliminar.Checked;
-                tipoUsuario.PoderGuardar = ChkGuardar.Checked;
-                tipoUsuario.PoderImprimir = ChkImprimir.Checked;
-                tipoUsuario.PoderExportar = ChkExportar.Checked;
-
-                if (CtrlTipoUsuarios.Actualizar(tipoUsuario))
-                {
-                    XtraMessageBox.Show("Tipo de usuario actualizado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                }
             }
         }
 
@@ -220,12 +234,13 @@ namespace Estandar.Vistas
 
         private void GetUsuarios_Load(object sender, EventArgs e)
         {                     
-            TxtNombre.Focus();
             if (Modo == "E" && Convert.ToInt32(ID) > 0) 
             {
                 CargarDatos(Convert.ToInt32(ID));
                 TxtNombre.Enabled = false;              
-            }           
+            }
+
+            TxtNombre.Focus();           
         }
 
         private void TxtNombre_Validating(object sender, CancelEventArgs e)
@@ -256,7 +271,15 @@ namespace Estandar.Vistas
             }
         }       
 
+        private void FrmGetTipoUsuarios_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (agrego) { 
+                DialogResult = DialogResult.OK;
+            }
+        }
+
         #endregion
+
 
 
     }

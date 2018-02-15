@@ -158,6 +158,7 @@
             // 
             this.toolBarShowit1.AñadirValidacion = true;
             this.toolBarShowit1.AutoSize = true;
+            this.toolBarShowit1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.toolBarShowit1.EditarValidacion = true;
             this.toolBarShowit1.EliminarValidacion = true;
             this.toolBarShowit1.ExcelValidacion = true;
@@ -177,7 +178,7 @@
             this.toolBarShowit1.Mguardar = null;
             this.toolBarShowit1.Mimprimir = null;
             this.toolBarShowit1.Name = "toolBarShowit1";
-            this.toolBarShowit1.Size = new System.Drawing.Size(218, 31);
+            this.toolBarShowit1.Size = new System.Drawing.Size(220, 31);
             this.toolBarShowit1.TabIndex = 29;
             this.toolBarShowit1.VerAñadir = DevExpress.XtraBars.BarItemVisibility.Always;
             this.toolBarShowit1.VerEditar = DevExpress.XtraBars.BarItemVisibility.Always;

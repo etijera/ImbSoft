@@ -120,6 +120,12 @@ namespace ImbSoft.Vistas
             frmTipoUsuarios.Usuario = Usuario;
             frmTipoUsuarios.DesdeMenu = true;
             frmTipoUsuarios.PasarUsuario = true;
+            //frmTipoUsuarios.OcultarBtnImprimir();
+            //frmTipoUsuarios.OcultarBtnExcel();
+            //frmTipoUsuarios.OcultarBtnGuardar();
+            frmTipoUsuarios.DesHabilitarBtnImprimir();
+            frmTipoUsuarios.DesHabilitarBtnGuardar();
+            frmTipoUsuarios.DesHabilitarBtnExcel();
             frmTipoUsuarios.ShowDialog(); 
         }
 

@@ -12,7 +12,7 @@ namespace Estandar.Controladores
 {
     class CtrlTipoUsuarios
     {
-        public static bool InsertarBasico(TipoUsuario tipoUsuario)
+        public static DataTable InsertarBasico(TipoUsuario tipoUsuario)
         {
             SqlParameter[] dbParametros = new[] {   new SqlParameter("@Operacion", "INSERTBASICO")
                                                     ,new SqlParameter("@Nombre", tipoUsuario.Nombre)
@@ -24,7 +24,7 @@ namespace Estandar.Controladores
                                                     ,new SqlParameter("@PoderImprimir", tipoUsuario.PoderImprimir)
                                                 };
 
-            return DataBase.ExecuteNonQuery("PA_TipoUsuarios", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));
+            return DataBase.ExecuteQueryDataTable("PA_TipoUsuarios", "datos", CommandType.StoredProcedure, dbParametros, ConexionDB.getInstancia().Conexion(null, null));
         }
    
         public static bool Actualizar(TipoUsuario tipoUsuario)
