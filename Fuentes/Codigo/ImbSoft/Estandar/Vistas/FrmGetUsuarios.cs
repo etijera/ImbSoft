@@ -19,9 +19,11 @@ namespace Estandar.Vistas
         #region Propiedades
 
         public string Database { get; set; }
-        public string Usuario { get; set; }
         public string Modo { get; set; }
-        public int Id { get; set; }
+        public string ID { get; set; }
+        public Perfil PerfilAct { get; set; }
+        public bool DesdeMenu { get; set; }
+        public string Usuario { get; set; }
 
         #endregion
 
@@ -30,6 +32,7 @@ namespace Estandar.Vistas
         Point formPosition;
         Boolean mouseAction;
         private Funciones f = new Funciones();
+        private bool agrego;
 
         #endregion
 
@@ -210,7 +213,7 @@ namespace Estandar.Vistas
             {
                 Usuario usuario = new Usuario();
                
-                usuario.Id = Id;
+                usuario.Id = Convert.ToInt32(ID);
                 usuario.Nombre = TxtUsuario.Text.Trim();
                 usuario.Clave = TxtPass2.Text.Trim();
 
@@ -242,41 +245,41 @@ namespace Estandar.Vistas
             //}
            
             TxtUsuario.Focus();
-            if (Modo == "E" && Id > 0) 
+            if (Modo == "E" && Convert.ToInt32(ID) > 0) 
             {
-                CargarDatos(Id);
+                CargarDatos(Convert.ToInt32(ID));
                 TxtUsuario.Enabled = false;              
             }
            
         }
 
-        private void TxtUsuario_Validating(object sender, CancelEventArgs e)
-        {
-            if (TxtUsuario.Text.Trim().Length > 0) 
-            { 
-                if (TxtUsuario.Text.Trim().Contains(" "))
-                {                   
-                    errorP1.SetError(TxtUsuario, "El usuario no debe contener espcios en blanco.");
-                    TxtUsuario.Focus();
-                }
-                else
-                {
-                    errorP1.SetError(TxtUsuario, "");
-                }
-            }
-            else
-            {
-                if (string.IsNullOrEmpty((TxtUsuario.Text))) 
-                {
-                    errorP1.SetError(TxtUsuario, "Debe ingresar el usuario.");
-                    TxtUsuario.Focus();
-                }
-                else
-                {
-                    errorP1.SetError(TxtUsuario, "");
-                }
-            }
-        }
+        //private void TxtUsuario_Validating(object sender, CancelEventArgs e)
+        //{
+        //    if (TxtUsuario.Text.Trim().Length > 0) 
+        //    { 
+        //        if (TxtUsuario.Text.Trim().Contains(" "))
+        //        {                   
+        //            errorP1.SetError(TxtUsuario, "El usuario no debe contener espcios en blanco.");
+        //            TxtUsuario.Focus();
+        //        }
+        //        else
+        //        {
+        //            errorP1.SetError(TxtUsuario, "");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        if (string.IsNullOrEmpty((TxtUsuario.Text))) 
+        //        {
+        //            errorP1.SetError(TxtUsuario, "Debe ingresar el usuario.");
+        //            TxtUsuario.Focus();
+        //        }
+        //        else
+        //        {
+        //            errorP1.SetError(TxtUsuario, "");
+        //        }
+        //    }
+        //}
        
         private void TxtPass2_Validating(object sender, CancelEventArgs e)
         {

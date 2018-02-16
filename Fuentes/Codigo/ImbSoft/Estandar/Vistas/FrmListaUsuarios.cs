@@ -124,7 +124,7 @@ namespace Estandar.Vistas
                 FrmGetUsuarios usuarios = new FrmGetUsuarios();
                 usuarios.Database = Database;
                 usuarios.Modo = "E";
-                usuarios.Id = idGeneral;
+                usuarios.ID = idGeneral.ToString();
                 usuarios.ShowDialog();
 
                 if (usuarios.DialogResult == DialogResult.OK)

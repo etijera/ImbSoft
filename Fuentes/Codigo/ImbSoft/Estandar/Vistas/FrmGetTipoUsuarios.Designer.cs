@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolTip1 = new System.Windows.Forms.ToolTip();
+            this.components = new System.ComponentModel.Container();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.LblNameFrm = new DevExpress.XtraEditors.LabelControl();
             this.acceptCancel1 = new UsuarioControles.AcceptCancel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -229,7 +230,7 @@
             this.cabeceraForm1.AutoSize = true;
             this.cabeceraForm1.HabilitarBCerrar = true;
             this.cabeceraForm1.HabilitarBMinimiar = true;
-            this.cabeceraForm1.Location = new System.Drawing.Point(0, 1);
+            this.cabeceraForm1.Location = new System.Drawing.Point(0, 0);
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "Tipo de Usuarios";
             this.cabeceraForm1.Size = new System.Drawing.Size(485, 32);
