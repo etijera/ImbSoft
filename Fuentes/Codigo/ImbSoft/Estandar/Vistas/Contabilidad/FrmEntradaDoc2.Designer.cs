@@ -1,5 +1,5 @@
 ﻿using Referencias;
-namespace Contabilidad
+namespace Estandar.Vistas.Contabilidad
 {
     partial class FrmEntradaDoc2
     {

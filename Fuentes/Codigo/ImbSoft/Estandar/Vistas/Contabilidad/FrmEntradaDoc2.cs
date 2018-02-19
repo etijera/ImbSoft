@@ -14,7 +14,7 @@ using System.Data.SqlClient;
 //using Contabilidad.Reports;
 
 
-namespace Contabilidad
+namespace Estandar.Vistas.Contabilidad
 {
     public partial class FrmEntradaDoc2 : FormularioBase
     {

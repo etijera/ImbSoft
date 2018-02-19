@@ -13,7 +13,7 @@ using System.Data.SqlClient;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 
-namespace Contabilidad
+namespace Estandar.Vistas.Contabilidad
 {
     public partial class FrmGetPuc : FormularioBase
     {
@@ -753,15 +753,15 @@ namespace Contabilidad
                     InsertarPucClasificacionDet("0013", TxtCodigoCuenta.Text.Trim());
 
 
-                    //FrmGetTipoDiferidos frm = new FrmGetTipoDiferidos();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = TxtCodigoCuenta.Text.Trim();
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetTipoDiferidos frm = new FrmGetTipoDiferidos();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
                
             }
@@ -774,15 +774,15 @@ namespace Contabilidad
                     InsertarTipoActivo();
                     InsertarPucClasificacionDet("0012", TxtCodigoCuenta.Text.Trim());
 
-                    //FrmGetTipoActivo frm = new FrmGetTipoActivo();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = TxtCodigoCuenta.Text.Trim();
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetTipoActivo frm = new FrmGetTipoActivo();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
             }
 
@@ -794,16 +794,16 @@ namespace Contabilidad
                     InsertarConceptoNomina();
                     InsertarPucClasificacionDet("0011", TxtCodigoCuenta.Text.Trim());
 
-                    //FrmGetConceptoNomina frm = new FrmGetConceptoNomina();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = nuevoCodCon;
-                    //frm.DeshabilitarCuenta();
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetConceptoNomina frm = new FrmGetConceptoNomina();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = nuevoCodCon;
+                    frm.DeshabilitarCuenta();
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
             }
 
@@ -814,15 +814,15 @@ namespace Contabilidad
                     Nuevo();
                     InsertarPucClasificacionDet("0006", TxtCodigoCuenta.Text.Trim());
 
-                    //FrmGetCajaMenor frm = new FrmGetCajaMenor();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = TxtCodigoCuenta.Text.Trim();
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetCajaMenor frm = new FrmGetCajaMenor();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
             }
 
@@ -833,15 +833,15 @@ namespace Contabilidad
                     Nuevo();
                     InsertarPucClasificacionDet("0005", TxtCodigoCuenta.Text.Trim());
 
-                    //FrmGetCuentasBancarias frm = new FrmGetCuentasBancarias();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = TxtCodigoCuenta.Text.Trim();
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetCuentasBancarias frm = new FrmGetCuentasBancarias();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
             }
 
@@ -852,15 +852,15 @@ namespace Contabilidad
                     Nuevo();
                     InsertarPucClasificacionDet("0004", TxtCodigoCuenta.Text.Trim());
 
-                    //FrmGetTarifaIva frm = new FrmGetTarifaIva();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = TxtCodigoCuenta.Text.Trim();
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetTarifaIva frm = new FrmGetTarifaIva();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
             }
 
@@ -871,16 +871,16 @@ namespace Contabilidad
                     Nuevo();
                     InsertarPucClasificacionDet("0002", TxtCodigoCuenta.Text.Trim());
 
-                    //FrmGetRetenciones frm = new FrmGetRetenciones();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = TxtCodigoCuenta.Text.Trim();
-                    //frm.OpcionGet = "reteica";
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetRetenciones frm = new FrmGetRetenciones();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.OpcionGet = "reteica";
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
             }
 
@@ -891,16 +891,16 @@ namespace Contabilidad
                     Nuevo();
                     InsertarPucClasificacionDet("0003", TxtCodigoCuenta.Text.Trim());
 
-                    //FrmGetRetenciones frm = new FrmGetRetenciones();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = TxtCodigoCuenta.Text.Trim();
-                    //frm.OpcionGet = "reteiva";
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetRetenciones frm = new FrmGetRetenciones();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.OpcionGet = "reteiva";
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
             }
 
@@ -911,16 +911,16 @@ namespace Contabilidad
                     Nuevo();
                     InsertarPucClasificacionDet("0001", TxtCodigoCuenta.Text.Trim());
 
-                    //FrmGetRetenciones frm = new FrmGetRetenciones();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = TxtCodigoCuenta.Text.Trim();
-                    //frm.OpcionGet = "retefte";
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetRetenciones frm = new FrmGetRetenciones();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.OpcionGet = "retefte";
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
             }
 
@@ -931,16 +931,16 @@ namespace Contabilidad
                     Nuevo();
                     InsertarPucClasificacionDet("0014", TxtCodigoCuenta.Text.Trim());
 
-                    //FrmGetRetenciones frm = new FrmGetRetenciones();
-                    //frm.Database = Database;
-                    //frm.Modo = "E";
-                    //frm.ID = TxtCodigoCuenta.Text.Trim();
-                    //frm.OpcionGet = "retecree";
-                    //frm.ShowDialog();
-                    //if (frm.DialogResult != DialogResult.OK)
-                    //{
-                    //    view.SetFocusedValue(false);
-                    //}
+                    FrmGetRetenciones frm = new FrmGetRetenciones();
+                    frm.Database = Database;
+                    frm.Modo = "E";
+                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.OpcionGet = "retecree";
+                    frm.ShowDialog();
+                    if (frm.DialogResult != DialogResult.OK)
+                    {
+                        view.SetFocusedValue(false);
+                    }
                 }
             }
         }

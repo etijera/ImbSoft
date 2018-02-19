@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using UsuarioControles;
-using Contabilidad;
 using Referencias;
 using Estandar.Vistas;
+using Estandar.Vistas.Contabilidad;
 
 namespace ImbSoft.Vistas
 {

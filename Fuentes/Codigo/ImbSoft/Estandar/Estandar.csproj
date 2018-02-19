@@ -80,11 +80,53 @@
     <Compile Include="Vistas\Contabilidad\FrmEntradaDoc2.Designer.cs">
       <DependentUpon>FrmEntradaDoc2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetCajaMenor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetCajaMenor.Designer.cs">
+      <DependentUpon>FrmGetCajaMenor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetConceptoNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetConceptoNomina.designer.cs">
+      <DependentUpon>FrmGetConceptoNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetCuentasBancarias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetCuentasBancarias.Designer.cs">
+      <DependentUpon>FrmGetCuentasBancarias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Contabilidad\FrmGetPuc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Contabilidad\FrmGetPuc.Designer.cs">
       <DependentUpon>FrmGetPuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetRetenciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetRetenciones.Designer.cs">
+      <DependentUpon>FrmGetRetenciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetTarifaIva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetTarifaIva.Designer.cs">
+      <DependentUpon>FrmGetTarifaIva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetTipoActivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetTipoActivo.Designer.cs">
+      <DependentUpon>FrmGetTipoActivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetTipoDiferidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmGetTipoDiferidos.Designer.cs">
+      <DependentUpon>FrmGetTipoDiferidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\FrmGetTipoUsuarios.cs">
       <SubType>Form</SubType>
@@ -129,8 +171,29 @@
     <EmbeddedResource Include="Vistas\Contabilidad\FrmEntradaDoc2.resx">
       <DependentUpon>FrmEntradaDoc2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Contabilidad\FrmGetCajaMenor.resx">
+      <DependentUpon>FrmGetCajaMenor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Contabilidad\FrmGetConceptoNomina.resx">
+      <DependentUpon>FrmGetConceptoNomina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Contabilidad\FrmGetCuentasBancarias.resx">
+      <DependentUpon>FrmGetCuentasBancarias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Contabilidad\FrmGetPuc.resx">
       <DependentUpon>FrmGetPuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Contabilidad\FrmGetRetenciones.resx">
+      <DependentUpon>FrmGetRetenciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Contabilidad\FrmGetTarifaIva.resx">
+      <DependentUpon>FrmGetTarifaIva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Contabilidad\FrmGetTipoActivo.resx">
+      <DependentUpon>FrmGetTipoActivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Contabilidad\FrmGetTipoDiferidos.resx">
+      <DependentUpon>FrmGetTipoDiferidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmGetTipoUsuarios.resx">
       <DependentUpon>FrmGetTipoUsuarios.cs</DependentUpon>

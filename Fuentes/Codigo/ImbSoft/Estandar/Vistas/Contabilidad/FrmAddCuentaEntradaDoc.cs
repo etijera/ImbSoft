@@ -11,7 +11,7 @@ using Referencias.Properties;
 using UsuarioControles;
 using DevExpress.XtraEditors;
 
-namespace Contabilidad
+namespace Estandar.Vistas.Contabilidad
 {
     public partial class FrmAddCuentaEntradaDoc : FormularioBase
     {
