@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
-            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
+            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.BtnIClases = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -51,6 +50,7 @@
             this.BtnIUsuarios = new DevExpress.XtraBars.BarButtonItem();
             this.BtnIngresarDocumentos = new DevExpress.XtraBars.BarButtonItem();
             this.BtnPerfiles = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnItipoUsuarios = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.RbPContabilidad = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.RbPGPuc = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -61,8 +61,7 @@
             this.rbPGPerfilesImb = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.RibPHerramientas = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbPGPerfil = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.BtnItipoUsuarios = new DevExpress.XtraBars.BarButtonItem();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -76,10 +75,10 @@
             this.cabeceraForm1.AutoSize = true;
             this.cabeceraForm1.HabilitarBCerrar = true;
             this.cabeceraForm1.HabilitarBMinimiar = true;
-            this.cabeceraForm1.Location = new System.Drawing.Point(2, 1);
+            this.cabeceraForm1.Location = new System.Drawing.Point(0, 0);
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "ImbSoft";
-            this.cabeceraForm1.Size = new System.Drawing.Size(857, 32);
+            this.cabeceraForm1.Size = new System.Drawing.Size(859, 32);
             this.cabeceraForm1.TabIndex = 3;
             this.cabeceraForm1.VerBCerrar = true;
             this.cabeceraForm1.VerBMinimiar = true;
@@ -115,7 +114,7 @@
             this.BtnIngresarDocumentos,
             this.BtnPerfiles,
             this.BtnItipoUsuarios});
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 32);
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 30);
             this.ribbonControl1.MaxItemId = 39;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -236,6 +235,13 @@
             this.BtnPerfiles.Name = "BtnPerfiles";
             this.BtnPerfiles.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPerfiles_ItemClick);
             // 
+            // BtnItipoUsuarios
+            // 
+            this.BtnItipoUsuarios.Caption = "Tipo Usuarios";
+            this.BtnItipoUsuarios.Id = 38;
+            this.BtnItipoUsuarios.Name = "BtnItipoUsuarios";
+            this.BtnItipoUsuarios.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnItipoUsuarios_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -257,9 +263,9 @@
             this.RbPGPuc.ItemLinks.Add(this.BtnIMayores);
             this.RbPGPuc.ItemLinks.Add(this.BtnIAuxiliares);
             this.RbPGPuc.Name = "RbPGPuc";
-            toolTipItem2.Text = "Plan Único de cuenta";
-            superToolTip2.Items.Add(toolTipItem2);
-            this.RbPGPuc.SuperTip = superToolTip2;
+            toolTipItem1.Text = "Plan Único de cuenta";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.RbPGPuc.SuperTip = superToolTip1;
             this.RbPGPuc.Text = "PUC";
             // 
             // RbPGPerfilesCont
@@ -314,13 +320,6 @@
             this.xtraTabbedMdiManager1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Bottom;
             this.xtraTabbedMdiManager1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // BtnItipoUsuarios
-            // 
-            this.BtnItipoUsuarios.Caption = "Tipo Usuarios";
-            this.BtnItipoUsuarios.Id = 38;
-            this.BtnItipoUsuarios.Name = "BtnItipoUsuarios";
-            this.BtnItipoUsuarios.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnItipoUsuarios_ItemClick);
             // 
             // FrmMenu
             // 

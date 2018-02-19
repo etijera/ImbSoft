@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip();
             this.LblNameFrm = new DevExpress.XtraEditors.LabelControl();
             this.acceptCancel1 = new UsuarioControles.AcceptCancel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -194,7 +193,7 @@
             this.TxtNombre.Location = new System.Drawing.Point(80, 14);
             this.TxtNombre.MaxLenght = 50;
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(346, 26);
+            this.TxtNombre.Size = new System.Drawing.Size(342, 26);
             this.TxtNombre.SoloLectura = false;
             this.TxtNombre.TabIndex = 1;
             this.TxtNombre.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;

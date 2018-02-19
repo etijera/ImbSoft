@@ -65,9 +65,17 @@ namespace ImbSoft.Vistas
 
         private void BtnIUsuarios_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmListaUsuarios lUsu = new FrmListaUsuarios();
-            lUsu.Database = Database;
-            lUsu.ShowDialog();
+            FrmShowIt frmUsuarios = new FrmShowIt();
+            frmUsuarios.PerfilShow = Perfilador.getInstancia().CargarPerfil("Usuarios");
+            frmUsuarios.database = Database;
+            frmUsuarios.Usuario = Usuario;
+            frmUsuarios.DesdeMenu = true;
+            frmUsuarios.PasarUsuario = true;
+            frmUsuarios.EliminarRegistro = true;
+            frmUsuarios.DesHabilitarBtnImprimir();
+            frmUsuarios.DesHabilitarBtnGuardar();
+            frmUsuarios.DesHabilitarBtnExcel();
+            frmUsuarios.ShowDialog();
         }
 
         private void BtnIGeneral_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -120,6 +128,7 @@ namespace ImbSoft.Vistas
             frmTipoUsuarios.Usuario = Usuario;
             frmTipoUsuarios.DesdeMenu = true;
             frmTipoUsuarios.PasarUsuario = true;
+            frmTipoUsuarios.EliminarRegistro = true;
             //frmTipoUsuarios.OcultarBtnImprimir();
             //frmTipoUsuarios.OcultarBtnExcel();
             //frmTipoUsuarios.OcultarBtnGuardar();

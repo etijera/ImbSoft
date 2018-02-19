@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommonToolBar2));
-            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.BtnAñadir = new DevExpress.XtraBars.BarButtonItem();
@@ -105,9 +105,9 @@
             this.BtnAñadir.Glyph = ((System.Drawing.Image)(resources.GetObject("BtnAñadir.Glyph")));
             this.BtnAñadir.Id = 0;
             this.BtnAñadir.Name = "BtnAñadir";
-            toolTipItem7.Text = "Adicionar";
-            superToolTip7.Items.Add(toolTipItem7);
-            this.BtnAñadir.SuperTip = superToolTip7;
+            toolTipItem1.Text = "Adicionar";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.BtnAñadir.SuperTip = superToolTip1;
             this.BtnAñadir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAñadir_ItemClick);
             // 
             // BtnEdit
@@ -117,9 +117,9 @@
             this.BtnEdit.Glyph = ((System.Drawing.Image)(resources.GetObject("BtnEdit.Glyph")));
             this.BtnEdit.Id = 2;
             this.BtnEdit.Name = "BtnEdit";
-            toolTipItem9.Text = "Editar";
-            superToolTip9.Items.Add(toolTipItem9);
-            this.BtnEdit.SuperTip = superToolTip9;
+            toolTipItem2.Text = "Editar";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.BtnEdit.SuperTip = superToolTip2;
             this.BtnEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnEdit_ItemClick);
             // 
             // BtnEliminar
@@ -129,9 +129,9 @@
             this.BtnEliminar.Glyph = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Glyph")));
             this.BtnEliminar.Id = 1;
             this.BtnEliminar.Name = "BtnEliminar";
-            toolTipItem8.Text = "Eliminar";
-            superToolTip8.Items.Add(toolTipItem8);
-            this.BtnEliminar.SuperTip = superToolTip8;
+            toolTipItem3.Text = "Eliminar";
+            superToolTip3.Items.Add(toolTipItem3);
+            this.BtnEliminar.SuperTip = superToolTip3;
             this.BtnEliminar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnEliminar_ItemClick);
             // 
             // BtnImprimir
@@ -141,9 +141,9 @@
             this.BtnImprimir.Glyph = ((System.Drawing.Image)(resources.GetObject("BtnImprimir.Glyph")));
             this.BtnImprimir.Id = 3;
             this.BtnImprimir.Name = "BtnImprimir";
-            toolTipItem10.Text = "Imprimir";
-            superToolTip10.Items.Add(toolTipItem10);
-            this.BtnImprimir.SuperTip = superToolTip10;
+            toolTipItem4.Text = "Imprimir";
+            superToolTip4.Items.Add(toolTipItem4);
+            this.BtnImprimir.SuperTip = superToolTip4;
             this.BtnImprimir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnImprimir_ItemClick);
             // 
             // BtnGuardar
@@ -153,9 +153,9 @@
             this.BtnGuardar.Glyph = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Glyph")));
             this.BtnGuardar.Id = 4;
             this.BtnGuardar.Name = "BtnGuardar";
-            toolTipItem11.Text = "Guardar";
-            superToolTip11.Items.Add(toolTipItem11);
-            this.BtnGuardar.SuperTip = superToolTip11;
+            toolTipItem5.Text = "Guardar";
+            superToolTip5.Items.Add(toolTipItem5);
+            this.BtnGuardar.SuperTip = superToolTip5;
             this.BtnGuardar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGuardar_ItemClick);
             // 
             // BtnExcel
@@ -165,9 +165,9 @@
             this.BtnExcel.Glyph = ((System.Drawing.Image)(resources.GetObject("BtnExcel.Glyph")));
             this.BtnExcel.Id = 5;
             this.BtnExcel.Name = "BtnExcel";
-            toolTipItem12.Text = "Exportar a Excel";
-            superToolTip12.Items.Add(toolTipItem12);
-            this.BtnExcel.SuperTip = superToolTip12;
+            toolTipItem6.Text = "Exportar a Excel";
+            superToolTip6.Items.Add(toolTipItem6);
+            this.BtnExcel.SuperTip = superToolTip6;
             this.BtnExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnExcel_ItemClick);
             // 
             // barDockControlTop

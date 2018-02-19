@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Mask;
 using DevExpress.Utils;
+using System.Reflection;
 
 namespace UsuarioControles
 {
@@ -112,6 +113,8 @@ namespace UsuarioControles
             }
         }
 
+        public String MTextChanged { get; set; }
+
         #endregion
 
         #region Variables
@@ -196,7 +199,28 @@ namespace UsuarioControles
             TxtTex.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
         }
 
+        private void TxtTex_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (String.IsNullOrEmpty(MTextChanged))
+                {
+                    Type cType = ParentForm.GetType();
+                    MethodInfo mi = cType.GetMethod("TextChanged");
+                    mi.Invoke(ParentForm, null);
+                }
+                else
+                {
+                    Type cType = ParentForm.GetType();
+                    MethodInfo mi = cType.GetMethod(MTextChanged);
+                    mi.Invoke(ParentForm, null);
+                }
+            }
+            catch (Exception ex)
+            {
 
+            }
+        }
 
 
         #endregion

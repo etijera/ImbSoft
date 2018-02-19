@@ -121,7 +121,7 @@ namespace Referencias
             return DataBase.ExecuteQuery("PA_ObtenerConfiguracionGeneral", "Data", CommandType.StoredProcedure, null, conn);
         }
 
-        public DataSet GetTipoUsurios(SqlConnection Conn)
+        public DataSet GetTipoUsuarios(SqlConnection Conn)
         {
             string sql = "SELECT * FROM TipoUsuarios WHERE MarcaBorrado = '1' order by Codigo";
             return DataBase.ExecuteQuery(sql, "datos", CommandType.Text, null, Conn);

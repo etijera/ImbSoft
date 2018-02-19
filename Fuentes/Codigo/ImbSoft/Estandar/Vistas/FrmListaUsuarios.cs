@@ -72,7 +72,7 @@ namespace Estandar.Vistas
             DataView dvMain = dvm.CreateDataView(dsConsulta.Tables[0]);
             DgvGeneral.OptionsBehavior.AutoPopulateColumns = false;
             GctrlGeneral.DataSource = dvMain;
-            string[] captions = new[] { "Id", "Código", "Nombre Usuario", "Contraseña"};
+            string[] captions = new[] { "Id", "Código", "Nombre", "Usuario", "Tipo Usuario" };
 
             GridColumn[] col = new GridColumn[dsConsulta.Tables[0].Columns.Count];
             for (int i = 0; i < dsConsulta.Tables[0].Columns.Count; i++)
@@ -82,7 +82,7 @@ namespace Estandar.Vistas
                 col[i].Caption = captions[i];
                 col[i].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
 
-                if (i == 0 || i == 1 || i == 3)
+                if (i == 0 || i == 1)
                 {
                     col[i].Visible = false;
                 }

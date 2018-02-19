@@ -565,33 +565,30 @@
   </Perfil>
   <Perfil ID="Usuarios">
     <Id>Usuarios</Id>
-    <Descripcion>
-    </Descripcion>
-    <Tabla>accglUsuarios</Tabla>
-    <Campos>Codigo,Nombre,Usuario</Campos>
-    <Visibles>Codigo,Usuario</Visibles>
-    <Formulario>
-    </Formulario>
+    <Descripcion>Usuarios</Descripcion>
+    <Tabla>dbo.Usuarios</Tabla>
+    <Campos>Codigo,Id,Nombre,Usuario</Campos>
+    <Visibles>Nombre,Usuario</Visibles>
+    <Formulario>Estandar.Vistas.FrmGetUsuarios</Formulario>
     <Titulo>Usuarios</Titulo>
-    <Cabeceras>Usuario,Codigo</Cabeceras>
-    <Tamaños>300,82</Tamaños>
-    <Llave>Codigo</Llave>
+    <Cabeceras>Nombre,Usuario</Cabeceras>
+    <Tamaños>200,200</Tamaños>
+    <Llave>Id</Llave>
     <CampoFecha>
     </CampoFecha>
     <UtilizarReportes>False</UtilizarReportes>
     <DatosDetalle>
     </DatosDetalle>
-    <Subtitulo>
-    </Subtitulo>
+    <Subtitulo>Usuarios</Subtitulo>
     <ColumnaEstatica>
     </ColumnaEstatica>
     <Reporte>
     </Reporte>
-    <CamposId>Usuario,Codigo</CamposId>
+    <CamposId>Nombre,Usuario</CamposId>
     <Indices>0,1</Indices>
-    <Proyecto>\GL0037.dll</Proyecto>
+    <Proyecto>\Estandar.dll</Proyecto>
     <CampoCodigo>Codigo</CampoCodigo>
-    <CampoNombre>Usuario</CampoNombre>
+    <CampoNombre>Nombre</CampoNombre>
   </Perfil>
   <Perfil ID="Formularios">
     <Id>Formularios</Id>

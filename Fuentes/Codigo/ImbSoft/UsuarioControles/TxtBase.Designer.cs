@@ -55,6 +55,7 @@
             this.TxtTex.Properties.MaxLength = 50;
             this.TxtTex.Size = new System.Drawing.Size(166, 20);
             this.TxtTex.TabIndex = 2;
+            this.TxtTex.TextChanged += new System.EventHandler(this.TxtTex_TextChanged);
             this.TxtTex.Enter += new System.EventHandler(this.TxtTex_Enter);
             this.TxtTex.Leave += new System.EventHandler(this.TxtTex_Leave);
             // 

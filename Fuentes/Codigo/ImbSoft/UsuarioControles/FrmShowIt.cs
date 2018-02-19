@@ -69,6 +69,10 @@ namespace UsuarioControles
         public String Usuario { get; set; }
 
         public bool PasarUsuario { get; set; }
+        /// <summary>
+        /// Se utiliza para saber si al momento de llamar el metodo eliminar el siste elimina fisicamente el registro.
+        /// </summary>
+        public bool EliminarRegistro { get; set; }
 
         #endregion
 
@@ -231,12 +235,6 @@ namespace UsuarioControles
                 permisoEliminar = (bool)(dtPermisos.Rows[0]["Eliminar"]);
                 permisoImprimir = (bool)(dtPermisos.Rows[0]["Imprimir"]);
             }
-
-            //toolBarShowit1.HabilitarAñadir = permisoAdicionar;
-            //toolBarShowit1.HabilitarEditar = permisoEditar;
-            //toolBarShowit1.HabilitarEliminar = permisoEliminar;
-            //toolBarShowit1.HabilitarImprimir = permisoImprimir;
-
         }
 
         /// <summary>
@@ -439,11 +437,20 @@ namespace UsuarioControles
 
                     if (GvGeneral.GetFocusedDataSourceRowIndex() > -1)
                     {
-                        if (XtraMessageBox.Show("¿Esta seguro que desea anular el registro ?", Referencias.Properties.Resources.AppName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                        if (XtraMessageBox.Show("¿Esta seguro que desea eliminar el registro ?", Referencias.Properties.Resources.AppName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
                             Seleccion = dsGeneral.Tables[0].Rows[GvGeneral.GetFocusedDataSourceRowIndex()][PerfilShow.Llave].ToString();
 
-                            String sql = String.Format("UPDATE {0} SET MarcaBorrado = 0 WHERE {1} = '{2}'", PerfilShow.Tabla, PerfilShow.Llave, Seleccion);
+                            String sql = "";
+
+                            if (EliminarRegistro)
+                            {
+                                sql = String.Format("DELETE FROM {0} WHERE {1} = '{2}'", PerfilShow.Tabla, PerfilShow.Llave, Seleccion);
+                            }
+                            else
+                            {
+                                sql = String.Format("UPDATE {0} SET MarcaBorrado = 0 WHERE {1} = '{2}'", PerfilShow.Tabla, PerfilShow.Llave, Seleccion); 
+                            }
 
                             bool IsDone = DataBase.ExecuteNonQuery(sql, CommandType.Text, null, ConexionDB.getInstancia().Conexion(database, null));
 

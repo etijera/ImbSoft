@@ -30,8 +30,6 @@ namespace Estandar.Vistas
 
         #region Variables
 
-        Point formPosition;
-        Boolean mouseAction;
         private Funciones f = new Funciones();
         private bool agrego;
 
@@ -89,14 +87,11 @@ namespace Estandar.Vistas
                     {
                         InsertarActualizar("INSERT");
                         LimpiarVentana();
-
-                        DialogResult = DialogResult.OK;
                     }
                 }                                
             }
             else
             {
-  
                 if (Validar())
                 {
                     if (ConsultarTipoUsuario())
@@ -136,7 +131,7 @@ namespace Estandar.Vistas
 
         private void LimpiarVentana()
         {
-            TxtNombre.Texto = "";
+            TxtNombre.Texto = string.Empty;
             ChkAñadir.Checked = false;
             ChkEliminar.Checked = false;
             ChkEditar.Checked = false;
@@ -178,17 +173,13 @@ namespace Estandar.Vistas
                     tipoUsuario.PoderImprimir = ChkImprimir.Checked;
                     tipoUsuario.PoderExportar = ChkExportar.Checked;
 
-                    //if (CtrlTipoUsuarios.InsertarBasico(tipoUsuario))
-                    //{
-                    //    XtraMessageBox.Show("Tipo de usuario insertado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                    //}
-
                     DataTable dt = CtrlTipoUsuarios.InsertarBasico(tipoUsuario);
 
                     ID = dt.Rows[0][PerfilAct.Llave].ToString();
                     AlertInfo info = new AlertInfo(Resources.SystemMessage, String.Format(Resources.SaveSuccess, TxtNombre.Text), Resources.Check);
-                    alertControl1.Show(this, info);                    
-                    this.TxtNombre.Text = String.Empty;                 
+                    alertControl1.Show(this, info);
+                    //    XtraMessageBox.Show("Tipo de usuario insertado con éxito.", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+                    LimpiarVentana();                
                     this.TxtNombre.Focus();
 
                     if (!DesdeMenu)
