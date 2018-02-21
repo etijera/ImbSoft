@@ -30,9 +30,10 @@ namespace Estandar.Vistas.Contabilidad
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtLblCuenta = new TxtLblGeneral();
+            this.TxtLblCuenta = new UsuarioControles.TxtLblGeneral();
             this.TxtConcepto = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new DevExpress.XtraEditors.GroupControl();
@@ -47,8 +48,9 @@ namespace Estandar.Vistas.Contabilidad
             this.ChkPrimasCesantias = new DevExpress.XtraEditors.CheckEdit();
             this.ChkARLParafiscales = new DevExpress.XtraEditors.CheckEdit();
             this.ChkSeguridadSocial = new DevExpress.XtraEditors.CheckEdit();
-            this.acceptCancel1 = new AcceptCancel();
-            this.errorP1 = new System.Windows.Forms.ErrorProvider();
+            this.acceptCancel1 = new UsuarioControles.AcceptCancel();
+            this.errorP3 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtConcepto.Properties)).BeginInit();
@@ -66,7 +68,7 @@ namespace Estandar.Vistas.Contabilidad
             ((System.ComponentModel.ISupportInitialize)(this.ChkPrimasCesantias.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkARLParafiscales.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkSeguridadSocial.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,11 +102,13 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCuenta.DesHabilitarBtnExcel = false;
             this.TxtLblCuenta.DesHabilitarBtnGuardar = false;
             this.TxtLblCuenta.DesHabilitarBtnImprimir = false;
+            this.TxtLblCuenta.DesHabilitarTodo = false;
             this.TxtLblCuenta.Id = "";
             this.TxtLblCuenta.LblNomLocation = new System.Drawing.Point(106, 3);
             this.TxtLblCuenta.LblNomSize = new System.Drawing.Size(260, 20);
             this.TxtLblCuenta.Location = new System.Drawing.Point(81, 35);
             this.TxtLblCuenta.MaxLenght = 0;
+            this.TxtLblCuenta.Modo = null;
             this.TxtLblCuenta.Name = "TxtLblCuenta";
             this.TxtLblCuenta.NexControl = false;
             this.TxtLblCuenta.Nombre = null;
@@ -116,7 +120,8 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCuenta.OcultarBtnImprimir = false;
             this.TxtLblCuenta.OpcionGet = null;
             this.TxtLblCuenta.OpGet = false;
-            this.TxtLblCuenta.Ordenar = OrdenarPor.CampoNombre;
+            this.TxtLblCuenta.Ordenar = Referencias.OrdenarPor.CampoNombre;
+            this.TxtLblCuenta.PasarUsuario = false;
             this.TxtLblCuenta.PerfilShow = null;
             this.TxtLblCuenta.PonerCeros = false;
             this.TxtLblCuenta.Relacion = null;
@@ -125,7 +130,8 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCuenta.SoloLectura = false;
             this.TxtLblCuenta.TabIndex = 13;
             this.TxtLblCuenta.TxtCodLocation = new System.Drawing.Point(0, 3);
-            this.TxtLblCuenta.TxtCodSize = new System.Drawing.Size(100, 18);
+            this.TxtLblCuenta.TxtCodSize = new System.Drawing.Size(100, 20);
+            this.TxtLblCuenta.Usuario = null;
             this.TxtLblCuenta.Validating += new System.ComponentModel.CancelEventHandler(this.TxtLblCuenta_Validating);
             // 
             // TxtConcepto
@@ -288,20 +294,25 @@ namespace Estandar.Vistas.Contabilidad
             this.acceptCancel1.CancelButtonText = "Cancelar";
             this.acceptCancel1.HabilitarAceptar = true;
             this.acceptCancel1.HabilitarCancelar = true;
-            this.acceptCancel1.Location = new System.Drawing.Point(161, 275);
+            this.acceptCancel1.Location = new System.Drawing.Point(185, 275);
             this.acceptCancel1.LookAndFeel.SkinName = "Office 2007 Silver";
             this.acceptCancel1.Maceptar = null;
             this.acceptCancel1.Mcancelar = null;
             this.acceptCancel1.Name = "acceptCancel1";
-            this.acceptCancel1.Size = new System.Drawing.Size(172, 38);
+            this.acceptCancel1.Size = new System.Drawing.Size(125, 38);
             this.acceptCancel1.TabIndex = 4;
             // 
-            // errorP1
+            // errorP3
             // 
-            this.errorP1.ContainerControl = this;
+            this.errorP3.ContainerControl = this;
             // 
             // FrmGetConceptoNomina
             // 
+            this.Appearance.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 319);
@@ -316,6 +327,7 @@ namespace Estandar.Vistas.Contabilidad
             this.Name = "FrmGetConceptoNomina";
             this.Text = "Concepto de Nómina";
             this.Load += new System.EventHandler(this.GetConceptoNomina_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panel1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -335,7 +347,7 @@ namespace Estandar.Vistas.Contabilidad
             ((System.ComponentModel.ISupportInitialize)(this.ChkPrimasCesantias.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkARLParafiscales.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkSeguridadSocial.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -360,6 +372,6 @@ namespace Estandar.Vistas.Contabilidad
         private AcceptCancel acceptCancel1;
         private DevExpress.XtraEditors.RadioGroup rgAplicar;
         private DevExpress.XtraEditors.RadioGroup rgTipo;
-        private System.Windows.Forms.ErrorProvider errorP1;
+        private System.Windows.Forms.ErrorProvider errorP3;
     }
 }

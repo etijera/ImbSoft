@@ -39,13 +39,13 @@ namespace Estandar.Vistas.Contabilidad
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.rgTipo = new DevExpress.XtraEditors.RadioGroup();
             this.acceptCancel1 = new AcceptCancel();
-            this.errorP1 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.errorP2 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMonto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPorcentaje.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rgTipo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl2
@@ -181,7 +181,7 @@ namespace Estandar.Vistas.Contabilidad
             // 
             // errorP1
             // 
-            this.errorP1.ContainerControl = this;
+            this.errorP2.ContainerControl = this;
             // 
             // FrmGetRetenciones
             // 
@@ -207,7 +207,7 @@ namespace Estandar.Vistas.Contabilidad
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rgTipo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,6 +224,6 @@ namespace Estandar.Vistas.Contabilidad
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.RadioGroup rgTipo;
         private AcceptCancel acceptCancel1;
-        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errorP1;
+        private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errorP2;
     }
 }

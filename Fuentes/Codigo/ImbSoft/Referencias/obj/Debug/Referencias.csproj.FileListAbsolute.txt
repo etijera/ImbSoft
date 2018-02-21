@@ -98,3 +98,4 @@ D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\R
 D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.dll.licenses
 D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.dll
 D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.pdb
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.csprojResolveAssemblyReference.cache
