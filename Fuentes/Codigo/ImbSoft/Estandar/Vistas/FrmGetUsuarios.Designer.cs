@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolTip1 = new System.Windows.Forms.ToolTip();
+            this.components = new System.ComponentModel.Container();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.LblNameFrm = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtPass2 = new UsuarioControles.TxtBase();
@@ -89,6 +90,7 @@
             this.TxtPass2.CaraterPassword = '*';
             this.TxtPass2.Location = new System.Drawing.Point(144, 138);
             this.TxtPass2.MaxLenght = 50;
+            this.TxtPass2.MTextChanged = null;
             this.TxtPass2.Name = "TxtPass2";
             this.TxtPass2.Size = new System.Drawing.Size(173, 26);
             this.TxtPass2.SoloLectura = false;
@@ -107,6 +109,7 @@
             this.TxtPass1.CaraterPassword = '*';
             this.TxtPass1.Location = new System.Drawing.Point(144, 107);
             this.TxtPass1.MaxLenght = 50;
+            this.TxtPass1.MTextChanged = null;
             this.TxtPass1.Name = "TxtPass1";
             this.TxtPass1.Size = new System.Drawing.Size(173, 26);
             this.TxtPass1.SoloLectura = false;
@@ -158,6 +161,7 @@
             this.TxtNombre.CaraterPassword = '\0';
             this.TxtNombre.Location = new System.Drawing.Point(144, 44);
             this.TxtNombre.MaxLenght = 50;
+            this.TxtNombre.MTextChanged = null;
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(173, 26);
             this.TxtNombre.SoloLectura = false;
@@ -184,6 +188,7 @@
             this.TxtUsuario.CaraterPassword = '\0';
             this.TxtUsuario.Location = new System.Drawing.Point(144, 13);
             this.TxtUsuario.MaxLenght = 20;
+            this.TxtUsuario.MTextChanged = null;
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(173, 26);
             this.TxtUsuario.SoloLectura = false;
@@ -242,9 +247,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.panel1);
             this.panelControl1.Controls.Add(this.acceptCancel1);
-            this.panelControl1.Location = new System.Drawing.Point(2, 29);
+            this.panelControl1.Location = new System.Drawing.Point(2, 28);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(385, 257);
+            this.panelControl1.Size = new System.Drawing.Size(385, 258);
             this.panelControl1.TabIndex = 0;
             // 
             // cabeceraForm1
@@ -254,10 +259,10 @@
             this.cabeceraForm1.AutoSize = true;
             this.cabeceraForm1.HabilitarBCerrar = true;
             this.cabeceraForm1.HabilitarBMinimiar = true;
-            this.cabeceraForm1.Location = new System.Drawing.Point(1, 0);
+            this.cabeceraForm1.Location = new System.Drawing.Point(0, -1);
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "Usuarios";
-            this.cabeceraForm1.Size = new System.Drawing.Size(385, 32);
+            this.cabeceraForm1.Size = new System.Drawing.Size(387, 32);
             this.cabeceraForm1.TabIndex = 1;
             this.cabeceraForm1.VerBCerrar = true;
             this.cabeceraForm1.VerBMinimiar = true;

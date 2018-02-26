@@ -37,28 +37,28 @@
             // 
             this.TxtCodigo.Location = new System.Drawing.Point(44, 3);
             this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.TxtCodigo.Properties.Appearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.TxtCodigo.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.TxtCodigo.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.TxtCodigo.Properties.Appearance.Options.UseBackColor = true;
-            this.TxtCodigo.Properties.Appearance.Options.UseBorderColor = true;
-            this.TxtCodigo.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TxtCodigo.Properties.AppearanceDisabled.BackColor2 = System.Drawing.Color.WhiteSmoke;
-            this.TxtCodigo.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.TxtCodigo.Properties.Appearance.Options.UseForeColor = true;
+            this.TxtCodigo.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TxtCodigo.Properties.AppearanceDisabled.Options.UseBackColor = true;
-            this.TxtCodigo.Properties.AppearanceDisabled.Options.UseBorderColor = true;
-            this.TxtCodigo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.TxtCodigo.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Teal;
+            this.TxtCodigo.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this.TxtCodigo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtCodigo.Properties.MaxLength = 12;
             this.TxtCodigo.Size = new System.Drawing.Size(100, 20);
             this.TxtCodigo.TabIndex = 0;
             this.TxtCodigo.TextChanged += new System.EventHandler(this.TxtCodigo_TextChanged);
+            this.TxtCodigo.Enter += new System.EventHandler(this.TxtCodigo_Enter);
             this.TxtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCodigo_KeyPress);
+            this.TxtCodigo.Leave += new System.EventHandler(this.TxtCodigo_Leave);
             this.TxtCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCodigo_Validating);
             // 
             // LblNombre
             // 
-            this.LblNombre.Appearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.LblNombre.Appearance.ForeColor = System.Drawing.Color.DarkGreen;
+            this.LblNombre.Appearance.BorderColor = System.Drawing.Color.Teal;
+            this.LblNombre.Appearance.ForeColor = System.Drawing.Color.Teal;
             this.LblNombre.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.LblNombre.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.LblNombre.Location = new System.Drawing.Point(150, 3);

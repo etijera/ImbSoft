@@ -382,32 +382,30 @@
   </Perfil>
   <Perfil ID="Puc">
     <Id>Puc</Id>
-    <Descripcion>
-    </Descripcion>
-    <Tabla>accglPUC</Tabla>
-    <Campos>glcod,glnum</Campos>
-    <Visibles>glcod,glnum</Visibles>
-    <Formulario>Estandar.FrmGetPuc</Formulario>
-    <Titulo>Plan Unico de Cuentas</Titulo>
-    <Cabeceras>Nombre,Código</Cabeceras>
-    <Tamaños>300,82</Tamaños>
-    <Llave>glcod</Llave>
+    <Descripcion>Plan Único de Cuentas</Descripcion>
+    <Tabla>Contabilidad.Puc</Tabla>
+    <Campos>Codigo,Nombre</Campos>
+    <Visibles>Codigo,Nombre</Visibles>
+    <Formulario>Estandar.Vistas.Contabilidad.FrmGetPuc</Formulario>
+    <Titulo>Plan Único de Cuentas</Titulo>
+    <Cabeceras>Codigo,Nombre</Cabeceras>
+    <Tamaños>82,300</Tamaños>
+    <Llave>Codigo</Llave>
     <CampoFecha>
     </CampoFecha>
     <UtilizarReportes>False</UtilizarReportes>
     <DatosDetalle>
     </DatosDetalle>
-    <Subtitulo>
-    </Subtitulo>
+    <Subtitulo>Plan Único de Cuentas</Subtitulo>
     <ColumnaEstatica>
     </ColumnaEstatica>
     <Reporte>
     </Reporte>
-    <CamposId>glnum,glcod</CamposId>
-    <Indices>1,0</Indices>
-    <Proyecto>\GL0010.dll</Proyecto>
-    <CampoCodigo>glcod</CampoCodigo>
-    <CampoNombre>glnum</CampoNombre>
+    <CamposId>Codigo,Nombre</CamposId>
+    <Indices>0,1</Indices>
+    <Proyecto>\Estandar.dll</Proyecto>
+    <CampoCodigo>Codigo</CampoCodigo>
+    <CampoNombre>Nombre</CampoNombre>
   </Perfil>
   <Perfil ID="ImbRetefuente">
     <Id>ImbRetefuente</Id>

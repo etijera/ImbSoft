@@ -99,3 +99,15 @@ D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\R
 D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.dll
 D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.pdb
 D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.csprojResolveAssemblyReference.cache
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\bin\Debug\Referencias.dll
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\bin\Debug\Referencias.pdb
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\bin\Debug\es\Microsoft.Windows.Design.Interaction.resources.dll
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\bin\Debug\es\Microsoft.Windows.Design.Extensibility.resources.dll
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.csprojResolveAssemblyReference.cache
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.Properties.Resources.resources
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.csproj.GenerateResource.Cache
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.dll.licenses
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.dll
+D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Referencias\obj\Debug\Referencias.pdb

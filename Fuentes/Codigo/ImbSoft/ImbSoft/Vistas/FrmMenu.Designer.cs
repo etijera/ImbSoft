@@ -33,7 +33,7 @@
             this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.BtnIClases = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnIPuc = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -96,7 +96,7 @@
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.BtnIClases,
+            this.BtnIPuc,
             this.barButtonItem2,
             this.barButtonItem3,
             this.barButtonItem4,
@@ -129,11 +129,12 @@
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
-            // BtnIClases
+            // BtnIPuc
             // 
-            this.BtnIClases.Caption = "Clases";
-            this.BtnIClases.Id = 1;
-            this.BtnIClases.Name = "BtnIClases";
+            this.BtnIPuc.Caption = "Puc";
+            this.BtnIPuc.Id = 1;
+            this.BtnIPuc.Name = "BtnIPuc";
+            this.BtnIPuc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnIPuc_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -258,7 +259,7 @@
             // 
             // RbPGPuc
             // 
-            this.RbPGPuc.ItemLinks.Add(this.BtnIClases);
+            this.RbPGPuc.ItemLinks.Add(this.BtnIPuc);
             this.RbPGPuc.ItemLinks.Add(this.BtnIGrupos);
             this.RbPGPuc.ItemLinks.Add(this.BtnIMayores);
             this.RbPGPuc.ItemLinks.Add(this.BtnIAuxiliares);
@@ -354,7 +355,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage RbPContabilidad;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup RbPGPuc;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.BarButtonItem BtnIClases;
+        private DevExpress.XtraBars.BarButtonItem BtnIPuc;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;

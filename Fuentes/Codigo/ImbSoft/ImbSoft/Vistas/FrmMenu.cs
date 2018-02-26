@@ -138,5 +138,23 @@ namespace ImbSoft.Vistas
             frmTipoUsuarios.ShowDialog(); 
         }
 
+        private void BtnIPuc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmShowIt frmPuc = new FrmShowIt();
+            frmPuc.PerfilShow = Perfilador.getInstancia().CargarPerfil("PUC");
+            frmPuc.database = Database;
+            frmPuc.Usuario = Usuario;
+            frmPuc.DesdeMenu = true;
+            frmPuc.PasarUsuario = true;
+            frmPuc.EliminarRegistro = true;
+            //frmTipoUsuarios.OcultarBtnImprimir();
+            //frmTipoUsuarios.OcultarBtnExcel();
+            //frmTipoUsuarios.OcultarBtnGuardar();
+            frmPuc.DesHabilitarBtnImprimir();
+            frmPuc.DesHabilitarBtnGuardar();
+            frmPuc.DesHabilitarBtnExcel();
+            frmPuc.ShowDialog(); 
+        }
+
     }
 }

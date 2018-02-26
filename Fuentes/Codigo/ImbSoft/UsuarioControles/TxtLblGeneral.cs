@@ -524,8 +524,6 @@ namespace UsuarioControles
             }
         }
 
-        #endregion
-
         private void TxtLblGeneral_Load(object sender, EventArgs e)
         {
             if (SinBordes)
@@ -533,5 +531,19 @@ namespace UsuarioControles
                 TxtCodigo.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             }
         }
+
+        private void TxtCodigo_Enter(object sender, EventArgs e)
+        {
+            TxtCodigo.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+        }
+
+        private void TxtCodigo_Leave(object sender, EventArgs e)
+        {
+            TxtCodigo.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+        }
+
+        #endregion
+
+
     }
 }
