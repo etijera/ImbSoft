@@ -579,7 +579,7 @@ namespace Estandar.Vistas.Contabilidad
 
         private void FrmGetPuc_Load(object sender, EventArgs e)
         {
-            TxtLblClasificacion.PerfilShow = Perfilador.getInstancia().CargarPerfil("PucClasificacionPuc");
+            TxtLblClasificacion.PerfilShow = Perfilador.getInstancia().CargarPerfil("ClasificacionPuc");
             TxtLblClasificacion.database = Database;
             TxtLblClasificacion.DesHabilitarBtnExcel = true;
             TxtLblClasificacion.DesHabilitarBtnGuardar = true;

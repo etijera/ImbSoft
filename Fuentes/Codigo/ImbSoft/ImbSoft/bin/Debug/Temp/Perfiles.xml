@@ -3649,16 +3649,16 @@
     <CampoCodigo>coddpto</CampoCodigo>
     <CampoNombre>nomdpto</CampoNombre>
   </Perfil>
-  <Perfil ID="PucClasificacionPuc">
+  <Perfil ID="ClasificacionPuc">
     <Id>PucClasificacionPuc</Id>
     <Descripcion>
     </Descripcion>
-    <Tabla>ClasificacionPuc</Tabla>
+    <Tabla>Contabilidad.ClasificacionPuc</Tabla>
     <Campos>Descripcion</Campos>
     <Visibles>Descripcion</Visibles>
-    <Formulario>GLUserControls.FrmGetName</Formulario>
+    <Formulario>UsuarioControles.FrmGetName</Formulario>
     <Titulo>Clasificación de Cuentas</Titulo>
-    <Cabeceras>Nombre</Cabeceras>
+    <Cabeceras>Descripcion</Cabeceras>
     <Tamaños>402</Tamaños>
     <Llave>Codigo</Llave>
     <CampoFecha>
@@ -3670,10 +3670,10 @@
     </Subtitulo>
     <ColumnaEstatica>
     </ColumnaEstatica>
-    <Reporte>GLUserControls.RptPerfilGeneral</Reporte>
+    <Reporte>UsuarioControles.RptPerfilGeneral</Reporte>
     <CamposId>Descripcion</CamposId>
     <Indices>0</Indices>
-    <Proyecto>\GL0037.dll</Proyecto>
+    <Proyecto>\UsuarioControles.dll</Proyecto>
     <CampoCodigo>Codigo</CampoCodigo>
     <CampoNombre>Descripcion</CampoNombre>
   </Perfil>
