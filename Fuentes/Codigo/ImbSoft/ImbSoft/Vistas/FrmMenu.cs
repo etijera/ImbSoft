@@ -141,7 +141,7 @@ namespace ImbSoft.Vistas
         private void BtnIPuc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmShowIt frmPuc = new FrmShowIt();
-            frmPuc.PerfilShow = Perfilador.getInstancia().CargarPerfil("PUC");
+            frmPuc.PerfilShow = Perfilador.getInstancia().CargarPerfil("Puc");
             frmPuc.database = Database;
             frmPuc.Usuario = Usuario;
             frmPuc.DesdeMenu = true;

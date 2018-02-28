@@ -48,9 +48,9 @@ namespace Estandar.Vistas.Contabilidad
             DgvTiposCuentas.Columns.Clear();
             dsTiposCuentas.Tables.Clear();
             SqlParameter[] parametros = new[] { new SqlParameter("@Operacion", "SCLC"),
-                                                new SqlParameter("@Glcod", TxtCodigoCuenta.Text.Trim()) };
+                                                new SqlParameter("@Codigo", TxtCodigoCuenta.Text.Trim()) };
 
-            DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, parametros,
+            DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, parametros,
                                                     ConexionDB.getInstancia().Conexion(Database, null));
             dtTiposCuentas = ds.Tables[0].Copy();
 
@@ -246,18 +246,18 @@ namespace Estandar.Vistas.Contabilidad
         private void Recuperar(String codigo)
         {
             SqlParameter[] parametros = new[] { new SqlParameter("@Operacion", "R"),
-                                                new SqlParameter("@Glcod", codigo)};
+                                                new SqlParameter("@Codigo", codigo)};
 
-            DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, parametros,
+            DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, parametros,
                                                     ConexionDB.getInstancia().Conexion(Database, null));
         }
 
         public void ConsultarCuenta(String codigo) 
         {
             SqlParameter[] parametros = new[] { new SqlParameter("@Operacion", "S"),
-                                                new SqlParameter("@Glcod", codigo)};
+                                                new SqlParameter("@Codigo", codigo)};
 
-            DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, parametros,
+            DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, parametros,
                                                     ConexionDB.getInstancia().Conexion(Database, null));
             if (ds.Tables[0].Rows.Count>0)
             {
@@ -364,9 +364,9 @@ namespace Estandar.Vistas.Contabilidad
         public void EliminarPucClasificacionDet() 
         {
             SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","D"),
-                                                    new SqlParameter("@Det_Puc",TxtCodigoCuenta.Text.Trim())};
+                                                    new SqlParameter("@CodigoClasificacion",TxtCodigoCuenta.Text.Trim())};
 
-            bool IsDone = DataBase.ExecuteNonQuery("PA_Puc_Clasificacion_Det", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_ClasificacionPucDetalles", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
         }
 
@@ -394,15 +394,15 @@ namespace Estandar.Vistas.Contabilidad
         {
 
             SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","IUPUC"),
-                                                    new SqlParameter("@Glcod",TxtCodigoCuenta.Text),
-                                                    new SqlParameter("@Glnum",TxtNombreCuenta.Text),
+                                                    new SqlParameter("@Codigo",TxtCodigoCuenta.Text),
+                                                    new SqlParameter("@Nombre",TxtNombreCuenta.Text),
                                                     new SqlParameter("@GlVersion",TxtFormatoVersion.Text),
-                                                    new SqlParameter("@GlCodDIAN",TxtCodigoDian.Text),
+                                                    new SqlParameter("@CodigoDIAN",TxtCodigoDian.Text),
                                                     new SqlParameter("@TipoConcepto",TxtLblClasificacion.Codigo??""),
-                                                    new SqlParameter("@Glcct",ChkCentroCosto.Checked),
-                                                    new SqlParameter("@Glter",ChkTerceros.Checked)};
+                                                    new SqlParameter("@Ccosto",ChkCentroCosto.Checked),
+                                                    new SqlParameter("@Tercero",ChkTerceros.Checked)};
 
-            bool IsDone = DataBase.ExecuteNonQuery("PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
             //XtraMessageBox.Show("Proceso realizado con éxito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
            // 
@@ -410,113 +410,114 @@ namespace Estandar.Vistas.Contabilidad
 
         public void InsertarTipoDiferido() 
         {
-            SqlParameter[] parametros = new[] {    new SqlParameter("@Operacion","VIDF"),
-                                                   new SqlParameter("@Glcod",TxtCodigoCuenta.Text)};
-            DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
+            //SqlParameter[] parametros = new[] {    new SqlParameter("@Operacion","VIDF"),
+            //                                       new SqlParameter("@Codigo",TxtCodigoCuenta.Text)};
+            //DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
 
-            if (ds.Tables[0].Rows.Count == 0)
-            {
-                SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","I"),
-                                                    new SqlParameter("@DifPuc",TxtCodigoCuenta.Text),
-                                                    new SqlParameter("@DifNom",TxtNombreCuenta.Text),
-                                                    new SqlParameter("@DifDebe",""),
-                                                    new SqlParameter("@DifHaber","")};
+            //if (ds.Tables[0].Rows.Count == 0)
+            //{
+            //    SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","I"),
+            //                                        new SqlParameter("@DifPuc",TxtCodigoCuenta.Text),
+            //                                        new SqlParameter("@DifNom",TxtNombreCuenta.Text),
+            //                                        new SqlParameter("@DifDebe",""),
+            //                                        new SqlParameter("@DifHaber","")};
 
-                bool IsDone = DataBase.ExecuteNonQuery("PA_PucTipoDiferido", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
-            }
+            //    bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_PucTipoDiferido", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            //}
         }
 
         public void InsertarTipoActivo() 
         {
-            SqlParameter[] parametros = new[] {    new SqlParameter("@Operacion","VIAF"),
-                                                   new SqlParameter("@Glcod",TxtCodigoCuenta.Text)};
-            DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
+            //SqlParameter[] parametros = new[] {    new SqlParameter("@Operacion","VIAF"),
+            //                                       new SqlParameter("@Codigo",TxtCodigoCuenta.Text)};
+            //DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
 
-            if (ds.Tables[0].Rows.Count==0)
-            {
-                SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","I"),
-                                                    new SqlParameter("@tacpuc",TxtCodigoCuenta.Text),
-                                                    new SqlParameter("@tacnom",TxtNombreCuenta.Text),
-                                                    new SqlParameter("@tactiempo","0"),
-                                                    new SqlParameter("@tacdepre","0"),
-                                                    new SqlParameter("@tacgastos",""),
-                                                    new SqlParameter("@tacdepre_aa","")};
+            //if (ds.Tables[0].Rows.Count==0)
+            //{
+            //    SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","I"),
+            //                                        new SqlParameter("@tacpuc",TxtCodigoCuenta.Text),
+            //                                        new SqlParameter("@tacnom",TxtNombreCuenta.Text),
+            //                                        new SqlParameter("@tactiempo","0"),
+            //                                        new SqlParameter("@tacdepre","0"),
+            //                                        new SqlParameter("@tacgastos",""),
+            //                                        new SqlParameter("@tacdepre_aa","")};
 
-                bool IsDone = DataBase.ExecuteNonQuery("PA_TipoActivo", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
-            }            
+            //    bool IsDone = DataBase.ExecuteNonQuery("PA_TipoActivo", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            //}            
         }
 
         private String MaxCodigoConcepto()
         {
-            SqlParameter[] parametros = new[] { new SqlParameter("@Operacion", "GETMAXCON") };
+            //SqlParameter[] parametros = new[] { new SqlParameter("@Operacion", "GETMAXCON") };
 
-            DataSet dsCods = new DataSet();
+            //DataSet dsCods = new DataSet();
 
-            dsCods = DataBase.ExecuteQuery("PA_REGEMP", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
+            //dsCods = DataBase.ExecuteQuery("PA_REGEMP", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
 
-            String maxCod = "0";
+            //String maxCod = "0";
 
-            if (dsCods.Tables.Count != 0)
-            {
-                maxCod = dsCods.Tables[0].Rows[0][0].ToString();
-            }
+            //if (dsCods.Tables.Count != 0)
+            //{
+            //    maxCod = dsCods.Tables[0].Rows[0][0].ToString();
+            //}
 
-            if (maxCod == "")
-            {
-                maxCod = "00";
-            }
+            //if (maxCod == "")
+            //{
+            //    maxCod = "00";
+            //}
 
-            return maxCod;
+            //return maxCod;
+            return "";
         }
 
         public void InsertarConceptoNomina() 
         {
-            SqlParameter[] parametros = new[] {    new SqlParameter("@Operacion","VICN"),
-                                                   new SqlParameter("@Glcod",TxtCodigoCuenta.Text)};
-            DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
+            //SqlParameter[] parametros = new[] {    new SqlParameter("@Operacion","VICN"),
+            //                                       new SqlParameter("@Codigo",TxtCodigoCuenta.Text)};
+            //DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
 
-            if (ds.Tables[0].Rows.Count == 0)
-            {
-                nuevoCodCon = Funciones.getInstancia().RellenarCadenaPorLaIzquierda((MaxCodigoConcepto().ToInt() + 1).ToString(), '0', 4);
+            //if (ds.Tables[0].Rows.Count == 0)
+            //{
+            //    nuevoCodCon = Funciones.getInstancia().RellenarCadenaPorLaIzquierda((MaxCodigoConcepto().ToInt() + 1).ToString(), '0', 4);
 
-                SqlParameter[] parametros1 = new[] { new SqlParameter("@Operacion", "INSCONNOM"),
-                               new SqlParameter("@concod", nuevoCodCon),
-                               new SqlParameter("@connom", TxtNombreCuenta.Text),
-							   new SqlParameter("@conaux", TxtCodigoCuenta.Text),
-                               new SqlParameter("@concre", ""),
-							   new SqlParameter("@conapli", "1"),
-							   new SqlParameter("@contip", "1"),
-							   new SqlParameter("@consal", "0"),
-							   new SqlParameter("@conpri", "0"),
-							   new SqlParameter("@convac", "0" ),
-							   new SqlParameter("@conret", "0"),
-							   new SqlParameter("@conpvac", "0"),
-							   new SqlParameter("@conpor", "0")};
+            //    SqlParameter[] parametros1 = new[] { new SqlParameter("@Operacion", "INSCONNOM"),
+            //                   new SqlParameter("@concod", nuevoCodCon),
+            //                   new SqlParameter("@connom", TxtNombreCuenta.Text),
+            //                   new SqlParameter("@conaux", TxtCodigoCuenta.Text),
+            //                   new SqlParameter("@concre", ""),
+            //                   new SqlParameter("@conapli", "1"),
+            //                   new SqlParameter("@contip", "1"),
+            //                   new SqlParameter("@consal", "0"),
+            //                   new SqlParameter("@conpri", "0"),
+            //                   new SqlParameter("@convac", "0" ),
+            //                   new SqlParameter("@conret", "0"),
+            //                   new SqlParameter("@conpvac", "0"),
+            //                   new SqlParameter("@conpor", "0")};
 
-                bool IsDone = DataBase.ExecuteNonQuery("PA_REGEMP", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
-            }
-            else
-            {
-                nuevoCodCon = ds.Tables[0].Rows[0]["conCod"].ToString();
-            }
+            //    bool IsDone = DataBase.ExecuteNonQuery("PA_REGEMP", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            //}
+            //else
+            //{
+            //    nuevoCodCon = ds.Tables[0].Rows[0]["conCod"].ToString();
+            //}
         }
 
         public void InsertarPucClasificacionDet(String codigo,String puc) 
         {
             SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","I"),
-                                                    new SqlParameter("@Det_codigo",codigo),
-                                                    new SqlParameter("@Det_Puc",puc)};
+                                                    new SqlParameter("@CodigoClasificacion",codigo),
+                                                    new SqlParameter("@CodigoPuc",puc)};
 
-            bool IsDone = DataBase.ExecuteNonQuery("PA_Puc_Clasificacion_Det", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_ClasificacionPucDetalles", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
         }
 
         public bool ConsultarCodigo(String codigo) 
         {
             bool retorno = false;
             SqlParameter[] parametros = new[] { new SqlParameter("@Operacion", "S"),
-                                                new SqlParameter("@Glcod", codigo)};
+                                                new SqlParameter("@Codigo", codigo)};
 
-            DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, parametros,
+            DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, parametros,
                                                     ConexionDB.getInstancia().Conexion(Database, null));
 
             if (ds.Tables[0].Rows.Count > 0)
