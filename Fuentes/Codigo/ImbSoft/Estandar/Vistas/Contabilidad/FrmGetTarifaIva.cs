@@ -85,12 +85,12 @@ namespace Estandar.Vistas.Contabilidad
         {
 
             SqlParameter[] parametros1 = new [] {    new SqlParameter("@Operacion", "ITI"),
-            new SqlParameter("@Glcod", ID ?? ""),
-            new SqlParameter("@GlModalidad", RgbModalidad.SelectedIndex + 1),
-            new SqlParameter("@GlRetTipo", RgbTipo.SelectedIndex + 1),
-            new SqlParameter("@GlRetPorCentaje", Funciones.getInstancia().FormatearValorDecimal(TxtTarifa.EditValue.ToString())) };
+            new SqlParameter("@Codigo", ID ?? ""),
+            new SqlParameter("@Modalidad", RgbModalidad.SelectedIndex + 1),
+            new SqlParameter("@TipoRetencion", RgbTipo.SelectedIndex + 1),
+            new SqlParameter("@PorcentajeRetencion", Funciones.getInstancia().FormatearValorDecimal(TxtTarifa.EditValue.ToString())) };
 
-            bool IsDone = DataBase.ExecuteNonQuery("PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
             // XtraMessageBox.Show("Proceso realizado con exito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;
@@ -99,12 +99,12 @@ namespace Estandar.Vistas.Contabilidad
         private void Editando()
         {
             SqlParameter[] parametros1 = new [] {    new SqlParameter("@Operacion", "UTI"),
-            new SqlParameter("@Glcod", ID ?? ""),
-            new SqlParameter("@GlModalidad", RgbModalidad.SelectedIndex + 1),
-            new SqlParameter("@GlRetTipo", RgbTipo.SelectedIndex + 1),
-            new SqlParameter("@GlRetPorCentaje", Funciones.getInstancia().FormatearValorDecimal(TxtTarifa.EditValue.ToString())) };
+            new SqlParameter("@Codigo", ID ?? ""),
+            new SqlParameter("@Modalidad", RgbModalidad.SelectedIndex + 1),
+            new SqlParameter("@TipoRetencion", RgbTipo.SelectedIndex + 1),
+            new SqlParameter("@PorcentajeRetencion", Funciones.getInstancia().FormatearValorDecimal(TxtTarifa.EditValue.ToString())) };
 
-            bool IsDone = DataBase.ExecuteNonQuery("PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
             //XtraMessageBox.Show("Proceso realizado con exito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;
@@ -117,26 +117,26 @@ namespace Estandar.Vistas.Contabilidad
 
         private void FrmGetTarifaIva_Load(object sender, EventArgs e)
         {
-            TxtLblCodigo.PerfilShow = Perfilador.getInstancia().CargarPerfil("PUC");
+            TxtLblCodigo.PerfilShow = Perfilador.getInstancia().CargarPerfil("Puc");
             TxtLblCodigo.database = Database;
             TxtLblCodigo.Ordenar = OrdenarPor.CampoCodigo;
 
             if (Modo == "E")
             {
                 SqlParameter[] par = new [] {   new SqlParameter("@Operacion", "STI"),
-                new SqlParameter("@Glcod", ID) };
+                new SqlParameter("@Codigo", ID) };
 
-                DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
+                DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
 
                 this.Text = "Editando";
 
-                TxtLblCodigo.Codigo = ds.Tables[0].Rows[0]["glcod"].ToString();
+                TxtLblCodigo.Codigo = ds.Tables[0].Rows[0]["Codigo"].ToString();
                 TxtLblCodigo.Edit();
 
-                RgbModalidad.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0]["glModalidad"]) - 1;
-                RgbTipo.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0]["glRetTipo"]) - 1;
+                RgbModalidad.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0]["Modalidad"]) - 1;
+                RgbTipo.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0]["TipoRetencion"]) - 1;
 
-                TxtTarifa.Text = ds.Tables[0].Rows[0]["glRetPorCentaje"].ToString();
+                TxtTarifa.Text = ds.Tables[0].Rows[0]["PorcentajeRetencion"].ToString();
 
                 TxtLblCodigo.Disable();
             }

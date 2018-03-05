@@ -49,10 +49,10 @@ namespace Estandar.Vistas.Contabilidad
         {
 
             SqlParameter[] parametros1 = new [] {    new SqlParameter("@Operacion", "ICB"),
-            new SqlParameter("@Glcod", ID ?? ""),
-            new SqlParameter("@GlPlano", TxtLblArchivoDisfon.Codigo ?? ""),
-            new SqlParameter("@Glcheque", TxtUltimoCheque.Text.Trim()),
-            new SqlParameter("@Glgravamen", ChkGravamen.Checked) };
+            new SqlParameter("@Codigo", ID ?? ""),
+            //new SqlParameter("@GlPlano", TxtLblArchivoDisfon.Codigo ?? ""),
+            new SqlParameter("@Cheque", TxtUltimoCheque.Text.Trim()),
+            new SqlParameter("@Gravamen", ChkGravamen.Checked) };
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -63,10 +63,10 @@ namespace Estandar.Vistas.Contabilidad
         private void Editando()
         {
             SqlParameter[] parametros1 = new [] {    new SqlParameter("@Operacion", "UCB"),
-            new SqlParameter("@Glcod", ID ?? ""),
-            new SqlParameter("@GlPlano", TxtLblArchivoDisfon.Codigo ?? ""),
-            new SqlParameter("@Glcheque", TxtUltimoCheque.Text.Trim()),
-            new SqlParameter("@Glgravamen", ChkGravamen.Checked) };
+            new SqlParameter("@Codigo", ID ?? ""),
+            //new SqlParameter("@GlPlano", TxtLblArchivoDisfon.Codigo ?? ""),
+            new SqlParameter("@Cheque", TxtUltimoCheque.Text.Trim()),
+            new SqlParameter("@Gravamen", ChkGravamen.Checked) };
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -99,27 +99,27 @@ namespace Estandar.Vistas.Contabilidad
             TxtLblCodigo.database = Database;
             TxtLblCodigo.Ordenar = OrdenarPor.CampoCodigo;
 
-            TxtLblArchivoDisfon.PerfilShow = Perfilador.getInstancia().CargarPerfil("Disfon");
-            TxtLblArchivoDisfon.database = Database;
-            TxtLblArchivoDisfon.Ordenar = OrdenarPor.CampoCodigo;
+            //TxtLblArchivoDisfon.PerfilShow = Perfilador.getInstancia().CargarPerfil("Disfon");
+            //TxtLblArchivoDisfon.database = Database;
+            //TxtLblArchivoDisfon.Ordenar = OrdenarPor.CampoCodigo;
 
             if (Modo == "E")
             {
                 SqlParameter[] par = new [] {   new SqlParameter("@Operacion", "SCB"),
-                new SqlParameter("@Glcod", ID) };
+                new SqlParameter("@Codigo", ID) };
 
                 DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
 
                 this.Text = "Editando";
 
-                TxtLblCodigo.Codigo = ds.Tables[0].Rows[0]["glcod"].ToString();
+                TxtLblCodigo.Codigo = ds.Tables[0].Rows[0]["Codigo"].ToString();
                 TxtLblCodigo.Edit();
 
-                TxtLblArchivoDisfon.Codigo = ds.Tables[0].Rows[0]["glPlano"].ToString();
-                TxtLblArchivoDisfon.Edit();
+                //TxtLblArchivoDisfon.Codigo = ds.Tables[0].Rows[0]["glPlano"].ToString();
+                //TxtLblArchivoDisfon.Edit();
 
-                TxtUltimoCheque.Text = ds.Tables[0].Rows[0]["glcheque"].ToString();
-                ChkGravamen.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["glgravamen"]);
+                TxtUltimoCheque.Text = ds.Tables[0].Rows[0]["Cheque"].ToString();
+                ChkGravamen.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["Gravamen"]);
 
                 TxtLblCodigo.Disable();
             }
