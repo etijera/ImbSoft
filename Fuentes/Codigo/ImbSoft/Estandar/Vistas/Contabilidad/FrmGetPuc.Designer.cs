@@ -29,20 +29,7 @@ namespace Estandar.Vistas.Contabilidad
         /// </summary>
         private void InitializeComponent()
         {
-            this.LblTipoCuenta = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.BtnPuc = new DevExpress.XtraEditors.SimpleButton();
-            this.LblNombreCuenta = new DevExpress.XtraEditors.LabelControl();
-            this.TxtNombreCuenta = new DevExpress.XtraEditors.TextEdit();
-            this.LblCodigoCuenta = new DevExpress.XtraEditors.LabelControl();
-            this.TxtCodigoCuenta = new DevExpress.XtraEditors.TextEdit();
-            this.CmbTipoCueta = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.LblCodigoDian = new DevExpress.XtraEditors.LabelControl();
-            this.TxtCodigoDian = new DevExpress.XtraEditors.TextEdit();
-            this.LblFormatoVersion = new DevExpress.XtraEditors.LabelControl();
-            this.TxtFormatoVersion = new DevExpress.XtraEditors.TextEdit();
-            this.TxtLblClasificacion = new UsuarioControles.TxtLblGeneral();
             this.ChkTerceros = new DevExpress.XtraEditors.CheckEdit();
             this.ChkCentroCosto = new DevExpress.XtraEditors.CheckEdit();
             this.groupControl8 = new DevExpress.XtraEditors.GroupControl();
@@ -52,19 +39,15 @@ namespace Estandar.Vistas.Contabilidad
             this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblBase1 = new UsuarioControles.LblBase();
+            this.TxtNombreCuenta = new UsuarioControles.TxtBase();
+            this.TxtCodigoCuenta = new UsuarioControles.TxtBase();
+            this.CmbTipoCueta = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.LblCodigoCuenta = new UsuarioControles.LblBase();
+            this.LblTipoCuenta = new UsuarioControles.LblBase();
+            this.LblNombreCuenta = new UsuarioControles.LblBase();
             this.LblPanel4 = new UsuarioControles.LblBase();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtNombreCuenta.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtCodigoCuenta.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbTipoCueta.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtCodigoDian.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFormatoVersion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkTerceros.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkCentroCosto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).BeginInit();
@@ -74,196 +57,19 @@ namespace Estandar.Vistas.Contabilidad
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbTipoCueta.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LblTipoCuenta
-            // 
-            this.LblTipoCuenta.Location = new System.Drawing.Point(14, 16);
-            this.LblTipoCuenta.Name = "LblTipoCuenta";
-            this.LblTipoCuenta.Size = new System.Drawing.Size(73, 13);
-            this.LblTipoCuenta.TabIndex = 0;
-            this.LblTipoCuenta.Text = "Tipo de Cuenta";
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.BtnPuc);
-            this.groupControl1.Controls.Add(this.LblNombreCuenta);
-            this.groupControl1.Controls.Add(this.TxtNombreCuenta);
-            this.groupControl1.Controls.Add(this.LblCodigoCuenta);
-            this.groupControl1.Controls.Add(this.TxtCodigoCuenta);
-            this.groupControl1.Controls.Add(this.CmbTipoCueta);
-            this.groupControl1.Controls.Add(this.LblTipoCuenta);
-            this.groupControl1.Location = new System.Drawing.Point(19, 21);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(412, 98);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "groupControl1";
-            // 
             // BtnPuc
             // 
-            this.BtnPuc.Location = new System.Drawing.Point(217, 39);
+            this.BtnPuc.Location = new System.Drawing.Point(249, 41);
+            this.BtnPuc.LookAndFeel.SkinName = "Office 2010 Blue";
             this.BtnPuc.Name = "BtnPuc";
             this.BtnPuc.Size = new System.Drawing.Size(19, 20);
-            this.BtnPuc.TabIndex = 6;
+            this.BtnPuc.TabIndex = 4;
             this.BtnPuc.Text = "...";
             this.BtnPuc.Click += new System.EventHandler(this.BtnPuc_Click);
-            // 
-            // LblNombreCuenta
-            // 
-            this.LblNombreCuenta.Location = new System.Drawing.Point(14, 68);
-            this.LblNombreCuenta.Name = "LblNombreCuenta";
-            this.LblNombreCuenta.Size = new System.Drawing.Size(75, 13);
-            this.LblNombreCuenta.TabIndex = 4;
-            this.LblNombreCuenta.Text = "Nombre Cuenta";
-            // 
-            // TxtNombreCuenta
-            // 
-            this.TxtNombreCuenta.EnterMoveNextControl = true;
-            this.TxtNombreCuenta.Location = new System.Drawing.Point(95, 65);
-            this.TxtNombreCuenta.Name = "TxtNombreCuenta";
-            this.TxtNombreCuenta.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.TxtNombreCuenta.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtNombreCuenta.Properties.MaxLength = 50;
-            this.TxtNombreCuenta.Size = new System.Drawing.Size(306, 18);
-            this.TxtNombreCuenta.TabIndex = 5;
-            this.TxtNombreCuenta.EditValueChanged += new System.EventHandler(this.TxtNombreCuenta_EditValueChanged);
-            // 
-            // LblCodigoCuenta
-            // 
-            this.LblCodigoCuenta.Location = new System.Drawing.Point(14, 42);
-            this.LblCodigoCuenta.Name = "LblCodigoCuenta";
-            this.LblCodigoCuenta.Size = new System.Drawing.Size(73, 13);
-            this.LblCodigoCuenta.TabIndex = 2;
-            this.LblCodigoCuenta.Text = "Tipo de Cuenta";
-            // 
-            // TxtCodigoCuenta
-            // 
-            this.TxtCodigoCuenta.EnterMoveNextControl = true;
-            this.TxtCodigoCuenta.Location = new System.Drawing.Point(95, 39);
-            this.TxtCodigoCuenta.Name = "TxtCodigoCuenta";
-            this.TxtCodigoCuenta.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.TxtCodigoCuenta.Properties.MaxLength = 12;
-            this.TxtCodigoCuenta.Size = new System.Drawing.Size(116, 18);
-            this.TxtCodigoCuenta.TabIndex = 3;
-            this.TxtCodigoCuenta.EditValueChanged += new System.EventHandler(this.TxtCodigoCuenta_EditValueChanged);
-            this.TxtCodigoCuenta.Validating += new System.ComponentModel.CancelEventHandler(this.TxtCodigoCuenta_Validating);
-            this.TxtCodigoCuenta.Validated += new System.EventHandler(this.TxtCodigoCuenta_Validated);
-            // 
-            // CmbTipoCueta
-            // 
-            this.CmbTipoCueta.EditValue = "AUXILIAR";
-            this.CmbTipoCueta.EnterMoveNextControl = true;
-            this.CmbTipoCueta.Location = new System.Drawing.Point(95, 13);
-            this.CmbTipoCueta.Name = "CmbTipoCueta";
-            this.CmbTipoCueta.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.CmbTipoCueta.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CmbTipoCueta.Properties.Items.AddRange(new object[] {
-            "AUXILIAR",
-            "SUBCUENTA",
-            "CUENTAS",
-            "GRUPO",
-            "CLASE"});
-            this.CmbTipoCueta.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.CmbTipoCueta.Size = new System.Drawing.Size(116, 18);
-            this.CmbTipoCueta.TabIndex = 1;
-            this.CmbTipoCueta.SelectedIndexChanged += new System.EventHandler(this.CmbDestinadoA_SelectedIndexChanged);
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.LblCodigoDian);
-            this.groupControl2.Controls.Add(this.TxtCodigoDian);
-            this.groupControl2.Controls.Add(this.LblFormatoVersion);
-            this.groupControl2.Controls.Add(this.TxtFormatoVersion);
-            this.groupControl2.Location = new System.Drawing.Point(19, 119);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(412, 70);
-            this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "Información Exogena";
-            // 
-            // LblCodigoDian
-            // 
-            this.LblCodigoDian.Location = new System.Drawing.Point(218, 40);
-            this.LblCodigoDian.Name = "LblCodigoDian";
-            this.LblCodigoDian.Size = new System.Drawing.Size(61, 13);
-            this.LblCodigoDian.TabIndex = 2;
-            this.LblCodigoDian.Text = "Código DIAN";
-            // 
-            // TxtCodigoDian
-            // 
-            this.TxtCodigoDian.EnterMoveNextControl = true;
-            this.TxtCodigoDian.Location = new System.Drawing.Point(285, 37);
-            this.TxtCodigoDian.Name = "TxtCodigoDian";
-            this.TxtCodigoDian.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.TxtCodigoDian.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtCodigoDian.Properties.MaxLength = 10;
-            this.TxtCodigoDian.Size = new System.Drawing.Size(116, 18);
-            this.TxtCodigoDian.TabIndex = 3;
-            // 
-            // LblFormatoVersion
-            // 
-            this.LblFormatoVersion.Location = new System.Drawing.Point(14, 40);
-            this.LblFormatoVersion.Name = "LblFormatoVersion";
-            this.LblFormatoVersion.Size = new System.Drawing.Size(78, 13);
-            this.LblFormatoVersion.TabIndex = 0;
-            this.LblFormatoVersion.Text = "Formato Versión\r\n";
-            // 
-            // TxtFormatoVersion
-            // 
-            this.TxtFormatoVersion.EnterMoveNextControl = true;
-            this.TxtFormatoVersion.Location = new System.Drawing.Point(95, 37);
-            this.TxtFormatoVersion.Name = "TxtFormatoVersion";
-            this.TxtFormatoVersion.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.TxtFormatoVersion.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtFormatoVersion.Properties.MaxLength = 10;
-            this.TxtFormatoVersion.Size = new System.Drawing.Size(116, 18);
-            this.TxtFormatoVersion.TabIndex = 1;
-            this.TxtFormatoVersion.EditValueChanged += new System.EventHandler(this.TxtFormatoVersion_EditValueChanged);
-            // 
-            // TxtLblClasificacion
-            // 
-            this.TxtLblClasificacion.AutoSize = true;
-            this.TxtLblClasificacion.Codigo = null;
-            this.TxtLblClasificacion.Complemento = null;
-            this.TxtLblClasificacion.database = null;
-            this.TxtLblClasificacion.DesHabilitarBtnAñadir = false;
-            this.TxtLblClasificacion.DesHabilitarBtnEditar = false;
-            this.TxtLblClasificacion.DesHabilitarBtnEliminar = false;
-            this.TxtLblClasificacion.DesHabilitarBtnExcel = false;
-            this.TxtLblClasificacion.DesHabilitarBtnGuardar = false;
-            this.TxtLblClasificacion.DesHabilitarBtnImprimir = false;
-            this.TxtLblClasificacion.DesHabilitarTodo = false;
-            this.TxtLblClasificacion.Id = "";
-            this.TxtLblClasificacion.LblNomLocation = new System.Drawing.Point(71, 3);
-            this.TxtLblClasificacion.LblNomSize = new System.Drawing.Size(234, 20);
-            this.TxtLblClasificacion.Location = new System.Drawing.Point(90, 7);
-            this.TxtLblClasificacion.MaxLenght = 12;
-            this.TxtLblClasificacion.Modo = null;
-            this.TxtLblClasificacion.Name = "TxtLblClasificacion";
-            this.TxtLblClasificacion.NexControl = false;
-            this.TxtLblClasificacion.Nombre = null;
-            this.TxtLblClasificacion.OcultarBtnAñadir = false;
-            this.TxtLblClasificacion.OcultarBtnEditar = false;
-            this.TxtLblClasificacion.OcultarBtnEliminar = false;
-            this.TxtLblClasificacion.OcultarBtnExcel = false;
-            this.TxtLblClasificacion.OcultarBtnGuardar = false;
-            this.TxtLblClasificacion.OcultarBtnImprimir = false;
-            this.TxtLblClasificacion.OpcionGet = null;
-            this.TxtLblClasificacion.OpGet = false;
-            this.TxtLblClasificacion.Ordenar = Referencias.OrdenarPor.CampoNombre;
-            this.TxtLblClasificacion.PasarUsuario = false;
-            this.TxtLblClasificacion.PerfilShow = null;
-            this.TxtLblClasificacion.PonerCeros = false;
-            this.TxtLblClasificacion.Relacion = null;
-            this.TxtLblClasificacion.SinBordes = false;
-            this.TxtLblClasificacion.Size = new System.Drawing.Size(308, 26);
-            this.TxtLblClasificacion.SoloLectura = false;
-            this.TxtLblClasificacion.TabIndex = 1;
-            this.TxtLblClasificacion.TxtCodLocation = new System.Drawing.Point(0, 3);
-            this.TxtLblClasificacion.TxtCodSize = new System.Drawing.Size(65, 20);
-            this.TxtLblClasificacion.Usuario = null;
             // 
             // ChkTerceros
             // 
@@ -292,7 +98,7 @@ namespace Estandar.Vistas.Contabilidad
             this.groupControl8.Name = "groupControl8";
             this.groupControl8.ShowCaption = false;
             this.groupControl8.Size = new System.Drawing.Size(322, 325);
-            this.groupControl8.TabIndex = 4;
+            this.groupControl8.TabIndex = 3;
             // 
             // GctrlTiposCuentas
             // 
@@ -345,34 +151,129 @@ namespace Estandar.Vistas.Contabilidad
             this.panelControl1.Controls.Add(this.LblPanel4);
             this.panelControl1.Controls.Add(this.panel1);
             this.panelControl1.Controls.Add(this.groupControl8);
-            this.panelControl1.Controls.Add(this.groupControl1);
-            this.panelControl1.Controls.Add(this.groupControl2);
             this.panelControl1.Location = new System.Drawing.Point(2, 29);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(777, 351);
-            this.panelControl1.TabIndex = 7;
+            this.panelControl1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblBase1);
-            this.panel2.Controls.Add(this.TxtLblClasificacion);
-            this.panel2.Location = new System.Drawing.Point(19, 193);
+            this.panel2.Controls.Add(this.TxtNombreCuenta);
+            this.panel2.Controls.Add(this.BtnPuc);
+            this.panel2.Controls.Add(this.TxtCodigoCuenta);
+            this.panel2.Controls.Add(this.CmbTipoCueta);
+            this.panel2.Controls.Add(this.LblCodigoCuenta);
+            this.panel2.Controls.Add(this.LblTipoCuenta);
+            this.panel2.Controls.Add(this.LblNombreCuenta);
+            this.panel2.Location = new System.Drawing.Point(9, 9);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(412, 42);
-            this.panel2.TabIndex = 10;
+            this.panel2.Size = new System.Drawing.Size(412, 110);
+            this.panel2.TabIndex = 0;
             // 
-            // lblBase1
+            // TxtNombreCuenta
             // 
-            this.lblBase1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lblBase1.Appearance.Options.UseBackColor = true;
-            this.lblBase1.AutoSize = true;
-            this.lblBase1.Location = new System.Drawing.Point(1, 14);
-            this.lblBase1.Name = "lblBase1";
-            this.lblBase1.Size = new System.Drawing.Size(82, 13);
-            this.lblBase1.TabIndex = 10;
-            this.lblBase1.Texto = "Clasificación";
+            this.TxtNombreCuenta.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Default;
+            this.TxtNombreCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.TxtNombreCuenta.Appearance.Options.UseBackColor = true;
+            this.TxtNombreCuenta.CaraterPassword = '\0';
+            this.TxtNombreCuenta.Location = new System.Drawing.Point(126, 70);
+            this.TxtNombreCuenta.MaxLenght = 50;
+            this.TxtNombreCuenta.MTextChanged = null;
+            this.TxtNombreCuenta.Name = "TxtNombreCuenta";
+            this.TxtNombreCuenta.Size = new System.Drawing.Size(274, 26);
+            this.TxtNombreCuenta.SoloLectura = false;
+            this.TxtNombreCuenta.TabIndex = 6;
+            this.TxtNombreCuenta.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtNombreCuenta.Texto = "";
+            this.TxtNombreCuenta.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
+            this.TxtNombreCuenta.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
+            // 
+            // TxtCodigoCuenta
+            // 
+            this.TxtCodigoCuenta.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Default;
+            this.TxtCodigoCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.TxtCodigoCuenta.Appearance.Options.UseBackColor = true;
+            this.TxtCodigoCuenta.CaraterPassword = '\0';
+            this.TxtCodigoCuenta.Location = new System.Drawing.Point(126, 38);
+            this.TxtCodigoCuenta.MaxLenght = 50;
+            this.TxtCodigoCuenta.MTextChanged = null;
+            this.TxtCodigoCuenta.Name = "TxtCodigoCuenta";
+            this.TxtCodigoCuenta.Size = new System.Drawing.Size(123, 26);
+            this.TxtCodigoCuenta.SoloLectura = false;
+            this.TxtCodigoCuenta.TabIndex = 3;
+            this.TxtCodigoCuenta.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtCodigoCuenta.Texto = "";
+            this.TxtCodigoCuenta.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
+            this.TxtCodigoCuenta.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.TxtCodigoCuenta.Validated += new System.EventHandler(this.TxtCodigoCuenta_Validated);
+            // 
+            // CmbTipoCueta
+            // 
+            this.CmbTipoCueta.EditValue = "AUXILIAR";
+            this.CmbTipoCueta.EnterMoveNextControl = true;
+            this.CmbTipoCueta.Location = new System.Drawing.Point(129, 12);
+            this.CmbTipoCueta.Name = "CmbTipoCueta";
+            this.CmbTipoCueta.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.CmbTipoCueta.Properties.Appearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.CmbTipoCueta.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.CmbTipoCueta.Properties.Appearance.Options.UseBackColor = true;
+            this.CmbTipoCueta.Properties.Appearance.Options.UseBorderColor = true;
+            this.CmbTipoCueta.Properties.Appearance.Options.UseForeColor = true;
+            this.CmbTipoCueta.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CmbTipoCueta.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.CmbTipoCueta.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Teal;
+            this.CmbTipoCueta.Properties.AppearanceFocused.Options.UseBorderColor = true;
+            this.CmbTipoCueta.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.CmbTipoCueta.Properties.Items.AddRange(new object[] {
+            "AUXILIAR",
+            "SUBCUENTA",
+            "CUENTAS",
+            "GRUPO",
+            "CLASE"});
+            this.CmbTipoCueta.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.CmbTipoCueta.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.CmbTipoCueta.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.CmbTipoCueta.Size = new System.Drawing.Size(116, 20);
+            this.CmbTipoCueta.TabIndex = 1;
+            this.CmbTipoCueta.SelectedIndexChanged += new System.EventHandler(this.CmbTipoCueta_SelectedIndexChanged);
+            this.CmbTipoCueta.Enter += new System.EventHandler(this.CmbTipoCueta_Enter);
+            this.CmbTipoCueta.Leave += new System.EventHandler(this.CmbTipoCueta_Leave);
+            // 
+            // LblCodigoCuenta
+            // 
+            this.LblCodigoCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.LblCodigoCuenta.Appearance.Options.UseBackColor = true;
+            this.LblCodigoCuenta.AutoSize = true;
+            this.LblCodigoCuenta.Location = new System.Drawing.Point(6, 48);
+            this.LblCodigoCuenta.Name = "LblCodigoCuenta";
+            this.LblCodigoCuenta.Size = new System.Drawing.Size(111, 13);
+            this.LblCodigoCuenta.TabIndex = 2;
+            this.LblCodigoCuenta.Texto = "Código de Cuenta";
+            // 
+            // LblTipoCuenta
+            // 
+            this.LblTipoCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.LblTipoCuenta.Appearance.Options.UseBackColor = true;
+            this.LblTipoCuenta.AutoSize = true;
+            this.LblTipoCuenta.Location = new System.Drawing.Point(6, 15);
+            this.LblTipoCuenta.Name = "LblTipoCuenta";
+            this.LblTipoCuenta.Size = new System.Drawing.Size(97, 13);
+            this.LblTipoCuenta.TabIndex = 0;
+            this.LblTipoCuenta.Texto = "Tipo de Cuenta";
+            // 
+            // LblNombreCuenta
+            // 
+            this.LblNombreCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.LblNombreCuenta.Appearance.Options.UseBackColor = true;
+            this.LblNombreCuenta.AutoSize = true;
+            this.LblNombreCuenta.Location = new System.Drawing.Point(6, 82);
+            this.LblNombreCuenta.Name = "LblNombreCuenta";
+            this.LblNombreCuenta.Size = new System.Drawing.Size(97, 13);
+            this.LblNombreCuenta.TabIndex = 5;
+            this.LblNombreCuenta.Texto = "Nombre Cuenta";
             // 
             // LblPanel4
             // 
@@ -380,10 +281,10 @@ namespace Estandar.Vistas.Contabilidad
             this.LblPanel4.Appearance.Options.UseBackColor = true;
             this.LblPanel4.AutoSize = true;
             this.LblPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LblPanel4.Location = new System.Drawing.Point(19, 238);
+            this.LblPanel4.Location = new System.Drawing.Point(9, 125);
             this.LblPanel4.Name = "LblPanel4";
             this.LblPanel4.Size = new System.Drawing.Size(108, 16);
-            this.LblPanel4.TabIndex = 9;
+            this.LblPanel4.TabIndex = 1;
             this.LblPanel4.Texto = "Requerimientos";
             // 
             // panel1
@@ -392,10 +293,10 @@ namespace Estandar.Vistas.Contabilidad
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ChkTerceros);
             this.panel1.Controls.Add(this.ChkCentroCosto);
-            this.panel1.Location = new System.Drawing.Point(19, 253);
+            this.panel1.Location = new System.Drawing.Point(9, 140);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(413, 39);
-            this.panel1.TabIndex = 8;
+            this.panel1.TabIndex = 2;
             // 
             // FrmGetPuc
             // 
@@ -416,17 +317,6 @@ namespace Estandar.Vistas.Contabilidad
             this.Text = "PUC";
             this.Load += new System.EventHandler(this.FrmGetPuc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtNombreCuenta.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtCodigoCuenta.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CmbTipoCueta.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtCodigoDian.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFormatoVersion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkTerceros.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkCentroCosto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).EndInit();
@@ -438,6 +328,7 @@ namespace Estandar.Vistas.Contabilidad
             this.panelControl1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CmbTipoCueta.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -446,19 +337,6 @@ namespace Estandar.Vistas.Contabilidad
 
         #endregion
 
-        private DevExpress.XtraEditors.LabelControl LblTipoCuenta;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.LabelControl LblNombreCuenta;
-        private DevExpress.XtraEditors.TextEdit TxtNombreCuenta;
-        private DevExpress.XtraEditors.LabelControl LblCodigoCuenta;
-        private DevExpress.XtraEditors.TextEdit TxtCodigoCuenta;
-        private DevExpress.XtraEditors.ComboBoxEdit CmbTipoCueta;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.LabelControl LblCodigoDian;
-        private DevExpress.XtraEditors.TextEdit TxtCodigoDian;
-        private DevExpress.XtraEditors.LabelControl LblFormatoVersion;
-        private DevExpress.XtraEditors.TextEdit TxtFormatoVersion;
-        private UsuarioControles.TxtLblGeneral TxtLblClasificacion;
         private DevExpress.XtraEditors.CheckEdit ChkTerceros;
         private DevExpress.XtraEditors.CheckEdit ChkCentroCosto;
         private DevExpress.XtraEditors.GroupControl groupControl8;
@@ -471,6 +349,11 @@ namespace Estandar.Vistas.Contabilidad
         private System.Windows.Forms.Panel panel1;
         private UsuarioControles.LblBase LblPanel4;
         private System.Windows.Forms.Panel panel2;
-        private UsuarioControles.LblBase lblBase1;
+        private UsuarioControles.LblBase LblCodigoCuenta;
+        private UsuarioControles.LblBase LblTipoCuenta;
+        private UsuarioControles.LblBase LblNombreCuenta;
+        private DevExpress.XtraEditors.ComboBoxEdit CmbTipoCueta;
+        private UsuarioControles.TxtBase TxtCodigoCuenta;
+        private UsuarioControles.TxtBase TxtNombreCuenta;
     }
 }

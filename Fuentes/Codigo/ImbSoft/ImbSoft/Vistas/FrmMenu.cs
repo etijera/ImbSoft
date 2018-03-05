@@ -147,6 +147,7 @@ namespace ImbSoft.Vistas
             frmPuc.DesdeMenu = true;
             frmPuc.PasarUsuario = true;
             frmPuc.EliminarRegistro = true;
+            frmPuc.Ordenar = OrdenarPor.CampoCodigo;
             //frmTipoUsuarios.OcultarBtnImprimir();
             //frmTipoUsuarios.OcultarBtnExcel();
             //frmTipoUsuarios.OcultarBtnGuardar();

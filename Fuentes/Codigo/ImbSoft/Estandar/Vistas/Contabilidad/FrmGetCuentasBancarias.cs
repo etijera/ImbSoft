@@ -54,7 +54,7 @@ namespace Estandar.Vistas.Contabilidad
             new SqlParameter("@Glcheque", TxtUltimoCheque.Text.Trim()),
             new SqlParameter("@Glgravamen", ChkGravamen.Checked) };
 
-            bool IsDone = DataBase.ExecuteNonQuery("PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
             //XtraMessageBox.Show("Proceso realizado con exito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;
@@ -68,7 +68,7 @@ namespace Estandar.Vistas.Contabilidad
             new SqlParameter("@Glcheque", TxtUltimoCheque.Text.Trim()),
             new SqlParameter("@Glgravamen", ChkGravamen.Checked) };
 
-            bool IsDone = DataBase.ExecuteNonQuery("PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
             //XtraMessageBox.Show("Proceso realizado con exito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;
@@ -95,7 +95,7 @@ namespace Estandar.Vistas.Contabilidad
 
         private void FrmGetCuentasBancarias_Load(object sender, EventArgs e)
         {
-            TxtLblCodigo.PerfilShow = Perfilador.getInstancia().CargarPerfil("PUC");
+            TxtLblCodigo.PerfilShow = Perfilador.getInstancia().CargarPerfil("Puc");
             TxtLblCodigo.database = Database;
             TxtLblCodigo.Ordenar = OrdenarPor.CampoCodigo;
 
@@ -108,7 +108,7 @@ namespace Estandar.Vistas.Contabilidad
                 SqlParameter[] par = new [] {   new SqlParameter("@Operacion", "SCB"),
                 new SqlParameter("@Glcod", ID) };
 
-                DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
+                DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
 
                 this.Text = "Editando";
 

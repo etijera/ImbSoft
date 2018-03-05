@@ -824,32 +824,30 @@
   </Perfil>
   <Perfil ID="Terceros">
     <Id>Terceros</Id>
-    <Descripcion>
-    </Descripcion>
-    <Tabla>accglTer</Tabla>
-    <Campos>tercod,ternom,ternit</Campos>
-    <Visibles>ternom</Visibles>
-    <Formulario>GLUserControls.FrmGet.FrmGetTercero</Formulario>
+    <Descripcion>Terceros</Descripcion>
+    <Tabla>dbo.Terceros</Tabla>
+    <Campos>DocumentoIdentidad,RazonSocial</Campos>
+    <Visibles>DocumentoIdentidad,RazonSocial</Visibles>
+    <Formulario>Estandar.Vistas.FrmGetTercero</Formulario>
     <Titulo>Terceros</Titulo>
-    <Cabeceras>Nombre</Cabeceras>
-    <Tamaños>382</Tamaños>
-    <Llave>tercod</Llave>
+    <Cabeceras>Nit,Razón Social</Cabeceras>
+    <Tamaños>100,300</Tamaños>
+    <Llave>Codigo</Llave>
     <CampoFecha>
     </CampoFecha>
     <UtilizarReportes>False</UtilizarReportes>
     <DatosDetalle>
     </DatosDetalle>
-    <Subtitulo>
-    </Subtitulo>
+    <Subtitulo>Terceros</Subtitulo>
     <ColumnaEstatica>
     </ColumnaEstatica>
     <Reporte>
     </Reporte>
-    <CamposId>ternom</CamposId>
-    <Indices>0</Indices>
-    <Proyecto>\GL0037.dll</Proyecto>
-    <CampoCodigo>ternit</CampoCodigo>
-    <CampoNombre>ternom</CampoNombre>
+    <CamposId>DocumentoIdentidad,RazonSocial</CamposId>
+    <Indices>0,1</Indices>
+    <Proyecto>\Estandar.dll</Proyecto>
+    <CampoCodigo>DocumentoIdentidad</CampoCodigo>
+    <CampoNombre>RazonSocial</CampoNombre>
   </Perfil>
   <Perfil ID="Prioridades">
     <Id>Prioridades</Id>

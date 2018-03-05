@@ -26,3 +26,31 @@ D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\I
 D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.dll.licenses
 D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.dll
 D:\Erick\Proyecto ImbSoft\Github\Código Fuente ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.pdb
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\bin\Debug\Estandar.dll.config
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\bin\Debug\Estandar.dll
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\bin\Debug\Estandar.pdb
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\bin\Debug\Referencias.dll
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\bin\Debug\UsuarioControles.dll
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\bin\Debug\Referencias.pdb
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\bin\Debug\UsuarioControles.pdb
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.csprojResolveAssemblyReference.cache
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Properties.Resources.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmAddCuentaEntradaDoc.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmEntradaDoc.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmEntradaDoc2.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmGetCajaMenor.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmGetConceptoNomina.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmGetCuentasBancarias.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmGetPuc.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmGetRetenciones.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmGetTarifaIva.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmGetTipoActivo.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.Contabilidad.FrmGetTipoDiferidos.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.FrmGetTipoUsuarios.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.FrmGetUsuarios.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.FrmListaUsuarios.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.XtraForm1.resources
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.csproj.GenerateResource.Cache
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.dll.licenses
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.dll
+G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.pdb

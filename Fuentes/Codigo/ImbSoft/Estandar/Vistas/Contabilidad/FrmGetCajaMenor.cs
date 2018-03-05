@@ -78,12 +78,12 @@ namespace Estandar.Vistas.Contabilidad
         {
 
             SqlParameter[] parametros1 = new [] {    new SqlParameter("@Operacion", "ICM"),
-            new SqlParameter("@Glcod", TxtLblCodigo.Codigo ?? ""),
-            new SqlParameter("@GlContraPartidaCajaMenor", TxtLblContrapartida.Codigo ?? ""),
-            new SqlParameter("@GlResponsableCajaMenor", TxtLblResponsable.Codigo ?? ""),
-            new SqlParameter("@GlMotoCajaMenor", Funciones.getInstancia().FormatearValorDecimal(TxtMonto.Text)) };
+            new SqlParameter("@Codigo", TxtLblCodigo.Codigo ?? ""),
+            new SqlParameter("@ContraPartidaCajaMenor", TxtLblContrapartida.Codigo ?? ""),
+            new SqlParameter("@ResponsableCajaMenor", TxtLblResponsable.Codigo ?? ""),
+            new SqlParameter("@MontoCajaMenor", Funciones.getInstancia().FormatearValorDecimal(TxtMonto.Text)) };
 
-            bool IsDone = DataBase.ExecuteNonQuery("PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
             // XtraMessageBox.Show("Proceso realizado con exito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;
@@ -92,12 +92,12 @@ namespace Estandar.Vistas.Contabilidad
         private void Editando()
         {
             SqlParameter[] parametros1 = new [] {    new SqlParameter("@Operacion", "UCM"),
-            new SqlParameter("@Glcod", TxtLblCodigo.Codigo ?? ""),
-            new SqlParameter("@GlContraPartidaCajaMenor", TxtLblContrapartida.Codigo ?? ""),
-            new SqlParameter("@GlResponsableCajaMenor", TxtLblResponsable.Id ?? ""),
-            new SqlParameter("@GlMotoCajaMenor", Funciones.getInstancia().FormatearValorDecimal(TxtMonto.Text)) };
+            new SqlParameter("@Codigo", TxtLblCodigo.Codigo ?? ""),
+            new SqlParameter("@ContraPartidaCajaMenor", TxtLblContrapartida.Codigo ?? ""),
+            new SqlParameter("@ResponsableCajaMenor", TxtLblResponsable.Codigo ?? ""),
+            new SqlParameter("@MontoCajaMenor", Funciones.getInstancia().FormatearValorDecimal(TxtMonto.Text)) };
 
-            bool IsDone = DataBase.ExecuteNonQuery("PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+            bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
             //XtraMessageBox.Show("Proceso realizado con exito", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             DialogResult = DialogResult.OK;
@@ -107,11 +107,11 @@ namespace Estandar.Vistas.Contabilidad
 
         private void FrmGetCajaMenor_Load(object sender, EventArgs e)
         {
-            TxtLblCodigo.PerfilShow = Perfilador.getInstancia().CargarPerfil("PUC");
+            TxtLblCodigo.PerfilShow = Perfilador.getInstancia().CargarPerfil("Puc");
             TxtLblCodigo.database = Database;
             TxtLblCodigo.Ordenar = OrdenarPor.CampoCodigo;
 
-            TxtLblContrapartida.PerfilShow = Perfilador.getInstancia().CargarPerfil("PUC");
+            TxtLblContrapartida.PerfilShow = Perfilador.getInstancia().CargarPerfil("Puc");
             TxtLblContrapartida.database = Database;
             TxtLblContrapartida.Ordenar = OrdenarPor.CampoCodigo;
 
@@ -122,22 +122,22 @@ namespace Estandar.Vistas.Contabilidad
             if (Modo == "E")
             {
                 SqlParameter[] par = new [] {   new SqlParameter("@Operacion", "SCM"),
-                new SqlParameter("@Glcod", ID) };
+                new SqlParameter("@Codigo", ID) };
 
-                DataSet ds = DataBase.ExecuteQuery("PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
+                DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
 
                 this.Text = "Editando";
 
-                TxtLblCodigo.Codigo = ds.Tables[0].Rows[0]["glcod"].ToString();
+                TxtLblCodigo.Codigo = ds.Tables[0].Rows[0]["Codigo"].ToString();
                 TxtLblCodigo.Edit();
 
-                TxtLblContrapartida.Codigo = ds.Tables[0].Rows[0]["glContraPartidaCajaMenor"].ToString();
+                TxtLblContrapartida.Codigo = ds.Tables[0].Rows[0]["ContraPartidaCajaMenor"].ToString();
                 TxtLblContrapartida.Edit();
 
-                TxtLblResponsable.Codigo = ds.Tables[0].Rows[0]["glResponsableCajaMenor"].ToString();
+                TxtLblResponsable.Codigo = ds.Tables[0].Rows[0]["ResponsableCajaMenor"].ToString();
                 TxtLblResponsable.Edit();
 
-                TxtMonto.Text = ds.Tables[0].Rows[0]["glMotoCajaMenor"].ToString();
+                TxtMonto.Text = ds.Tables[0].Rows[0]["MontoCajaMenor"].ToString();
 
                 TxtLblCodigo.Disable();
             }

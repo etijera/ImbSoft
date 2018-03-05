@@ -48,7 +48,7 @@ namespace Estandar.Vistas.Contabilidad
             DgvTiposCuentas.Columns.Clear();
             dsTiposCuentas.Tables.Clear();
             SqlParameter[] parametros = new[] { new SqlParameter("@Operacion", "SCLC"),
-                                                new SqlParameter("@Codigo", TxtCodigoCuenta.Text.Trim()) };
+                                                new SqlParameter("@Codigo", TxtCodigoCuenta.Texto.Trim()) };
 
             DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, parametros,
                                                     ConexionDB.getInstancia().Conexion(Database, null));
@@ -266,8 +266,8 @@ namespace Estandar.Vistas.Contabilidad
                 {
                     if (DialogResult.Yes == XtraMessageBox.Show("El código que intenta ingresar fue eliminado. ¿Desea recuperar el registro? ", Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        Recuperar(TxtCodigoCuenta.Text);
-                        ConsultarCuenta(TxtCodigoCuenta.Text);
+                        Recuperar(TxtCodigoCuenta.Texto);
+                        ConsultarCuenta(TxtCodigoCuenta.Texto);
                     }
                     else
                     {
@@ -277,16 +277,16 @@ namespace Estandar.Vistas.Contabilidad
                 else
                 {
                     Modo = "E";
-                    TxtNombreCuenta.Text = ds.Tables[0].Rows[0]["Nombre"].ToString();
-                    TxtFormatoVersion.Text = ds.Tables[0].Rows[0]["Version"].ToString();
-                    TxtCodigoDian.Text = ds.Tables[0].Rows[0]["Dian"].ToString();
-                    TxtLblClasificacion.Codigo = ds.Tables[0].Rows[0]["Clasificacion"].ToString();
-                    TxtLblClasificacion.Edit();
-                    if (String.IsNullOrEmpty(TxtLblClasificacion.Codigo))
-                    {
-                        TxtLblClasificacion.Codigo = "";
-                        TxtLblClasificacion.Borrar();
-                    }
+                    TxtNombreCuenta.Texto = ds.Tables[0].Rows[0]["Nombre"].ToString();
+                    //TxtFormatoVersion.Text = ds.Tables[0].Rows[0]["Version"].ToString();
+                    //TxtCodigoDian.Text = ds.Tables[0].Rows[0]["Dian"].ToString();
+                    //TxtLblClasificacion.Codigo = ds.Tables[0].Rows[0]["Clasificacion"].ToString();
+                    //TxtLblClasificacion.Edit();
+                    //if (String.IsNullOrEmpty(TxtLblClasificacion.Codigo))
+                    //{
+                    //    TxtLblClasificacion.Codigo = "";
+                    //    TxtLblClasificacion.Borrar();
+                    //}
 
                     ChkCentroCosto.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["Ccosto"]);
                     ChkTerceros.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["Tercero"]);
@@ -298,11 +298,11 @@ namespace Estandar.Vistas.Contabilidad
             else
             {
                 Modo = "N";
-                TxtNombreCuenta.Text = "";
-                TxtCodigoDian.Text = "";
-                TxtCodigoDian.Text = "";
-                TxtLblClasificacion.Codigo = "";
-                TxtLblClasificacion.Borrar();
+                TxtNombreCuenta.Texto = "";
+                //TxtCodigoDian.Text = "";
+                //TxtCodigoDian.Text = "";
+                //TxtLblClasificacion.Codigo = "";
+                //TxtLblClasificacion.Borrar();
                 ChkCentroCosto.Checked = false;
                 ChkTerceros.Checked = false;
 
@@ -346,7 +346,7 @@ namespace Estandar.Vistas.Contabilidad
                     {
                         
                         String det_codigo = DgvTiposCuentas.GetRowCellDisplayText(i, DgvTiposCuentas.Columns["Codigo"]);
-                        String det_Puc = TxtCodigoCuenta.Text;
+                        String det_Puc = TxtCodigoCuenta.Texto;
 
                         bool sel = Convert.ToBoolean(DgvTiposCuentas.GetRowCellValue(i, DgvTiposCuentas.Columns["Sel"]));
                         if (sel)
@@ -364,7 +364,7 @@ namespace Estandar.Vistas.Contabilidad
         public void EliminarPucClasificacionDet() 
         {
             SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","D"),
-                                                    new SqlParameter("@CodigoClasificacion",TxtCodigoCuenta.Text.Trim())};
+                                                    new SqlParameter("@CodigoClasificacion",TxtCodigoCuenta.Texto.Trim())};
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_ClasificacionPucDetalles", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -373,14 +373,14 @@ namespace Estandar.Vistas.Contabilidad
         public bool Validar()
         {
             bool retorno = true;
-            if (String.IsNullOrEmpty(TxtCodigoCuenta.Text))
+            if (String.IsNullOrEmpty(TxtCodigoCuenta.Texto))
             {
                 retorno = false;
                 XtraMessageBox.Show("Debe digitar un código para la cuenta", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TxtCodigoCuenta.Focus();
             }
 
-            if (!String.IsNullOrEmpty(TxtCodigoCuenta.Text) && String.IsNullOrEmpty(TxtNombreCuenta.Text))
+            if (!String.IsNullOrEmpty(TxtCodigoCuenta.Texto) && String.IsNullOrEmpty(TxtNombreCuenta.Texto))
             {
                 retorno = false;
                 XtraMessageBox.Show("Debe digitar el nombre de la cuenta", Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -394,11 +394,11 @@ namespace Estandar.Vistas.Contabilidad
         {
 
             SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","IUPUC"),
-                                                    new SqlParameter("@Codigo",TxtCodigoCuenta.Text),
-                                                    new SqlParameter("@Nombre",TxtNombreCuenta.Text),
-                                                    new SqlParameter("@GlVersion",TxtFormatoVersion.Text),
-                                                    new SqlParameter("@CodigoDIAN",TxtCodigoDian.Text),
-                                                    new SqlParameter("@TipoConcepto",TxtLblClasificacion.Codigo??""),
+                                                    new SqlParameter("@Codigo",TxtCodigoCuenta.Texto),
+                                                    new SqlParameter("@Nombre",TxtNombreCuenta.Texto),
+                                                    //new SqlParameter("@Version",TxtFormatoVersion.Text),
+                                                    //new SqlParameter("@CodigoDIAN",TxtCodigoDian.Text),
+                                                    //new SqlParameter("@TipoConcepto",TxtLblClasificacion.Codigo??""),
                                                     new SqlParameter("@Ccosto",ChkCentroCosto.Checked),
                                                     new SqlParameter("@Tercero",ChkTerceros.Checked)};
 
@@ -580,13 +580,13 @@ namespace Estandar.Vistas.Contabilidad
 
         private void FrmGetPuc_Load(object sender, EventArgs e)
         {
-            TxtLblClasificacion.PerfilShow = Perfilador.getInstancia().CargarPerfil("ClasificacionPuc");
-            TxtLblClasificacion.database = Database;
-            TxtLblClasificacion.DesHabilitarBtnExcel = true;
-            TxtLblClasificacion.DesHabilitarBtnGuardar = true;
-            TxtLblClasificacion.Disable();
-            TxtLblClasificacion.Usuario = Usuario;
-            TxtLblClasificacion.PasarUsuario = true;
+            //TxtLblClasificacion.PerfilShow = Perfilador.getInstancia().CargarPerfil("ClasificacionPuc");
+            //TxtLblClasificacion.database = Database;
+            //TxtLblClasificacion.DesHabilitarBtnExcel = true;
+            //TxtLblClasificacion.DesHabilitarBtnGuardar = true;
+            //TxtLblClasificacion.Disable();
+            //TxtLblClasificacion.Usuario = Usuario;
+            //TxtLblClasificacion.PasarUsuario = true;
             
 
             LlenarGrillaTiposCuentas();
@@ -595,7 +595,7 @@ namespace Estandar.Vistas.Contabilidad
             {
                 CmbTipoCueta.Enabled = false;
                 TxtCodigoCuenta.Enabled = false;
-                TxtCodigoCuenta.Text = ID.Trim();
+                TxtCodigoCuenta.Texto = ID.Trim();
                 ConsultarCuenta(ID.Trim());
                 ClasificacionCodigo(ID.Trim());
             }
@@ -609,72 +609,22 @@ namespace Estandar.Vistas.Contabilidad
                 DgvTiposCuentas.OptionsBehavior.Editable = false;
             }
         }
+       
 
-        private void CmbDestinadoA_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (CmbTipoCueta.SelectedIndex == 2)
-            {
-                TxtLblClasificacion.Enable();
-                TxtCodigoCuenta.Properties.MaxLength = 4;
-            }
-            else
-            {
-                TxtLblClasificacion.Codigo = "";
-                TxtLblClasificacion.Id = "";
-                TxtLblClasificacion.Borrar();
-                TxtLblClasificacion.Disable();
-            }
-
-            if (CmbTipoCueta.SelectedIndex == 1)
-            {
-                ChkCentroCosto.Enabled = true;
-                ChkTerceros.Enabled = true;
-                TxtCodigoCuenta.Properties.MaxLength = 6;
-            }
-            else
-            {
-                ChkCentroCosto.Enabled = false;
-                ChkTerceros.Enabled = false;
-
-                ChkTerceros.Checked = false;
-                ChkCentroCosto.Checked = false;
-            }
-
-            if (CmbTipoCueta.SelectedIndex == 0)
-            {
-                DgvTiposCuentas.OptionsBehavior.Editable = true;
-                TxtCodigoCuenta.Properties.MaxLength = 12;
-            }
-            else
-            {
-                DgvTiposCuentas.OptionsBehavior.Editable = false;
-            }
-
-            if (CmbTipoCueta.SelectedIndex == 3)
-            {                
-                TxtCodigoCuenta.Properties.MaxLength = 2;
-            }
-
-            if (CmbTipoCueta.SelectedIndex == 4)
-            {
-                TxtCodigoCuenta.Properties.MaxLength = 1;
-            }
-        }
-
-        private void TxtCodigoCuenta_Validated(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrEmpty(TxtCodigoCuenta.Text))
-            {
-                if (CmbTipoCueta.SelectedIndex == 0)
-                {
-                    DgvTiposCuentas.OptionsBehavior.Editable = true;
-                }
-                else
-                {
-                    DgvTiposCuentas.OptionsBehavior.Editable = false;
-                }
-            }
-        }
+        //private void TxtCodigoCuenta_Validated(object sender, EventArgs e)
+        //{
+        //    if (!String.IsNullOrEmpty(TxtCodigoCuenta.Text))
+        //    {
+        //        if (CmbTipoCueta.SelectedIndex == 0)
+        //        {
+        //            DgvTiposCuentas.OptionsBehavior.Editable = true;
+        //        }
+        //        else
+        //        {
+        //            DgvTiposCuentas.OptionsBehavior.Editable = false;
+        //        }
+        //    }
+        //}
 
         private void BtnPuc_Click(object sender, EventArgs e)
         {
@@ -694,11 +644,11 @@ namespace Estandar.Vistas.Contabilidad
             {
                 if (TxtCodigoCuenta.Enabled == true)
                 {
-                    TxtCodigoCuenta.Text = CodigoClasificacion(frmShowit.Seleccion.Trim());
+                    TxtCodigoCuenta.Texto = CodigoClasificacion(frmShowit.Seleccion.Trim());
                 }
                 else
                 {
-                    TxtCodigoCuenta.Text = frmShowit.Seleccion.Trim();
+                    TxtCodigoCuenta.Texto = frmShowit.Seleccion.Trim();
                 }
                 
                 TxtCodigoCuenta.Focus();       
@@ -706,7 +656,7 @@ namespace Estandar.Vistas.Contabilidad
                 if (TxtCodigoCuenta.Enabled == false)
                 {
                     ClasificacionCodigo(frmShowit.Seleccion.Trim());
-                    ConsultarCuenta(TxtCodigoCuenta.Text);                    
+                    ConsultarCuenta(TxtCodigoCuenta.Texto);                    
                 }
                 
             }            
@@ -715,13 +665,13 @@ namespace Estandar.Vistas.Contabilidad
         private void TxtCodigoCuenta_Validating(object sender, CancelEventArgs e)
         {
             //CmbTipoCueta.SelectedIndex = CladificacionCuenta(TxtCodigoCuenta.Text.Trim());
-            if (!String.IsNullOrEmpty(TxtCodigoCuenta.Text))
+            if (!String.IsNullOrEmpty(TxtCodigoCuenta.Texto))
             {
-                if (ValidarCodigo(TxtCodigoCuenta.Text.Trim()))
+                if (ValidarCodigo(TxtCodigoCuenta.Texto.Trim()))
                 {
-                    if (ValidarNivelAnterior(TxtCodigoCuenta.Text.Trim()))
+                    if (ValidarNivelAnterior(TxtCodigoCuenta.Texto.Trim()))
                     {
-                        ConsultarCuenta(TxtCodigoCuenta.Text);
+                        ConsultarCuenta(TxtCodigoCuenta.Texto);
                     }                   
                 }
             }
@@ -734,7 +684,7 @@ namespace Estandar.Vistas.Contabilidad
             bool v = Convert.ToBoolean(view.GetFocusedRowCellValue(view.Columns["Sel"]));
             if (view.FocusedColumn.FieldName == "Sel" && !v)//&& TipoCuenta(view, view.FocusedRowHandle) == "0013"
             {
-                if (String.IsNullOrEmpty(TxtCodigoCuenta.Text)||CmbTipoCueta.SelectedIndex!=0)
+                if (String.IsNullOrEmpty(TxtCodigoCuenta.Texto)||CmbTipoCueta.SelectedIndex!=0)
                 {
                     e.Cancel = true; 
                 }
@@ -745,80 +695,80 @@ namespace Estandar.Vistas.Contabilidad
         {
             GridView view = sender as GridView;
             bool v = Convert.ToBoolean(e.Value);
-            if (view.FocusedColumn.FieldName == "Sel" && TipoCuenta(view, view.FocusedRowHandle) == "0013" && v) // Activos Diferidos
-            {
-                if (Validar())
-                {
-                    Nuevo();
-                    InsertarTipoDiferido();
-                    InsertarPucClasificacionDet("0013", TxtCodigoCuenta.Text.Trim());
+            //if (view.FocusedColumn.FieldName == "Sel" && TipoCuenta(view, view.FocusedRowHandle) == "0013" && v) // Activos Diferidos
+            //{
+            //    if (Validar())
+            //    {
+            //        Nuevo();
+            //        InsertarTipoDiferido();
+            //        InsertarPucClasificacionDet("0013", TxtCodigoCuenta.Texto.Trim());
 
 
-                    FrmGetTipoDiferidos frm = new FrmGetTipoDiferidos();
-                    frm.Database = Database;
-                    frm.Modo = "E";
-                    frm.ID = TxtCodigoCuenta.Text.Trim();
-                    frm.ShowDialog();
-                    if (frm.DialogResult != DialogResult.OK)
-                    {
-                        view.SetFocusedValue(false);
-                    }
-                }
+            //        FrmGetTipoDiferidos frm = new FrmGetTipoDiferidos();
+            //        frm.Database = Database;
+            //        frm.Modo = "E";
+            //        frm.ID = TxtCodigoCuenta.Texto.Trim();
+            //        frm.ShowDialog();
+            //        if (frm.DialogResult != DialogResult.OK)
+            //        {
+            //            view.SetFocusedValue(false);
+            //        }
+            //    }
                
-            }
+            //}
 
-            if (view.FocusedColumn.FieldName == "Sel" && TipoCuenta(view, view.FocusedRowHandle) == "0012" && v) //
-            {
-                if (Validar())
-                {
-                    Nuevo();
-                    InsertarTipoActivo();
-                    InsertarPucClasificacionDet("0012", TxtCodigoCuenta.Text.Trim());
+            //if (view.FocusedColumn.FieldName == "Sel" && TipoCuenta(view, view.FocusedRowHandle) == "0012" && v) //
+            //{
+            //    if (Validar())
+            //    {
+            //        Nuevo();
+            //        InsertarTipoActivo();
+            //        InsertarPucClasificacionDet("0012", TxtCodigoCuenta.Texto.Trim());
 
-                    FrmGetTipoActivo frm = new FrmGetTipoActivo();
-                    frm.Database = Database;
-                    frm.Modo = "E";
-                    frm.ID = TxtCodigoCuenta.Text.Trim();
-                    frm.ShowDialog();
-                    if (frm.DialogResult != DialogResult.OK)
-                    {
-                        view.SetFocusedValue(false);
-                    }
-                }
-            }
+            //        FrmGetTipoActivo frm = new FrmGetTipoActivo();
+            //        frm.Database = Database;
+            //        frm.Modo = "E";
+            //        frm.ID = TxtCodigoCuenta.Texto.Trim();
+            //        frm.ShowDialog();
+            //        if (frm.DialogResult != DialogResult.OK)
+            //        {
+            //            view.SetFocusedValue(false);
+            //        }
+            //    }
+            //}
 
-            if (view.FocusedColumn.FieldName == "Sel" && TipoCuenta(view, view.FocusedRowHandle) == "0011" && v)
-            {
-                if (Validar())
-                {
-                    Nuevo();
-                    InsertarConceptoNomina();
-                    InsertarPucClasificacionDet("0011", TxtCodigoCuenta.Text.Trim());
+            //if (view.FocusedColumn.FieldName == "Sel" && TipoCuenta(view, view.FocusedRowHandle) == "0011" && v)
+            //{
+            //    if (Validar())
+            //    {
+            //        Nuevo();
+            //        InsertarConceptoNomina();
+            //        InsertarPucClasificacionDet("0011", TxtCodigoCuenta.Texto.Trim());
 
-                    FrmGetConceptoNomina frm = new FrmGetConceptoNomina();
-                    frm.Database = Database;
-                    frm.Modo = "E";
-                    frm.ID = nuevoCodCon;
-                    frm.DeshabilitarCuenta();
-                    frm.ShowDialog();
-                    if (frm.DialogResult != DialogResult.OK)
-                    {
-                        view.SetFocusedValue(false);
-                    }
-                }
-            }
+            //        FrmGetConceptoNomina frm = new FrmGetConceptoNomina();
+            //        frm.Database = Database;
+            //        frm.Modo = "E";
+            //        frm.ID = nuevoCodCon;
+            //        frm.DeshabilitarCuenta();
+            //        frm.ShowDialog();
+            //        if (frm.DialogResult != DialogResult.OK)
+            //        {
+            //            view.SetFocusedValue(false);
+            //        }
+            //    }
+            //}
 
             if (view.FocusedColumn.FieldName == "Sel" && TipoCuenta(view, view.FocusedRowHandle) == "0006" && v)
             {
                 if (Validar())
                 {
                     Nuevo();
-                    InsertarPucClasificacionDet("0006", TxtCodigoCuenta.Text.Trim());
+                    InsertarPucClasificacionDet("0006", TxtCodigoCuenta.Texto.Trim());
 
                     FrmGetCajaMenor frm = new FrmGetCajaMenor();
                     frm.Database = Database;
                     frm.Modo = "E";
-                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ID = TxtCodigoCuenta.Texto.Trim();
                     frm.ShowDialog();
                     if (frm.DialogResult != DialogResult.OK)
                     {
@@ -832,12 +782,12 @@ namespace Estandar.Vistas.Contabilidad
                 if (Validar())
                 {
                     Nuevo();
-                    InsertarPucClasificacionDet("0005", TxtCodigoCuenta.Text.Trim());
+                    InsertarPucClasificacionDet("0005", TxtCodigoCuenta.Texto.Trim());
 
                     FrmGetCuentasBancarias frm = new FrmGetCuentasBancarias();
                     frm.Database = Database;
                     frm.Modo = "E";
-                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ID = TxtCodigoCuenta.Texto.Trim();
                     frm.ShowDialog();
                     if (frm.DialogResult != DialogResult.OK)
                     {
@@ -851,12 +801,12 @@ namespace Estandar.Vistas.Contabilidad
                 if (Validar())
                 {
                     Nuevo();
-                    InsertarPucClasificacionDet("0004", TxtCodigoCuenta.Text.Trim());
+                    InsertarPucClasificacionDet("0004", TxtCodigoCuenta.Texto.Trim());
 
                     FrmGetTarifaIva frm = new FrmGetTarifaIva();
                     frm.Database = Database;
                     frm.Modo = "E";
-                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ID = TxtCodigoCuenta.Texto.Trim();
                     frm.ShowDialog();
                     if (frm.DialogResult != DialogResult.OK)
                     {
@@ -870,12 +820,12 @@ namespace Estandar.Vistas.Contabilidad
                 if (Validar())
                 {
                     Nuevo();
-                    InsertarPucClasificacionDet("0002", TxtCodigoCuenta.Text.Trim());
+                    InsertarPucClasificacionDet("0002", TxtCodigoCuenta.Texto.Trim());
 
                     FrmGetRetenciones frm = new FrmGetRetenciones();
                     frm.Database = Database;
                     frm.Modo = "E";
-                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ID = TxtCodigoCuenta.Texto.Trim();
                     frm.OpcionGet = "reteica";
                     frm.ShowDialog();
                     if (frm.DialogResult != DialogResult.OK)
@@ -890,12 +840,12 @@ namespace Estandar.Vistas.Contabilidad
                 if (Validar())
                 {
                     Nuevo();
-                    InsertarPucClasificacionDet("0003", TxtCodigoCuenta.Text.Trim());
+                    InsertarPucClasificacionDet("0003", TxtCodigoCuenta.Texto.Trim());
 
                     FrmGetRetenciones frm = new FrmGetRetenciones();
                     frm.Database = Database;
                     frm.Modo = "E";
-                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ID = TxtCodigoCuenta.Texto.Trim();
                     frm.OpcionGet = "reteiva";
                     frm.ShowDialog();
                     if (frm.DialogResult != DialogResult.OK)
@@ -910,12 +860,12 @@ namespace Estandar.Vistas.Contabilidad
                 if (Validar())
                 {
                     Nuevo();
-                    InsertarPucClasificacionDet("0001", TxtCodigoCuenta.Text.Trim());
+                    InsertarPucClasificacionDet("0001", TxtCodigoCuenta.Texto.Trim());
 
                     FrmGetRetenciones frm = new FrmGetRetenciones();
                     frm.Database = Database;
                     frm.Modo = "E";
-                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ID = TxtCodigoCuenta.Texto.Trim();
                     frm.OpcionGet = "retefte";
                     frm.ShowDialog();
                     if (frm.DialogResult != DialogResult.OK)
@@ -930,12 +880,12 @@ namespace Estandar.Vistas.Contabilidad
                 if (Validar())
                 {
                     Nuevo();
-                    InsertarPucClasificacionDet("0014", TxtCodigoCuenta.Text.Trim());
+                    InsertarPucClasificacionDet("0014", TxtCodigoCuenta.Texto.Trim());
 
                     FrmGetRetenciones frm = new FrmGetRetenciones();
                     frm.Database = Database;
                     frm.Modo = "E";
-                    frm.ID = TxtCodigoCuenta.Text.Trim();
+                    frm.ID = TxtCodigoCuenta.Texto.Trim();
                     frm.OpcionGet = "retecree";
                     frm.ShowDialog();
                     if (frm.DialogResult != DialogResult.OK)
@@ -948,20 +898,83 @@ namespace Estandar.Vistas.Contabilidad
 
         #endregion
 
-        private void TxtCodigoCuenta_EditValueChanged(object sender, EventArgs e)
-        {
 
+        private void CmbTipoCueta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CmbTipoCueta.SelectedIndex == 2)
+            {
+                //TxtLblClasificacion.Enable();
+                TxtCodigoCuenta.MaxLenght = 4;
+            }
+            //else
+            //{
+            //    TxtLblClasificacion.Codigo = "";
+            //    TxtLblClasificacion.Id = "";
+            //    TxtLblClasificacion.Borrar();
+            //    TxtLblClasificacion.Disable();
+            //}
+
+            if (CmbTipoCueta.SelectedIndex == 1)
+            {
+                ChkCentroCosto.Enabled = true;
+                ChkTerceros.Enabled = true;
+                TxtCodigoCuenta.MaxLenght = 6;
+            }
+            else
+            {
+                ChkCentroCosto.Enabled = false;
+                ChkTerceros.Enabled = false;
+
+                ChkTerceros.Checked = false;
+                ChkCentroCosto.Checked = false;
+            }
+
+            if (CmbTipoCueta.SelectedIndex == 0)
+            {
+                DgvTiposCuentas.OptionsBehavior.Editable = true;
+                TxtCodigoCuenta.MaxLenght = 12;
+            }
+            else
+            {
+                DgvTiposCuentas.OptionsBehavior.Editable = false;
+            }
+
+            if (CmbTipoCueta.SelectedIndex == 3)
+            {
+                TxtCodigoCuenta.MaxLenght = 2;
+            }
+
+            if (CmbTipoCueta.SelectedIndex == 4)
+            {
+                TxtCodigoCuenta.MaxLenght = 1;
+            }
         }
 
-        private void TxtNombreCuenta_EditValueChanged(object sender, EventArgs e)
+        private void TxtCodigoCuenta_Validated(object sender, EventArgs e)
         {
-
+            if (!String.IsNullOrEmpty(TxtCodigoCuenta.Texto))
+            {
+                if (CmbTipoCueta.SelectedIndex == 0)
+                {
+                    DgvTiposCuentas.OptionsBehavior.Editable = true;
+                }
+                else
+                {
+                    DgvTiposCuentas.OptionsBehavior.Editable = false;
+                }
+            }
         }
 
-        private void TxtFormatoVersion_EditValueChanged(object sender, EventArgs e)
+        private void CmbTipoCueta_Enter(object sender, EventArgs e)
         {
-
+            CmbTipoCueta.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
         }
+
+        private void CmbTipoCueta_Leave(object sender, EventArgs e)
+        {
+            CmbTipoCueta.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+        }
+
 
     }
 }
