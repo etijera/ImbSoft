@@ -642,6 +642,8 @@ namespace UsuarioControles
         private void FrmShowIt_Load(object sender, EventArgs e)
         {
             cabeceraForm1.NombreCabecera = PerfilShow.Titulo;
+            cabeceraForm1.Width = cabeceraForm1.Width - 1;
+            cabeceraForm1.Width = cabeceraForm1.Width + 1;
             GvGeneral.Columns.Clear();
 
             GvGeneral.OptionsBehavior.AutoPopulateColumns = false;

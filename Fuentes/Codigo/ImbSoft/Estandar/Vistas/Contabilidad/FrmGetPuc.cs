@@ -78,7 +78,7 @@ namespace Estandar.Vistas.Contabilidad
                 col[i].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             }
 
-            col[1].Width = 270;  //Descripción
+            col[1].Width = 340;  //Descripción
             col[2].Width = 30;  //Sel
    
 
@@ -364,7 +364,7 @@ namespace Estandar.Vistas.Contabilidad
         public void EliminarPucClasificacionDet() 
         {
             SqlParameter[] parametros1 = new[] {    new SqlParameter("@Operacion","D"),
-                                                    new SqlParameter("@CodigoClasificacion",TxtCodigoCuenta.Texto.Trim())};
+                                                    new SqlParameter("@CodigoPuc",TxtCodigoCuenta.Texto.Trim())};
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_ClasificacionPucDetalles", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 

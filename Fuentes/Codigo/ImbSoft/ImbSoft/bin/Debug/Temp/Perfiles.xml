@@ -2893,33 +2893,30 @@
   </Perfil>
   <Perfil ID="Ccosto">
     <Id>Ccosto</Id>
-    <Descripcion>
-    </Descripcion>
-    <Tabla>procencos</Tabla>
-    <Campos>ccocod,cconom</Campos>
-    <Visibles>cconom</Visibles>
-    <Formulario>
-    </Formulario>
+    <Descripcion>Centros de costos</Descripcion>
+    <Tabla>Contabilidad.CentroCostos</Tabla>
+    <Campos>Nombre</Campos>
+    <Visibles>Nombre</Visibles>
+    <Formulario>UsuarioControles.FrmGetName</Formulario>
     <Titulo>Centro de Costos</Titulo>
     <Cabeceras>Nombre</Cabeceras>
-    <Tamaños>382</Tamaños>
-    <Llave>ccocod</Llave>
+    <Tamaños>402</Tamaños>
+    <Llave>Id</Llave>
     <CampoFecha>
     </CampoFecha>
     <UtilizarReportes>False</UtilizarReportes>
     <DatosDetalle>
     </DatosDetalle>
-    <Subtitulo>
-    </Subtitulo>
+    <Subtitulo>Centros de costos</Subtitulo>
     <ColumnaEstatica>
     </ColumnaEstatica>
     <Reporte>
     </Reporte>
-    <CamposId>cconom</CamposId>
+    <CamposId>Nombre</CamposId>
     <Indices>0</Indices>
-    <Proyecto>\GL0037.dll</Proyecto>
-    <CampoCodigo>ccocod</CampoCodigo>
-    <CampoNombre>cconom</CampoNombre>
+    <Proyecto>\UsuarioControles.dll</Proyecto>
+    <CampoCodigo>Codigo</CampoCodigo>
+    <CampoNombre>Nombre</CampoNombre>
   </Perfil>
   <Perfil ID="Escalas">
     <Id>Escalas</Id>

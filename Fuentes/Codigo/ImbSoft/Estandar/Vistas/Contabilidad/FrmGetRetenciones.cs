@@ -73,27 +73,27 @@ namespace Estandar.Vistas.Contabilidad
             if (Modo.Equals("N"))
             {
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "INSRETEFTE"),
-                new SqlParameter("@retpuc", ID),
-                new SqlParameter("@retnom", TxtLblCuenta.Nombre),
-                new SqlParameter("@retmon", TxtMonto.EditValue),
-                new SqlParameter("@retpor", TxtPorcentaje.EditValue),
-                new SqlParameter("@rettip", (rgTipo.SelectedIndex == 0) ? "1" : "2")
+                new SqlParameter("@CodigoPuc", ID),
+                new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
+                new SqlParameter("@Monto", TxtMonto.EditValue),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
-                DataBase.ExecuteNonQuery("PA_GETFORMS", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+                DataBase.ExecuteNonQuery("[Contabilidad].[PA_Retenciones]", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
                 alertControl1.Show(this, "ReteFuente    ", "Registro exitoso.");
             }
             else
             {
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "UPDRETEFTE"),
-                new SqlParameter("@retpuc", ID),
-                new SqlParameter("@retnom", TxtLblCuenta.Nombre),
-                new SqlParameter("@retmon", TxtMonto.EditValue),
-                new SqlParameter("@retpor", TxtPorcentaje.EditValue),
-                new SqlParameter("@rettip", (rgTipo.SelectedIndex == 0) ? "1" : "2")
+                new SqlParameter("@CodigoPuc", ID),
+                new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
+                new SqlParameter("@Monto", TxtMonto.EditValue),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
                 alertControl1.Show(this, "ReteFuente", "Actualización exitosa.");
-                DataBase.ExecuteNonQuery("PA_GETFORMS", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+                DataBase.ExecuteNonQuery("[Contabilidad].[PA_Retenciones]", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
             }
         }
@@ -104,27 +104,27 @@ namespace Estandar.Vistas.Contabilidad
             if (Modo.Equals("N"))
             {
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "INSRETEICA"),
-                new SqlParameter("@retpuc", ID),
-                new SqlParameter("@retnom", TxtLblCuenta.Nombre),
-                new SqlParameter("@retmon", TxtMonto.EditValue),
-                new SqlParameter("@retpor", TxtPorcentaje.EditValue),
-                new SqlParameter("@rettip", (rgTipo.SelectedIndex == 0) ? "1" : "2")
+                new SqlParameter("@CodigoPuc", ID),
+                new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
+                new SqlParameter("@Monto", TxtMonto.EditValue),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
-                DataBase.ExecuteNonQuery("PA_GETFORMS", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+                DataBase.ExecuteNonQuery("[Contabilidad].[PA_Retenciones]", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
                 alertControl1.Show(this, "ReteICA", "Registro exitoso.");
             }
             else
             {
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "UPDRETEICA"),
-                new SqlParameter("@retpuc", ID),
-                new SqlParameter("@retnom", TxtLblCuenta.Nombre),
-                new SqlParameter("@retmon", TxtMonto.EditValue),
-                new SqlParameter("@retpor", TxtPorcentaje.EditValue),
-                new SqlParameter("@rettip", (rgTipo.SelectedIndex == 0) ? "1" : "2")
+                new SqlParameter("@CodigoPuc", ID),
+                new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
+                new SqlParameter("@Monto", TxtMonto.EditValue),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
-                DataBase.ExecuteNonQuery("PA_GETFORMS", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+                DataBase.ExecuteNonQuery("[Contabilidad].[PA_Retenciones]", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
                 alertControl1.Show(this, "ReteICA", "Actualización exitosa.");
             }
         }
@@ -135,27 +135,27 @@ namespace Estandar.Vistas.Contabilidad
             if (Modo.Equals("N"))
             {
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "INSRETEIVA"),
-                new SqlParameter("@retpuc", ID),
-                new SqlParameter("@retnom", TxtLblCuenta.Nombre),
-                new SqlParameter("@retmon", TxtMonto.EditValue),
-                new SqlParameter("@retpor", TxtPorcentaje.EditValue),
-                new SqlParameter("@rettip", (rgTipo.SelectedIndex == 0) ? "1" : "2")
+                new SqlParameter("@CodigoPuc", ID),
+                new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
+                new SqlParameter("@Monto", TxtMonto.EditValue),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
-                DataBase.ExecuteNonQuery("PA_GETFORMS", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+                DataBase.ExecuteNonQuery("[Contabilidad].[PA_Retenciones]", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
                 alertControl1.Show(this, "ReteIVA", "Registro exitoso.");
             }
             else
             {
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "UPDRETEIVA"),
-                new SqlParameter("@retpuc", ID),
-                new SqlParameter("@retnom", TxtLblCuenta.Nombre),
-                new SqlParameter("@retmon", TxtMonto.EditValue),
-                new SqlParameter("@retpor", TxtPorcentaje.EditValue),
-                new SqlParameter("@rettip", (rgTipo.SelectedIndex == 0) ? "1" : "2")
+                new SqlParameter("@CodigoPuc", ID),
+                new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
+                new SqlParameter("@Monto", TxtMonto.EditValue),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
-                DataBase.ExecuteNonQuery("PA_GETFORMS", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+                DataBase.ExecuteNonQuery("[Contabilidad].[PA_Retenciones]", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
                 alertControl1.Show(this, "ReteIVA", "Actualización exitosa.");
             }
         }
@@ -166,27 +166,27 @@ namespace Estandar.Vistas.Contabilidad
             if (Modo.Equals("N"))
             {
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "INSRETECREE"),
-                new SqlParameter("@retpuc", ID),
-                new SqlParameter("@retnom", TxtLblCuenta.Nombre),
-                new SqlParameter("@retmon", TxtMonto.EditValue),
-                new SqlParameter("@retpor", TxtPorcentaje.EditValue),
-                new SqlParameter("@rettip", (rgTipo.SelectedIndex == 0) ? "1" : "2")
+                new SqlParameter("@CodigoPuc", ID),
+                new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
+                new SqlParameter("@Monto", TxtMonto.EditValue),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
-                DataBase.ExecuteNonQuery("PA_GETFORMS", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+                DataBase.ExecuteNonQuery("[Contabilidad].[PA_Retenciones]", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
                 alertControl1.Show(this, "RetCREE", "Registro exitoso.");
             }
             else
             {
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "UPDRETECREE"),
-                new SqlParameter("@retpuc", ID),
-                new SqlParameter("@retnom", TxtLblCuenta.Nombre),
-                new SqlParameter("@retmon", TxtMonto.EditValue),
-                new SqlParameter("@retpor", TxtPorcentaje.EditValue),
-                new SqlParameter("@rettip", (rgTipo.SelectedIndex == 0) ? "1" : "2")
+                new SqlParameter("@CodigoPuc", ID),
+                new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
+                new SqlParameter("@Monto", TxtMonto.EditValue),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
-                DataBase.ExecuteNonQuery("PA_GETFORMS", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
+                DataBase.ExecuteNonQuery("[Contabilidad].[PA_Retenciones]", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
                 alertControl1.Show(this, "ReteCREE", "Actualización exitosa.");
             }
         }
@@ -194,17 +194,17 @@ namespace Estandar.Vistas.Contabilidad
         private void LlenarCamposReteFte()
         {
             SqlParameter[] parametros = new [] { new SqlParameter("@Operacion", "GETRETEFTE"),
-            new SqlParameter("@retpuc", ID) };
+            new SqlParameter("@CodigoPuc", ID) };
 
             DataTable dsCods = new DataTable();
 
-            dsCods = DataBase.ExecuteQueryDataTable("PA_GETFORMS", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
+            dsCods = DataBase.ExecuteQueryDataTable("[Contabilidad].[PA_Retenciones]", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
 
             if (dsCods.Rows.Count != 0)
             {
-                String porc = Convert.ToDouble(dsCods.Rows[0]["retpor"].ToString()).ToString();
+                String porc = Convert.ToDouble(dsCods.Rows[0]["Porcentaje"].ToString()).ToString();
 
-                String tipo = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["rettip"].ToString())).ToString();
+                String tipo = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Tipo"].ToString())).ToString();
 
                 if (tipo == "1")
                 {
@@ -216,7 +216,7 @@ namespace Estandar.Vistas.Contabilidad
                         rgTipo.SelectedIndex = 1;
                     }
 
-                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["retmon"].ToString())).ToString();
+                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
                 TxtPorcentaje.Text = porc;
             }
 
@@ -225,17 +225,17 @@ namespace Estandar.Vistas.Contabilidad
         private void LlenarCamposReteIca()
         {
             SqlParameter[] parametros = new [] { new SqlParameter("@Operacion", "GETRETEICA"),
-            new SqlParameter("@retpuc", ID) };
+            new SqlParameter("@CodigoPuc", ID) };
 
             DataTable dsCods = new DataTable();
 
-            dsCods = DataBase.ExecuteQueryDataTable("PA_GETFORMS", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
+            dsCods = DataBase.ExecuteQueryDataTable("[Contabilidad].[PA_Retenciones]", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
 
             if (dsCods.Rows.Count != 0)
             {
-                String porc = Convert.ToDouble(dsCods.Rows[0]["retpor"].ToString()).ToString();
+                String porc = Convert.ToDouble(dsCods.Rows[0]["Porcentaje"].ToString()).ToString();
 
-                String tipo = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["rettip"].ToString())).ToString();
+                String tipo = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Tipo"].ToString())).ToString();
 
                 if (tipo == "1")
                 {
@@ -247,7 +247,7 @@ namespace Estandar.Vistas.Contabilidad
                         rgTipo.SelectedIndex = 1;
                     }
 
-                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["retmon"].ToString())).ToString();
+                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
                 TxtPorcentaje.Text = porc;
             }
         }
@@ -255,17 +255,17 @@ namespace Estandar.Vistas.Contabilidad
         private void LlenarCamposReteIva()
         {
             SqlParameter[] parametros = new [] { new SqlParameter("@Operacion", "GETRETEIVA"),
-            new SqlParameter("@retpuc", ID) };
+            new SqlParameter("@CodigoPuc", ID) };
 
             DataTable dsCods = new DataTable();
 
-            dsCods = DataBase.ExecuteQueryDataTable("PA_GETFORMS", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
+            dsCods = DataBase.ExecuteQueryDataTable("[Contabilidad].[PA_Retenciones]", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
 
             if (dsCods.Rows.Count != 0)
             {
-                String porc = Convert.ToDouble(dsCods.Rows[0]["retpor"].ToString()).ToString();
+                String porc = Convert.ToDouble(dsCods.Rows[0]["Porcentaje"].ToString()).ToString();
 
-                String tipo = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["rettip"].ToString())).ToString();
+                String tipo = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Tipo"].ToString())).ToString();
 
                 if (tipo == "1")
                 {
@@ -277,7 +277,7 @@ namespace Estandar.Vistas.Contabilidad
                         rgTipo.SelectedIndex = 1;
                     }
 
-                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["retmon"].ToString())).ToString();
+                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
                 TxtPorcentaje.Text = porc;
             }
         }
@@ -285,17 +285,17 @@ namespace Estandar.Vistas.Contabilidad
         private void LlenarCamposReteCree()
         {
             SqlParameter[] parametros = new [] { new SqlParameter("@Operacion", "GETRETECREE"),
-            new SqlParameter("@retpuc", ID) };
+            new SqlParameter("@CodigoPuc", ID) };
 
             DataTable dsCods = new DataTable();
 
-            dsCods = DataBase.ExecuteQueryDataTable("PA_GETFORMS", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
+            dsCods = DataBase.ExecuteQueryDataTable("[Contabilidad].[PA_Retenciones]", "datos", CommandType.StoredProcedure, parametros, ConexionDB.getInstancia().Conexion(Database, null));
 
             if (dsCods.Rows.Count != 0)
             {
-                String porc = Convert.ToDouble(dsCods.Rows[0]["retpor"].ToString()).ToString();
+                String porc = Convert.ToDouble(dsCods.Rows[0]["Porcentaje"].ToString()).ToString();
 
-                String tipo = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["rettip"].ToString())).ToString();
+                String tipo = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Tipo"].ToString())).ToString();
 
                 if (tipo == "1")
                 {
@@ -307,7 +307,7 @@ namespace Estandar.Vistas.Contabilidad
                         rgTipo.SelectedIndex = 1;
                     }
 
-                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["retmon"].ToString())).ToString();
+                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
                 TxtPorcentaje.Text = porc;
             }
         }

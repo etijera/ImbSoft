@@ -38,6 +38,8 @@ namespace Estandar.Vistas.Contabilidad
             this.acceptCancel1 = new UsuarioControles.AcceptCancel();
             this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TxtNombreCuenta = new UsuarioControles.TxtBase();
             this.TxtCodigoCuenta = new UsuarioControles.TxtBase();
@@ -45,8 +47,9 @@ namespace Estandar.Vistas.Contabilidad
             this.LblCodigoCuenta = new UsuarioControles.LblBase();
             this.LblTipoCuenta = new UsuarioControles.LblBase();
             this.LblNombreCuenta = new UsuarioControles.LblBase();
-            this.LblPanel4 = new UsuarioControles.LblBase();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LblPanel4 = new UsuarioControles.LblBase();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkTerceros.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChkCentroCosto.Properties)).BeginInit();
@@ -56,14 +59,18 @@ namespace Estandar.Vistas.Contabilidad
             ((System.ComponentModel.ISupportInitialize)(this.DgvTiposCuentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CmbTipoCueta.Properties)).BeginInit();
             this.panel1.SuspendLayout();
+            this.xtraTabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnPuc
             // 
-            this.BtnPuc.Location = new System.Drawing.Point(249, 41);
+            this.BtnPuc.Location = new System.Drawing.Point(249, 62);
             this.BtnPuc.LookAndFeel.SkinName = "Office 2010 Blue";
             this.BtnPuc.Name = "BtnPuc";
             this.BtnPuc.Size = new System.Drawing.Size(19, 20);
@@ -75,7 +82,7 @@ namespace Estandar.Vistas.Contabilidad
             // 
             this.ChkTerceros.Enabled = false;
             this.ChkTerceros.EnterMoveNextControl = true;
-            this.ChkTerceros.Location = new System.Drawing.Point(140, 9);
+            this.ChkTerceros.Location = new System.Drawing.Point(140, 20);
             this.ChkTerceros.Name = "ChkTerceros";
             this.ChkTerceros.Properties.Caption = "Terceros";
             this.ChkTerceros.Size = new System.Drawing.Size(80, 19);
@@ -85,7 +92,7 @@ namespace Estandar.Vistas.Contabilidad
             // 
             this.ChkCentroCosto.Enabled = false;
             this.ChkCentroCosto.EnterMoveNextControl = true;
-            this.ChkCentroCosto.Location = new System.Drawing.Point(9, 9);
+            this.ChkCentroCosto.Location = new System.Drawing.Point(9, 20);
             this.ChkCentroCosto.Name = "ChkCentroCosto";
             this.ChkCentroCosto.Properties.Caption = "Centro de Costo";
             this.ChkCentroCosto.Size = new System.Drawing.Size(114, 19);
@@ -94,10 +101,10 @@ namespace Estandar.Vistas.Contabilidad
             // groupControl8
             // 
             this.groupControl8.Controls.Add(this.GctrlTiposCuentas);
-            this.groupControl8.Location = new System.Drawing.Point(439, 21);
+            this.groupControl8.Location = new System.Drawing.Point(4, 3);
             this.groupControl8.Name = "groupControl8";
             this.groupControl8.ShowCaption = false;
-            this.groupControl8.Size = new System.Drawing.Size(322, 325);
+            this.groupControl8.Size = new System.Drawing.Size(412, 262);
             this.groupControl8.TabIndex = 3;
             // 
             // GctrlTiposCuentas
@@ -106,7 +113,7 @@ namespace Estandar.Vistas.Contabilidad
             this.GctrlTiposCuentas.Location = new System.Drawing.Point(2, 2);
             this.GctrlTiposCuentas.MainView = this.DgvTiposCuentas;
             this.GctrlTiposCuentas.Name = "GctrlTiposCuentas";
-            this.GctrlTiposCuentas.Size = new System.Drawing.Size(318, 321);
+            this.GctrlTiposCuentas.Size = new System.Drawing.Size(408, 258);
             this.GctrlTiposCuentas.TabIndex = 0;
             this.GctrlTiposCuentas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.DgvTiposCuentas});
@@ -124,12 +131,12 @@ namespace Estandar.Vistas.Contabilidad
             this.acceptCancel1.CancelButtonText = "Cancelar";
             this.acceptCancel1.HabilitarAceptar = true;
             this.acceptCancel1.HabilitarCancelar = true;
-            this.acceptCancel1.Location = new System.Drawing.Point(176, 395);
+            this.acceptCancel1.Location = new System.Drawing.Point(163, 300);
             this.acceptCancel1.LookAndFeel.SkinName = "Office 2007 Silver";
             this.acceptCancel1.Maceptar = "Guardar";
             this.acceptCancel1.Mcancelar = null;
             this.acceptCancel1.Name = "acceptCancel1";
-            this.acceptCancel1.Size = new System.Drawing.Size(110, 47);
+            this.acceptCancel1.Size = new System.Drawing.Size(110, 46);
             this.acceptCancel1.TabIndex = 5;
             // 
             // cabeceraForm1
@@ -139,22 +146,43 @@ namespace Estandar.Vistas.Contabilidad
             this.cabeceraForm1.HabilitarBMinimiar = true;
             this.cabeceraForm1.Location = new System.Drawing.Point(0, 0);
             this.cabeceraForm1.Name = "cabeceraForm1";
-            this.cabeceraForm1.NombreCabecera = "Titulo";
-            this.cabeceraForm1.Size = new System.Drawing.Size(754, 32);
+            this.cabeceraForm1.NombreCabecera = "Plan único de cuentas";
+            this.cabeceraForm1.Size = new System.Drawing.Size(439, 32);
             this.cabeceraForm1.TabIndex = 6;
             this.cabeceraForm1.VerBCerrar = true;
             this.cabeceraForm1.VerBMinimiar = true;
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.panel2);
-            this.panelControl1.Controls.Add(this.LblPanel4);
-            this.panelControl1.Controls.Add(this.panel1);
-            this.panelControl1.Controls.Add(this.groupControl8);
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.xtraTabControl1);
+            this.panelControl1.Controls.Add(this.acceptCancel1);
             this.panelControl1.Location = new System.Drawing.Point(2, 29);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(777, 351);
+            this.panelControl1.Size = new System.Drawing.Size(436, 354);
             this.panelControl1.TabIndex = 0;
+            // 
+            // xtraTabControl1
+            // 
+            this.xtraTabControl1.Location = new System.Drawing.Point(6, 5);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(426, 297);
+            this.xtraTabControl1.TabIndex = 6;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Controls.Add(this.panel2);
+            this.xtraTabPage1.Controls.Add(this.panel1);
+            this.xtraTabPage1.Controls.Add(this.LblPanel4);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(420, 269);
+            this.xtraTabPage1.Text = "General";
             // 
             // panel2
             // 
@@ -167,9 +195,9 @@ namespace Estandar.Vistas.Contabilidad
             this.panel2.Controls.Add(this.LblCodigoCuenta);
             this.panel2.Controls.Add(this.LblTipoCuenta);
             this.panel2.Controls.Add(this.LblNombreCuenta);
-            this.panel2.Location = new System.Drawing.Point(9, 9);
+            this.panel2.Location = new System.Drawing.Point(6, 14);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(412, 110);
+            this.panel2.Size = new System.Drawing.Size(406, 152);
             this.panel2.TabIndex = 0;
             // 
             // TxtNombreCuenta
@@ -178,7 +206,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtNombreCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.TxtNombreCuenta.Appearance.Options.UseBackColor = true;
             this.TxtNombreCuenta.CaraterPassword = '\0';
-            this.TxtNombreCuenta.Location = new System.Drawing.Point(126, 70);
+            this.TxtNombreCuenta.Location = new System.Drawing.Point(126, 100);
             this.TxtNombreCuenta.MaxLenght = 50;
             this.TxtNombreCuenta.MTextChanged = null;
             this.TxtNombreCuenta.Name = "TxtNombreCuenta";
@@ -196,7 +224,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtCodigoCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.TxtCodigoCuenta.Appearance.Options.UseBackColor = true;
             this.TxtCodigoCuenta.CaraterPassword = '\0';
-            this.TxtCodigoCuenta.Location = new System.Drawing.Point(126, 38);
+            this.TxtCodigoCuenta.Location = new System.Drawing.Point(126, 59);
             this.TxtCodigoCuenta.MaxLenght = 50;
             this.TxtCodigoCuenta.MTextChanged = null;
             this.TxtCodigoCuenta.Name = "TxtCodigoCuenta";
@@ -213,7 +241,7 @@ namespace Estandar.Vistas.Contabilidad
             // 
             this.CmbTipoCueta.EditValue = "AUXILIAR";
             this.CmbTipoCueta.EnterMoveNextControl = true;
-            this.CmbTipoCueta.Location = new System.Drawing.Point(129, 12);
+            this.CmbTipoCueta.Location = new System.Drawing.Point(129, 24);
             this.CmbTipoCueta.Name = "CmbTipoCueta";
             this.CmbTipoCueta.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.CmbTipoCueta.Properties.Appearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
@@ -247,7 +275,7 @@ namespace Estandar.Vistas.Contabilidad
             this.LblCodigoCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.LblCodigoCuenta.Appearance.Options.UseBackColor = true;
             this.LblCodigoCuenta.AutoSize = true;
-            this.LblCodigoCuenta.Location = new System.Drawing.Point(6, 48);
+            this.LblCodigoCuenta.Location = new System.Drawing.Point(6, 66);
             this.LblCodigoCuenta.Name = "LblCodigoCuenta";
             this.LblCodigoCuenta.Size = new System.Drawing.Size(111, 13);
             this.LblCodigoCuenta.TabIndex = 2;
@@ -258,7 +286,7 @@ namespace Estandar.Vistas.Contabilidad
             this.LblTipoCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.LblTipoCuenta.Appearance.Options.UseBackColor = true;
             this.LblTipoCuenta.AutoSize = true;
-            this.LblTipoCuenta.Location = new System.Drawing.Point(6, 15);
+            this.LblTipoCuenta.Location = new System.Drawing.Point(6, 27);
             this.LblTipoCuenta.Name = "LblTipoCuenta";
             this.LblTipoCuenta.Size = new System.Drawing.Size(97, 13);
             this.LblTipoCuenta.TabIndex = 0;
@@ -269,23 +297,11 @@ namespace Estandar.Vistas.Contabilidad
             this.LblNombreCuenta.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.LblNombreCuenta.Appearance.Options.UseBackColor = true;
             this.LblNombreCuenta.AutoSize = true;
-            this.LblNombreCuenta.Location = new System.Drawing.Point(6, 82);
+            this.LblNombreCuenta.Location = new System.Drawing.Point(6, 107);
             this.LblNombreCuenta.Name = "LblNombreCuenta";
             this.LblNombreCuenta.Size = new System.Drawing.Size(97, 13);
             this.LblNombreCuenta.TabIndex = 5;
             this.LblNombreCuenta.Texto = "Nombre Cuenta";
-            // 
-            // LblPanel4
-            // 
-            this.LblPanel4.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.LblPanel4.Appearance.Options.UseBackColor = true;
-            this.LblPanel4.AutoSize = true;
-            this.LblPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LblPanel4.Location = new System.Drawing.Point(9, 125);
-            this.LblPanel4.Name = "LblPanel4";
-            this.LblPanel4.Size = new System.Drawing.Size(108, 16);
-            this.LblPanel4.TabIndex = 1;
-            this.LblPanel4.Texto = "Requerimientos";
             // 
             // panel1
             // 
@@ -293,10 +309,29 @@ namespace Estandar.Vistas.Contabilidad
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ChkTerceros);
             this.panel1.Controls.Add(this.ChkCentroCosto);
-            this.panel1.Location = new System.Drawing.Point(9, 140);
+            this.panel1.Location = new System.Drawing.Point(6, 193);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(413, 39);
+            this.panel1.Size = new System.Drawing.Size(407, 61);
             this.panel1.TabIndex = 2;
+            // 
+            // LblPanel4
+            // 
+            this.LblPanel4.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.LblPanel4.Appearance.Options.UseBackColor = true;
+            this.LblPanel4.AutoSize = true;
+            this.LblPanel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LblPanel4.Location = new System.Drawing.Point(6, 178);
+            this.LblPanel4.Name = "LblPanel4";
+            this.LblPanel4.Size = new System.Drawing.Size(108, 16);
+            this.LblPanel4.TabIndex = 1;
+            this.LblPanel4.Texto = "Requerimientos";
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.groupControl8);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(420, 269);
+            this.xtraTabPage2.Text = "Tipos de cuenta";
             // 
             // FrmGetPuc
             // 
@@ -307,9 +342,8 @@ namespace Estandar.Vistas.Contabilidad
             this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 470);
+            this.ClientSize = new System.Drawing.Size(440, 385);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.acceptCancel1);
             this.Controls.Add(this.cabeceraForm1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -325,11 +359,15 @@ namespace Estandar.Vistas.Contabilidad
             ((System.ComponentModel.ISupportInitialize)(this.DgvTiposCuentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage1.ResumeLayout(false);
+            this.xtraTabPage1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CmbTipoCueta.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.xtraTabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +393,8 @@ namespace Estandar.Vistas.Contabilidad
         private DevExpress.XtraEditors.ComboBoxEdit CmbTipoCueta;
         private UsuarioControles.TxtBase TxtCodigoCuenta;
         private UsuarioControles.TxtBase TxtNombreCuenta;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
     }
 }
