@@ -157,5 +157,24 @@ namespace ImbSoft.Vistas
             frmPuc.ShowDialog(); 
         }
 
+        private void BtnCCostos_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmShowIt frmCcosto = new FrmShowIt();
+            frmCcosto.PerfilShow = Perfilador.getInstancia().CargarPerfil("Ccosto");
+            frmCcosto.database = Database;
+            frmCcosto.Usuario = Usuario;
+            frmCcosto.DesdeMenu = true;
+            frmCcosto.PasarUsuario = true;
+            frmCcosto.EliminarRegistro = true;
+            frmCcosto.Ordenar = OrdenarPor.CampoCodigo;
+            //frmTipoUsuarios.OcultarBtnImprimir();
+            //frmTipoUsuarios.OcultarBtnExcel();
+            //frmTipoUsuarios.OcultarBtnGuardar();
+            frmCcosto.DesHabilitarBtnImprimir();
+            frmCcosto.DesHabilitarBtnGuardar();
+            frmCcosto.DesHabilitarBtnExcel();
+            frmCcosto.ShowDialog(); 
+        }
+
     }
 }

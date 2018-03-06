@@ -2895,12 +2895,12 @@
     <Id>Ccosto</Id>
     <Descripcion>Centros de costos</Descripcion>
     <Tabla>Contabilidad.CentroCostos</Tabla>
-    <Campos>Nombre</Campos>
-    <Visibles>Nombre</Visibles>
-    <Formulario>UsuarioControles.FrmGetName</Formulario>
+    <Campos>Codigo,Nombre</Campos>
+    <Visibles>Codigo,Nombre</Visibles>
+    <Formulario>UsuarioControles.FrmGetCodeName</Formulario>
     <Titulo>Centro de Costos</Titulo>
-    <Cabeceras>Nombre</Cabeceras>
-    <Tamaños>402</Tamaños>
+    <Cabeceras>Código,Nombre</Cabeceras>
+    <Tamaños>82,320</Tamaños>
     <Llave>Id</Llave>
     <CampoFecha>
     </CampoFecha>
@@ -2912,8 +2912,8 @@
     </ColumnaEstatica>
     <Reporte>
     </Reporte>
-    <CamposId>Nombre</CamposId>
-    <Indices>0</Indices>
+    <CamposId>Codigo,Nombre</CamposId>
+    <Indices>0,1</Indices>
     <Proyecto>\UsuarioControles.dll</Proyecto>
     <CampoCodigo>Codigo</CampoCodigo>
     <CampoNombre>Nombre</CampoNombre>

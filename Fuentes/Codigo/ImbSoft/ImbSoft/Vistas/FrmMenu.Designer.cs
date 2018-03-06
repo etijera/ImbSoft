@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
-            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu();
+            this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.BtnIPuc = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnIGrupos = new DevExpress.XtraBars.BarButtonItem();
-            this.BtnIMayores = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnCCostos = new DevExpress.XtraBars.BarButtonItem();
             this.BtnIAuxiliares = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
@@ -61,7 +62,7 @@
             this.rbPGPerfilesImb = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.RibPHerramientas = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbPGPerfil = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -101,7 +102,7 @@
             this.barButtonItem3,
             this.barButtonItem4,
             this.BtnIGrupos,
-            this.BtnIMayores,
+            this.BtnCCostos,
             this.BtnIAuxiliares,
             this.barButtonItem8,
             this.barButtonItem9,
@@ -160,11 +161,12 @@
             this.BtnIGrupos.Id = 12;
             this.BtnIGrupos.Name = "BtnIGrupos";
             // 
-            // BtnIMayores
+            // BtnCCostos
             // 
-            this.BtnIMayores.Caption = "Mayores";
-            this.BtnIMayores.Id = 13;
-            this.BtnIMayores.Name = "BtnIMayores";
+            this.BtnCCostos.Caption = "Centros de Costos";
+            this.BtnCCostos.Id = 13;
+            this.BtnCCostos.Name = "BtnCCostos";
+            this.BtnCCostos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCCostos_ItemClick);
             // 
             // BtnIAuxiliares
             // 
@@ -261,7 +263,7 @@
             // 
             this.RbPGPuc.ItemLinks.Add(this.BtnIPuc);
             this.RbPGPuc.ItemLinks.Add(this.BtnIGrupos);
-            this.RbPGPuc.ItemLinks.Add(this.BtnIMayores);
+            this.RbPGPuc.ItemLinks.Add(this.BtnCCostos);
             this.RbPGPuc.ItemLinks.Add(this.BtnIAuxiliares);
             this.RbPGPuc.Name = "RbPGPuc";
             toolTipItem1.Text = "Plan Único de cuenta";
@@ -360,7 +362,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem BtnIGrupos;
-        private DevExpress.XtraBars.BarButtonItem BtnIMayores;
+        private DevExpress.XtraBars.BarButtonItem BtnCCostos;
         private DevExpress.XtraBars.BarButtonItem BtnIAuxiliares;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup RbPGPerfilesCont;
         private DevExpress.XtraBars.Ribbon.RibbonPage RibPConfiguraciones;

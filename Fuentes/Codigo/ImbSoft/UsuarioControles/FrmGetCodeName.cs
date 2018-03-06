@@ -44,8 +44,8 @@ namespace UsuarioControles
 
         private void LimpiarForm()
         {
-            this.TxtCod.Text = String.Empty;
-            this.TxtNombre.Text = String.Empty;
+            this.TxtCod.Texto = String.Empty;
+            this.TxtNombre.Texto = String.Empty;
         }
 
         /// <summary>Accept()
@@ -59,7 +59,7 @@ namespace UsuarioControles
                 {
                     if (Modo.Equals("N"))
                     {
-                        string code = TxtCod.Text;
+                        string code = TxtCod.Texto;
 
                         string camp = String.Format("SELECT {0} FROM {1} WHERE MarcaBorrado = 1 AND {2} = '{3}'", PerfilAct.CampoCodigo,
                         PerfilAct.Tabla, PerfilAct.CampoCodigo, code);
@@ -69,7 +69,7 @@ namespace UsuarioControles
                         if (ds.Tables[0].Rows.Count <= 0)
                         {
                             String sql = String.Format("INSERT INTO {0} ({1},{2}) VALUES ('{3}','{4}')", PerfilAct.Tabla,
-                            PerfilAct.CampoCodigo, PerfilAct.CampoNombre, code, TxtNombre.Text);
+                            PerfilAct.CampoCodigo, PerfilAct.CampoNombre, code, TxtNombre.Texto);
 
                             bool IsDone = DataBase.ExecuteNonQuery(sql, CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -83,8 +83,8 @@ namespace UsuarioControles
                                 ID = dsCons.Tables[0].Rows[0][PerfilAct.Llave].ToString();
                                 //AlertInfo info = new AlertInfo(Resources.SystemMessage, String.Format(Resources.SaveSuccess, TxtNombre.Text), Resources.Check);
                                 //alertControl1.Show(this, info);
-                                this.TxtCod.Text = String.Empty;
-                                this.TxtNombre.Text = String.Empty;
+                                this.TxtCod.Texto = String.Empty;
+                                this.TxtNombre.Texto = String.Empty;
                                 this.TxtCod.Focus();
                                 if (!DesdeMenu)
                                     DialogResult = DialogResult.OK;
@@ -104,7 +104,7 @@ namespace UsuarioControles
                     else
                     {
                         String sql = String.Format("UPDATE {0} SET {1} = '{2}', {3} = '{4}' WHERE {5} = '{6}'", PerfilAct.Tabla,
-                        PerfilAct.CampoCodigo, TxtCod.Text, PerfilAct.CampoNombre, TxtNombre.Text, PerfilAct.Llave, ID);
+                        PerfilAct.CampoCodigo, TxtCod.Texto, PerfilAct.CampoNombre, TxtNombre.Texto, PerfilAct.Llave, ID);
 
                         bool IsDone = DataBase.ExecuteNonQuery(sql, CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -112,7 +112,7 @@ namespace UsuarioControles
                         {
                           //  AlertInfo info = new AlertInfo(Resources.SystemMessage, String.Format(Resources.SaveSuccess, TxtNombre.Text), Resources.Check);
                           //  alertControl1.Show(this, info);
-                            this.TxtNombre.Text = String.Empty;
+                            this.TxtNombre.Texto = String.Empty;
                             this.TxtNombre.Focus();
                             DialogResult = DialogResult.OK;
                         }
@@ -133,14 +133,14 @@ namespace UsuarioControles
         public bool Validar()
         {
             bool retorno = true;
-            if (String.IsNullOrEmpty(TxtCod.Text))
+            if (String.IsNullOrEmpty(TxtCod.Texto))
             {
                 retorno = false;
                 XtraMessageBox.Show("El codigo no puede quedar vacío", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TxtCod.Focus();
             }
 
-            if (String.IsNullOrEmpty(TxtNombre.Text) && !String.IsNullOrEmpty(TxtCod.Text))
+            if (String.IsNullOrEmpty(TxtNombre.Texto) && !String.IsNullOrEmpty(TxtCod.Texto))
             {
                 retorno = false;
                 XtraMessageBox.Show("El nombre no puede quedar vacío", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -157,6 +157,8 @@ namespace UsuarioControles
         private void FrmGetName_Load(object sender, EventArgs e)
         {
             cabeceraForm1.NombreCabecera = "Añadir " + PerfilAct.Titulo;
+            cabeceraForm1.Width = cabeceraForm1.Width - 1;
+            cabeceraForm1.Width = cabeceraForm1.Width + 1;
             if (Modo == "E")
             {
                 cabeceraForm1.NombreCabecera = "Editar " + PerfilAct.Titulo;
@@ -167,35 +169,35 @@ namespace UsuarioControles
                 String cad = String.Format("SELECT {0}, {1} FROM {2} WHERE MarcaBorrado = 1 {3}", camp, PerfilAct.CampoCodigo, PerfilAct.Tabla, condicion);
                 DataSet ds = DataBase.ExecuteQuery(cad, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
 
-                this.TxtNombre.Text = ds.Tables[0].Rows[0][PerfilAct.CampoNombre].ToString();
-                this.TxtCod.Text = ds.Tables[0].Rows[0][PerfilAct.CampoCodigo].ToString();
+                this.TxtNombre.Texto = ds.Tables[0].Rows[0][PerfilAct.CampoNombre].ToString();
+                this.TxtCod.Texto = ds.Tables[0].Rows[0][PerfilAct.CampoCodigo].ToString();
                 //TxtCod.Text = PerfilAct.CampoCodigo;
                 TxtCod.Enabled = false;
             }
             else
             {
-                String sSql = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoCodigo);
+                String sSql = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE TABLE_SCHEMA + '.' + table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoCodigo);
                 DataSet ds = DataBase.ExecuteQuery(sSql, "tamaño", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
                 this.TxtCod.MaxLenght = Convert.ToInt32(ds.Tables[0].Rows[0][0].ToString());
             }
 
-            String sSql2 = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoNombre);
+            String sSql2 = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE TABLE_SCHEMA + '.' + table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoNombre);
             DataSet ds1 = DataBase.ExecuteQuery(sSql2, "tamaño", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
             this.TxtNombre.MaxLenght = Convert.ToInt32(ds1.Tables[0].Rows[0][0].ToString());
         }
 
         private void TxtCod_Validating(object sender, CancelEventArgs e)
         {
-            if (!String.IsNullOrEmpty(TxtCod.Text))
+            if (!String.IsNullOrEmpty(TxtCod.Texto))
             {
                 try
                 {
-                    if (TxtCod.Text.Contains('+') || TxtCod.Text.Contains("'"))
+                    if (TxtCod.Texto.Contains('+') || TxtCod.Texto.Contains("'"))
                     {
                         XtraMessageBox.Show("El codigo no puede contener los caracteres ' y +", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TxtCod.Focus();
                     }
-                    if (Convert.ToInt32(TxtCod.Text) == 0)
+                    if (Convert.ToInt32(TxtCod.Texto) == 0)
                     {
                         XtraMessageBox.Show("El codigo no puede ser 0", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         TxtCod.Focus();
@@ -203,11 +205,11 @@ namespace UsuarioControles
 
                     if (PonerCeros)
                     {
-                        String cod = TxtCod.Text;
+                        String cod = TxtCod.Texto;
                         if (!String.IsNullOrEmpty(cod))
                         {
                             string codigo = Funciones.getInstancia().RellenarCadenaPorLaIzquierda(cod, '0', TxtCod.MaxLenght);
-                            TxtCod.Text = codigo;
+                            TxtCod.Texto = codigo;
                         }
                     }
                 }

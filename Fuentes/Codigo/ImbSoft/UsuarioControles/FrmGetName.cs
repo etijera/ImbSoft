@@ -55,7 +55,7 @@ namespace UsuarioControles
         {
             try
             {
-                if (!String.IsNullOrEmpty(TxtNombre.Text))
+                if (!String.IsNullOrEmpty(TxtNombre.Texto))
                 {
                     if (Modo.Equals("N"))
                     {
@@ -66,7 +66,7 @@ namespace UsuarioControles
                         
                         camp = PerfilAct.CampoCodigo + "," + PerfilAct.CampoNombre;
                         var sql = string.Format("INSERT INTO {0} ({1}) VALUES ({2})", PerfilAct.Tabla,
-                        camp, String.Format("'{0}', '{1}'", code, TxtNombre.Text));
+                        camp, String.Format("'{0}', '{1}'", code, TxtNombre.Texto));
 
                         var IsDone = DataBase.ExecuteNonQuery(sql, CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -80,21 +80,21 @@ namespace UsuarioControles
                             ID = ds.Tables[0].Rows[0][PerfilAct.Llave].ToString();
                             //AlertInfo info = new AlertInfo(Resources.SystemMessage, String.Format(Resources.SaveSuccess, TxtNombre.Text), Resources.Check);
                             //alertControl1.Show(this, info);
-                            this.TxtNombre.Text = String.Empty;
+                            this.TxtNombre.Texto = String.Empty;
                             this.TxtNombre.Focus();
                             if (!DesdeMenu)
                                 DialogResult = DialogResult.OK;
                             else
                             {
                                 agrego = true;
-                                this.TxtNombre.Text = String.Empty;
+                                this.TxtNombre.Texto = String.Empty;
                             }
                         }
                     }
                     else
                     {
                         String sql = String.Format("UPDATE {0} SET {1} = '{2}' WHERE {3} = '{4}'", PerfilAct.Tabla,
-                        PerfilAct.CampoNombre, TxtNombre.Text, PerfilAct.Llave, ID);
+                        PerfilAct.CampoNombre, TxtNombre.Texto, PerfilAct.Llave, ID);
 
                         bool IsDone = DataBase.ExecuteNonQuery(sql, CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -102,7 +102,7 @@ namespace UsuarioControles
                         {
                             //AlertInfo info = new AlertInfo(Resources.SystemMessage, String.Format(Resources.SaveSuccess, TxtNombre.Text), Resources.Check);
                             //alertControl1.Show(this, info);
-                            this.TxtNombre.Text = String.Empty;
+                            this.TxtNombre.Texto = String.Empty;
                             this.TxtNombre.Focus();
                             DialogResult = DialogResult.OK;
                         }
@@ -129,6 +129,8 @@ namespace UsuarioControles
         private void FrmGetName_Load(object sender, EventArgs e)
         {
             cabeceraForm1.NombreCabecera = "Añadir " + PerfilAct.Titulo;
+            cabeceraForm1.Width = cabeceraForm1.Width - 1;
+            cabeceraForm1.Width = cabeceraForm1.Width + 1;
 
             if (Modo == "E")
             {
@@ -139,7 +141,7 @@ namespace UsuarioControles
                 String cad = String.Format("SELECT {0} FROM {1} WHERE MarcaBorrado = 1 {2}", camp, PerfilAct.Tabla, condicion);
                 DataSet ds = DataBase.ExecuteQuery(cad, "datos", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
 
-                this.TxtNombre.Text = ds.Tables[0].Rows[0][PerfilAct.CampoNombre].ToString();
+                this.TxtNombre.Texto = ds.Tables[0].Rows[0][PerfilAct.CampoNombre].ToString();
             }
 
             String sSql2 = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoNombre);
