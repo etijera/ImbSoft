@@ -73,11 +73,13 @@ namespace UsuarioControles
             this.TxtNombre.CaraterPassword = '\0';
             this.TxtNombre.Location = new System.Drawing.Point(80, 23);
             this.TxtNombre.MaxLenght = 50;
+            this.TxtNombre.MTextChanged = null;
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(321, 26);
             this.TxtNombre.SoloLectura = false;
             this.TxtNombre.TabIndex = 9;
             this.TxtNombre.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtNombre.Texto = "";
             this.TxtNombre.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
             this.TxtNombre.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
             // 
@@ -109,7 +111,7 @@ namespace UsuarioControles
             this.cabeceraForm1.AutoSize = true;
             this.cabeceraForm1.HabilitarBCerrar = true;
             this.cabeceraForm1.HabilitarBMinimiar = true;
-            this.cabeceraForm1.Location = new System.Drawing.Point(1, 1);
+            this.cabeceraForm1.Location = new System.Drawing.Point(1, 0);
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "Titulo";
             this.cabeceraForm1.Size = new System.Drawing.Size(460, 32);

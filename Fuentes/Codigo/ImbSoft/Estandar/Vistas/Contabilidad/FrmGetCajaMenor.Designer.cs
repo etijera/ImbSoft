@@ -32,14 +32,16 @@ namespace Estandar.Vistas.Contabilidad
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.TxtMonto = new DevExpress.XtraEditors.TextEdit();
-            this.LblMonto = new System.Windows.Forms.Label();
-            this.TxtLblResponsable = new TxtLblGeneral();
-            this.LblResponsable = new DevExpress.XtraEditors.LabelControl();
-            this.TxtLblContrapartida = new TxtLblGeneral();
-            this.LblContrapartida = new DevExpress.XtraEditors.LabelControl();
-            this.TxtLblCodigo = new TxtLblGeneral();
-            this.LblCodigo = new DevExpress.XtraEditors.LabelControl();
-            this.acceptCancel1 = new AcceptCancel();
+            this.TxtLblResponsable = new UsuarioControles.TxtLblGeneral();
+            this.TxtLblContrapartida = new UsuarioControles.TxtLblGeneral();
+            this.TxtLblCodigo = new UsuarioControles.TxtLblGeneral();
+            this.acceptCancel1 = new UsuarioControles.AcceptCancel();
+            this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
+            this.lblBase1 = new UsuarioControles.LblBase();
+            this.lblBase2 = new UsuarioControles.LblBase();
+            this.lblBase3 = new UsuarioControles.LblBase();
+            this.lblBase4 = new UsuarioControles.LblBase();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMonto.Properties)).BeginInit();
@@ -47,18 +49,19 @@ namespace Estandar.Vistas.Contabilidad
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.lblBase4);
+            this.groupControl1.Controls.Add(this.lblBase3);
+            this.groupControl1.Controls.Add(this.lblBase2);
+            this.groupControl1.Controls.Add(this.lblBase1);
             this.groupControl1.Controls.Add(this.TxtMonto);
-            this.groupControl1.Controls.Add(this.LblMonto);
+            this.groupControl1.Controls.Add(this.acceptCancel1);
             this.groupControl1.Controls.Add(this.TxtLblResponsable);
-            this.groupControl1.Controls.Add(this.LblResponsable);
             this.groupControl1.Controls.Add(this.TxtLblContrapartida);
-            this.groupControl1.Controls.Add(this.LblContrapartida);
             this.groupControl1.Controls.Add(this.TxtLblCodigo);
-            this.groupControl1.Controls.Add(this.LblCodigo);
-            this.groupControl1.Location = new System.Drawing.Point(11, 12);
+            this.groupControl1.Location = new System.Drawing.Point(2, 29);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(510, 115);
+            this.groupControl1.Size = new System.Drawing.Size(565, 168);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "groupControl1";
             // 
@@ -78,15 +81,6 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtMonto.Size = new System.Drawing.Size(100, 20);
             this.TxtMonto.TabIndex = 23;
             // 
-            // LblMonto
-            // 
-            this.LblMonto.AutoSize = true;
-            this.LblMonto.Location = new System.Drawing.Point(8, 87);
-            this.LblMonto.Name = "LblMonto";
-            this.LblMonto.Size = new System.Drawing.Size(37, 13);
-            this.LblMonto.TabIndex = 22;
-            this.LblMonto.Text = "Monto";
-            // 
             // TxtLblResponsable
             // 
             this.TxtLblResponsable.AutoSize = true;
@@ -99,11 +93,13 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblResponsable.DesHabilitarBtnExcel = true;
             this.TxtLblResponsable.DesHabilitarBtnGuardar = true;
             this.TxtLblResponsable.DesHabilitarBtnImprimir = true;
+            this.TxtLblResponsable.DesHabilitarTodo = false;
             this.TxtLblResponsable.Id = "";
             this.TxtLblResponsable.LblNomLocation = new System.Drawing.Point(106, 3);
             this.TxtLblResponsable.LblNomSize = new System.Drawing.Size(320, 20);
             this.TxtLblResponsable.Location = new System.Drawing.Point(73, 57);
             this.TxtLblResponsable.MaxLenght = 0;
+            this.TxtLblResponsable.Modo = null;
             this.TxtLblResponsable.Name = "TxtLblResponsable";
             this.TxtLblResponsable.NexControl = false;
             this.TxtLblResponsable.Nombre = null;
@@ -115,7 +111,8 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblResponsable.OcultarBtnImprimir = false;
             this.TxtLblResponsable.OpcionGet = null;
             this.TxtLblResponsable.OpGet = false;
-            this.TxtLblResponsable.Ordenar = OrdenarPor.CampoCodigo;
+            this.TxtLblResponsable.Ordenar = Referencias.OrdenarPor.CampoCodigo;
+            this.TxtLblResponsable.PasarUsuario = false;
             this.TxtLblResponsable.PerfilShow = null;
             this.TxtLblResponsable.PonerCeros = false;
             this.TxtLblResponsable.Relacion = null;
@@ -124,15 +121,8 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblResponsable.SoloLectura = false;
             this.TxtLblResponsable.TabIndex = 5;
             this.TxtLblResponsable.TxtCodLocation = new System.Drawing.Point(0, 3);
-            this.TxtLblResponsable.TxtCodSize = new System.Drawing.Size(100, 18);
-            // 
-            // LblResponsable
-            // 
-            this.LblResponsable.Location = new System.Drawing.Point(11, 64);
-            this.LblResponsable.Name = "LblResponsable";
-            this.LblResponsable.Size = new System.Drawing.Size(37, 13);
-            this.LblResponsable.TabIndex = 4;
-            this.LblResponsable.Text = "Tercero";
+            this.TxtLblResponsable.TxtCodSize = new System.Drawing.Size(100, 20);
+            this.TxtLblResponsable.Usuario = null;
             // 
             // TxtLblContrapartida
             // 
@@ -146,11 +136,13 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblContrapartida.DesHabilitarBtnExcel = true;
             this.TxtLblContrapartida.DesHabilitarBtnGuardar = true;
             this.TxtLblContrapartida.DesHabilitarBtnImprimir = true;
+            this.TxtLblContrapartida.DesHabilitarTodo = false;
             this.TxtLblContrapartida.Id = "";
             this.TxtLblContrapartida.LblNomLocation = new System.Drawing.Point(106, 3);
             this.TxtLblContrapartida.LblNomSize = new System.Drawing.Size(320, 20);
-            this.TxtLblContrapartida.Location = new System.Drawing.Point(73, 33);
+            this.TxtLblContrapartida.Location = new System.Drawing.Point(102, 33);
             this.TxtLblContrapartida.MaxLenght = 0;
+            this.TxtLblContrapartida.Modo = null;
             this.TxtLblContrapartida.Name = "TxtLblContrapartida";
             this.TxtLblContrapartida.NexControl = false;
             this.TxtLblContrapartida.Nombre = null;
@@ -162,7 +154,8 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblContrapartida.OcultarBtnImprimir = false;
             this.TxtLblContrapartida.OpcionGet = null;
             this.TxtLblContrapartida.OpGet = false;
-            this.TxtLblContrapartida.Ordenar = OrdenarPor.CampoCodigo;
+            this.TxtLblContrapartida.Ordenar = Referencias.OrdenarPor.CampoCodigo;
+            this.TxtLblContrapartida.PasarUsuario = false;
             this.TxtLblContrapartida.PerfilShow = null;
             this.TxtLblContrapartida.PonerCeros = false;
             this.TxtLblContrapartida.Relacion = null;
@@ -171,16 +164,9 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblContrapartida.SoloLectura = false;
             this.TxtLblContrapartida.TabIndex = 3;
             this.TxtLblContrapartida.TxtCodLocation = new System.Drawing.Point(0, 3);
-            this.TxtLblContrapartida.TxtCodSize = new System.Drawing.Size(100, 18);
+            this.TxtLblContrapartida.TxtCodSize = new System.Drawing.Size(100, 20);
+            this.TxtLblContrapartida.Usuario = null;
             this.TxtLblContrapartida.Validating += new System.ComponentModel.CancelEventHandler(this.TxtLblContrapartida_Validating);
-            // 
-            // LblContrapartida
-            // 
-            this.LblContrapartida.Location = new System.Drawing.Point(11, 40);
-            this.LblContrapartida.Name = "LblContrapartida";
-            this.LblContrapartida.Size = new System.Drawing.Size(67, 13);
-            this.LblContrapartida.TabIndex = 2;
-            this.LblContrapartida.Text = "Contrapartida";
             // 
             // TxtLblCodigo
             // 
@@ -194,11 +180,13 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCodigo.DesHabilitarBtnExcel = true;
             this.TxtLblCodigo.DesHabilitarBtnGuardar = true;
             this.TxtLblCodigo.DesHabilitarBtnImprimir = true;
+            this.TxtLblCodigo.DesHabilitarTodo = false;
             this.TxtLblCodigo.Id = "";
             this.TxtLblCodigo.LblNomLocation = new System.Drawing.Point(106, 3);
             this.TxtLblCodigo.LblNomSize = new System.Drawing.Size(320, 20);
-            this.TxtLblCodigo.Location = new System.Drawing.Point(73, 9);
+            this.TxtLblCodigo.Location = new System.Drawing.Point(87, 9);
             this.TxtLblCodigo.MaxLenght = 0;
+            this.TxtLblCodigo.Modo = null;
             this.TxtLblCodigo.Name = "TxtLblCodigo";
             this.TxtLblCodigo.NexControl = false;
             this.TxtLblCodigo.Nombre = null;
@@ -210,7 +198,8 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCodigo.OcultarBtnImprimir = false;
             this.TxtLblCodigo.OpcionGet = null;
             this.TxtLblCodigo.OpGet = false;
-            this.TxtLblCodigo.Ordenar = OrdenarPor.CampoCodigo;
+            this.TxtLblCodigo.Ordenar = Referencias.OrdenarPor.CampoCodigo;
+            this.TxtLblCodigo.PasarUsuario = false;
             this.TxtLblCodigo.PerfilShow = null;
             this.TxtLblCodigo.PonerCeros = false;
             this.TxtLblCodigo.Relacion = null;
@@ -219,16 +208,9 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCodigo.SoloLectura = false;
             this.TxtLblCodigo.TabIndex = 1;
             this.TxtLblCodigo.TxtCodLocation = new System.Drawing.Point(0, 3);
-            this.TxtLblCodigo.TxtCodSize = new System.Drawing.Size(100, 18);
+            this.TxtLblCodigo.TxtCodSize = new System.Drawing.Size(100, 20);
+            this.TxtLblCodigo.Usuario = null;
             this.TxtLblCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.TxtLblCodigo_Validating);
-            // 
-            // LblCodigo
-            // 
-            this.LblCodigo.Location = new System.Drawing.Point(11, 16);
-            this.LblCodigo.Name = "LblCodigo";
-            this.LblCodigo.Size = new System.Drawing.Size(33, 13);
-            this.LblCodigo.TabIndex = 0;
-            this.LblCodigo.Text = "Código";
             // 
             // acceptCancel1
             // 
@@ -236,32 +218,95 @@ namespace Estandar.Vistas.Contabilidad
             this.acceptCancel1.CancelButtonText = "Cancelar";
             this.acceptCancel1.HabilitarAceptar = true;
             this.acceptCancel1.HabilitarCancelar = true;
-            this.acceptCancel1.Location = new System.Drawing.Point(182, 130);
+            this.acceptCancel1.Location = new System.Drawing.Point(211, 114);
             this.acceptCancel1.LookAndFeel.SkinName = "Office 2007 Silver";
             this.acceptCancel1.Maceptar = "Guardar";
             this.acceptCancel1.Mcancelar = null;
             this.acceptCancel1.Name = "acceptCancel1";
-            this.acceptCancel1.Size = new System.Drawing.Size(172, 38);
+            this.acceptCancel1.Size = new System.Drawing.Size(106, 49);
             this.acceptCancel1.TabIndex = 6;
+            // 
+            // cabeceraForm1
+            // 
+            this.cabeceraForm1.AutoSize = true;
+            this.cabeceraForm1.HabilitarBCerrar = true;
+            this.cabeceraForm1.HabilitarBMinimiar = true;
+            this.cabeceraForm1.Location = new System.Drawing.Point(0, 0);
+            this.cabeceraForm1.Name = "cabeceraForm1";
+            this.cabeceraForm1.NombreCabecera = "Titulo";
+            this.cabeceraForm1.Size = new System.Drawing.Size(567, 32);
+            this.cabeceraForm1.TabIndex = 7;
+            this.cabeceraForm1.VerBCerrar = true;
+            this.cabeceraForm1.VerBMinimiar = true;
+            // 
+            // lblBase1
+            // 
+            this.lblBase1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBase1.Appearance.Options.UseBackColor = true;
+            this.lblBase1.AutoSize = true;
+            this.lblBase1.Location = new System.Drawing.Point(11, 16);
+            this.lblBase1.Name = "lblBase1";
+            this.lblBase1.Size = new System.Drawing.Size(53, 13);
+            this.lblBase1.TabIndex = 24;
+            this.lblBase1.Texto = "Código:";
+            // 
+            // lblBase2
+            // 
+            this.lblBase2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBase2.Appearance.Options.UseBackColor = true;
+            this.lblBase2.AutoSize = true;
+            this.lblBase2.Location = new System.Drawing.Point(11, 39);
+            this.lblBase2.Name = "lblBase2";
+            this.lblBase2.Size = new System.Drawing.Size(90, 13);
+            this.lblBase2.TabIndex = 25;
+            this.lblBase2.Texto = "Contrapartida:";
+            // 
+            // lblBase3
+            // 
+            this.lblBase3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBase3.Appearance.Options.UseBackColor = true;
+            this.lblBase3.AutoSize = true;
+            this.lblBase3.Location = new System.Drawing.Point(11, 65);
+            this.lblBase3.Name = "lblBase3";
+            this.lblBase3.Size = new System.Drawing.Size(62, 13);
+            this.lblBase3.TabIndex = 26;
+            this.lblBase3.Texto = "Tercero:";
+            // 
+            // lblBase4
+            // 
+            this.lblBase4.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBase4.Appearance.Options.UseBackColor = true;
+            this.lblBase4.AutoSize = true;
+            this.lblBase4.Location = new System.Drawing.Point(11, 87);
+            this.lblBase4.Name = "lblBase4";
+            this.lblBase4.Size = new System.Drawing.Size(49, 13);
+            this.lblBase4.TabIndex = 27;
+            this.lblBase4.Texto = "Monto:";
             // 
             // FrmGetCajaMenor
             // 
+            this.Appearance.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 171);
-            this.Controls.Add(this.acceptCancel1);
+            this.ClientSize = new System.Drawing.Size(568, 203);
             this.Controls.Add(this.groupControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.cabeceraForm1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmGetCajaMenor";
             this.Text = "Capturando";
             this.Load += new System.EventHandler(this.FrmGetCajaMenor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtMonto.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -269,13 +314,14 @@ namespace Estandar.Vistas.Contabilidad
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private TxtLblGeneral TxtLblCodigo;
-        private DevExpress.XtraEditors.LabelControl LblCodigo;
         private TxtLblGeneral TxtLblResponsable;
-        private DevExpress.XtraEditors.LabelControl LblResponsable;
         private TxtLblGeneral TxtLblContrapartida;
-        private DevExpress.XtraEditors.LabelControl LblContrapartida;
         private DevExpress.XtraEditors.TextEdit TxtMonto;
-        private System.Windows.Forms.Label LblMonto;
         private AcceptCancel acceptCancel1;
+        private CabeceraForm cabeceraForm1;
+        private LblBase lblBase4;
+        private LblBase lblBase3;
+        private LblBase lblBase2;
+        private LblBase lblBase1;
     }
 }
