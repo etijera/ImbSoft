@@ -42,7 +42,7 @@ namespace ImbSoft
             FrmLogin1 login = new FrmLogin1();
             if (login.ShowDialog() == DialogResult.OK)
             {
-            FrmMenu principal = new FrmMenu();
+                FrmMenu principal = new FrmMenu();
 
                 principal.Usuario = login.Usuario;
                 principal.Periodo = login.Periodo;

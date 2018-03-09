@@ -46,6 +46,8 @@
             this.TxtCodigo.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Teal;
             this.TxtCodigo.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this.TxtCodigo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtCodigo.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
+            this.TxtCodigo.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.TxtCodigo.Properties.MaxLength = 12;
             this.TxtCodigo.Size = new System.Drawing.Size(100, 20);
             this.TxtCodigo.TabIndex = 0;

@@ -155,12 +155,33 @@ namespace UsuarioControles
             LblNameFrm.Location = new Point((panel2.Width - LblNameFrm.Width) / 2, LblNameFrm.Location.Y);
         }
 
-        #endregion
-
         private void LblNameFrm_TextChanged(object sender, EventArgs e)
         {
             LblNameFrm.Location = new Point((panel2.Width - LblNameFrm.Width) / 2, LblNameFrm.Location.Y);
         }
+
+        private void LnkLblCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            LnkLblCerrar.BackColor = Color.Red;
+        }
+
+        private void LnkLblCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            LnkLblCerrar.BackColor = Color.Transparent;
+        }
+
+        private void LnkLblMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            LnkLblMinimizar.BackColor = Color.Teal;
+        }
+
+        private void LnkLblMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            LnkLblMinimizar.BackColor = Color.Transparent;
+        }
+
+        #endregion
+
 
     }
 }

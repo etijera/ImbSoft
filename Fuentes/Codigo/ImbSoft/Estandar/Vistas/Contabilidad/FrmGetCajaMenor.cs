@@ -81,7 +81,7 @@ namespace Estandar.Vistas.Contabilidad
             new SqlParameter("@Codigo", TxtLblCodigo.Codigo ?? ""),
             new SqlParameter("@ContraPartidaCajaMenor", TxtLblContrapartida.Codigo ?? ""),
             new SqlParameter("@ResponsableCajaMenor", TxtLblResponsable.Codigo ?? ""),
-            new SqlParameter("@MontoCajaMenor", Funciones.getInstancia().FormatearValorDecimal(TxtMonto.Text)) };
+            new SqlParameter("@MontoCajaMenor", Funciones.getInstancia().FormatearValorDecimal(TxtMonto.Texto)) };
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -95,7 +95,7 @@ namespace Estandar.Vistas.Contabilidad
             new SqlParameter("@Codigo", TxtLblCodigo.Codigo ?? ""),
             new SqlParameter("@ContraPartidaCajaMenor", TxtLblContrapartida.Codigo ?? ""),
             new SqlParameter("@ResponsableCajaMenor", TxtLblResponsable.Codigo ?? ""),
-            new SqlParameter("@MontoCajaMenor", Funciones.getInstancia().FormatearValorDecimal(TxtMonto.Text)) };
+            new SqlParameter("@MontoCajaMenor", Funciones.getInstancia().FormatearValorDecimal(TxtMonto.Texto)) };
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -118,6 +118,9 @@ namespace Estandar.Vistas.Contabilidad
             TxtLblResponsable.PerfilShow = Perfilador.getInstancia().CargarPerfil("Terceros");
             TxtLblResponsable.database = Database;
             TxtLblResponsable.Ordenar = OrdenarPor.CampoNombre;
+            
+            //Asignar el formato texto al txtMonto
+            TxtMonto.AsignarTipoFormatoNumerico();
 
             if (Modo == "E")
             {
@@ -137,7 +140,7 @@ namespace Estandar.Vistas.Contabilidad
                 TxtLblResponsable.Codigo = ds.Tables[0].Rows[0]["ResponsableCajaMenor"].ToString();
                 TxtLblResponsable.Edit();
 
-                TxtMonto.Text = ds.Tables[0].Rows[0]["MontoCajaMenor"].ToString();
+                TxtMonto.Texto = ds.Tables[0].Rows[0]["MontoCajaMenor"].ToString();
 
                 TxtLblCodigo.Disable();
             }
@@ -162,5 +165,6 @@ namespace Estandar.Vistas.Contabilidad
                 TxtLblContrapartida.Focus();
             }
         }
+
     }
 }

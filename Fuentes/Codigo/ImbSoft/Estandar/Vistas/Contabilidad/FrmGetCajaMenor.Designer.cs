@@ -31,29 +31,28 @@ namespace Estandar.Vistas.Contabilidad
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.TxtMonto = new DevExpress.XtraEditors.TextEdit();
+            this.TxtMonto = new UsuarioControles.TxtBase();
+            this.lblBase4 = new UsuarioControles.LblBase();
+            this.lblBase3 = new UsuarioControles.LblBase();
+            this.lblBase2 = new UsuarioControles.LblBase();
+            this.lblBase1 = new UsuarioControles.LblBase();
+            this.acceptCancel1 = new UsuarioControles.AcceptCancel();
             this.TxtLblResponsable = new UsuarioControles.TxtLblGeneral();
             this.TxtLblContrapartida = new UsuarioControles.TxtLblGeneral();
             this.TxtLblCodigo = new UsuarioControles.TxtLblGeneral();
-            this.acceptCancel1 = new UsuarioControles.AcceptCancel();
             this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
-            this.lblBase1 = new UsuarioControles.LblBase();
-            this.lblBase2 = new UsuarioControles.LblBase();
-            this.lblBase3 = new UsuarioControles.LblBase();
-            this.lblBase4 = new UsuarioControles.LblBase();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtMonto.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.TxtMonto);
             this.groupControl1.Controls.Add(this.lblBase4);
             this.groupControl1.Controls.Add(this.lblBase3);
             this.groupControl1.Controls.Add(this.lblBase2);
             this.groupControl1.Controls.Add(this.lblBase1);
-            this.groupControl1.Controls.Add(this.TxtMonto);
             this.groupControl1.Controls.Add(this.acceptCancel1);
             this.groupControl1.Controls.Add(this.TxtLblResponsable);
             this.groupControl1.Controls.Add(this.TxtLblContrapartida);
@@ -61,25 +60,85 @@ namespace Estandar.Vistas.Contabilidad
             this.groupControl1.Location = new System.Drawing.Point(2, 29);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(565, 168);
+            this.groupControl1.Size = new System.Drawing.Size(565, 177);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "groupControl1";
             // 
             // TxtMonto
             // 
-            this.TxtMonto.EditValue = "0";
-            this.TxtMonto.EnterMoveNextControl = true;
-            this.TxtMonto.Location = new System.Drawing.Point(73, 84);
+            this.TxtMonto.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Far;
+            this.TxtMonto.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.TxtMonto.Appearance.Options.UseBackColor = true;
+            this.TxtMonto.CaraterPassword = '\0';
+            this.TxtMonto.Location = new System.Drawing.Point(115, 93);
+            this.TxtMonto.MaxLenght = 50;
+            this.TxtMonto.MTextChanged = null;
             this.TxtMonto.Name = "TxtMonto";
-            this.TxtMonto.Properties.Appearance.Options.UseTextOptions = true;
-            this.TxtMonto.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.TxtMonto.Properties.Mask.EditMask = "n2";
-            this.TxtMonto.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.TxtMonto.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TxtMonto.Properties.MaxLength = 15;
-            this.TxtMonto.Properties.ValidateOnEnterKey = true;
-            this.TxtMonto.Size = new System.Drawing.Size(100, 20);
-            this.TxtMonto.TabIndex = 23;
+            this.TxtMonto.Size = new System.Drawing.Size(107, 26);
+            this.TxtMonto.SoloLectura = false;
+            this.TxtMonto.TabIndex = 28;
+            this.TxtMonto.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtMonto.Texto = "0";
+            this.TxtMonto.TipoFormato = Referencias.Funciones.TipoNumerico.Numerico2;
+            this.TxtMonto.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            // 
+            // lblBase4
+            // 
+            this.lblBase4.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBase4.Appearance.Options.UseBackColor = true;
+            this.lblBase4.AutoSize = true;
+            this.lblBase4.Location = new System.Drawing.Point(18, 101);
+            this.lblBase4.Name = "lblBase4";
+            this.lblBase4.Size = new System.Drawing.Size(49, 13);
+            this.lblBase4.TabIndex = 27;
+            this.lblBase4.Texto = "Monto:";
+            // 
+            // lblBase3
+            // 
+            this.lblBase3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBase3.Appearance.Options.UseBackColor = true;
+            this.lblBase3.AutoSize = true;
+            this.lblBase3.Location = new System.Drawing.Point(18, 73);
+            this.lblBase3.Name = "lblBase3";
+            this.lblBase3.Size = new System.Drawing.Size(62, 13);
+            this.lblBase3.TabIndex = 26;
+            this.lblBase3.Texto = "Tercero:";
+            // 
+            // lblBase2
+            // 
+            this.lblBase2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBase2.Appearance.Options.UseBackColor = true;
+            this.lblBase2.AutoSize = true;
+            this.lblBase2.Location = new System.Drawing.Point(18, 46);
+            this.lblBase2.Name = "lblBase2";
+            this.lblBase2.Size = new System.Drawing.Size(90, 13);
+            this.lblBase2.TabIndex = 25;
+            this.lblBase2.Texto = "Contrapartida:";
+            // 
+            // lblBase1
+            // 
+            this.lblBase1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBase1.Appearance.Options.UseBackColor = true;
+            this.lblBase1.AutoSize = true;
+            this.lblBase1.Location = new System.Drawing.Point(18, 21);
+            this.lblBase1.Name = "lblBase1";
+            this.lblBase1.Size = new System.Drawing.Size(53, 13);
+            this.lblBase1.TabIndex = 24;
+            this.lblBase1.Texto = "Código:";
+            // 
+            // acceptCancel1
+            // 
+            this.acceptCancel1.AcceptButtonText = "Guardar";
+            this.acceptCancel1.CancelButtonText = "Cancelar";
+            this.acceptCancel1.HabilitarAceptar = true;
+            this.acceptCancel1.HabilitarCancelar = true;
+            this.acceptCancel1.Location = new System.Drawing.Point(229, 122);
+            this.acceptCancel1.LookAndFeel.SkinName = "Office 2007 Silver";
+            this.acceptCancel1.Maceptar = "Guardar";
+            this.acceptCancel1.Mcancelar = null;
+            this.acceptCancel1.Name = "acceptCancel1";
+            this.acceptCancel1.Size = new System.Drawing.Size(106, 49);
+            this.acceptCancel1.TabIndex = 6;
             // 
             // TxtLblResponsable
             // 
@@ -97,7 +156,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblResponsable.Id = "";
             this.TxtLblResponsable.LblNomLocation = new System.Drawing.Point(106, 3);
             this.TxtLblResponsable.LblNomSize = new System.Drawing.Size(320, 20);
-            this.TxtLblResponsable.Location = new System.Drawing.Point(73, 57);
+            this.TxtLblResponsable.Location = new System.Drawing.Point(118, 67);
             this.TxtLblResponsable.MaxLenght = 0;
             this.TxtLblResponsable.Modo = null;
             this.TxtLblResponsable.Name = "TxtLblResponsable";
@@ -140,7 +199,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblContrapartida.Id = "";
             this.TxtLblContrapartida.LblNomLocation = new System.Drawing.Point(106, 3);
             this.TxtLblContrapartida.LblNomSize = new System.Drawing.Size(320, 20);
-            this.TxtLblContrapartida.Location = new System.Drawing.Point(102, 33);
+            this.TxtLblContrapartida.Location = new System.Drawing.Point(118, 40);
             this.TxtLblContrapartida.MaxLenght = 0;
             this.TxtLblContrapartida.Modo = null;
             this.TxtLblContrapartida.Name = "TxtLblContrapartida";
@@ -184,7 +243,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCodigo.Id = "";
             this.TxtLblCodigo.LblNomLocation = new System.Drawing.Point(106, 3);
             this.TxtLblCodigo.LblNomSize = new System.Drawing.Size(320, 20);
-            this.TxtLblCodigo.Location = new System.Drawing.Point(87, 9);
+            this.TxtLblCodigo.Location = new System.Drawing.Point(118, 14);
             this.TxtLblCodigo.MaxLenght = 0;
             this.TxtLblCodigo.Modo = null;
             this.TxtLblCodigo.Name = "TxtLblCodigo";
@@ -212,76 +271,18 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCodigo.Usuario = null;
             this.TxtLblCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.TxtLblCodigo_Validating);
             // 
-            // acceptCancel1
-            // 
-            this.acceptCancel1.AcceptButtonText = "Guardar";
-            this.acceptCancel1.CancelButtonText = "Cancelar";
-            this.acceptCancel1.HabilitarAceptar = true;
-            this.acceptCancel1.HabilitarCancelar = true;
-            this.acceptCancel1.Location = new System.Drawing.Point(211, 114);
-            this.acceptCancel1.LookAndFeel.SkinName = "Office 2007 Silver";
-            this.acceptCancel1.Maceptar = "Guardar";
-            this.acceptCancel1.Mcancelar = null;
-            this.acceptCancel1.Name = "acceptCancel1";
-            this.acceptCancel1.Size = new System.Drawing.Size(106, 49);
-            this.acceptCancel1.TabIndex = 6;
-            // 
             // cabeceraForm1
             // 
             this.cabeceraForm1.AutoSize = true;
             this.cabeceraForm1.HabilitarBCerrar = true;
             this.cabeceraForm1.HabilitarBMinimiar = true;
-            this.cabeceraForm1.Location = new System.Drawing.Point(0, 0);
+            this.cabeceraForm1.Location = new System.Drawing.Point(0, -1);
             this.cabeceraForm1.Name = "cabeceraForm1";
-            this.cabeceraForm1.NombreCabecera = "Titulo";
+            this.cabeceraForm1.NombreCabecera = "Capturando";
             this.cabeceraForm1.Size = new System.Drawing.Size(567, 32);
             this.cabeceraForm1.TabIndex = 7;
             this.cabeceraForm1.VerBCerrar = true;
             this.cabeceraForm1.VerBMinimiar = true;
-            // 
-            // lblBase1
-            // 
-            this.lblBase1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lblBase1.Appearance.Options.UseBackColor = true;
-            this.lblBase1.AutoSize = true;
-            this.lblBase1.Location = new System.Drawing.Point(11, 16);
-            this.lblBase1.Name = "lblBase1";
-            this.lblBase1.Size = new System.Drawing.Size(53, 13);
-            this.lblBase1.TabIndex = 24;
-            this.lblBase1.Texto = "Código:";
-            // 
-            // lblBase2
-            // 
-            this.lblBase2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lblBase2.Appearance.Options.UseBackColor = true;
-            this.lblBase2.AutoSize = true;
-            this.lblBase2.Location = new System.Drawing.Point(11, 39);
-            this.lblBase2.Name = "lblBase2";
-            this.lblBase2.Size = new System.Drawing.Size(90, 13);
-            this.lblBase2.TabIndex = 25;
-            this.lblBase2.Texto = "Contrapartida:";
-            // 
-            // lblBase3
-            // 
-            this.lblBase3.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lblBase3.Appearance.Options.UseBackColor = true;
-            this.lblBase3.AutoSize = true;
-            this.lblBase3.Location = new System.Drawing.Point(11, 65);
-            this.lblBase3.Name = "lblBase3";
-            this.lblBase3.Size = new System.Drawing.Size(62, 13);
-            this.lblBase3.TabIndex = 26;
-            this.lblBase3.Texto = "Tercero:";
-            // 
-            // lblBase4
-            // 
-            this.lblBase4.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lblBase4.Appearance.Options.UseBackColor = true;
-            this.lblBase4.AutoSize = true;
-            this.lblBase4.Location = new System.Drawing.Point(11, 87);
-            this.lblBase4.Name = "lblBase4";
-            this.lblBase4.Size = new System.Drawing.Size(49, 13);
-            this.lblBase4.TabIndex = 27;
-            this.lblBase4.Texto = "Monto:";
             // 
             // FrmGetCajaMenor
             // 
@@ -292,7 +293,7 @@ namespace Estandar.Vistas.Contabilidad
             this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 203);
+            this.ClientSize = new System.Drawing.Size(568, 208);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.cabeceraForm1);
             this.MaximizeBox = false;
@@ -304,7 +305,6 @@ namespace Estandar.Vistas.Contabilidad
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtMonto.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,12 +316,12 @@ namespace Estandar.Vistas.Contabilidad
         private TxtLblGeneral TxtLblCodigo;
         private TxtLblGeneral TxtLblResponsable;
         private TxtLblGeneral TxtLblContrapartida;
-        private DevExpress.XtraEditors.TextEdit TxtMonto;
         private AcceptCancel acceptCancel1;
         private CabeceraForm cabeceraForm1;
         private LblBase lblBase4;
         private LblBase lblBase3;
         private LblBase lblBase2;
         private LblBase lblBase1;
+        private TxtBase TxtMonto;
     }
 }

@@ -42,7 +42,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.BackColor = System.Drawing.Color.DarkCyan;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.LblNameFrm);
             this.panel2.Controls.Add(this.pictureEdit1);
@@ -89,32 +89,32 @@
             this.LnkLblMinimizar.ActiveLinkColor = System.Drawing.Color.White;
             this.LnkLblMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LnkLblMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.LnkLblMinimizar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LnkLblMinimizar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblMinimizar.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LnkLblMinimizar.LinkColor = System.Drawing.Color.White;
-            this.LnkLblMinimizar.Location = new System.Drawing.Point(505, 4);
+            this.LnkLblMinimizar.Location = new System.Drawing.Point(487, 1);
             this.LnkLblMinimizar.Name = "LnkLblMinimizar";
-            this.LnkLblMinimizar.Size = new System.Drawing.Size(18, 18);
+            this.LnkLblMinimizar.Size = new System.Drawing.Size(32, 25);
             this.LnkLblMinimizar.TabIndex = 1;
             this.LnkLblMinimizar.TabStop = true;
             this.LnkLblMinimizar.Text = "_";
             this.LnkLblMinimizar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LnkLblMinimizar.VisitedLinkColor = System.Drawing.Color.White;
             this.LnkLblMinimizar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLblMinimizar_LinkClicked);
+            this.LnkLblMinimizar.MouseEnter += new System.EventHandler(this.LnkLblMinimizar_MouseEnter);
+            this.LnkLblMinimizar.MouseLeave += new System.EventHandler(this.LnkLblMinimizar_MouseLeave);
             // 
             // LnkLblCerrar
             // 
             this.LnkLblCerrar.ActiveLinkColor = System.Drawing.Color.White;
             this.LnkLblCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LnkLblCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.LnkLblCerrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LnkLblCerrar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblCerrar.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LnkLblCerrar.LinkColor = System.Drawing.Color.White;
-            this.LnkLblCerrar.Location = new System.Drawing.Point(525, 4);
+            this.LnkLblCerrar.Location = new System.Drawing.Point(518, 1);
             this.LnkLblCerrar.Name = "LnkLblCerrar";
-            this.LnkLblCerrar.Size = new System.Drawing.Size(18, 18);
+            this.LnkLblCerrar.Size = new System.Drawing.Size(32, 25);
             this.LnkLblCerrar.TabIndex = 2;
             this.LnkLblCerrar.TabStop = true;
             this.LnkLblCerrar.Text = "X";
@@ -122,6 +122,8 @@
             this.LnkLblCerrar.UseCompatibleTextRendering = true;
             this.LnkLblCerrar.VisitedLinkColor = System.Drawing.Color.White;
             this.LnkLblCerrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLblCerrar_LinkClicked);
+            this.LnkLblCerrar.MouseEnter += new System.EventHandler(this.LnkLblCerrar_MouseEnter);
+            this.LnkLblCerrar.MouseLeave += new System.EventHandler(this.LnkLblCerrar_MouseLeave);
             // 
             // CabeceraForm
             // 
