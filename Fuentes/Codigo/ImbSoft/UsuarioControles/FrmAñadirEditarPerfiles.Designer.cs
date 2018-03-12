@@ -79,6 +79,9 @@
             this.LblCampoF = new DevExpress.XtraEditors.LabelControl();
             this.acceptCancel1 = new UsuarioControles.AcceptCancel();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XtcGeneral)).BeginInit();
             this.XtcGeneral.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -111,17 +114,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChkUtilizarR.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LueCampoFecha.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // XtcGeneral
             // 
-            this.XtcGeneral.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.XtcGeneral.Location = new System.Drawing.Point(3, 12);
+            this.XtcGeneral.Location = new System.Drawing.Point(3, 10);
             this.XtcGeneral.Name = "XtcGeneral";
             this.XtcGeneral.SelectedTabPage = this.xtraTabPage1;
-            this.XtcGeneral.Size = new System.Drawing.Size(640, 497);
+            this.XtcGeneral.Size = new System.Drawing.Size(640, 491);
             this.XtcGeneral.TabIndex = 0;
             this.XtcGeneral.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -133,27 +135,28 @@
             this.xtraTabPage1.Controls.Add(this.panelControl1);
             this.xtraTabPage1.Controls.Add(this.groupControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(634, 471);
+            this.xtraTabPage1.Size = new System.Drawing.Size(634, 463);
             this.xtraTabPage1.Text = "General";
             // 
             // panelControl1
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.GcrtlCampos);
             this.panelControl1.Location = new System.Drawing.Point(3, 156);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(628, 313);
+            this.panelControl1.Size = new System.Drawing.Size(628, 300);
             this.panelControl1.TabIndex = 2;
             // 
             // GcrtlCampos
             // 
-            this.GcrtlCampos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GcrtlCampos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.GcrtlCampos.Location = new System.Drawing.Point(2, 2);
             this.GcrtlCampos.MainView = this.DgvCampos;
             this.GcrtlCampos.Name = "GcrtlCampos";
-            this.GcrtlCampos.Size = new System.Drawing.Size(624, 309);
+            this.GcrtlCampos.Size = new System.Drawing.Size(624, 295);
             this.GcrtlCampos.TabIndex = 1;
             this.GcrtlCampos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.DgvCampos});
@@ -198,8 +201,8 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.Controls.Add(this.LueCampoCodigo);
             this.groupControl1.Controls.Add(this.LblCampoCodigo);
             this.groupControl1.Controls.Add(this.LueCampoNombre);
@@ -369,14 +372,14 @@
             this.xtraTabPage2.Controls.Add(this.groupControl3);
             this.xtraTabPage2.Controls.Add(this.groupControl2);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(634, 471);
+            this.xtraTabPage2.Size = new System.Drawing.Size(634, 463);
             this.xtraTabPage2.Text = "Formato de Datos";
             // 
             // groupControl4
             // 
-            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl4.Controls.Add(this.GctrlCamposVisibles);
             this.groupControl4.Location = new System.Drawing.Point(3, 102);
             this.groupControl4.Name = "groupControl4";
@@ -544,11 +547,21 @@
             this.TxtLblDatosD.Codigo = null;
             this.TxtLblDatosD.Complemento = null;
             this.TxtLblDatosD.database = null;
+            this.TxtLblDatosD.DesHabilitarBtnAñadir = false;
+            this.TxtLblDatosD.DesHabilitarBtnEditar = false;
+            this.TxtLblDatosD.DesHabilitarBtnEliminar = false;
+            this.TxtLblDatosD.DesHabilitarBtnExcel = false;
+            this.TxtLblDatosD.DesHabilitarBtnGuardar = false;
+            this.TxtLblDatosD.DesHabilitarBtnImprimir = false;
+            this.TxtLblDatosD.DesHabilitarTodo = false;
             this.TxtLblDatosD.Id = "";
             this.TxtLblDatosD.LblNomLocation = new System.Drawing.Point(106, 3);
             this.TxtLblDatosD.LblNomSize = new System.Drawing.Size(189, 20);
             this.TxtLblDatosD.Location = new System.Drawing.Point(80, 31);
+            this.TxtLblDatosD.MaxLenght = 12;
+            this.TxtLblDatosD.Modo = null;
             this.TxtLblDatosD.Name = "TxtLblDatosD";
+            this.TxtLblDatosD.NexControl = false;
             this.TxtLblDatosD.Nombre = null;
             this.TxtLblDatosD.OcultarBtnAñadir = false;
             this.TxtLblDatosD.OcultarBtnEditar = false;
@@ -556,13 +569,20 @@
             this.TxtLblDatosD.OcultarBtnExcel = false;
             this.TxtLblDatosD.OcultarBtnGuardar = false;
             this.TxtLblDatosD.OcultarBtnImprimir = false;
+            this.TxtLblDatosD.OpcionGet = null;
+            this.TxtLblDatosD.OpGet = false;
+            this.TxtLblDatosD.Ordenar = Referencias.OrdenarPor.CampoNombre;
+            this.TxtLblDatosD.PasarUsuario = false;
             this.TxtLblDatosD.PerfilShow = null;
             this.TxtLblDatosD.PonerCeros = false;
+            this.TxtLblDatosD.Relacion = null;
+            this.TxtLblDatosD.SinBordes = false;
             this.TxtLblDatosD.Size = new System.Drawing.Size(342, 26);
             this.TxtLblDatosD.SoloLectura = false;
             this.TxtLblDatosD.TabIndex = 9;
             this.TxtLblDatosD.TxtCodLocation = new System.Drawing.Point(0, 3);
             this.TxtLblDatosD.TxtCodSize = new System.Drawing.Size(100, 20);
+            this.TxtLblDatosD.Usuario = null;
             // 
             // LblDatosD
             // 
@@ -596,35 +616,63 @@
             this.acceptCancel1.CancelButtonText = "Cancelar";
             this.acceptCancel1.HabilitarAceptar = true;
             this.acceptCancel1.HabilitarCancelar = true;
-            this.acceptCancel1.Location = new System.Drawing.Point(3, 507);
+            this.acceptCancel1.Location = new System.Drawing.Point(5, 497);
             this.acceptCancel1.LookAndFeel.SkinName = "Office 2007 Silver";
             this.acceptCancel1.Maceptar = null;
+            this.acceptCancel1.Mcancelar = null;
             this.acceptCancel1.Name = "acceptCancel1";
-            this.acceptCancel1.Size = new System.Drawing.Size(171, 39);
+            this.acceptCancel1.Size = new System.Drawing.Size(122, 46);
             this.acceptCancel1.TabIndex = 1;
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(563, 515);
+            this.simpleButton1.Location = new System.Drawing.Point(557, 512);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "Previsualizar";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
+            // cabeceraForm1
+            // 
+            this.cabeceraForm1.AutoSize = true;
+            this.cabeceraForm1.HabilitarBCerrar = true;
+            this.cabeceraForm1.HabilitarBMinimiar = true;
+            this.cabeceraForm1.Location = new System.Drawing.Point(0, -1);
+            this.cabeceraForm1.Name = "cabeceraForm1";
+            this.cabeceraForm1.NombreCabecera = "Titulo";
+            this.cabeceraForm1.Size = new System.Drawing.Size(648, 32);
+            this.cabeceraForm1.TabIndex = 3;
+            this.cabeceraForm1.VerBCerrar = true;
+            this.cabeceraForm1.VerBMinimiar = true;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.XtcGeneral);
+            this.panelControl2.Controls.Add(this.acceptCancel1);
+            this.panelControl2.Controls.Add(this.simpleButton1);
+            this.panelControl2.Location = new System.Drawing.Point(2, 28);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(646, 545);
+            this.panelControl2.TabIndex = 4;
+            // 
             // FrmAñadirEditarPerfiles
             // 
+            this.Appearance.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 547);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.acceptCancel1);
-            this.Controls.Add(this.XtcGeneral);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(649, 575);
+            this.Controls.Add(this.panelControl2);
+            this.Controls.Add(this.cabeceraForm1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAñadirEditarPerfiles";
             this.Load += new System.EventHandler(this.FrmAñadirEditarPerfiles_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XtcGeneral)).EndInit();
             this.XtcGeneral.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
@@ -660,7 +708,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChkUtilizarR.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LueCampoFecha.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -717,5 +768,7 @@
         private DevExpress.XtraEditors.LookUpEdit LueCampoNombre;
         private DevExpress.XtraEditors.LabelControl LblCampoNombre;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private CabeceraForm cabeceraForm1;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
     }
 }

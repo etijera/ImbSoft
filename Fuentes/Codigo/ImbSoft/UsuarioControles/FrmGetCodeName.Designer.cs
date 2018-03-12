@@ -141,10 +141,10 @@
             this.cabeceraForm1.AutoSize = true;
             this.cabeceraForm1.HabilitarBCerrar = true;
             this.cabeceraForm1.HabilitarBMinimiar = true;
-            this.cabeceraForm1.Location = new System.Drawing.Point(1, 0);
+            this.cabeceraForm1.Location = new System.Drawing.Point(0, -1);
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "Titulo";
-            this.cabeceraForm1.Size = new System.Drawing.Size(469, 32);
+            this.cabeceraForm1.Size = new System.Drawing.Size(471, 32);
             this.cabeceraForm1.TabIndex = 2;
             this.cabeceraForm1.VerBCerrar = true;
             this.cabeceraForm1.VerBMinimiar = true;

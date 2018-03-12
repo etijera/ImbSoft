@@ -113,7 +113,7 @@
             this.toolBarShowit1.HabilitarGuardar = true;
             this.toolBarShowit1.HabilitarImprimir = true;
             this.toolBarShowit1.ImprimirValidacion = true;
-            this.toolBarShowit1.Location = new System.Drawing.Point(1, 30);
+            this.toolBarShowit1.Location = new System.Drawing.Point(1, 29);
             this.toolBarShowit1.Mañadir = null;
             this.toolBarShowit1.Meditar = null;
             this.toolBarShowit1.Melimnar = null;
@@ -145,10 +145,10 @@
             this.cabeceraForm1.AutoSize = true;
             this.cabeceraForm1.HabilitarBCerrar = true;
             this.cabeceraForm1.HabilitarBMinimiar = true;
-            this.cabeceraForm1.Location = new System.Drawing.Point(1, 0);
+            this.cabeceraForm1.Location = new System.Drawing.Point(0, -1);
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "Maestro de Perfiles";
-            this.cabeceraForm1.Size = new System.Drawing.Size(661, 32);
+            this.cabeceraForm1.Size = new System.Drawing.Size(663, 32);
             this.cabeceraForm1.TabIndex = 32;
             this.cabeceraForm1.VerBCerrar = true;
             this.cabeceraForm1.VerBMinimiar = true;
@@ -156,7 +156,7 @@
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.groupControl1);
-            this.panelControl1.Location = new System.Drawing.Point(1, 58);
+            this.panelControl1.Location = new System.Drawing.Point(1, 57);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(662, 337);
             this.panelControl1.TabIndex = 33;

@@ -92,15 +92,16 @@
             this.LnkLblMinimizar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblMinimizar.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LnkLblMinimizar.LinkColor = System.Drawing.Color.White;
-            this.LnkLblMinimizar.Location = new System.Drawing.Point(487, 1);
+            this.LnkLblMinimizar.Location = new System.Drawing.Point(487, 0);
             this.LnkLblMinimizar.Name = "LnkLblMinimizar";
-            this.LnkLblMinimizar.Size = new System.Drawing.Size(32, 25);
+            this.LnkLblMinimizar.Size = new System.Drawing.Size(32, 26);
             this.LnkLblMinimizar.TabIndex = 1;
             this.LnkLblMinimizar.TabStop = true;
             this.LnkLblMinimizar.Text = "_";
             this.LnkLblMinimizar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LnkLblMinimizar.VisitedLinkColor = System.Drawing.Color.White;
             this.LnkLblMinimizar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLblMinimizar_LinkClicked);
+            this.LnkLblMinimizar.Click += new System.EventHandler(this.LnkLblMinimizar_Click);
             this.LnkLblMinimizar.MouseEnter += new System.EventHandler(this.LnkLblMinimizar_MouseEnter);
             this.LnkLblMinimizar.MouseLeave += new System.EventHandler(this.LnkLblMinimizar_MouseLeave);
             // 
@@ -112,9 +113,9 @@
             this.LnkLblCerrar.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnkLblCerrar.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.LnkLblCerrar.LinkColor = System.Drawing.Color.White;
-            this.LnkLblCerrar.Location = new System.Drawing.Point(518, 1);
+            this.LnkLblCerrar.Location = new System.Drawing.Point(518, 0);
             this.LnkLblCerrar.Name = "LnkLblCerrar";
-            this.LnkLblCerrar.Size = new System.Drawing.Size(32, 25);
+            this.LnkLblCerrar.Size = new System.Drawing.Size(32, 26);
             this.LnkLblCerrar.TabIndex = 2;
             this.LnkLblCerrar.TabStop = true;
             this.LnkLblCerrar.Text = "X";
@@ -122,6 +123,7 @@
             this.LnkLblCerrar.UseCompatibleTextRendering = true;
             this.LnkLblCerrar.VisitedLinkColor = System.Drawing.Color.White;
             this.LnkLblCerrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLblCerrar_LinkClicked);
+            this.LnkLblCerrar.Click += new System.EventHandler(this.LnkLblCerrar_Click);
             this.LnkLblCerrar.MouseEnter += new System.EventHandler(this.LnkLblCerrar_MouseEnter);
             this.LnkLblCerrar.MouseLeave += new System.EventHandler(this.LnkLblCerrar_MouseLeave);
             // 
