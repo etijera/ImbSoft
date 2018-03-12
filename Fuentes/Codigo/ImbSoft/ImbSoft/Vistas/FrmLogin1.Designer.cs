@@ -144,6 +144,7 @@
             this.TxtPassword.CaraterPassword = '*';
             this.TxtPassword.Location = new System.Drawing.Point(90, 60);
             this.TxtPassword.MaxLenght = 50;
+            this.TxtPassword.MTextChanged = null;
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(167, 26);
             this.TxtPassword.SoloLectura = false;
@@ -265,7 +266,7 @@
             // 
             // FrmLogin1
             // 
-            this.Appearance.BackColor = System.Drawing.Color.Teal;
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(170)))), ((int)(((byte)(198)))));
             this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
             this.Appearance.BorderColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;

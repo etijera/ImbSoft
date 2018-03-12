@@ -335,7 +335,7 @@ namespace Estandar.Vistas.Contabilidad
             // 
             // FrmGetPuc
             // 
-            this.Appearance.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(170)))), ((int)(((byte)(198)))));
             this.Appearance.BackColor2 = System.Drawing.Color.Transparent;
             this.Appearance.BorderColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;
