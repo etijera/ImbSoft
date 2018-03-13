@@ -38,12 +38,12 @@
             this.TxtCodigo.Location = new System.Drawing.Point(44, 3);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
-            this.TxtCodigo.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.TxtCodigo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.TxtCodigo.Properties.Appearance.Options.UseBackColor = true;
             this.TxtCodigo.Properties.Appearance.Options.UseForeColor = true;
             this.TxtCodigo.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TxtCodigo.Properties.AppearanceDisabled.Options.UseBackColor = true;
-            this.TxtCodigo.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Teal;
+            this.TxtCodigo.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.TxtCodigo.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this.TxtCodigo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtCodigo.Properties.LookAndFeel.SkinName = "Office 2010 Blue";
@@ -59,8 +59,8 @@
             // 
             // LblNombre
             // 
-            this.LblNombre.Appearance.BorderColor = System.Drawing.Color.Teal;
-            this.LblNombre.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.LblNombre.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
+            this.LblNombre.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.LblNombre.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.LblNombre.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.LblNombre.Location = new System.Drawing.Point(150, 3);

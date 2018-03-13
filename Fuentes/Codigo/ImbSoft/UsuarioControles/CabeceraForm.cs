@@ -162,11 +162,8 @@ namespace UsuarioControles
 
         private void LnkLblCerrar_MouseEnter(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             LnkLblCerrar.BackColor = Color.FromArgb(180, 0, 0);
-=======
             LnkLblCerrar.BackColor = Color.Firebrick;
->>>>>>> 668ff4ccb51bf86e47c17c965c871c948d3469cf
         }
 
         private void LnkLblCerrar_MouseLeave(object sender, EventArgs e)
@@ -184,16 +181,6 @@ namespace UsuarioControles
             LnkLblMinimizar.BackColor = Color.Transparent;
         }
 
-<<<<<<< HEAD
-        private void LnkLblMinimizar_Click(object sender, EventArgs e)
-        {
-            ParentForm.WindowState = FormWindowState.Minimized;
-        }
-
-        private void LnkLblCerrar_Click(object sender, EventArgs e)
-        {
-            ParentForm.Close(); 
-=======
         private void LnkLblCerrar_Click(object sender, EventArgs e)
         {
             ParentForm.Close(); 
@@ -202,7 +189,6 @@ namespace UsuarioControles
         private void LnkLblMinimizar_Click(object sender, EventArgs e)
         {
             ParentForm.WindowState = FormWindowState.Minimized;
->>>>>>> 668ff4ccb51bf86e47c17c965c871c948d3469cf
         }
 
         #endregion

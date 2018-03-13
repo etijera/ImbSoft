@@ -60,11 +60,11 @@
             // LblNameFrm
             // 
             this.LblNameFrm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblNameFrm.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNameFrm.Appearance.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNameFrm.Appearance.ForeColor = System.Drawing.Color.White;
             this.LblNameFrm.Location = new System.Drawing.Point(257, 4);
             this.LblNameFrm.Name = "LblNameFrm";
-            this.LblNameFrm.Size = new System.Drawing.Size(36, 18);
+            this.LblNameFrm.Size = new System.Drawing.Size(46, 17);
             this.LblNameFrm.TabIndex = 17;
             this.LblNameFrm.Text = "Titulo";
             this.LblNameFrm.TextChanged += new System.EventHandler(this.LblNameFrm_TextChanged);

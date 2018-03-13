@@ -42,12 +42,12 @@
             this.TxtTex.Location = new System.Drawing.Point(3, 3);
             this.TxtTex.Name = "TxtTex";
             this.TxtTex.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
-            this.TxtTex.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.TxtTex.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.TxtTex.Properties.Appearance.Options.UseBackColor = true;
             this.TxtTex.Properties.Appearance.Options.UseForeColor = true;
             this.TxtTex.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TxtTex.Properties.AppearanceDisabled.Options.UseBackColor = true;
-            this.TxtTex.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.Teal;
+            this.TxtTex.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.TxtTex.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this.TxtTex.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtTex.Properties.LookAndFeel.SkinName = "Office 2010 Blue";

@@ -138,3 +138,17 @@ D:\Erick\Proyecto ImbSoft\Github\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\
 D:\Erick\Proyecto ImbSoft\Github\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.exe.licenses
 D:\Erick\Proyecto ImbSoft\Github\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.exe
 D:\Erick\Proyecto ImbSoft\Github\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.pdb
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\bin\Debug\Settings.exe.config
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\bin\Debug\Settings.exe
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\bin\Debug\Settings.pdb
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\bin\Debug\Referencias.dll
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\bin\Debug\UsuarioControles.dll
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\bin\Debug\Referencias.pdb
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\bin\Debug\UsuarioControles.pdb
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.csprojResolveAssemblyReference.cache
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.FrmConfigurar.resources
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.Properties.Resources.resources
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.csproj.GenerateResource.Cache
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.exe.licenses
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.exe
+D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Settings\obj\Debug\Settings.pdb
