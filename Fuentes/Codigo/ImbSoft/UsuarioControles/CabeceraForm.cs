@@ -173,7 +173,7 @@ namespace UsuarioControles
 
         private void LnkLblMinimizar_MouseEnter(object sender, EventArgs e)
         {
-            LnkLblMinimizar.BackColor = Color.FromArgb(91, 170, 198);
+            LnkLblMinimizar.BackColor = Color.FromArgb(16, 74, 90);
         }
 
         private void LnkLblMinimizar_MouseLeave(object sender, EventArgs e)

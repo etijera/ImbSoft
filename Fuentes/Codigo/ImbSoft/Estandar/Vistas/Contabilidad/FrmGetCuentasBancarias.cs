@@ -51,7 +51,7 @@ namespace Estandar.Vistas.Contabilidad
             SqlParameter[] parametros1 = new [] {    new SqlParameter("@Operacion", "ICB"),
             new SqlParameter("@Codigo", ID ?? ""),
             //new SqlParameter("@GlPlano", TxtLblArchivoDisfon.Codigo ?? ""),
-            new SqlParameter("@Cheque", TxtUltimoCheque.Text.Trim()),
+            new SqlParameter("@Cheque", TxtUltimoCheque.Texto.Trim()),
             new SqlParameter("@Gravamen", ChkGravamen.Checked) };
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
@@ -65,7 +65,7 @@ namespace Estandar.Vistas.Contabilidad
             SqlParameter[] parametros1 = new [] {    new SqlParameter("@Operacion", "UCB"),
             new SqlParameter("@Codigo", ID ?? ""),
             //new SqlParameter("@GlPlano", TxtLblArchivoDisfon.Codigo ?? ""),
-            new SqlParameter("@Cheque", TxtUltimoCheque.Text.Trim()),
+            new SqlParameter("@Cheque", TxtUltimoCheque.Texto.Trim()),
             new SqlParameter("@Gravamen", ChkGravamen.Checked) };
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
@@ -110,7 +110,7 @@ namespace Estandar.Vistas.Contabilidad
 
                 DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
 
-                this.Text = "Editando";
+                cabeceraForm1.NombreCabecera = "Editando";
 
                 TxtLblCodigo.Codigo = ds.Tables[0].Rows[0]["Codigo"].ToString();
                 TxtLblCodigo.Edit();
@@ -118,7 +118,7 @@ namespace Estandar.Vistas.Contabilidad
                 //TxtLblArchivoDisfon.Codigo = ds.Tables[0].Rows[0]["glPlano"].ToString();
                 //TxtLblArchivoDisfon.Edit();
 
-                TxtUltimoCheque.Text = ds.Tables[0].Rows[0]["Cheque"].ToString();
+                TxtUltimoCheque.Texto = ds.Tables[0].Rows[0]["Cheque"].ToString();
                 ChkGravamen.Checked = Convert.ToBoolean(ds.Tables[0].Rows[0]["Gravamen"]);
 
                 TxtLblCodigo.Disable();

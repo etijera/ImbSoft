@@ -161,7 +161,7 @@
             this.lblBase3.AutoSize = true;
             this.lblBase3.Location = new System.Drawing.Point(16, 100);
             this.lblBase3.Name = "lblBase3";
-            this.lblBase3.Size = new System.Drawing.Size(74, 13);
+            this.lblBase3.Size = new System.Drawing.Size(74, 14);
             this.lblBase3.TabIndex = 7;
             this.lblBase3.Texto = "Periodo";
             // 
@@ -172,7 +172,7 @@
             this.lblBase2.AutoSize = true;
             this.lblBase2.Location = new System.Drawing.Point(16, 68);
             this.lblBase2.Name = "lblBase2";
-            this.lblBase2.Size = new System.Drawing.Size(74, 13);
+            this.lblBase2.Size = new System.Drawing.Size(80, 14);
             this.lblBase2.TabIndex = 6;
             this.lblBase2.Texto = "Contraseña";
             // 
@@ -183,7 +183,7 @@
             this.lblBase1.AutoSize = true;
             this.lblBase1.Location = new System.Drawing.Point(16, 33);
             this.lblBase1.Name = "lblBase1";
-            this.lblBase1.Size = new System.Drawing.Size(53, 13);
+            this.lblBase1.Size = new System.Drawing.Size(55, 14);
             this.lblBase1.TabIndex = 5;
             this.lblBase1.Texto = "Usuario";
             // 
@@ -195,7 +195,7 @@
             this.CbxMes.Name = "CbxMes";
             this.CbxMes.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.CbxMes.Properties.Appearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
-            this.CbxMes.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.CbxMes.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.CbxMes.Properties.Appearance.Options.UseBackColor = true;
             this.CbxMes.Properties.Appearance.Options.UseBorderColor = true;
             this.CbxMes.Properties.Appearance.Options.UseForeColor = true;
@@ -222,7 +222,7 @@
             this.CbxAño.Name = "CbxAño";
             this.CbxAño.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
             this.CbxAño.Properties.Appearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
-            this.CbxAño.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.CbxAño.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.CbxAño.Properties.Appearance.Options.UseBackColor = true;
             this.CbxAño.Properties.Appearance.Options.UseBorderColor = true;
             this.CbxAño.Properties.Appearance.Options.UseForeColor = true;
@@ -244,7 +244,7 @@
             this.LueUsuario.Location = new System.Drawing.Point(93, 30);
             this.LueUsuario.Name = "LueUsuario";
             this.LueUsuario.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
-            this.LueUsuario.Properties.Appearance.ForeColor = System.Drawing.Color.Teal;
+            this.LueUsuario.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.LueUsuario.Properties.Appearance.Options.UseBackColor = true;
             this.LueUsuario.Properties.Appearance.Options.UseForeColor = true;
             this.LueUsuario.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.DarkSeaGreen;

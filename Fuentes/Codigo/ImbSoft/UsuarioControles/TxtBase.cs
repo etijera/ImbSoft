@@ -114,6 +114,32 @@ namespace UsuarioControles
         }
 
         public String MTextChanged { get; set; }
+        public String MSpin { get; set; }
+
+        public object Value
+        {
+            get
+            {
+                return TxtTex.EditValue;
+            }
+            set
+            {
+                TxtTex.EditValue = value;
+            }
+        }
+
+        public bool UseMaskAsDisplayFormat
+        {
+            get
+            {
+                return TxtTex.Properties.Mask.UseMaskAsDisplayFormat;
+            }
+            set
+            {
+                TxtTex.Properties.Mask.UseMaskAsDisplayFormat = value;
+            }
+        }
+
 
         #endregion
 
@@ -212,7 +238,8 @@ namespace UsuarioControles
                 else
                 {
                     Type cType = ParentForm.GetType();
-                    MethodInfo mi = cType.GetMethod(MTextChanged);
+                    //aqui
+                    MethodInfo mi = cType.GetMethod(MTextChanged, new Type[] { System.Type.GetType("object"), System.Type.GetType("DevExpress.XtraEditors.Controls.SpinEventArgs") });
                     mi.Invoke(ParentForm, null);
                 }
             }
@@ -222,7 +249,30 @@ namespace UsuarioControles
             }
         }
 
+        private void TxtTex_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e)
+        {
+            try
+            {
+                if (String.IsNullOrEmpty(MSpin))
+                {
+                    Type cType = ParentForm.GetType();
+                    MethodInfo mi = cType.GetMethod("Spin");
+                    mi.Invoke(ParentForm, null);
+                }
+                else
+                {
+                    Type cType = ParentForm.GetType();
+                    MethodInfo mi = cType.GetMethod(MSpin);
+                    mi.Invoke(ParentForm, null);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
         #endregion
+
     }
 }

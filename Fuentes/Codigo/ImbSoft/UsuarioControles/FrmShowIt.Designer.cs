@@ -263,11 +263,18 @@
             this.TxtBuscar.Location = new System.Drawing.Point(5, 7);
             this.TxtBuscar.MenuManager = this.barManager1;
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.TxtBuscar.Properties.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.TxtBuscar.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
+            this.TxtBuscar.Properties.Appearance.Options.UseBackColor = true;
+            this.TxtBuscar.Properties.Appearance.Options.UseForeColor = true;
+            this.TxtBuscar.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
+            this.TxtBuscar.Properties.AppearanceFocused.Options.UseBorderColor = true;
             this.TxtBuscar.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtBuscar.Size = new System.Drawing.Size(393, 18);
+            this.TxtBuscar.Size = new System.Drawing.Size(393, 20);
             this.TxtBuscar.TabIndex = 1;
+            this.TxtBuscar.Enter += new System.EventHandler(this.TxtBuscar_Enter);
             this.TxtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBuscar_KeyDown);
+            this.TxtBuscar.Leave += new System.EventHandler(this.TxtBuscar_Leave);
             // 
             // BtnBuscar
             // 

@@ -59,7 +59,7 @@ namespace Estandar.Vistas.Contabilidad
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
             this.groupControl1.Size = new System.Drawing.Size(586, 216);
-            this.groupControl1.TabIndex = 4;
+            this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
             // 
             // panel1
@@ -79,7 +79,7 @@ namespace Estandar.Vistas.Contabilidad
             this.panel1.Location = new System.Drawing.Point(17, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(553, 128);
-            this.panel1.TabIndex = 29;
+            this.panel1.TabIndex = 0;
             // 
             // lblBase1
             // 
@@ -88,8 +88,8 @@ namespace Estandar.Vistas.Contabilidad
             this.lblBase1.AutoSize = true;
             this.lblBase1.Location = new System.Drawing.Point(11, 18);
             this.lblBase1.Name = "lblBase1";
-            this.lblBase1.Size = new System.Drawing.Size(53, 13);
-            this.lblBase1.TabIndex = 24;
+            this.lblBase1.Size = new System.Drawing.Size(57, 14);
+            this.lblBase1.TabIndex = 4;
             this.lblBase1.Texto = "Código:";
             // 
             // TxtMonto
@@ -104,7 +104,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtMonto.Name = "TxtMonto";
             this.TxtMonto.Size = new System.Drawing.Size(107, 26);
             this.TxtMonto.SoloLectura = false;
-            this.TxtMonto.TabIndex = 28;
+            this.TxtMonto.TabIndex = 3;
             this.TxtMonto.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtMonto.Texto = "0";
             this.TxtMonto.TipoFormato = Referencias.Funciones.TipoNumerico.Numerico2;
@@ -148,7 +148,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCodigo.SinBordes = false;
             this.TxtLblCodigo.Size = new System.Drawing.Size(429, 26);
             this.TxtLblCodigo.SoloLectura = false;
-            this.TxtLblCodigo.TabIndex = 1;
+            this.TxtLblCodigo.TabIndex = 0;
             this.TxtLblCodigo.TxtCodLocation = new System.Drawing.Point(0, 3);
             this.TxtLblCodigo.TxtCodSize = new System.Drawing.Size(100, 20);
             this.TxtLblCodigo.Usuario = null;
@@ -161,8 +161,8 @@ namespace Estandar.Vistas.Contabilidad
             this.lblBase4.AutoSize = true;
             this.lblBase4.Location = new System.Drawing.Point(11, 98);
             this.lblBase4.Name = "lblBase4";
-            this.lblBase4.Size = new System.Drawing.Size(49, 13);
-            this.lblBase4.TabIndex = 27;
+            this.lblBase4.Size = new System.Drawing.Size(55, 14);
+            this.lblBase4.TabIndex = 7;
             this.lblBase4.Texto = "Monto:";
             // 
             // TxtLblContrapartida
@@ -203,7 +203,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblContrapartida.SinBordes = false;
             this.TxtLblContrapartida.Size = new System.Drawing.Size(429, 26);
             this.TxtLblContrapartida.SoloLectura = false;
-            this.TxtLblContrapartida.TabIndex = 3;
+            this.TxtLblContrapartida.TabIndex = 1;
             this.TxtLblContrapartida.TxtCodLocation = new System.Drawing.Point(0, 3);
             this.TxtLblContrapartida.TxtCodSize = new System.Drawing.Size(100, 20);
             this.TxtLblContrapartida.Usuario = null;
@@ -216,8 +216,8 @@ namespace Estandar.Vistas.Contabilidad
             this.lblBase3.AutoSize = true;
             this.lblBase3.Location = new System.Drawing.Point(11, 70);
             this.lblBase3.Name = "lblBase3";
-            this.lblBase3.Size = new System.Drawing.Size(62, 13);
-            this.lblBase3.TabIndex = 26;
+            this.lblBase3.Size = new System.Drawing.Size(62, 14);
+            this.lblBase3.TabIndex = 6;
             this.lblBase3.Texto = "Tercero:";
             // 
             // TxtLblResponsable
@@ -258,7 +258,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblResponsable.SinBordes = false;
             this.TxtLblResponsable.Size = new System.Drawing.Size(429, 26);
             this.TxtLblResponsable.SoloLectura = false;
-            this.TxtLblResponsable.TabIndex = 5;
+            this.TxtLblResponsable.TabIndex = 2;
             this.TxtLblResponsable.TxtCodLocation = new System.Drawing.Point(0, 3);
             this.TxtLblResponsable.TxtCodSize = new System.Drawing.Size(100, 20);
             this.TxtLblResponsable.Usuario = null;
@@ -270,8 +270,8 @@ namespace Estandar.Vistas.Contabilidad
             this.lblBase2.AutoSize = true;
             this.lblBase2.Location = new System.Drawing.Point(11, 43);
             this.lblBase2.Name = "lblBase2";
-            this.lblBase2.Size = new System.Drawing.Size(90, 13);
-            this.lblBase2.TabIndex = 25;
+            this.lblBase2.Size = new System.Drawing.Size(100, 14);
+            this.lblBase2.TabIndex = 5;
             this.lblBase2.Texto = "Contrapartida:";
             // 
             // acceptCancel1
@@ -286,7 +286,7 @@ namespace Estandar.Vistas.Contabilidad
             this.acceptCancel1.Mcancelar = null;
             this.acceptCancel1.Name = "acceptCancel1";
             this.acceptCancel1.Size = new System.Drawing.Size(106, 49);
-            this.acceptCancel1.TabIndex = 6;
+            this.acceptCancel1.TabIndex = 1;
             // 
             // cabeceraForm1
             // 
@@ -297,7 +297,7 @@ namespace Estandar.Vistas.Contabilidad
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "Capturando";
             this.cabeceraForm1.Size = new System.Drawing.Size(588, 32);
-            this.cabeceraForm1.TabIndex = 7;
+            this.cabeceraForm1.TabIndex = 1;
             this.cabeceraForm1.VerBCerrar = true;
             this.cabeceraForm1.VerBMinimiar = true;
             // 

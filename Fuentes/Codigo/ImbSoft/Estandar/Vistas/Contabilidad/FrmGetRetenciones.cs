@@ -75,8 +75,8 @@ namespace Estandar.Vistas.Contabilidad
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "INSRETEFTE"),
                 new SqlParameter("@CodigoPuc", ID),
                 new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
-                new SqlParameter("@Monto", TxtMonto.EditValue),
-                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Monto", TxtMonto.Value),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.Value),
                 new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
@@ -88,8 +88,8 @@ namespace Estandar.Vistas.Contabilidad
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "UPDRETEFTE"),
                 new SqlParameter("@CodigoPuc", ID),
                 new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
-                new SqlParameter("@Monto", TxtMonto.EditValue),
-                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Monto", TxtMonto.Value),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.Value),
                 new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
                 alertControl1.Show(this, "ReteFuente", "Actualización exitosa.");
@@ -106,8 +106,8 @@ namespace Estandar.Vistas.Contabilidad
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "INSRETEICA"),
                 new SqlParameter("@CodigoPuc", ID),
                 new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
-                new SqlParameter("@Monto", TxtMonto.EditValue),
-                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Monto", TxtMonto.Value),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.Value),
                 new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
@@ -119,8 +119,8 @@ namespace Estandar.Vistas.Contabilidad
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "UPDRETEICA"),
                 new SqlParameter("@CodigoPuc", ID),
                 new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
-                new SqlParameter("@Monto", TxtMonto.EditValue),
-                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Monto", TxtMonto.Value),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.Value),
                 new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
@@ -137,8 +137,8 @@ namespace Estandar.Vistas.Contabilidad
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "INSRETEIVA"),
                 new SqlParameter("@CodigoPuc", ID),
                 new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
-                new SqlParameter("@Monto", TxtMonto.EditValue),
-                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Monto", TxtMonto.Value),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.Value),
                 new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
@@ -150,8 +150,8 @@ namespace Estandar.Vistas.Contabilidad
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "UPDRETEIVA"),
                 new SqlParameter("@CodigoPuc", ID),
                 new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
-                new SqlParameter("@Monto", TxtMonto.EditValue),
-                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Monto", TxtMonto.Value),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.Value),
                 new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
@@ -168,8 +168,8 @@ namespace Estandar.Vistas.Contabilidad
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "INSRETECREE"),
                 new SqlParameter("@CodigoPuc", ID),
                 new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
-                new SqlParameter("@Monto", TxtMonto.EditValue),
-                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Monto", TxtMonto.Value),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.Value),
                 new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
@@ -181,8 +181,8 @@ namespace Estandar.Vistas.Contabilidad
                 SqlParameter[] parametros1 = new [] { new SqlParameter("@Operacion", "UPDRETECREE"),
                 new SqlParameter("@CodigoPuc", ID),
                 new SqlParameter("@Nombre", TxtLblCuenta.Nombre),
-                new SqlParameter("@Monto", TxtMonto.EditValue),
-                new SqlParameter("@Porcentaje", TxtPorcentaje.EditValue),
+                new SqlParameter("@Monto", TxtMonto.Value),
+                new SqlParameter("@Porcentaje", TxtPorcentaje.Value),
                 new SqlParameter("@Tipo", (rgTipo.SelectedIndex == 0) ? "1" : "2")
                 };
 
@@ -216,8 +216,8 @@ namespace Estandar.Vistas.Contabilidad
                         rgTipo.SelectedIndex = 1;
                     }
 
-                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
-                TxtPorcentaje.Text = porc;
+                TxtMonto.Texto = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
+                TxtPorcentaje.Texto = porc;
             }
 
         }
@@ -247,8 +247,8 @@ namespace Estandar.Vistas.Contabilidad
                         rgTipo.SelectedIndex = 1;
                     }
 
-                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
-                TxtPorcentaje.Text = porc;
+                TxtMonto.Texto = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
+                TxtPorcentaje.Texto = porc;
             }
         }
 
@@ -277,8 +277,8 @@ namespace Estandar.Vistas.Contabilidad
                         rgTipo.SelectedIndex = 1;
                     }
 
-                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
-                TxtPorcentaje.Text = porc;
+                TxtMonto.Texto = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
+                TxtPorcentaje.Texto = porc;
             }
         }
 
@@ -307,8 +307,8 @@ namespace Estandar.Vistas.Contabilidad
                         rgTipo.SelectedIndex = 1;
                     }
 
-                TxtMonto.Text = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
-                TxtPorcentaje.Text = porc;
+                TxtMonto.Texto = Convert.ToInt32(Convert.ToDouble(dsCods.Rows[0]["Monto"].ToString())).ToString();
+                TxtPorcentaje.Texto = porc;
             }
         }
 
@@ -323,7 +323,7 @@ namespace Estandar.Vistas.Contabilidad
                 errorP1.SetError(TxtLblCuenta, "");
             }
 
-            if (TxtPorcentaje.EditValue.ToString() == "0" || TxtPorcentaje.EditValue == null)
+            if (TxtPorcentaje.Value.ToString() == "0" || TxtPorcentaje.Value == null)
             {
                 errorP1.SetError(TxtPorcentaje, "Debe especificar un porcentaje.");
             }
@@ -333,7 +333,7 @@ namespace Estandar.Vistas.Contabilidad
             }
 
             if (!String.IsNullOrEmpty(TxtLblCuenta.Codigo)
-            && (TxtPorcentaje.EditValue.ToString() != "0" && TxtPorcentaje.EditValue != null))
+            && (TxtPorcentaje.Value.ToString() != "0" && TxtPorcentaje.Value != null))
             {
                 acceptCancel1.HabilitarAceptar = true;
             }
@@ -345,7 +345,6 @@ namespace Estandar.Vistas.Contabilidad
 
         private void FrmGetRetenciones_Load(object sender, EventArgs e)
         {
-
             TxtLblCuenta.PerfilShow = Perfilador.getInstancia().CargarPerfil("Puc");
             TxtLblCuenta.database = Database;
             TxtLblCuenta.DesHabilitarBtnExcel = true;
@@ -354,6 +353,14 @@ namespace Estandar.Vistas.Contabilidad
             TxtLblCuenta.DesHabilitarBtnAñadir = true;
             TxtLblCuenta.DesHabilitarBtnEditar = true;
             TxtLblCuenta.Ordenar = OrdenarPor.CampoCodigo;
+
+            //Asignar el formato texto 
+            TxtMonto.AsignarTipoFormatoNumerico();
+            TxtPorcentaje.AsignarTipoFormatoNumerico();
+            //Nombrar metodos para los eventos
+            TxtMonto.MSpin = "TxtMonto_Spin";
+            TxtPorcentaje.MTextChanged = "TxtPorcentaje_TextChanged";
+            TxtPorcentaje.MSpin = "TxtPorcentaje_Spin";
 
             TxtLblCuenta.Codigo = (ID ?? "");
             TxtLblCuenta.Edit();

@@ -826,6 +826,16 @@ namespace UsuarioControles
             }
         }
 
+        private void TxtBuscar_Enter(object sender, EventArgs e)
+        {
+            TxtBuscar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+        }
+
+        private void TxtBuscar_Leave(object sender, EventArgs e)
+        {
+            TxtBuscar.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
+        }
+
         #endregion
 
     }
