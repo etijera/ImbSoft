@@ -90,6 +90,7 @@
             this.TxtPass2.CaraterPassword = '*';
             this.TxtPass2.Location = new System.Drawing.Point(144, 138);
             this.TxtPass2.MaxLenght = 50;
+            this.TxtPass2.MSpin = null;
             this.TxtPass2.MTextChanged = null;
             this.TxtPass2.Name = "TxtPass2";
             this.TxtPass2.Size = new System.Drawing.Size(173, 26);
@@ -99,6 +100,8 @@
             this.TxtPass2.Texto = "";
             this.TxtPass2.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
             this.TxtPass2.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.TxtPass2.UseMaskAsDisplayFormat = false;
+            this.TxtPass2.Value = "";
             this.TxtPass2.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPass2_Validating);
             // 
             // TxtPass1
@@ -109,6 +112,7 @@
             this.TxtPass1.CaraterPassword = '*';
             this.TxtPass1.Location = new System.Drawing.Point(144, 107);
             this.TxtPass1.MaxLenght = 50;
+            this.TxtPass1.MSpin = null;
             this.TxtPass1.MTextChanged = null;
             this.TxtPass1.Name = "TxtPass1";
             this.TxtPass1.Size = new System.Drawing.Size(173, 26);
@@ -118,13 +122,15 @@
             this.TxtPass1.Texto = "";
             this.TxtPass1.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
             this.TxtPass1.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.TxtPass1.UseMaskAsDisplayFormat = false;
+            this.TxtPass1.Value = "";
             // 
             // LblTipoUsuario
             // 
             this.LblTipoUsuario.AutoSize = true;
             this.LblTipoUsuario.Location = new System.Drawing.Point(19, 82);
             this.LblTipoUsuario.Name = "LblTipoUsuario";
-            this.LblTipoUsuario.Size = new System.Drawing.Size(86, 13);
+            this.LblTipoUsuario.Size = new System.Drawing.Size(89, 14);
             this.LblTipoUsuario.TabIndex = 7;
             this.LblTipoUsuario.Texto = "Tipo Usuario:";
             // 
@@ -161,6 +167,7 @@
             this.TxtNombre.CaraterPassword = '\0';
             this.TxtNombre.Location = new System.Drawing.Point(144, 44);
             this.TxtNombre.MaxLenght = 50;
+            this.TxtNombre.MSpin = null;
             this.TxtNombre.MTextChanged = null;
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(173, 26);
@@ -170,13 +177,15 @@
             this.TxtNombre.Texto = "";
             this.TxtNombre.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
             this.TxtNombre.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.TxtNombre.UseMaskAsDisplayFormat = false;
+            this.TxtNombre.Value = "";
             // 
             // LblNombre
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.Location = new System.Drawing.Point(19, 51);
             this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(60, 13);
+            this.LblNombre.Size = new System.Drawing.Size(61, 14);
             this.LblNombre.TabIndex = 6;
             this.LblNombre.Texto = "Nombre:";
             // 
@@ -188,6 +197,7 @@
             this.TxtUsuario.CaraterPassword = '\0';
             this.TxtUsuario.Location = new System.Drawing.Point(144, 13);
             this.TxtUsuario.MaxLenght = 20;
+            this.TxtUsuario.MSpin = null;
             this.TxtUsuario.MTextChanged = null;
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(173, 26);
@@ -197,6 +207,8 @@
             this.TxtUsuario.Texto = "";
             this.TxtUsuario.TipoFormato = Referencias.Funciones.TipoNumerico.Ninguno;
             this.TxtUsuario.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.TxtUsuario.UseMaskAsDisplayFormat = false;
+            this.TxtUsuario.Value = "";
             this.TxtUsuario.Validating += new System.ComponentModel.CancelEventHandler(this.TxtUsuario_Validating);
             // 
             // LblConfirmarC
@@ -204,7 +216,7 @@
             this.LblConfirmarC.AutoSize = true;
             this.LblConfirmarC.Location = new System.Drawing.Point(19, 145);
             this.LblConfirmarC.Name = "LblConfirmarC";
-            this.LblConfirmarC.Size = new System.Drawing.Size(119, 13);
+            this.LblConfirmarC.Size = new System.Drawing.Size(129, 14);
             this.LblConfirmarC.TabIndex = 9;
             this.LblConfirmarC.Texto = "Confir. Contraseña:";
             // 
@@ -213,7 +225,7 @@
             this.LblContraseña.AutoSize = true;
             this.LblContraseña.Location = new System.Drawing.Point(19, 114);
             this.LblContraseña.Name = "LblContraseña";
-            this.LblContraseña.Size = new System.Drawing.Size(78, 13);
+            this.LblContraseña.Size = new System.Drawing.Size(84, 14);
             this.LblContraseña.TabIndex = 8;
             this.LblContraseña.Texto = "Contraseña:";
             // 
@@ -222,7 +234,7 @@
             this.LblUsurio.AutoSize = true;
             this.LblUsurio.Location = new System.Drawing.Point(19, 20);
             this.LblUsurio.Name = "LblUsurio";
-            this.LblUsurio.Size = new System.Drawing.Size(60, 13);
+            this.LblUsurio.Size = new System.Drawing.Size(60, 14);
             this.LblUsurio.TabIndex = 5;
             this.LblUsurio.Texto = "Usuario:";
             // 
@@ -249,7 +261,7 @@
             this.panelControl1.Controls.Add(this.acceptCancel1);
             this.panelControl1.Location = new System.Drawing.Point(2, 28);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(385, 258);
+            this.panelControl1.Size = new System.Drawing.Size(385, 259);
             this.panelControl1.TabIndex = 0;
             // 
             // cabeceraForm1

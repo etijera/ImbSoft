@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Mask;
 using DevExpress.Utils;
 using System.Reflection;
+using DevExpress.XtraEditors.Controls;
 
 namespace UsuarioControles
 {
@@ -232,15 +233,14 @@ namespace UsuarioControles
                 if (String.IsNullOrEmpty(MTextChanged))
                 {
                     Type cType = ParentForm.GetType();
-                    MethodInfo mi = cType.GetMethod("TextChanged");
-                    mi.Invoke(ParentForm, null);
+                    MethodInfo mi = cType.GetMethod("TextChanged", new Type[] { typeof(object), typeof(EventArgs) });
+                    mi.Invoke(ParentForm, new object[] { sender, e });
                 }
                 else
                 {
-                    Type cType = ParentForm.GetType();
-                    //aqui
-                    MethodInfo mi = cType.GetMethod(MTextChanged, new Type[] { System.Type.GetType("object"), System.Type.GetType("DevExpress.XtraEditors.Controls.SpinEventArgs") });
-                    mi.Invoke(ParentForm, null);
+                    Type cType = ParentForm.GetType();                    
+                    MethodInfo mi = cType.GetMethod(MTextChanged, new Type[] { typeof(object), typeof(EventArgs) });
+                    mi.Invoke(ParentForm, new object[] { sender, e });
                 }
             }
             catch (Exception ex)
@@ -256,14 +256,14 @@ namespace UsuarioControles
                 if (String.IsNullOrEmpty(MSpin))
                 {
                     Type cType = ParentForm.GetType();
-                    MethodInfo mi = cType.GetMethod("Spin");
-                    mi.Invoke(ParentForm, null);
+                    MethodInfo mi = cType.GetMethod("Spin", new Type[] { typeof(object), typeof(SpinEventArgs) });
+                    mi.Invoke(ParentForm, new object[] { sender, e });
                 }
                 else
                 {
                     Type cType = ParentForm.GetType();
-                    MethodInfo mi = cType.GetMethod(MSpin);
-                    mi.Invoke(ParentForm, null);
+                    MethodInfo mi = cType.GetMethod(MSpin, new Type[] { typeof(object), typeof(SpinEventArgs) });
+                    mi.Invoke(ParentForm, new object[]{sender, e});
                 }
             }
             catch (Exception ex)

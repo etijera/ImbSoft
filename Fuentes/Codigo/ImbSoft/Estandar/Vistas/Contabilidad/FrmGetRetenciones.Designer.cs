@@ -30,23 +30,22 @@ namespace Estandar.Vistas.Contabilidad
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TxtLblCuenta = new UsuarioControles.TxtLblGeneral();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.rgTipo = new DevExpress.XtraEditors.RadioGroup();
             this.acceptCancel1 = new UsuarioControles.AcceptCancel();
-            this.errorP2 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider();
+            this.errorP2 = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
             this.GbxDatos = new DevExpress.XtraEditors.GroupControl();
-            this.TxtPorcentaje = new UsuarioControles.TxtBase();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TxtPorcentaje = new UsuarioControles.TxtBase();
             this.lblBase2 = new UsuarioControles.LblBase();
+            this.TxtMonto = new UsuarioControles.TxtBase();
             this.lblBase1 = new UsuarioControles.LblBase();
             this.LblPanel4 = new UsuarioControles.LblBase();
             this.LblNombre = new UsuarioControles.LblBase();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.TxtMonto = new UsuarioControles.TxtBase();
             this.cabeceraForm1 = new UsuarioControles.CabeceraForm();
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgTipo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GbxDatos)).BeginInit();
@@ -100,14 +99,6 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCuenta.Usuario = null;
             this.TxtLblCuenta.Validated += new System.EventHandler(this.TxtLblCuenta_Validated);
             // 
-            // groupControl1
-            // 
-            this.groupControl1.Location = new System.Drawing.Point(222, 246);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(227, 75);
-            this.groupControl1.TabIndex = 7;
-            this.groupControl1.Text = "Tipo de Retención";
-            // 
             // rgTipo
             // 
             this.rgTipo.AutoSizeInLayoutControl = true;
@@ -132,7 +123,7 @@ namespace Estandar.Vistas.Contabilidad
             this.acceptCancel1.CancelButtonText = "Cancelar";
             this.acceptCancel1.HabilitarAceptar = true;
             this.acceptCancel1.HabilitarCancelar = true;
-            this.acceptCancel1.Location = new System.Drawing.Point(17, 267);
+            this.acceptCancel1.Location = new System.Drawing.Point(202, 154);
             this.acceptCancel1.LookAndFeel.SkinName = "Office 2007 Silver";
             this.acceptCancel1.Maceptar = null;
             this.acceptCancel1.Mcancelar = null;
@@ -147,32 +138,13 @@ namespace Estandar.Vistas.Contabilidad
             // GbxDatos
             // 
             this.GbxDatos.Controls.Add(this.panel1);
-            this.GbxDatos.Location = new System.Drawing.Point(12, 32);
+            this.GbxDatos.Controls.Add(this.acceptCancel1);
+            this.GbxDatos.Location = new System.Drawing.Point(2, 29);
             this.GbxDatos.Name = "GbxDatos";
             this.GbxDatos.ShowCaption = false;
-            this.GbxDatos.Size = new System.Drawing.Size(569, 198);
+            this.GbxDatos.Size = new System.Drawing.Size(520, 210);
             this.GbxDatos.TabIndex = 9;
             this.GbxDatos.Text = "groupControl1";
-            // 
-            // TxtPorcentaje
-            // 
-            this.TxtPorcentaje.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Far;
-            this.TxtPorcentaje.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.TxtPorcentaje.Appearance.Options.UseBackColor = true;
-            this.TxtPorcentaje.CaraterPassword = '\0';
-            this.TxtPorcentaje.Location = new System.Drawing.Point(93, 85);
-            this.TxtPorcentaje.MaxLenght = 9;
-            this.TxtPorcentaje.MTextChanged = null;
-            this.TxtPorcentaje.Name = "TxtPorcentaje";
-            this.TxtPorcentaje.Size = new System.Drawing.Size(107, 26);
-            this.TxtPorcentaje.SoloLectura = false;
-            this.TxtPorcentaje.TabIndex = 10;
-            this.TxtPorcentaje.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtPorcentaje.Texto = "0,";
-            this.TxtPorcentaje.TipoFormato = Referencias.Funciones.TipoNumerico.Porcentaje3;
-            this.TxtPorcentaje.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.TxtPorcentaje.UseMaskAsDisplayFormat = true;
-            this.TxtPorcentaje.Value = "0";
             // 
             // panel1
             // 
@@ -188,10 +160,31 @@ namespace Estandar.Vistas.Contabilidad
             this.panel1.Controls.Add(this.LblNombre);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.Maroon;
-            this.panel1.Location = new System.Drawing.Point(25, 17);
+            this.panel1.Location = new System.Drawing.Point(25, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(474, 125);
             this.panel1.TabIndex = 3;
+            // 
+            // TxtPorcentaje
+            // 
+            this.TxtPorcentaje.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Far;
+            this.TxtPorcentaje.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.TxtPorcentaje.Appearance.Options.UseBackColor = true;
+            this.TxtPorcentaje.CaraterPassword = '\0';
+            this.TxtPorcentaje.Location = new System.Drawing.Point(93, 85);
+            this.TxtPorcentaje.MaxLenght = 9;
+            this.TxtPorcentaje.MSpin = null;
+            this.TxtPorcentaje.MTextChanged = null;
+            this.TxtPorcentaje.Name = "TxtPorcentaje";
+            this.TxtPorcentaje.Size = new System.Drawing.Size(107, 26);
+            this.TxtPorcentaje.SoloLectura = false;
+            this.TxtPorcentaje.TabIndex = 10;
+            this.TxtPorcentaje.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtPorcentaje.Texto = "0.";
+            this.TxtPorcentaje.TipoFormato = Referencias.Funciones.TipoNumerico.Porcentaje3;
+            this.TxtPorcentaje.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.TxtPorcentaje.UseMaskAsDisplayFormat = true;
+            this.TxtPorcentaje.Value = "0";
             // 
             // lblBase2
             // 
@@ -201,6 +194,27 @@ namespace Estandar.Vistas.Contabilidad
             this.lblBase2.Size = new System.Drawing.Size(80, 14);
             this.lblBase2.TabIndex = 11;
             this.lblBase2.Texto = "Porcentaje:";
+            // 
+            // TxtMonto
+            // 
+            this.TxtMonto.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Far;
+            this.TxtMonto.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.TxtMonto.Appearance.Options.UseBackColor = true;
+            this.TxtMonto.CaraterPassword = '\0';
+            this.TxtMonto.Location = new System.Drawing.Point(93, 48);
+            this.TxtMonto.MaxLenght = 9;
+            this.TxtMonto.MSpin = null;
+            this.TxtMonto.MTextChanged = null;
+            this.TxtMonto.Name = "TxtMonto";
+            this.TxtMonto.Size = new System.Drawing.Size(107, 26);
+            this.TxtMonto.SoloLectura = false;
+            this.TxtMonto.TabIndex = 9;
+            this.TxtMonto.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtMonto.Texto = "0.";
+            this.TxtMonto.TipoFormato = Referencias.Funciones.TipoNumerico.Decimal;
+            this.TxtMonto.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.TxtMonto.UseMaskAsDisplayFormat = true;
+            this.TxtMonto.Value = "0";
             // 
             // lblBase1
             // 
@@ -244,26 +258,6 @@ namespace Estandar.Vistas.Contabilidad
             this.panel2.Size = new System.Drawing.Size(250, 49);
             this.panel2.TabIndex = 11;
             // 
-            // TxtMonto
-            // 
-            this.TxtMonto.AlineacionHorizontal = DevExpress.Utils.HorzAlignment.Far;
-            this.TxtMonto.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.TxtMonto.Appearance.Options.UseBackColor = true;
-            this.TxtMonto.CaraterPassword = '\0';
-            this.TxtMonto.Location = new System.Drawing.Point(93, 48);
-            this.TxtMonto.MaxLenght = 9;
-            this.TxtMonto.MTextChanged = null;
-            this.TxtMonto.Name = "TxtMonto";
-            this.TxtMonto.Size = new System.Drawing.Size(107, 26);
-            this.TxtMonto.SoloLectura = false;
-            this.TxtMonto.TabIndex = 9;
-            this.TxtMonto.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtMonto.Texto = "0,";
-            this.TxtMonto.TipoFormato = Referencias.Funciones.TipoNumerico.Decimal;
-            this.TxtMonto.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.TxtMonto.UseMaskAsDisplayFormat = true;
-            this.TxtMonto.Value = "0";
-            // 
             // cabeceraForm1
             // 
             this.cabeceraForm1.AutoSize = true;
@@ -272,7 +266,7 @@ namespace Estandar.Vistas.Contabilidad
             this.cabeceraForm1.Location = new System.Drawing.Point(0, -1);
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "Retenciones";
-            this.cabeceraForm1.Size = new System.Drawing.Size(555, 32);
+            this.cabeceraForm1.Size = new System.Drawing.Size(523, 32);
             this.cabeceraForm1.TabIndex = 10;
             this.cabeceraForm1.VerBCerrar = true;
             this.cabeceraForm1.VerBMinimiar = true;
@@ -286,18 +280,15 @@ namespace Estandar.Vistas.Contabilidad
             this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 333);
-            this.Controls.Add(this.cabeceraForm1);
-            this.Controls.Add(this.acceptCancel1);
-            this.Controls.Add(this.groupControl1);
+            this.ClientSize = new System.Drawing.Size(523, 240);
             this.Controls.Add(this.GbxDatos);
+            this.Controls.Add(this.cabeceraForm1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmGetRetenciones";
             this.Text = "FrmRetenciones";
             this.Load += new System.EventHandler(this.FrmGetRetenciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorP1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgTipo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorP2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GbxDatos)).EndInit();
@@ -313,7 +304,6 @@ namespace Estandar.Vistas.Contabilidad
         #endregion
 
         private TxtLblGeneral TxtLblCuenta;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.RadioGroup rgTipo;
         private AcceptCancel acceptCancel1;
         private DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider errorP2;

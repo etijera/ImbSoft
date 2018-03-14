@@ -417,17 +417,17 @@ namespace Estandar.Vistas.Contabilidad
             ValidateData();
         }
 
-        private void TxtPorcentaje_TextChanged(object sender, EventArgs e)
+        public void TxtPorcentaje_TextChanged(object sender, EventArgs e)
         {
             ValidateData();
         }
 
-        private void TxtMonto_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e)
+        public void TxtMonto_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e)
         {
             e.Handled = true;
         }
 
-        private void TxtPorcentaje_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e)
+        public void TxtPorcentaje_Spin(object sender, DevExpress.XtraEditors.Controls.SpinEventArgs e)
         {
             e.Handled = true;
         }

@@ -142,7 +142,7 @@ namespace Estandar.Vistas
             }           
         }
 
-        public void TxtPass2_TextChanged()
+        public void TxtPass2_TextChanged(object sender, EventArgs e)
         {
             if (TxtPass2.Texto.Trim().Length > 0)
             {
