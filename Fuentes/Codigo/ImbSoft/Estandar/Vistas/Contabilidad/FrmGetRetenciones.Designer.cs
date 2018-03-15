@@ -93,7 +93,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtLblCuenta.SinBordes = false;
             this.TxtLblCuenta.Size = new System.Drawing.Size(362, 26);
             this.TxtLblCuenta.SoloLectura = false;
-            this.TxtLblCuenta.TabIndex = 4;
+            this.TxtLblCuenta.TabIndex = 0;
             this.TxtLblCuenta.TxtCodLocation = new System.Drawing.Point(0, 3);
             this.TxtLblCuenta.TxtCodSize = new System.Drawing.Size(100, 20);
             this.TxtLblCuenta.Usuario = null;
@@ -115,7 +115,7 @@ namespace Estandar.Vistas.Contabilidad
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Anticipo de Impuestos y Contribuciones"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Retenciones a Cargo")});
             this.rgTipo.Size = new System.Drawing.Size(243, 42);
-            this.rgTipo.TabIndex = 59;
+            this.rgTipo.TabIndex = 0;
             // 
             // acceptCancel1
             // 
@@ -129,7 +129,7 @@ namespace Estandar.Vistas.Contabilidad
             this.acceptCancel1.Mcancelar = null;
             this.acceptCancel1.Name = "acceptCancel1";
             this.acceptCancel1.Size = new System.Drawing.Size(117, 49);
-            this.acceptCancel1.TabIndex = 8;
+            this.acceptCancel1.TabIndex = 1;
             // 
             // errorP2
             // 
@@ -143,7 +143,7 @@ namespace Estandar.Vistas.Contabilidad
             this.GbxDatos.Name = "GbxDatos";
             this.GbxDatos.ShowCaption = false;
             this.GbxDatos.Size = new System.Drawing.Size(520, 210);
-            this.GbxDatos.TabIndex = 9;
+            this.GbxDatos.TabIndex = 0;
             this.GbxDatos.Text = "groupControl1";
             // 
             // panel1
@@ -163,7 +163,7 @@ namespace Estandar.Vistas.Contabilidad
             this.panel1.Location = new System.Drawing.Point(25, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(474, 125);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 0;
             // 
             // TxtPorcentaje
             // 
@@ -178,7 +178,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtPorcentaje.Name = "TxtPorcentaje";
             this.TxtPorcentaje.Size = new System.Drawing.Size(107, 26);
             this.TxtPorcentaje.SoloLectura = false;
-            this.TxtPorcentaje.TabIndex = 10;
+            this.TxtPorcentaje.TabIndex = 2;
             this.TxtPorcentaje.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtPorcentaje.Texto = "0.";
             this.TxtPorcentaje.TipoFormato = Referencias.Funciones.TipoNumerico.Porcentaje3;
@@ -208,7 +208,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtMonto.Name = "TxtMonto";
             this.TxtMonto.Size = new System.Drawing.Size(107, 26);
             this.TxtMonto.SoloLectura = false;
-            this.TxtMonto.TabIndex = 9;
+            this.TxtMonto.TabIndex = 1;
             this.TxtMonto.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtMonto.Texto = "0.";
             this.TxtMonto.TipoFormato = Referencias.Funciones.TipoNumerico.Decimal;
@@ -234,7 +234,7 @@ namespace Estandar.Vistas.Contabilidad
             this.LblPanel4.Location = new System.Drawing.Point(205, 44);
             this.LblPanel4.Name = "LblPanel4";
             this.LblPanel4.Size = new System.Drawing.Size(123, 16);
-            this.LblPanel4.TabIndex = 10;
+            this.LblPanel4.TabIndex = 3;
             this.LblPanel4.Texto = "Tipo de Retención";
             // 
             // LblNombre
@@ -267,7 +267,7 @@ namespace Estandar.Vistas.Contabilidad
             this.cabeceraForm1.Name = "cabeceraForm1";
             this.cabeceraForm1.NombreCabecera = "Retenciones";
             this.cabeceraForm1.Size = new System.Drawing.Size(523, 32);
-            this.cabeceraForm1.TabIndex = 10;
+            this.cabeceraForm1.TabIndex = 1;
             this.cabeceraForm1.VerBCerrar = true;
             this.cabeceraForm1.VerBMinimiar = true;
             // 

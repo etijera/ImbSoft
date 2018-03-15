@@ -100,6 +100,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtMonto.CaraterPassword = '\0';
             this.TxtMonto.Location = new System.Drawing.Point(108, 90);
             this.TxtMonto.MaxLenght = 50;
+            this.TxtMonto.MSpin = null;
             this.TxtMonto.MTextChanged = null;
             this.TxtMonto.Name = "TxtMonto";
             this.TxtMonto.Size = new System.Drawing.Size(107, 26);
@@ -109,6 +110,8 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtMonto.Texto = "0";
             this.TxtMonto.TipoFormato = Referencias.Funciones.TipoNumerico.Numerico2;
             this.TxtMonto.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.TxtMonto.UseMaskAsDisplayFormat = false;
+            this.TxtMonto.Value = "0";
             // 
             // TxtLblCodigo
             // 

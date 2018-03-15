@@ -370,19 +370,19 @@ namespace Estandar.Vistas.Contabilidad
                 switch (OpcionGet)
                 {
                     case "retefte":
-                        Text = "Editar Retención en la Fuente por Renta";
+                        cabeceraForm1.NombreCabecera = "Editar Retención en la Fuente por Renta";
                         LlenarCamposReteFte();
                         break;
                     case "reteica":
-                        Text = "Editar Retención en la Fuente por ICA";
+                        cabeceraForm1.NombreCabecera = "Editar Retención en la Fuente por ICA";
                         LlenarCamposReteIca();
                         break;
                     case "reteiva":
-                        Text = "Editar Retención en la Fuente por IVA";
+                        cabeceraForm1.NombreCabecera = "Editar Retención en la Fuente por IVA";
                         LlenarCamposReteIva();
                         break;
                     case "retecree":
-                        Text = "Editar Retención en la Fuente por CREE";
+                        cabeceraForm1.NombreCabecera = "Editar Retención en la Fuente por CREE";
                         LlenarCamposReteCree();
                         break;
                 }
@@ -392,22 +392,25 @@ namespace Estandar.Vistas.Contabilidad
                 switch (OpcionGet)
                 {
                     case "retefte":
-                        Text = "Nueva Retención en la Fuente por Renta";
+                        cabeceraForm1.NombreCabecera = "Nueva Retención en la Fuente por Renta";
                         break;
                     case "reteica":
-                        Text = "Nueva Retención en la Fuente por ICA";
+                        cabeceraForm1.NombreCabecera = "Nueva Retención en la Fuente por ICA";
                         break;
                     case "reteiva":
-                        Text = "Nueva Retención en la Fuente por IVA";
+                        cabeceraForm1.NombreCabecera = "Nueva Retención en la Fuente por IVA";
                         break;
                     case "retecree":
-                        Text = "Nueva Retención en la Fuente por CREE";
+                        cabeceraForm1.NombreCabecera = "Nueva Retención en la Fuente por CREE";
                         break;
                 }
-
+                
                 TxtLblCuenta.Enabled = true;
 
             }
+
+            cabeceraForm1.Width = cabeceraForm1.Width - 1;
+            cabeceraForm1.Width = cabeceraForm1.Width + 1; 
 
             ValidateData();
         }

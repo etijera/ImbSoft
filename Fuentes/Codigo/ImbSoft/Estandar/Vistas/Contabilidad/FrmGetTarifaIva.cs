@@ -41,21 +41,21 @@ namespace Estandar.Vistas.Contabilidad
                 TxtLblCodigo.Focus();
             }
 
-            if (!String.IsNullOrEmpty(TxtLblCodigo.Codigo) && Convert.ToDecimal(TxtTarifa.EditValue) == 0)
+            if (!String.IsNullOrEmpty(TxtLblCodigo.Codigo) && Convert.ToDecimal(TxtTarifa.Value) == 0)
             {
                 retorno = false;
                 XtraMessageBox.Show("Debe digitar la tarifa", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TxtTarifa.Focus();
             }
 
-            if (!String.IsNullOrEmpty(TxtLblCodigo.Codigo) && Convert.ToDecimal(TxtTarifa.EditValue) > 0 && RgbTipo.SelectedIndex == -1)
+            if (!String.IsNullOrEmpty(TxtLblCodigo.Codigo) && Convert.ToDecimal(TxtTarifa.Value) > 0 && RgbTipo.SelectedIndex == -1)
             {
                 retorno = false;
                 XtraMessageBox.Show("Debe seleccionar un tipo", Referencias.Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RgbTipo.Focus();
             }
 
-            if (!String.IsNullOrEmpty(TxtLblCodigo.Codigo) && Convert.ToDecimal(TxtTarifa.EditValue) > 0
+            if (!String.IsNullOrEmpty(TxtLblCodigo.Codigo) && Convert.ToDecimal(TxtTarifa.Value) > 0
             && RgbTipo.SelectedIndex != -1 && RgbModalidad.SelectedIndex == -1)
             {
                 retorno = false;
@@ -88,7 +88,7 @@ namespace Estandar.Vistas.Contabilidad
             new SqlParameter("@Codigo", ID ?? ""),
             new SqlParameter("@Modalidad", RgbModalidad.SelectedIndex + 1),
             new SqlParameter("@TipoRetencion", RgbTipo.SelectedIndex + 1),
-            new SqlParameter("@PorcentajeRetencion", Funciones.getInstancia().FormatearValorDecimal(TxtTarifa.EditValue.ToString())) };
+            new SqlParameter("@PorcentajeRetencion", Funciones.getInstancia().FormatearValorDecimal(TxtTarifa.Value.ToString())) };
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -102,7 +102,7 @@ namespace Estandar.Vistas.Contabilidad
             new SqlParameter("@Codigo", ID ?? ""),
             new SqlParameter("@Modalidad", RgbModalidad.SelectedIndex + 1),
             new SqlParameter("@TipoRetencion", RgbTipo.SelectedIndex + 1),
-            new SqlParameter("@PorcentajeRetencion", Funciones.getInstancia().FormatearValorDecimal(TxtTarifa.EditValue.ToString())) };
+            new SqlParameter("@PorcentajeRetencion", TxtTarifa.Value.ToString()) };
 
             bool IsDone = DataBase.ExecuteNonQuery("Contabilidad.PA_Puc", CommandType.StoredProcedure, parametros1, ConexionDB.getInstancia().Conexion(Database, null));
 
@@ -121,6 +121,10 @@ namespace Estandar.Vistas.Contabilidad
             TxtLblCodigo.database = Database;
             TxtLblCodigo.Ordenar = OrdenarPor.CampoCodigo;
 
+            //Asignar el formato texto 
+            TxtTarifa.AsignarTipoFormatoNumerico();
+            TxtTarifa.AsignarTipoFormatoNumerico();
+
             if (Modo == "E")
             {
                 SqlParameter[] par = new [] {   new SqlParameter("@Operacion", "STI"),
@@ -128,7 +132,9 @@ namespace Estandar.Vistas.Contabilidad
 
                 DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
 
-                this.Text = "Editando";
+                cabeceraForm1.NombreCabecera = "Editando";
+                cabeceraForm1.Width = cabeceraForm1.Width - 1;
+                cabeceraForm1.Width = cabeceraForm1.Width + 1;                
 
                 TxtLblCodigo.Codigo = ds.Tables[0].Rows[0]["Codigo"].ToString();
                 TxtLblCodigo.Edit();
@@ -136,7 +142,7 @@ namespace Estandar.Vistas.Contabilidad
                 RgbModalidad.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0]["Modalidad"]) - 1;
                 RgbTipo.SelectedIndex = Convert.ToInt32(ds.Tables[0].Rows[0]["TipoRetencion"]) - 1;
 
-                TxtTarifa.Text = ds.Tables[0].Rows[0]["PorcentajeRetencion"].ToString();
+                TxtTarifa.Texto = ds.Tables[0].Rows[0]["PorcentajeRetencion"].ToString();
 
                 TxtLblCodigo.Disable();
             }

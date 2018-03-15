@@ -129,7 +129,9 @@ namespace Estandar.Vistas.Contabilidad
 
                 DataSet ds = DataBase.ExecuteQuery("Contabilidad.PA_Puc", "datos", CommandType.StoredProcedure, par, ConexionDB.getInstancia().Conexion(Database, null));
 
-                this.Text = "Editando";
+                cabeceraForm1.NombreCabecera = "Editando";
+                cabeceraForm1.Width = cabeceraForm1.Width - 1;
+                cabeceraForm1.Width = cabeceraForm1.Width + 1;
 
                 TxtLblCodigo.Codigo = ds.Tables[0].Rows[0]["Codigo"].ToString();
                 TxtLblCodigo.Edit();
