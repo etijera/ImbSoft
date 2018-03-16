@@ -128,6 +128,12 @@
     <Compile Include="Vistas\Contabilidad\FrmGetTipoDiferidos.Designer.cs">
       <DependentUpon>FrmGetTipoDiferidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FrmGetPropietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmGetPropietario.Designer.cs">
+      <DependentUpon>FrmGetPropietario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FrmGetTipoUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Contabilidad\FrmGetTipoDiferidos.resx">
       <DependentUpon>FrmGetTipoDiferidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmGetPropietario.resx">
+      <DependentUpon>FrmGetPropietario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmGetTipoUsuarios.resx">
       <DependentUpon>FrmGetTipoUsuarios.cs</DependentUpon>

@@ -61,7 +61,7 @@ namespace Estandar.Vistas.Contabilidad
             this.acceptCancel1.Mcancelar = null;
             this.acceptCancel1.Name = "acceptCancel1";
             this.acceptCancel1.Size = new System.Drawing.Size(111, 51);
-            this.acceptCancel1.TabIndex = 10;
+            this.acceptCancel1.TabIndex = 1;
             // 
             // groupControl1
             // 
