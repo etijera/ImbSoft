@@ -56,7 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Propietario.cs" />
     <Compile Include="Clases\TipoUsuario.cs" />
+    <Compile Include="Clases\Tercero.cs" />
+    <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Controladores\CtrlTipoUsuarios.cs" />
     <Compile Include="Controladores\CtrlUsuarios.cs" />
