@@ -106,7 +106,7 @@ namespace Estandar.Vistas.Contabilidad
             this.rgTipo.Name = "rgTipo";
             this.rgTipo.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.rgTipo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rgTipo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(74)))), ((int)(((byte)(90)))));
+            this.rgTipo.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.rgTipo.Properties.Appearance.Options.UseBackColor = true;
             this.rgTipo.Properties.Appearance.Options.UseFont = true;
             this.rgTipo.Properties.Appearance.Options.UseForeColor = true;
@@ -172,7 +172,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtPorcentaje.Appearance.Options.UseBackColor = true;
             this.TxtPorcentaje.CaraterPassword = '\0';
             this.TxtPorcentaje.Location = new System.Drawing.Point(93, 85);
-            this.TxtPorcentaje.MaxLenght = 9;
+            this.TxtPorcentaje.MaxLength = 9;
             this.TxtPorcentaje.MSpin = null;
             this.TxtPorcentaje.MTextChanged = null;
             this.TxtPorcentaje.Name = "TxtPorcentaje";
@@ -180,7 +180,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtPorcentaje.SoloLectura = false;
             this.TxtPorcentaje.TabIndex = 2;
             this.TxtPorcentaje.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtPorcentaje.Texto = "0.";
+            this.TxtPorcentaje.Texto = "0,";
             this.TxtPorcentaje.TipoFormato = Referencias.Funciones.TipoNumerico.Porcentaje3;
             this.TxtPorcentaje.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TxtPorcentaje.UseMaskAsDisplayFormat = true;
@@ -202,7 +202,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtMonto.Appearance.Options.UseBackColor = true;
             this.TxtMonto.CaraterPassword = '\0';
             this.TxtMonto.Location = new System.Drawing.Point(93, 48);
-            this.TxtMonto.MaxLenght = 9;
+            this.TxtMonto.MaxLength = 9;
             this.TxtMonto.MSpin = null;
             this.TxtMonto.MTextChanged = null;
             this.TxtMonto.Name = "TxtMonto";
@@ -210,7 +210,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtMonto.SoloLectura = false;
             this.TxtMonto.TabIndex = 1;
             this.TxtMonto.TextMayusMinus = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtMonto.Texto = "0.";
+            this.TxtMonto.Texto = "0,";
             this.TxtMonto.TipoFormato = Referencias.Funciones.TipoNumerico.Decimal;
             this.TxtMonto.TipoMascara = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TxtMonto.UseMaskAsDisplayFormat = true;

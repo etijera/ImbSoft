@@ -89,7 +89,7 @@
             this.TxtPass2.Appearance.Options.UseBackColor = true;
             this.TxtPass2.CaraterPassword = '*';
             this.TxtPass2.Location = new System.Drawing.Point(144, 138);
-            this.TxtPass2.MaxLenght = 50;
+            this.TxtPass2.MaxLength = 50;
             this.TxtPass2.MSpin = null;
             this.TxtPass2.MTextChanged = null;
             this.TxtPass2.Name = "TxtPass2";
@@ -111,7 +111,7 @@
             this.TxtPass1.Appearance.Options.UseBackColor = true;
             this.TxtPass1.CaraterPassword = '*';
             this.TxtPass1.Location = new System.Drawing.Point(144, 107);
-            this.TxtPass1.MaxLenght = 50;
+            this.TxtPass1.MaxLength = 50;
             this.TxtPass1.MSpin = null;
             this.TxtPass1.MTextChanged = null;
             this.TxtPass1.Name = "TxtPass1";
@@ -166,7 +166,7 @@
             this.TxtNombre.Appearance.Options.UseBackColor = true;
             this.TxtNombre.CaraterPassword = '\0';
             this.TxtNombre.Location = new System.Drawing.Point(144, 44);
-            this.TxtNombre.MaxLenght = 50;
+            this.TxtNombre.MaxLength = 50;
             this.TxtNombre.MSpin = null;
             this.TxtNombre.MTextChanged = null;
             this.TxtNombre.Name = "TxtNombre";
@@ -196,7 +196,7 @@
             this.TxtUsuario.Appearance.Options.UseBackColor = true;
             this.TxtUsuario.CaraterPassword = '\0';
             this.TxtUsuario.Location = new System.Drawing.Point(144, 13);
-            this.TxtUsuario.MaxLenght = 20;
+            this.TxtUsuario.MaxLength = 20;
             this.TxtUsuario.MSpin = null;
             this.TxtUsuario.MTextChanged = null;
             this.TxtUsuario.Name = "TxtUsuario";

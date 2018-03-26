@@ -30,7 +30,7 @@ namespace UsuarioControles
             }
         }
 
-        public int MaxLenght
+        public int MaxLength
         {
             get
             {

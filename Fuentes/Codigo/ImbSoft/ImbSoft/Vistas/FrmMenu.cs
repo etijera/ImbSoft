@@ -176,5 +176,20 @@ namespace ImbSoft.Vistas
             frmCcosto.ShowDialog(); 
         }
 
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmShowIt frmTerceros = new FrmShowIt();
+            frmTerceros.PerfilShow = Perfilador.getInstancia().CargarPerfil("Terceros");
+            frmTerceros.database = Database;
+            frmTerceros.Usuario = Usuario;
+            frmTerceros.DesdeMenu = true;
+            frmTerceros.PasarUsuario = true;
+            frmTerceros.EliminarRegistro = true;
+            frmTerceros.DesHabilitarBtnImprimir();
+            frmTerceros.DesHabilitarBtnGuardar();
+            frmTerceros.DesHabilitarBtnExcel();
+            frmTerceros.ShowDialog();
+        }
+
     }
 }

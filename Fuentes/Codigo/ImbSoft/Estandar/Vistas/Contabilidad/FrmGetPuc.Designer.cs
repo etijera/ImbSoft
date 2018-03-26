@@ -207,7 +207,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtNombreCuenta.Appearance.Options.UseBackColor = true;
             this.TxtNombreCuenta.CaraterPassword = '\0';
             this.TxtNombreCuenta.Location = new System.Drawing.Point(126, 100);
-            this.TxtNombreCuenta.MaxLenght = 50;
+            this.TxtNombreCuenta.MaxLength = 50;
             this.TxtNombreCuenta.MTextChanged = null;
             this.TxtNombreCuenta.Name = "TxtNombreCuenta";
             this.TxtNombreCuenta.Size = new System.Drawing.Size(274, 26);
@@ -225,7 +225,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtCodigoCuenta.Appearance.Options.UseBackColor = true;
             this.TxtCodigoCuenta.CaraterPassword = '\0';
             this.TxtCodigoCuenta.Location = new System.Drawing.Point(126, 59);
-            this.TxtCodigoCuenta.MaxLenght = 50;
+            this.TxtCodigoCuenta.MaxLength = 50;
             this.TxtCodigoCuenta.MTextChanged = null;
             this.TxtCodigoCuenta.Name = "TxtCodigoCuenta";
             this.TxtCodigoCuenta.Size = new System.Drawing.Size(123, 26);

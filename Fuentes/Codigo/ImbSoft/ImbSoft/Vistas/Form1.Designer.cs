@@ -55,7 +55,7 @@
             this.txtBase1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtBase1.Appearance.Options.UseBackColor = true;
             this.txtBase1.Location = new System.Drawing.Point(96, 97);
-            this.txtBase1.MaxLenght = 50;
+            this.txtBase1.MaxLength = 50;
             this.txtBase1.Name = "txtBase1";
             this.txtBase1.Size = new System.Drawing.Size(173, 26);
             this.txtBase1.SoloLectura = false;
@@ -70,7 +70,7 @@
             this.txtBase2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtBase2.Appearance.Options.UseBackColor = true;
             this.txtBase2.Location = new System.Drawing.Point(96, 129);
-            this.txtBase2.MaxLenght = 50;
+            this.txtBase2.MaxLength = 50;
             this.txtBase2.Name = "txtBase2";
             this.txtBase2.Size = new System.Drawing.Size(173, 26);
             this.txtBase2.SoloLectura = false;
@@ -85,7 +85,7 @@
             this.txtBase3.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtBase3.Appearance.Options.UseBackColor = true;
             this.txtBase3.Location = new System.Drawing.Point(96, 161);
-            this.txtBase3.MaxLenght = 50;
+            this.txtBase3.MaxLength = 50;
             this.txtBase3.Name = "txtBase3";
             this.txtBase3.Size = new System.Drawing.Size(173, 26);
             this.txtBase3.SoloLectura = false;
@@ -100,7 +100,7 @@
             this.txtBase4.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtBase4.Appearance.Options.UseBackColor = true;
             this.txtBase4.Location = new System.Drawing.Point(275, 97);
-            this.txtBase4.MaxLenght = 50;
+            this.txtBase4.MaxLength = 50;
             this.txtBase4.Name = "txtBase4";
             this.txtBase4.Size = new System.Drawing.Size(173, 26);
             this.txtBase4.SoloLectura = false;
@@ -115,7 +115,7 @@
             this.txtBase5.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtBase5.Appearance.Options.UseBackColor = true;
             this.txtBase5.Location = new System.Drawing.Point(275, 129);
-            this.txtBase5.MaxLenght = 50;
+            this.txtBase5.MaxLength = 50;
             this.txtBase5.Name = "txtBase5";
             this.txtBase5.Size = new System.Drawing.Size(173, 26);
             this.txtBase5.SoloLectura = false;
@@ -130,7 +130,7 @@
             this.txtBase6.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtBase6.Appearance.Options.UseBackColor = true;
             this.txtBase6.Location = new System.Drawing.Point(275, 162);
-            this.txtBase6.MaxLenght = 50;
+            this.txtBase6.MaxLength = 50;
             this.txtBase6.Name = "txtBase6";
             this.txtBase6.Size = new System.Drawing.Size(173, 26);
             this.txtBase6.SoloLectura = false;
@@ -145,7 +145,7 @@
             this.txtBase7.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtBase7.Appearance.Options.UseBackColor = true;
             this.txtBase7.Location = new System.Drawing.Point(96, 194);
-            this.txtBase7.MaxLenght = 50;
+            this.txtBase7.MaxLength = 50;
             this.txtBase7.Name = "txtBase7";
             this.txtBase7.Size = new System.Drawing.Size(173, 26);
             this.txtBase7.SoloLectura = false;
@@ -160,7 +160,7 @@
             this.txtBase8.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.txtBase8.Appearance.Options.UseBackColor = true;
             this.txtBase8.Location = new System.Drawing.Point(275, 195);
-            this.txtBase8.MaxLenght = 50;
+            this.txtBase8.MaxLength = 50;
             this.txtBase8.Name = "txtBase8";
             this.txtBase8.Size = new System.Drawing.Size(173, 26);
             this.txtBase8.SoloLectura = false;

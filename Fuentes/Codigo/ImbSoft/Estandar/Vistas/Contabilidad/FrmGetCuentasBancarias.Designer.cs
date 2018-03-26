@@ -177,7 +177,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtUltimoCheque.Appearance.Options.UseBackColor = true;
             this.TxtUltimoCheque.CaraterPassword = '\0';
             this.TxtUltimoCheque.Location = new System.Drawing.Point(115, 54);
-            this.TxtUltimoCheque.MaxLenght = 12;
+            this.TxtUltimoCheque.MaxLength = 12;
             this.TxtUltimoCheque.MTextChanged = null;
             this.TxtUltimoCheque.Name = "TxtUltimoCheque";
             this.TxtUltimoCheque.Size = new System.Drawing.Size(107, 26);

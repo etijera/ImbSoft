@@ -72,7 +72,7 @@ namespace UsuarioControles
             this.TxtNombre.Appearance.Options.UseBackColor = true;
             this.TxtNombre.CaraterPassword = '\0';
             this.TxtNombre.Location = new System.Drawing.Point(80, 23);
-            this.TxtNombre.MaxLenght = 50;
+            this.TxtNombre.MaxLength = 50;
             this.TxtNombre.MTextChanged = null;
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(321, 26);

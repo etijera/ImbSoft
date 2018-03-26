@@ -143,7 +143,7 @@
             this.TxtPassword.Appearance.Options.UseBackColor = true;
             this.TxtPassword.CaraterPassword = '*';
             this.TxtPassword.Location = new System.Drawing.Point(90, 60);
-            this.TxtPassword.MaxLenght = 50;
+            this.TxtPassword.MaxLength = 50;
             this.TxtPassword.MTextChanged = null;
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.Size = new System.Drawing.Size(167, 26);

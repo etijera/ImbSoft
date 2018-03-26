@@ -99,7 +99,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtMonto.Appearance.Options.UseBackColor = true;
             this.TxtMonto.CaraterPassword = '\0';
             this.TxtMonto.Location = new System.Drawing.Point(108, 90);
-            this.TxtMonto.MaxLenght = 50;
+            this.TxtMonto.MaxLength = 50;
             this.TxtMonto.MSpin = null;
             this.TxtMonto.MTextChanged = null;
             this.TxtMonto.Name = "TxtMonto";

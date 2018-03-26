@@ -191,7 +191,7 @@
             this.TxtNombre.Appearance.Options.UseBackColor = true;
             this.TxtNombre.CaraterPassword = '\0';
             this.TxtNombre.Location = new System.Drawing.Point(80, 14);
-            this.TxtNombre.MaxLenght = 50;
+            this.TxtNombre.MaxLength = 50;
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(342, 26);
             this.TxtNombre.SoloLectura = false;

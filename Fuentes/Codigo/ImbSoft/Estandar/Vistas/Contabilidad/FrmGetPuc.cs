@@ -904,7 +904,7 @@ namespace Estandar.Vistas.Contabilidad
             if (CmbTipoCueta.SelectedIndex == 2)
             {
                 //TxtLblClasificacion.Enable();
-                TxtCodigoCuenta.MaxLenght = 4;
+                TxtCodigoCuenta.MaxLength = 4;
             }
             //else
             //{
@@ -918,7 +918,7 @@ namespace Estandar.Vistas.Contabilidad
             {
                 ChkCentroCosto.Enabled = true;
                 ChkTerceros.Enabled = true;
-                TxtCodigoCuenta.MaxLenght = 6;
+                TxtCodigoCuenta.MaxLength = 6;
             }
             else
             {
@@ -932,7 +932,7 @@ namespace Estandar.Vistas.Contabilidad
             if (CmbTipoCueta.SelectedIndex == 0)
             {
                 DgvTiposCuentas.OptionsBehavior.Editable = true;
-                TxtCodigoCuenta.MaxLenght = 12;
+                TxtCodigoCuenta.MaxLength = 12;
             }
             else
             {
@@ -941,12 +941,12 @@ namespace Estandar.Vistas.Contabilidad
 
             if (CmbTipoCueta.SelectedIndex == 3)
             {
-                TxtCodigoCuenta.MaxLenght = 2;
+                TxtCodigoCuenta.MaxLength = 2;
             }
 
             if (CmbTipoCueta.SelectedIndex == 4)
             {
-                TxtCodigoCuenta.MaxLenght = 1;
+                TxtCodigoCuenta.MaxLength = 1;
             }
         }
 

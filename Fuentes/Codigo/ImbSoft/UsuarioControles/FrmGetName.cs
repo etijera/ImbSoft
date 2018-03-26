@@ -146,7 +146,7 @@ namespace UsuarioControles
 
             String sSql2 = String.Format("SELECT CHARACTER_MAXIMUM_LENGTH FROM information_schema.columns WHERE table_name = '{0}' AND COLUMN_NAME='{1}'", PerfilAct.Tabla, PerfilAct.CampoNombre);
             DataSet ds1 = DataBase.ExecuteQuery(sSql2, "tamaño", CommandType.Text, null, ConexionDB.getInstancia().Conexion(Database, null));
-            this.TxtNombre.MaxLenght = Convert.ToInt32(ds1.Tables[0].Rows[0][0].ToString());
+            this.TxtNombre.MaxLength = Convert.ToInt32(ds1.Tables[0].Rows[0][0].ToString());
         }
 
         private void FrmGetName_FormClosing(object sender, FormClosingEventArgs e)

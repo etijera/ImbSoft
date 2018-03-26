@@ -102,7 +102,7 @@ namespace Estandar.Vistas.Contabilidad
             this.TxtTarifa.Appearance.Options.UseBackColor = true;
             this.TxtTarifa.CaraterPassword = '\0';
             this.TxtTarifa.Location = new System.Drawing.Point(73, 84);
-            this.TxtTarifa.MaxLenght = 50;
+            this.TxtTarifa.MaxLength = 50;
             this.TxtTarifa.MSpin = null;
             this.TxtTarifa.MTextChanged = null;
             this.TxtTarifa.Name = "TxtTarifa";
