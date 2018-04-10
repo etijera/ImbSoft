@@ -624,18 +624,18 @@ namespace Estandar.Vistas
 
         private void FrmGetPropietario_Load(object sender, EventArgs e)
         {
-            TxtLblBarrio.PerfilShow = Perfilador.getInstancia().CargarPerfil("BarriosJ");
+            TxtLblBarrio.PerfilShow = Perfilador.getInstancia().CargarPerfil("BarriosZona");
             TxtLblBarrio.DesHabilitarBtnExcel = true;
             TxtLblBarrio.DesHabilitarBtnGuardar = true;
             TxtLblBarrio.DesHabilitarBtnImprimir = true;
 
-            TxtLblCiudad.PerfilShow = Perfilador.getInstancia().CargarPerfil("CiudadesJ");
+            TxtLblCiudad.PerfilShow = Perfilador.getInstancia().CargarPerfil("Ciudades");
 
             TxtLblCiudad.DesHabilitarBtnExcel = true;
             TxtLblCiudad.DesHabilitarBtnGuardar = true;
             TxtLblCiudad.DesHabilitarBtnImprimir = true;
 
-            TxtLblPais.PerfilShow = Perfilador.getInstancia().CargarPerfil("PaisesJ");
+            TxtLblPais.PerfilShow = Perfilador.getInstancia().CargarPerfil("Paises");
             TxtLblPais.DesHabilitarBtnExcel = true;
             TxtLblPais.DesHabilitarBtnGuardar = true;
             TxtLblPais.DesHabilitarBtnImprimir = true;

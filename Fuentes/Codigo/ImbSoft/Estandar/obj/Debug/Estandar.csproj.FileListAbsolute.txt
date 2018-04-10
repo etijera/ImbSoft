@@ -112,3 +112,4 @@ D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\
 D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.pdb
 D:\Erick\Proyecto ImbSoft\Github\ImbSoft Fuentes\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.FrmGetPropietario.resources
 G:\Trabajo\Proyecto imbSoft\GitHub\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.FrmGetTercero.resources
+D:\Erick\Proyecto ImbSoft\Github\Fuentes ImbSoft\ImbSoft\Fuentes\Codigo\ImbSoft\Estandar\obj\Debug\Estandar.Vistas.FrmGetTercero.resources
