@@ -71,6 +71,12 @@
     <Compile Include="Vistas\Contabilidad\FrmAddCuentaEntradaDoc.Designer.cs">
       <DependentUpon>FrmAddCuentaEntradaDoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmConfigConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Contabilidad\FrmConfigConcepto.Designer.cs">
+      <DependentUpon>FrmConfigConcepto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Contabilidad\FrmEntradaDoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\Contabilidad\FrmAddCuentaEntradaDoc.resx">
       <DependentUpon>FrmAddCuentaEntradaDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Contabilidad\FrmConfigConcepto.resx">
+      <DependentUpon>FrmConfigConcepto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Contabilidad\FrmEntradaDoc.resx">
       <DependentUpon>FrmEntradaDoc.cs</DependentUpon>

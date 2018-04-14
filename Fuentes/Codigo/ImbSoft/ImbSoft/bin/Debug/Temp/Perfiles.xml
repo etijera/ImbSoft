@@ -278,7 +278,6 @@
     <CampoCodigo>Codigo</CampoCodigo>
     <CampoNombre>Nombre</CampoNombre>
   </Perfil>
-
   <Perfil ID="Bancos">
     <Id>Bancos</Id>
     <Descripcion>
@@ -307,6 +306,66 @@
     <Proyecto>\UsuarioControles.dll</Proyecto>
     <CampoCodigo>Codigo</CampoCodigo>
     <CampoNombre>Nombre</CampoNombre>
+  </Perfil>  
+  <Perfil ID="TipoCliente">
+    <Id>TipoCliente</Id>
+    <Descripcion>
+    </Descripcion>
+    <Tabla>Contabilidad.V_TipoCliente</Tabla>
+    <Campos>Codigo,Nombre</Campos>
+    <Visibles>Nombre</Visibles>
+    <Formulario>UsuarioControles.FrmGetCodeName</Formulario>
+    <Titulo>Tipo Cliente</Titulo>
+    <Cabeceras>Nombre</Cabeceras>
+    <Tamaños>400</Tamaños>
+    <Llave>Codigo</Llave>
+    <CampoFecha>
+    </CampoFecha>
+    <UtilizarReportes>False</UtilizarReportes>
+    <DatosDetalle>
+    </DatosDetalle>
+    <Subtitulo>
+    </Subtitulo>
+    <ColumnaEstatica>
+    </ColumnaEstatica>
+    <Reporte>
+    </Reporte>
+    <CamposId>Nombre</CamposId>
+    <Indices>0</Indices>
+    <Proyecto>\UsuarioControles.dll</Proyecto>
+    <CampoCodigo>Codigo</CampoCodigo>
+    <CampoNombre>Nombre</CampoNombre>
   </Perfil>
+
+  <Perfil ID="TipoProvee">
+    <Id>TipoProvee</Id>
+    <Descripcion>
+    </Descripcion>
+    <Tabla>Contabilidad.V_TipoProveedor</Tabla>
+    <Campos>Nombre</Campos>
+    <Visibles>Nombre</Visibles>
+    <Formulario>Inmobiliaria.FrmConfigConcepto</Formulario>
+    <Titulo>Cuenta Temporal</Titulo>
+    <Cabeceras>Nombre</Cabeceras>
+    <Tamaños>382</Tamaños>
+    <Llave>Codigo</Llave>
+    <CampoFecha>
+    </CampoFecha>
+    <UtilizarReportes>False</UtilizarReportes>
+    <DatosDetalle>
+    </DatosDetalle>
+    <Subtitulo>
+    </Subtitulo>
+    <ColumnaEstatica>
+    </ColumnaEstatica>
+    <Reporte>
+    </Reporte>
+    <CamposId>Nombre</CamposId>
+    <Indices>0</Indices>
+    <Proyecto>\UsuarioControles.dll</Proyecto>
+    <CampoCodigo>Codigo</CampoCodigo>
+    <CampoNombre>Nombre</CampoNombre>
+  </Perfil>
+
 
 </Perfiles>

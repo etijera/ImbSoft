@@ -640,7 +640,7 @@ namespace Estandar.Vistas
             TxtLblPais.DesHabilitarBtnGuardar = true;
             TxtLblPais.DesHabilitarBtnImprimir = true;
 
-            TxtLblBanco.PerfilShow = Perfilador.getInstancia().CargarPerfil("BancosJ");
+            TxtLblBanco.PerfilShow = Perfilador.getInstancia().CargarPerfil("Bancos");
             TxtLblBanco.DesHabilitarBtnExcel = true;
             TxtLblBanco.DesHabilitarBtnGuardar = true;
             TxtLblBanco.DesHabilitarBtnImprimir = true;
@@ -661,7 +661,7 @@ namespace Estandar.Vistas
             TxtLblTipoCliente.DesHabilitarBtnImprimir = true;
             TxtLblTipoCliente.Usuario = Usuario;
 
-            TxtLblTipoProveedor.PerfilShow = Perfilador.getInstancia().CargarPerfil("ImbTipoProvee");
+            TxtLblTipoProveedor.PerfilShow = Perfilador.getInstancia().CargarPerfil("TipoProvee");
             TxtLblTipoProveedor.database = Database;
             TxtLblTipoProveedor.DesHabilitarBtnExcel = true;
             TxtLblTipoProveedor.DesHabilitarBtnGuardar = true;
